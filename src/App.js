@@ -45,7 +45,7 @@ class App extends Component {
                   second: '0032E3'
                 },
 
-                behance:'#'
+                behance:'https://www.behance.net/gallery/88957659/SquarePin-Real-State-Platform'
             },
             {
                 title: 'Frostbyte',
@@ -63,7 +63,7 @@ class App extends Component {
                   second: '00C0A9'
                 },
 
-                behance:'#',
+                behance:'https://www.behance.net/gallery/88959189/Frostbyte-Analytics-Platform',
             },
             {
                 title: 'We Are Angular',
@@ -81,7 +81,7 @@ class App extends Component {
                   second: 'DE6B00'
                 },
 
-                behance:'#',
+                behance:'https://www.behance.net/gallery/88961801/We-Are-Angular-Rebranding',
             },
             {
               title: 'Icesi University',
@@ -99,7 +99,7 @@ class App extends Component {
                 second: 'FF9900'
               },
 
-              behance:'#',
+              behance:'https://www.behance.net/gallery/88961063/eBook-Desarrollando-Competencias-Empresariales',
           },
         ],
     }
@@ -210,7 +210,7 @@ class App extends Component {
               <a href="https://juandis.design" className="logoL"><img src={logoJuandis} alt="Logo Juan David"/></a>
               <div className="infoFooter">
                 <p>@ 2019</p>
-                <a href="mailto:hello@juandis.design" title="Email me">hello@juandis.design</a>
+                <a href="mailto:hi@juandis.design" title="Email me">hi@juandis.design</a>
                 <p>Colombia</p>
               </div>
             </div>
@@ -287,7 +287,7 @@ class Project extends React.Component {
                 <Parallax.Layer speed={0.7} offset={1}>
                 <img src={`${process.env.PUBLIC_URL}/images/projects/${urlImage}.png`} alt={`Image ${title}`} />
                 </Parallax.Layer>
-                <a className="btnProject" href={behance} style={{background: `#${colors.first}`}}>
+                <a className="btnProject" href={behance} style={{background: `#${colors.first}`}} target="_blank">
                   <span>View more</span><img className="focusable" src={ARROW_RIGHT} alt="Go"/>
                 </a>
                 {/* <div className="imageProject" style={{background:'url(/assets/projects/'+urlImage+'/slider-mockup-'+urlImage+'.png) center center no-repeat',backgroundSize:'cover'}}></div> */}
