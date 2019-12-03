@@ -7,6 +7,9 @@ import "babel-polyfill"
 import logoSoloJuandis from './assets/images/logo-white.svg'
 import logoJuandis from './assets/images/logo-txt-white.svg'
 
+import ARROW_RIGHT from './assets/icons/arrow_forward-24px.svg'
+import ARROW_DOWN from './assets/icons/arrow_downward-24px.svg'
+
 import photoRiseUp from './assets/images/photos/riseup-green-leaf-11.jpg'
 import photoMe from './assets/images/photos/foto1-portfolio-ed.jpg'
 
@@ -40,7 +43,9 @@ class App extends Component {
                 colors: {
                   first: '000A66',
                   second: '0032E3'
-                }
+                },
+
+                behance:'#'
             },
             {
                 title: 'Frostbyte',
@@ -56,13 +61,15 @@ class App extends Component {
                 colors: {
                   first: '192D6B',
                   second: '00C0A9'
-                }
+                },
+
+                behance:'#',
             },
             {
                 title: 'We Are Angular',
                 urlImage: 'angular',
                 short: 'A new beginnig to home',
-                description: 'I had the responsibility to build, define and design a new retouch to We Are Angular brand image haciendo referencia a la trannsformación organizacional interna y externa.',
+                description: 'I had the responsibility to build, define and design a new retouch to We Are Angular brand image referring to internal and external organizational transformation.',
                 roles: [
                     'Creative Design', 'Frontend'
                 ],
@@ -72,13 +79,15 @@ class App extends Component {
                 colors: {
                   first: 'FFA800',
                   second: 'DE6B00'
-                }
+                },
+
+                behance:'#',
             },
             {
               title: 'Icesi University',
               urlImage: 'ebook',
               short: 'Design & learn with the accademy',
-              description: 'Gestionar el diseño y producción del eBook "Desarrollo Empresarial" del departamento CDEE, de la Universidad Icesi. Donde además participé en la producción audio visual de las introducciones de los capítlos.',
+              description: "Manage the design and production of the eBook 'Desarrollando Competencias Empresariales' (Developing business skills) by the CDEE (Business Development Center) department of the Icesi University.",
               roles: [
                   'Project Managment', 'Creative Design', 'Audiovisual'
               ],
@@ -88,7 +97,9 @@ class App extends Component {
               colors: {
                 first: '002F9E',
                 second: 'FF9900'
-              }
+              },
+
+              behance:'#',
           },
         ],
     }
@@ -96,12 +107,15 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Parallax ref="parallax" pages={4} className="juandis">
+        <Header test={this.test} />
+        <Parallax ref={ref => this.parallax = ref} pages={4} className="juandis" id="parall">
           <Parallax.Layer offset={0} speed={0.5} className="firstParallax prlx">
             <div className="initialSection">
               <div className="titleLanding">
                 <h1>I create tools, experiences and solutions with value through design.</h1>
+                <a onClick={() => this.parallax.scrollTo(1)} title="Go" className="goDown">
+                  <img className="focusable" src={ARROW_DOWN} alt="Go"/>
+                </a>
               </div>
               <div className="mockupsBanner">
                 <Parallax.Layer speed={0.7} className="img1">
@@ -118,7 +132,7 @@ class App extends Component {
               </div>
             </div>
           </Parallax.Layer>
-          <Parallax.Layer offset={1}>
+          <Parallax.Layer offset={1} id="me">
             <div className="photosSection">
               <div className="titleLanding" style={{background: `url(${photoRiseUp}) no-repeat center center`, backgroundSize: 'cover'}}>
               <div className="footerBanner">
@@ -135,13 +149,13 @@ class App extends Component {
                 <div className="meImg" style={{background:`url(${photoMe}) no-repeat center center`,backgroundSize:'cover'}}></div>
               </div>
               <div className="textMe">
-                <p>I’m an interaction designer working on software and digital solutions, based on user experience at Angular Diseño más Interacción, Cali, CO.<br/><br/>
-                He tenido la oportunidad de trabajar de la mano de diseñadores y desarrolladores, gestionando proyectos de software, productos y soluciones digitales para pequeñas y grandes proyectos.</p>
+                <p>I’m an interaction designer working on software and digital solutions, based on user experience design at Angular Diseño más Interacción, Cali, CO.<br/><br/>
+                I have had the opportunity to work with designers and developers, managing software projects, products and digital solutions for small and large projects..</p>
               </div>
             </div>  
             </Parallax.Layer>
 
-            <Parallax.Layer offset={3} className="toUp pr">
+            <Parallax.Layer offset={3} className="toUp pr" id="work">
             <div className="projects">
               <div>
               <Carousel
@@ -154,26 +168,53 @@ class App extends Component {
               showStatus={false}
               showIndicators={false}>
                   {this.state.projects.map(item => (
-                      <Project key={item} title={item.title} description={item.description} country={item.country} roles={item.roles} urlImage={item.urlImage} where={item.where} short={item.short} year={item.year} colors={item.colors}/>
+                      <Project
+                      key={item}
+                      title={item.title}
+                      description={item.description}
+                      country={item.country}
+                      roles={item.roles}
+                      urlImage={item.urlImage}
+                      where={item.where}
+                      short={item.short}
+                      year={item.year}
+                      colors={item.colors}
+                      behance={item.behance}/>
                   ))}
               </Carousel>
               </div>  
             </div>
             </Parallax.Layer>  
 
-        <Parallax.Layer offset={4}>
+        <Parallax.Layer offset={4} className="last" id="contact">
           <footer>
-            <div>
-WW
+
+            <div className="up">
+
+              <div className="right">
+                <p>Let's talk about us</p>
+              </div>
+
+              <div className="left">
+                <p className="colorsLinks"><a href="">download</a> my cv<br/>
+                email me <a href="mailto:hi@juandis.design">hi@juandis.design</a></p>
+                <p className="externalLinks">
+                  <a href="https://www.linkedin.com/in/juandis/" title="LinekdIn">linkedin</a>
+                  <a href="https://www.behance.net/iamjuan" title="Behance">behance</a>
+                  <a href="https://github.com/iamjuandis" title="GitHub">github</a>
+                </p>
+              </div>
             </div>
-            <div>
-              <a><img src={logoJuandis} alt="Logo Juan David"/></a>
-              <div>
+
+            <div className="down">
+              <a href="https://juandis.design" className="logoL"><img src={logoJuandis} alt="Logo Juan David"/></a>
+              <div className="infoFooter">
                 <p>@ 2019</p>
-                <a href="mailto:hello@juandis.design">hello@juandis.design</a>
+                <a href="mailto:hello@juandis.design" title="Email me">hello@juandis.design</a>
                 <p>Colombia</p>
               </div>
             </div>
+
           </footer>
           </Parallax.Layer>
     
@@ -217,7 +258,18 @@ class TypedReactDemo extends React.Component {
 
 class Project extends React.Component {
   render() {
-      const { title = 'input', description = 'text', roles = [], short = '', urlImage = '', year = '', where = '', country = '', colors = {}} = this.props;
+      const {
+        title = 'input',
+        description = 'text',
+        roles = [],
+        short = '',
+        urlImage = '',
+        year = '',
+        where = '',
+        country = '',
+        colors = {},
+        behance = ''
+      } = this.props;
       return (
           <div className="contentProject">
             <div className="infoProject">
@@ -232,10 +284,12 @@ class Project extends React.Component {
 
               <div className="imageContentProject">
                 <p style={{color: `#${colors.first}`}}>{year}</p>
-                <Parallax.Layer speed={0.8} offset={1}>
+                <Parallax.Layer speed={0.7} offset={1}>
                 <img src={`${process.env.PUBLIC_URL}/images/projects/${urlImage}.png`} alt={`Image ${title}`} />
                 </Parallax.Layer>
-                
+                <a className="btnProject" href={behance} style={{background: `#${colors.first}`}}>
+                  <span>View more</span><img className="focusable" src={ARROW_RIGHT} alt="Go"/>
+                </a>
                 {/* <div className="imageProject" style={{background:'url(/assets/projects/'+urlImage+'/slider-mockup-'+urlImage+'.png) center center no-repeat',backgroundSize:'cover'}}></div> */}
               </div>
               
