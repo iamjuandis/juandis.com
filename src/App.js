@@ -28,7 +28,7 @@ class App extends Component {
         projects: [
             {
                 title: 'SquarePin',
-                urlImage: 'frostbyte',
+                urlImage: 'squarepin',
                 short: 'Design to make real state accessible',
                 description: 'I am still working on a real state platform and marketplace, based on democratic principles through security and usability.',
                 roles: [
@@ -60,7 +60,7 @@ class App extends Component {
             },
             {
                 title: 'We Are Angular',
-                urlImage: 'frostbyte',
+                urlImage: 'angular',
                 short: 'A new beginnig to home',
                 description: 'I had the responsibility to build, define and design a new retouch to We Are Angular brand image haciendo referencia a la trannsformación organizacional interna y externa.',
                 roles: [
@@ -76,7 +76,7 @@ class App extends Component {
             },
             {
               title: 'Icesi University',
-              urlImage: 'frostbyte',
+              urlImage: 'ebook',
               short: 'Design & learn with the accademy',
               description: 'Gestionar el diseño y producción del eBook "Desarrollo Empresarial" del departamento CDEE, de la Universidad Icesi. Donde además participé en la producción audio visual de las introducciones de los capítlos.',
               roles: [
@@ -141,7 +141,7 @@ class App extends Component {
             </div>  
             </Parallax.Layer>
 
-            <Parallax.Layer offset={3} className="toUp">
+            <Parallax.Layer offset={3} className="toUp pr">
             <div className="projects">
               <div>
               <Carousel
@@ -164,7 +164,7 @@ class App extends Component {
         <Parallax.Layer offset={4}>
           <footer>
             <div>
-
+WW
             </div>
             <div>
               <a><img src={logoJuandis} alt="Logo Juan David"/></a>
@@ -232,7 +232,10 @@ class Project extends React.Component {
 
               <div className="imageContentProject">
                 <p style={{color: `#${colors.first}`}}>{year}</p>
+                <Parallax.Layer speed={0.8} offset={1}>
                 <img src={`${process.env.PUBLIC_URL}/images/projects/${urlImage}.png`} alt={`Image ${title}`} />
+                </Parallax.Layer>
+                
                 {/* <div className="imageProject" style={{background:'url(/assets/projects/'+urlImage+'/slider-mockup-'+urlImage+'.png) center center no-repeat',backgroundSize:'cover'}}></div> */}
               </div>
               

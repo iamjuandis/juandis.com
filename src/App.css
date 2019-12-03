@@ -21,6 +21,9 @@ body .juandis .prlx {
 body .juandis .toUp {
   margin-top: -200px !important;
 }
+body .juandis .pr {
+  margin-top: -400px !important;
+}
 body .juandis .initialSection {
   display: flex;
   flex-direction: row;
@@ -132,6 +135,20 @@ body .juandis .projects .carousel .slide {
   margin: 0 10% !important;
   background: transparent !important;
 }
+body .juandis .projects .carousel .slide:nth-child(5) .imageContentProject,
+body .juandis .projects .carousel .slide:nth-child(1) .imageContentProject {
+  background: #fff;
+}
+body .juandis .projects .carousel .slide:nth-child(5) .imageContentProject div img,
+body .juandis .projects .carousel .slide:nth-child(1) .imageContentProject div img {
+  background: #fff;
+  mix-blend-mode: multiply !important;
+  margin-right: 0px !important;
+}
+body .juandis .projects .carousel .slide:nth-child(4) .imageContentProject div img {
+  margin-top: 30px;
+  margin-right: 0px;
+}
 body .juandis .projects .carousel .control-arrow {
   top: 44%;
   color: #000;
@@ -164,11 +181,13 @@ body .juandis .projects .contentProject {
   padding: 70px;
   display: flex;
   justify-content: center;
+  height: 550px;
   flex-direction: row;
 }
 body .juandis .projects .contentProject .infoProject {
   text-align: left;
   width: 50%;
+  z-index: 9;
 }
 body .juandis .projects .contentProject .infoProject h4 {
   font-size: 50px;
@@ -194,9 +213,15 @@ body .juandis .projects .contentProject .imageContentProject {
   text-align: right;
   width: 50%;
 }
+body .juandis .projects .contentProject .imageContentProject p {
+  z-index: 9;
+}
 body .juandis .projects .contentProject .imageContentProject img {
   position: absolute;
   width: 60% !important;
   right: -50px;
   margin-top: -50px;
+}
+body .juandis footer {
+  background: #f00;
 }

@@ -19,6 +19,10 @@ body {
         .toUp{
             margin-top: -200px !important;
         }
+
+        .pr{
+            margin-top: -400px !important;
+        }
         .initialSection{
             display: flex;
             flex-direction: row;
@@ -135,6 +139,30 @@ body {
                     min-width: 80% !important;
                     margin: 0 10% !important;
                     background:  transparent !important;
+                    &:nth-child(5), &:nth-child(1){
+                        .imageContentProject {
+                            background: #fff;
+                            div{
+                              
+                                img {
+                                    background: #fff;
+                                    mix-blend-mode: multiply !important;
+                                    margin-right: 0px !important;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(4){
+                        .imageContentProject {
+                            div{
+                                img {
+                                    margin-top: 30px;
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
                 }
                 .control-arrow {
                     top: 44%;
@@ -169,11 +197,12 @@ body {
                 padding: 70px;
                 display: flex;
                 justify-content: center;
-                //height: 600px;
+                height: 550px;
                 flex-direction: row;
                 .infoProject{
                     text-align: left;
                     width: 50%;
+                    z-index: 9;
                     h4{
                         font-size: 50px;
                         text-transform: lowercase;
@@ -198,6 +227,9 @@ body {
                     justify-content: flex-end;
                     text-align: right;
                     width: 50%;
+                    p{
+                        z-index: 9;
+                    }
                     img{
                         position: absolute;
                         width: 60% !important;
@@ -206,6 +238,10 @@ body {
                     }
                 }
             }
+        }
+
+        footer{
+            background: #f00;
         }
     }
 }
