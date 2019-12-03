@@ -1,22 +1,76 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: Product Sans;
 }
-
-.App-logo {
-  height: 40vmin;
+body {
+  background: #080808;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body .juandis {
+  width: 100%;
+}
+body .juandis .prlx {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
+  width: 100% !important;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #09d3ac;
+body .juandis .initialSection {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+body .juandis .initialSection .titleLanding {
+  width: 50%;
+}
+body .juandis .initialSection .titleLanding h1 {
+  color: #fff;
+  font-size: 50px;
+}
+body .juandis .initialSection .mockupsBanner {
+  width: 50%;
+}
+body .juandis .initialSection .mockupsBanner .img1 {
+  top: 50vh;
+  left: 80%;
+}
+body .juandis .initialSection .mockupsBanner .img1 img {
+  width: 150px;
+  transform: rotate(-30deg);
+}
+body .juandis .initialSection .mockupsBanner .img2 {
+  top: 30vh;
+  left: 60%;
+}
+body .juandis .initialSection .mockupsBanner .img2 img {
+  width: 240px;
+  transform: scale(1.5) rotate(-30deg);
+}
+body .juandis .initialSection .mockupsBanner .img3 {
+  top: 80vh;
+  left: 60%;
+}
+body .juandis .initialSection .mockupsBanner .img3 img {
+  width: 300px;
+  transform: scale(1.2) rotate(-30deg);
+}
+body .juandis .photosSection {
+  width: 100%;
+  display: flex;
+  height: 500px;
+}
+body .juandis .photosSection .titleLanding {
+  margin: 0 auto;
+  width: 90%;
+}
+body .juandis .photosSection .titleLanding .footerBanner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+body .juandis .photosSection .titleLanding img.logo-big {
+  height: 100px;
 }
