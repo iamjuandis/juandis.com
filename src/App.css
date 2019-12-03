@@ -18,6 +18,9 @@ body .juandis .prlx {
   justify-content: center;
   align-items: center;
 }
+body .juandis .toUp {
+  margin-top: -200px !important;
+}
 body .juandis .initialSection {
   display: flex;
   flex-direction: row;
@@ -89,4 +92,111 @@ body .juandis .photosSection .titleLanding h3 {
 body .juandis .photosSection .titleLanding img.logo-big {
   height: 100px;
   margin-right: 50px;
+}
+body .juandis .meSection {
+  width: 100%;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+body .juandis .meSection .titleLanding {
+  width: 50%;
+  margin: 0 auto;
+  background: #080808;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body .juandis .meSection .titleLanding .meImg {
+  display: block;
+  height: 500px;
+  width: 50%;
+  mix-blend-mode: lighten !important;
+}
+body .juandis .meSection .textMe {
+  width: 50%;
+}
+body .juandis .meSection .textMe p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  width: 50%;
+}
+body .juandis .projects .carousel {
+  margin: 0 auto;
+  width: 100% !important;
+}
+body .juandis .projects .carousel .slide {
+  min-width: 80% !important;
+  margin: 0 10% !important;
+  background: transparent !important;
+}
+body .juandis .projects .carousel .control-arrow {
+  top: 44%;
+  color: #000;
+  font-size: 30px;
+  bottom: 0;
+  margin: 0 30px;
+  padding: 0;
+  height: 50px !important;
+  background: #fff;
+  border-radius: 50%;
+  width: 50px !important;
+  opacity: 1 !important;
+}
+body .juandis .projects .carousel .control-arrow:hover {
+  opacity: 0.5;
+  transition: all ease 0.3s;
+}
+body .juandis .projects .carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000 !important;
+}
+body .juandis .projects .carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000 !important;
+}
+body .juandis .projects .carousel .control-arrow:before,
+body .juandis .projects .carousel .carousel.carousel-slider .control-arrow:before {
+  margin: 3px 5px !important;
+}
+body .juandis .projects .contentProject {
+  background: #fff;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+body .juandis .projects .contentProject .infoProject {
+  text-align: left;
+  width: 50%;
+}
+body .juandis .projects .contentProject .infoProject h4 {
+  font-size: 50px;
+  text-transform: lowercase;
+  margin-bottom: 30px;
+}
+body .juandis .projects .contentProject .infoProject p {
+  opacity: 0.7;
+  font-size: 20px;
+  line-height: 28px;
+}
+body .juandis .projects .contentProject .infoProject p.rolesPr {
+  margin: 30px 0;
+}
+body .juandis .projects .contentProject .infoProject p.titlePr {
+  opacity: 1 !important;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+body .juandis .projects .contentProject .imageContentProject {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 50%;
+}
+body .juandis .projects .contentProject .imageContentProject img {
+  position: absolute;
+  width: 60% !important;
+  right: -50px;
+  margin-top: -50px;
 }

@@ -28,7 +28,7 @@ class App extends Component {
         projects: [
             {
                 title: 'SquarePin',
-                urlImage: 'trenggo',
+                urlImage: 'frostbyte',
                 short: 'Design to make real state accessible',
                 description: 'I am still working on a real state platform and marketplace, based on democratic principles through security and usability.',
                 roles: [
@@ -36,11 +36,15 @@ class App extends Component {
                 ],
                 country: 'mex',
                 year: '2018 - 2019',
-                where: 'Angular Diseño más Interacción'
+                where: 'Angular Diseño más Interacción',
+                colors: {
+                  first: '000A66',
+                  second: '0032E3'
+                }
             },
             {
                 title: 'Frostbyte',
-                urlImage: 'squarepin',
+                urlImage: 'frostbyte',
                 short: 'Design with analytics and IoT',
                 description: 'I had the oportunity to understand the relationship between analytics, IoT and its own value through design, software and data.',
                 roles: [
@@ -48,29 +52,43 @@ class App extends Component {
                 ],
                 country: 'col',
                 year: '2019',
-                where: 'Angular Diseño más Interacción'
+                where: 'Angular Diseño más Interacción',
+                colors: {
+                  first: '192D6B',
+                  second: '00C0A9'
+                }
             },
             {
                 title: 'We Are Angular',
-                urlImage: 'paco',
+                urlImage: 'frostbyte',
+                short: 'A new beginnig to home',
                 description: 'I had the responsibility to build, define and design a new retouch to We Are Angular brand image haciendo referencia a la trannsformación organizacional interna y externa.',
                 roles: [
                     'Creative Design', 'Frontend'
                 ],
                 country: 'col',
                 year: '2018',
-                where: 'Angular Diseño más Interacción'
+                where: 'Angular Diseño más Interacción',
+                colors: {
+                  first: 'FFA800',
+                  second: 'DE6B00'
+                }
             },
             {
               title: 'Icesi University',
-              urlImage: 'paco',
+              urlImage: 'frostbyte',
+              short: 'Design & learn with the accademy',
               description: 'Gestionar el diseño y producción del eBook "Desarrollo Empresarial" del departamento CDEE, de la Universidad Icesi. Donde además participé en la producción audio visual de las introducciones de los capítlos.',
               roles: [
                   'Project Managment', 'Creative Design', 'Audiovisual'
               ],
               country: 'col',
               year: '2018 - 2019',
-              where: 'Angular Diseño más Interacción'
+              where: 'Angular Diseño más Interacción',
+              colors: {
+                first: '002F9E',
+                second: 'FF9900'
+              }
           },
         ],
     }
@@ -84,9 +102,6 @@ class App extends Component {
             <div className="initialSection">
               <div className="titleLanding">
                 <h1>I create tools, experiences and solutions with value through design.</h1>
-                <a>
-                  <span>ICON</span>
-                </a>
               </div>
               <div className="mockupsBanner">
                 <Parallax.Layer speed={0.7} className="img1">
@@ -114,24 +129,32 @@ class App extends Component {
             </div>
             </Parallax.Layer>
 
-            <Parallax.Layer offset={2}>
+            <Parallax.Layer offset={2} className="toUp">
             <div className="meSection">
               <div className="titleLanding">
-                <img src={photoMe} alt="Juan David's Photo" className="profilePhoto" />
+                <div className="meImg" style={{background:`url(${photoMe}) no-repeat center center`,backgroundSize:'cover'}}></div>
               </div>
-              <div className="mockupsBanner">
-                <p>I’m an interaction designer working on software and digital solutions, based on user experience at Angular Diseño más Interacción, Cali, CO.<br/>
+              <div className="textMe">
+                <p>I’m an interaction designer working on software and digital solutions, based on user experience at Angular Diseño más Interacción, Cali, CO.<br/><br/>
                 He tenido la oportunidad de trabajar de la mano de diseñadores y desarrolladores, gestionando proyectos de software, productos y soluciones digitales para pequeñas y grandes proyectos.</p>
               </div>
             </div>  
             </Parallax.Layer>
 
-            <Parallax.Layer offset={3}>
+            <Parallax.Layer offset={3} className="toUp">
             <div className="projects">
               <div>
-              <Carousel showThumbs={false} showArrows={true}>
+              <Carousel
+              autoPlay={false}
+              showThumbs={false}
+              showArrows={true}
+              transitionTime={1000}
+              interval={10000}
+              infiniteLoop={true}
+              showStatus={false}
+              showIndicators={false}>
                   {this.state.projects.map(item => (
-                      <Project key={item} title={item.title} description={item.description} country={item.country} roles={item.roles} urlImage={item.urlImage} where={item.where} short={item.short} year={item.year}/>
+                      <Project key={item} title={item.title} description={item.description} country={item.country} roles={item.roles} urlImage={item.urlImage} where={item.where} short={item.short} year={item.year} colors={item.colors}/>
                   ))}
               </Carousel>
               </div>  
@@ -194,22 +217,22 @@ class TypedReactDemo extends React.Component {
 
 class Project extends React.Component {
   render() {
-      const { title = 'input', description = 'text', roles = [], short = '', urlImage = '', year = '', where = '', country = ''} = this.props;
+      const { title = 'input', description = 'text', roles = [], short = '', urlImage = '', year = '', where = '', country = '', colors = {}} = this.props;
       return (
           <div className="contentProject">
             <div className="infoProject">
-                  <h4>{short}</h4>
-                  <p>{title}</p>
-                  <p>{description}</p>
-                  <p>{roles.map(item => (
+                  <h4 style={{color: `#${colors.first}`}}>{short}</h4>
+                  <p style={{color: `#${colors.second}`}} className="titlePr">{title}</p>
+                  <p style={{color: `#${colors.first}`}}>{description}</p>
+                  <p style={{color: `#${colors.first}`}} className="rolesPr">{roles.map(item => (
                       <span className={'technology icon ion'+item} key={item} title={item}>{item}</span>
                   ))}</p>
-                  <p>at {where}</p>
+                  <p style={{color: `#${colors.first}`}}>at {where}</p>
               </div>
 
               <div className="imageContentProject">
-                <p>{year}</p>
-                <img src={`./assets/images/projects/${urlImage}.png`} alt={`Image ${title}`} />
+                <p style={{color: `#${colors.first}`}}>{year}</p>
+                <img src={`${process.env.PUBLIC_URL}/images/projects/${urlImage}.png`} alt={`Image ${title}`} />
                 {/* <div className="imageProject" style={{background:'url(/assets/projects/'+urlImage+'/slider-mockup-'+urlImage+'.png) center center no-repeat',backgroundSize:'cover'}}></div> */}
               </div>
               
