@@ -63,14 +63,30 @@ body .juandis .photosSection {
   height: 500px;
 }
 body .juandis .photosSection .titleLanding {
+  box-shadow: 0px 0px 50px #000000;
   margin: 0 auto;
   width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 body .juandis .photosSection .titleLanding .footerBanner {
   display: flex;
   flex-direction: row;
   width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+body .juandis .photosSection .titleLanding h3 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bolder;
+  width: 50%;
+  margin-left: 50px;
 }
 body .juandis .photosSection .titleLanding img.logo-big {
   height: 100px;
+  margin-right: 50px;
 }

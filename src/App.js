@@ -182,14 +182,12 @@ class TypedReactDemo extends React.Component {
   }
   render() {
       return (
-          <div className="wrap">
-              <div className="type-wrap">
-                  <span
-                      style={{ whiteSpace: 'pre' }}
-                      ref={(el) => { this.el = el; }}
-                  />
-              </div>
-          </div>
+          <span className="wrap">
+              <span
+                  style={{ whiteSpace: 'pre' }}
+                  ref={(el) => { this.el = el; }}
+              />
+          </span>
       );
   }
 }
