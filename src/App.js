@@ -4,11 +4,13 @@ import Header from './components/header/header'
 import './App.css'
 import "babel-polyfill"
 
+import logoSoloJuandis from './assets/images/logo-white.svg'
 import logoJuandis from './assets/images/logo-txt-white.svg'
+import photoRiseUp from './assets/images/photos/riseup-green-leaf-11.jpg'
 
-import mockupNoBlur from './assets/images/mockup-1.png';
-import mockupBlurOne from './assets/images/mockup-blur-1.png';
-import mockupBlurTwo from './assets/images/mockup-blur-2.png';
+import mockupNoBlur from './assets/images/mockup-1.png'
+import mockupBlurOne from './assets/images/mockup-blur-1.png'
+import mockupBlurTwo from './assets/images/mockup-blur-2.png'
 
 import Typed from 'typed.js';
 
@@ -45,27 +47,22 @@ class App extends Component {
           </div>
         </Parallax.Layer>
 
-          <div className="initialSection">
-            <div className="titleLanding">
-              <h1>I create tools, experiences and solutions with value through design.</h1>
-              <a>
-                <span>ICON</span>
-              </a>
-            </div>
+          <div className="photosSection">
+            <div className="titleLanding" style={{background: `url(${photoRiseUp}) no-repeat center center`, backgroundSize: 'cover'}}>
             <div className="mockupsBanner">
             <h3>i love <TypedReactDemo strings={['photography', 'coding', 'to learn', 'design', 'write', 'problems', 'challenges']} /></h3>
+            <img src={logoSoloJuandis} alt="Logo Juandis" />
+            </div>
             </div>
           </div>
   
-          <div className="initialSection">
+          <div className="meSection">
             <div className="titleLanding">
-              <h1>I create tools, experiences and solutions with value through design.</h1>
-              <a>
-                <span>ICON</span>
-              </a>
+              <img src="" alt="" />
             </div>
             <div className="mockupsBanner">
-              <p>Imagenes</p>
+              <p>I’m an interaction designer working on software and digital solutions, based on user experience at Angular Diseño más Interacción, Cali, CO.<br/>
+              He tenido la oportunidad de trabajar de la mano de diseñadores y desarrolladores, gestionando proyectos de software, productos y soluciones digitales para pequeñas y grandes proyectos.</p>
             </div>
           </div>        
 
