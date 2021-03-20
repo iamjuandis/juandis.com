@@ -1,0 +1,27 @@
+    {
+  "extends": ["netflix", "prettier", "eslint:recommended"],
+  "plugins": ["prettier", "react"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+    "no-var": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true,
+      "globalReturn": false
+    }
+  },
+  "globals": {
+    "shallow": true
+  }
+}
