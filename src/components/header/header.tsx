@@ -1,25 +1,37 @@
+import Link from 'next/link';
+import { NAV_OPTIONS } from '../../assets/content/intex';
 import { LOGO_JUANDIS } from '../../assets/images';
-import { HeaderContainer } from './styled';
+import { NavOptionType } from '../../types/interfaces';
+import NavOption from '../navOption';
+import { HeaderContainer, HeaderContent, LogoContainer, NavContainer } from './styled';
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <div className="container">
-        <a href="#" className="logo-link">
-          <img src={LOGO_JUANDIS} alt="Logo Juan David Pérez" />
-        </a>
-        <div className="navigation-links">
-          <a className="nav-link" href="#me">
-            me
-          </a>
-          <a className="nav-link" href="#work">
-            work
-          </a>
-          <a className="nav-link" href="#contact">
-            contact
-          </a>
-        </div>
-      </div>
+      <HeaderContent>
+        <Link href="/">
+          <LogoContainer>
+            {LOGO_JUANDIS}
+            <div>
+              <strong>Juan David Pérez</strong>
+              <span>Product Designer & Frontend Developer</span>
+            </div>
+          </LogoContainer>
+        </Link>
+        <NavContainer>
+          {NAV_OPTIONS.map((option: NavOptionType, idx: number) => (
+            <NavOption
+              key={idx}
+              type={option?.type}
+              label={option?.label}
+              icon={option?.icon}
+              isExternal={option?.isExternal}
+              onClick={option?.onClick}
+              route={option?.route}
+            />
+          ))}
+        </NavContainer>
+      </HeaderContent>
     </HeaderContainer>
   );
 };
