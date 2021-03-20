@@ -5,7 +5,6 @@ import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/page_layout/intex';
 
 const Home = () => {
-  console.info(PROJECTS);
   return (
     <PageLayout
       title="Juan David Pérez • Portfolio"

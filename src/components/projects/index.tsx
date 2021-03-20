@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 const ProjectsBanner = ({ projects }: any) => {
-  console.info('p', projects);
   return (
     <div>
       {Object.keys(projects).map((key: any) => {
