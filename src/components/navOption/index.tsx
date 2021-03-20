@@ -11,13 +11,15 @@ const NavOption = ({
   onClick,
 }: NavOptionType) => {
   return type === 'link' ? (
-    <Link href={`${route}`}>
-      <a target={isExternal ? '_blank' : '_self'}>
-        <NavOptionContainer>{Icon ? <Icon /> : label}</NavOptionContainer>
-      </a>
+    <Link href={`${route}`} passHref>
+      <NavOptionContainer type={type} target={isExternal ? '_blank' : '_self'}>
+        {Icon ? <Icon /> : label}
+      </NavOptionContainer>
     </Link>
   ) : (
-    <NavOptionContainer onClick={onClick}>{Icon ? <Icon /> : label}</NavOptionContainer>
+    <NavOptionContainer type={type} onClick={onClick}>
+      {Icon ? <Icon /> : label}
+    </NavOptionContainer>
   );
 };
 

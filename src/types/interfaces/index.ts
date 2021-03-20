@@ -5,4 +5,11 @@ export interface NavOptionType {
   icon?: any;
   isExternal?: boolean;
   onClick?: any;
+  target?: any;
+}
+
+export interface ParagraphType {
+  color?: string;
+  size?: number;
+  children?: string;
 }
