@@ -1,17 +1,27 @@
+import { MainBannerType } from '../../types/interfaces';
 import Headline from '../headline';
-import { HeadlineMainBanner, MainBannerContainer, MainBannerContent } from './styled';
+import Paragraph from '../paragraph';
+import {
+  HeadlineMainBanner,
+  MainBannerContainer,
+  MainBannerContent,
+  ParagraphsContainerMainBanner,
+} from './styled';
 
-const MainBanner = () => {
+const MainBanner = ({ headline, paragraphs }: MainBannerType) => {
   return (
     <MainBannerContainer>
       <MainBannerContent>
         <HeadlineMainBanner>
-          <Headline typeHeadline="h1">
-            I’m an Interactive Designer & Frontend Developer from Colombia. I lead the Product
-            Development area at We Are Angular where we design comprehensive and user-based products
-            & services for startups and companies.
-          </Headline>
+          <Headline typeHeadline="h1">{headline}</Headline>
         </HeadlineMainBanner>
+        <ParagraphsContainerMainBanner>
+          {paragraphs?.map((paragraph: string, idx: number) => (
+            <Paragraph size={22} key={idx}>
+              {paragraph}
+            </Paragraph>
+          ))}
+        </ParagraphsContainerMainBanner>
       </MainBannerContent>
     </MainBannerContainer>
   );

@@ -9,6 +9,7 @@ export const LinkTag = styled.a`
 export const Nav = styled.div`
   color: ${COLOR.blue_universe};
   cursor: pointer;
+  margin-left: 20px;
   &:hover {
     color: ${COLOR.blue_sky};
   }

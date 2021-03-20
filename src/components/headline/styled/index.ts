@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import COLOR from '../../../assets/style/colors';
 import { HeadlineType } from '../../../types/interfaces';
 
 export const HeadlineElement = styled.div`
@@ -27,10 +28,16 @@ const sizeHeadline = (type: string) => {
 };
 
 export const HeadlineContainer = styled(HeadlineElement).attrs(tag)<HeadlineType>`
+  color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
   line-height: ${(props) =>
     props.typeHeadline === 'h6' || props.typeHeadline === 'h5' || props.typeHeadline === 'h4'
       ? '140%'
       : '150%'};
   font-size: ${(props) => `${sizeHeadline(props.typeHeadline).size}px`};
   font-weight: ${(props) => sizeHeadline(props.typeHeadline).weight};
+  a {
+    color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
+    border-bottom: 2px solid
+      ${(props) => (props.color ? `${props.color}55` : `${COLOR.blue_universe}55`)};
+  }
 `;

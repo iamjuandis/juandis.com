@@ -18,3 +18,12 @@ export const HeadlineMainBanner = styled.div`
   grid-column: 2 / 11;
   width: 100%;
 `;
+
+export const ParagraphsContainerMainBanner = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  grid-column-gap: 30px;
+  grid-column: 3 / 11;
+  padding-top: 60px;
+  width: 100%;
+`;

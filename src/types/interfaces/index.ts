@@ -28,3 +28,17 @@ export interface PageLayoutTypes {
   description: string;
   image?: string;
 }
+
+export interface MainBannerType {
+  headline: string;
+  paragraphs: string[];
+}
+
+export interface ProjectTypes {
+  client: string;
+  headline: string;
+  mainColor: string;
+}
+export interface ProjectsType {
+  [key: string]: ProjectTypes;
+}

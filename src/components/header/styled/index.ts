@@ -7,11 +7,15 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderContent = styled.div`
+  align-items: center;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: auto;
   max-width: 1200px;
-  padding: 20px 30px;
-  width: 100%;
+  padding: 20px 0px;
+  width: calc(100% - 60px);
 `;
 
 export const LogoContainer = styled.a`
