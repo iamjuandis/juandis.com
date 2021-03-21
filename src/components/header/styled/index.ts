@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import COLOR from '../../../assets/style/colors';
 
 export const HeaderContainer = styled.header`
+  background: ${`${COLOR.white_cloud}77`};
+  backdrop-filter: blur(20px);
   position: fixed;
   width: 100%;
+  z-index: 100;
 `;
 
 export const HeaderContent = styled.div`

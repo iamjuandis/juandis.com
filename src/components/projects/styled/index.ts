@@ -17,5 +17,5 @@ export const ProjectsContent = styled.div`
 
 export const ProjectsHeadlineContainer = styled.div`
   grid-column: 1 / -1;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 `;

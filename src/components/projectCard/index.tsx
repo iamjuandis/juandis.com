@@ -29,7 +29,10 @@ const ProjectCard = ({
     <Link href={`/project/${slug}`} passHref>
       <ProjectCardContainer title={client} gridRange={gridRange}>
         <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
-          <ProjectCardCoverImage src={coverImages[0]} alt={client} />
+          <ProjectCardCoverImage
+            src={gridRange && gridRange[2] === 'big' ? coverImages[1] : coverImages[0]}
+            alt={client}
+          />
         </ProjectCardCoverContainer>
         <ProjectCardTextContainer
           background={gridRange && gridRange[2] === 'big' ? 'transparent' : `${mainColor}11`}
