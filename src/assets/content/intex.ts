@@ -3,9 +3,9 @@ import { scrollToIDElement } from '../utils/components';
 
 export const NAV_OPTIONS: NavOptionType[] = [
   {
-    label: 'Work',
+    label: 'Projects',
     type: 'action',
-    onClick: scrollToIDElement('work'),
+    onClick: scrollToIDElement('projects'),
   },
   {
     label: 'Resume',

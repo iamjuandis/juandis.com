@@ -34,11 +34,15 @@ export interface MainBannerType {
   paragraphs: string[];
 }
 
-export interface ProjectTypes {
+export interface ProjectMainTypes {
   client: string;
   headline: string;
   mainColor: string;
+  slug: string;
+  coverImages: string[];
 }
+
+export type ProjectAllTypes = ProjectMainTypes;
 export interface ProjectsType {
-  [key: string]: ProjectTypes;
+  [key: string]: ProjectAllTypes;
 }

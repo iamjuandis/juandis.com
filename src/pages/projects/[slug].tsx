@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { PROJECTS } from '../../assets/content/projects';
-import { ProjectTypes } from '../../types/interfaces';
+import { ProjectAllTypes } from '../../types/interfaces';
 
 interface Props {
-  project: ProjectTypes;
+  project: ProjectAllTypes;
   isValid: boolean;
 }
 
