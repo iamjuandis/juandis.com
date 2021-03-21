@@ -1,16 +1,36 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { NAV_OPTIONS } from '../../assets/content/intex';
 import { LOGO_JUANDIS } from '../../assets/images';
 import { NavOptionType } from '../../types/interfaces';
 import NavOption from '../navOption';
 import { HeaderContainer, HeaderContent, LogoContainer, NavContainer } from './styled';
 
-const Header = () => {
+export interface HeaderTypes {
+  bgColor?: string;
+  scrollTop?: number;
+  limitScroll?: number;
+}
+
+const Header = ({ bgColor }: HeaderTypes) => {
+  const limitScroll: number = 460;
+  const [scrollTop, setScrollTop] = useState<number>(1);
+
+  const onScroll = (e: any) => {
+    setScrollTop(e.target.documentElement.scrollTop);
+  };
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      window.addEventListener('scroll', onScroll);
+    }
+  }, []);
+
   return (
-    <HeaderContainer>
+    <HeaderContainer bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
       <HeaderContent>
         <Link href="/">
-          <LogoContainer>
+          <LogoContainer bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
             {LOGO_JUANDIS}
             <div>
               <strong>Juan David Pérez</strong>
@@ -18,7 +38,7 @@ const Header = () => {
             </div>
           </LogoContainer>
         </Link>
-        <NavContainer>
+        <NavContainer bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
           {NAV_OPTIONS.map((option: NavOptionType, idx: number) => (
             <NavOption
               key={idx}

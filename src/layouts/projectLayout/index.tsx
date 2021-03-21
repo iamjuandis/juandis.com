@@ -11,6 +11,7 @@ import {
   ProjectLayoutContainer,
   ProjectLayoutMainBanner,
   ProjectLayoutMainBannerContent,
+  ProjectLayoutMainBannerTextContainer,
 } from './styled';
 
 interface Props {
@@ -37,13 +38,15 @@ const ProjectLayout = ({ project }: Props) => {
         currentURL={currentURL}
         image={`https://juandis.com/`}
       />
-      <Header />
+      <Header bgColor={project.mainColor} />
       <ProjectLayoutMainBanner background={project.mainColor}>
         <ProjectLayoutMainBannerContent>
-          <Paragraph color={COLOR.white_cloud}>{project.client}</Paragraph>
-          <Headline color={COLOR.white_cloud} typeHeadline="h1">
-            {project.headline}
-          </Headline>
+          <ProjectLayoutMainBannerTextContainer>
+            <Paragraph color={COLOR.white_cloud}>{project.client}</Paragraph>
+            <Headline color={COLOR.white_cloud} typeHeadline="h1">
+              {project.headline}
+            </Headline>
+          </ProjectLayoutMainBannerTextContainer>
         </ProjectLayoutMainBannerContent>
       </ProjectLayoutMainBanner>
       <Footer />

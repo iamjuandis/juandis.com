@@ -1,15 +1,28 @@
 import styled from 'styled-components';
 import COLOR from '../../../assets/style/colors';
+import { HeaderTypes } from '../header';
 
-export const HeaderContainer = styled.header`
-  background: ${`${COLOR.white_cloud}77`};
+export const HeaderContainer = styled.header<HeaderTypes>`
+  background: ${(props) =>
+    props.bgColor &&
+    props.scrollTop !== undefined &&
+    props.limitScroll &&
+    props.scrollTop < props.limitScroll
+      ? `${props.bgColor}11`
+      : `${COLOR.white_cloud}77`};
   backdrop-filter: blur(20px);
   position: fixed;
   width: 100%;
   z-index: 100;
   /* Firefox */
   @-moz-document url-prefix() {
-    background: ${COLOR.white_cloud};
+    background: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? props.bgColor
+        : COLOR.white_cloud};
   }
 `;
 
@@ -25,16 +38,30 @@ export const HeaderContent = styled.div`
   width: calc(100% - 60px);
 `;
 
-export const LogoContainer = styled.a`
+export const LogoContainer = styled.a<HeaderTypes>`
   flex-direction: row;
   display: flex;
   div {
     display: flex;
     flex-direction: column;
     strong {
+      color: ${(props) =>
+        props.bgColor &&
+        props.scrollTop !== undefined &&
+        props.limitScroll &&
+        props.scrollTop < props.limitScroll
+          ? COLOR.white_cloud
+          : COLOR.blue_universe};
       font-weight: 800;
     }
     span {
+      color: ${(props) =>
+        props.bgColor &&
+        props.scrollTop !== undefined &&
+        props.limitScroll &&
+        props.scrollTop < props.limitScroll
+          ? COLOR.white_cloud
+          : COLOR.blue_universe};
       font-size: 14px;
     }
   }
@@ -43,12 +70,28 @@ export const LogoContainer = styled.a`
     margin-right: 10px;
     width: 40px;
     path {
-      fill: ${COLOR.blue_universe};
+      fill: ${(props) =>
+        props.bgColor &&
+        props.scrollTop !== undefined &&
+        props.limitScroll &&
+        props.scrollTop < props.limitScroll
+          ? COLOR.white_cloud
+          : COLOR.blue_universe};
     }
   }
 `;
 
-export const NavContainer = styled.nav`
+export const NavContainer = styled.nav<HeaderTypes>`
+  a,
+  p {
+    color: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? COLOR.white_cloud
+        : COLOR.blue_universe};
+  }
   display: flex;
   flex-direction: row;
 `;
