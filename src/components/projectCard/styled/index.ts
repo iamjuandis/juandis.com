@@ -28,8 +28,11 @@ export const ProjectCardCoverContainer = styled.div<ProjectCardComponentTypes>`
   width: 100%;
 `;
 
-export const ProjectCardCoverImage = styled.img`
+export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
   object-fit: cover;
+  height: ${(props) => (props.gridRange && props.gridRange[2] === 'large' ? '360px' : '100%')};
+  position: ${(props) =>
+    props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
   width: 100%;
 `;
 

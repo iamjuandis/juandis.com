@@ -30,6 +30,7 @@ const ProjectCard = ({
       <ProjectCardContainer title={client} gridRange={gridRange}>
         <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
           <ProjectCardCoverImage
+            gridRange={gridRange}
             src={gridRange && gridRange[2] === 'big' ? coverImages[1] : coverImages[0]}
             alt={client}
           />

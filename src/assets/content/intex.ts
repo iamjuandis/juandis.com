@@ -1,11 +1,17 @@
 import { MainBannerType, NavOptionType } from '../../types/interfaces';
 import { scrollToIDElement } from '../utils/components';
+import Router from 'next/router';
 
 export const NAV_OPTIONS: NavOptionType[] = [
   {
     label: 'Projects',
     type: 'action',
-    onClick: scrollToIDElement('projects'),
+    onClick: () => {
+      if (window.location.pathname !== '/') {
+        Router.push({ pathname: '/', query: { g: 'projects' } });
+      }
+      scrollToIDElement('projects');
+    },
   },
   {
     label: 'Resume',
