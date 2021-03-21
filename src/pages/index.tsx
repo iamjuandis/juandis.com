@@ -2,7 +2,7 @@ import { MAIN_BANNER_TEXTS } from '../assets/content/intex';
 import { PROJECTS } from '../assets/content/projects';
 import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
-import PageLayout from '../layouts/page_layout/intex';
+import PageLayout from '../layouts/pageLayout/intex';
 
 const Home = () => {
   return (

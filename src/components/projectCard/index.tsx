@@ -26,7 +26,7 @@ const ProjectCard = ({
   gridRange,
 }: ProjectCardType) => {
   return (
-    <Link href={`/project/${slug}`} passHref>
+    <Link href={`/projects/${slug}`} passHref>
       <ProjectCardContainer title={client} gridRange={gridRange}>
         <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
           <ProjectCardCoverImage

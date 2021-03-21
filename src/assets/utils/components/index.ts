@@ -8,7 +8,6 @@ export const scrollToIDElement = (id: any) => {
 };
 
 export const handleGridRangeProject = (length: number, position: number) => {
-  console.info(length, position);
   switch (true) {
     case length === 1:
       return [1, -1, 'large'];

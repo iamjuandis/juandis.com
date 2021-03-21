@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { PROJECTS } from '../../assets/content/projects';
+import ProjectLayout from '../../layouts/projectLayout';
 import { ProjectAllTypes } from '../../types/interfaces';
 
 interface Props {
@@ -16,16 +17,10 @@ const ProjectPage = ({ project, isValid }: Props) => {
     }
   }, []);
 
-  const { client, mainColor, headline } = project;
-
-  return (
-    <div>
-      Project: {client} {mainColor} {headline}
-    </div>
-  );
+  return <ProjectLayout project={project} />;
 };
 
-ProjectPage.getInitialProps = ({ query }: any) => {
+ProjectPage.getInitialProps = async ({ query }: any) => {
   const projectSelected = PROJECTS[query.slug];
   if (projectSelected) {
     return {

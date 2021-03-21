@@ -3,6 +3,9 @@ import { ProjectCardComponentTypes } from '..';
 import COLOR from '../../../assets/style/colors';
 
 export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
+  display: ${(props) => (props.gridRange && props.gridRange[2] === 'large' ? 'grid' : 'flex')};
+  flex-direction: column;
+  grid-template-columns: 57.1289% 5fr;
   background: ${COLOR.white_cloud};
   grid-column: ${(props) => props.gridRange && `${props.gridRange[0]} / ${props.gridRange[1]}`};
   position: relative;

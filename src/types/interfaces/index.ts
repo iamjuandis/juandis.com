@@ -46,3 +46,11 @@ export type ProjectAllTypes = ProjectMainTypes;
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
 }
+
+export interface HeadTagsProps {
+  title: string;
+  description: string;
+  image: string;
+  currentURL: string;
+  locale: string;
+}

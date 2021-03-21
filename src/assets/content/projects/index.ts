@@ -45,7 +45,7 @@ export const PROJECTS: ProjectsType = {
     client: 'Frostbyte',
     headline: 'Building the next elearning platform to transform education.',
     mainColor: '#1166ff',
-    slug: 'get2wear',
+    slug: 'fr',
     coverImages: [
       '/assets/images/projects/proper/test-small.png',
       '/assets/images/projects/proper/test-small.png',
