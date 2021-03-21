@@ -13,7 +13,7 @@ export interface NavOptionType {
 export interface ParagraphType {
   color?: string;
   size?: number;
-  children?: string;
+  children?: any;
 }
 
 export interface HeadlineType {

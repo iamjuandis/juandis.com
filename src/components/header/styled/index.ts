@@ -7,6 +7,10 @@ export const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
   z-index: 100;
+  /* Firefox */
+  @-moz-document url-prefix() {
+    background: ${COLOR.white_cloud};
+  }
 `;
 
 export const HeaderContent = styled.div`
