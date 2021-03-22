@@ -1,6 +1,9 @@
 * {
+  -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
+  -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
   font-family: 'europa', sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  transition: all ease 0.3s;
 }
