@@ -3,7 +3,7 @@ import Paragraph from '../paragraph';
 import { ErrorContainer, ErrorContent } from './styled';
 
 interface ErrorsType {
-  typeError: string;
+  typeError: number;
 }
 
 const Errors = ({ typeError }: ErrorsType) => {
@@ -12,18 +12,18 @@ const Errors = ({ typeError }: ErrorsType) => {
       <ErrorContent>
         <Headline
           children={
-            typeError === '404'
+            typeError === 404
               ? `Not found`
-              : typeError === '500'
+              : typeError === 500
               ? `Internal Server Error`
-              : `Somthing is not working`
+              : `Something is not working`
           }
           typeHeadline="h1"
         />
-        {typeError === '404' && <Paragraph children={`Error ${typeError}`} />}
+        <Paragraph children={`Error ${typeError}`} />
         <Paragraph
           children={
-            typeError === '404'
+            typeError === 404
               ? `Ooops, the page you're looking doesn't exist.`
               : `There is an error on the server. Hope it's fixed soon.`
           }
