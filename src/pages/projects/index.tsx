@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 const ProjectsPage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push('/');
+    router.push('/?g=projects');
   }, []);
-  return <div>404</div>;
+  return <div></div>;
 };
 
 export default ProjectsPage;
