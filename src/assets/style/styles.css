@@ -2,6 +2,7 @@
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
   -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
   font-family: 'europa', sans-serif;
+  font-display: swap;
   margin: 0;
   padding: 0;
   text-decoration: none;
