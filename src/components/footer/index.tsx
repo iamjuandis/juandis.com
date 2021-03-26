@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import COLOR from '../../assets/style/colors';
 import { formatDate } from '../../assets/utils/components';
 import Headline from '../headline';
 import Paragraph from '../paragraph';
@@ -8,7 +9,7 @@ interface FooterProps {
   mainColor?: string;
 }
 
-const Footer = ({ mainColor }: FooterProps) => {
+const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
   const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Footer = ({ mainColor }: FooterProps) => {
       });
   }, []);
   return (
-    <FooterContainer>
+    <FooterContainer suppressHydrationWarning={true}>
       <FooterContent>
         <Headline typeHeadline="h2">Get in touch</Headline>
         <FooterTextContent>

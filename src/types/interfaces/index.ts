@@ -38,7 +38,7 @@ export interface MainBannerType {
 export interface OwnerCompanyTypes {
   name: string;
   country: string;
-  icon: ReactNode;
+  icon: any;
   oneColorIcon?: boolean;
 }
 

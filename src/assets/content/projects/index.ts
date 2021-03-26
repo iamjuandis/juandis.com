@@ -10,7 +10,7 @@ export const PROJECTS: ProjectsType = {
     mainColor: '#ff0000',
     slug: 'proper',
     images: {
-      coverImage: '/assets/images/projects/proper/test-small.png',
+      coverImage: '/assets/images/projects/proper/proper-cover.png',
       metaImage: '/assets/images/projects/proper/test-small.png',
       cardImages: [
         '/assets/images/projects/proper/test-small.png',

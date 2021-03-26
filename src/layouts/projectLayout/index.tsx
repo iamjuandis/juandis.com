@@ -12,6 +12,7 @@ import {
   ProjectCompanyTexts,
   ProjectFooter,
   ProjectLayoutContainer,
+  ProjectLayoutCoverImageContainer,
   ProjectLayoutMainBanner,
   ProjectLayoutMainBannerContent,
   ProjectLayoutMainBannerTextContainer,
@@ -53,6 +54,9 @@ const ProjectLayout = ({ project }: Props) => {
               {project.headline}
             </Headline>
           </ProjectLayoutMainBannerTextContainer>
+          <ProjectLayoutCoverImageContainer>
+            <img src={project.images.coverImage} alt={project.headline} />
+          </ProjectLayoutCoverImageContainer>
         </ProjectLayoutMainBannerContent>
       </ProjectLayoutMainBanner>
       <ProjectRoleBanner>
@@ -67,9 +71,11 @@ const ProjectLayout = ({ project }: Props) => {
             />
             <ProjectCompanyContainer
               color={project.mainColor}
-              oneColorIcon={Boolean(project.ownerCompany.oneColorIcon)}
+              oneColorIcon={project.ownerCompany?.oneColorIcon}
             >
-              {project.ownerCompany.icon}
+              {project.ownerCompany.icon && (
+                <div dangerouslySetInnerHTML={{ __html: project.ownerCompany.icon }} />
+              )}
               <ProjectCompanyTexts>
                 <Paragraph size={14} children={`<strong>${project.ownerCompany.name}</strong>`} />
                 <Paragraph size={14}>{project.ownerCompany.country}</Paragraph>
@@ -82,7 +88,7 @@ const ProjectLayout = ({ project }: Props) => {
         <Paragraph
           color={`${COLOR.blue_universe}55`}
           size={14}
-          children={`© 2021. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permited by copyright law. `}
+          children={`© 2021. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permited by copyright law.`}
         />
       </ProjectFooter>
       <Footer mainColor={project.mainColor} />

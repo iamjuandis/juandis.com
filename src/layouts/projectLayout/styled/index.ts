@@ -6,7 +6,7 @@ interface BannerProps {
 
 interface CompanyProps {
   color: string;
-  oneColorIcon: boolean;
+  oneColorIcon: boolean | undefined;
 }
 
 export const ProjectLayoutContainer = styled.section`
@@ -38,6 +38,15 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
   justify-content: flex-end;
   grid-column: 1 / 8;
   height: 100%;
+`;
+
+export const ProjectLayoutCoverImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  img {
+    position: absolute;
+    width: 100%;
+  }
 `;
 
 export const ProjectFooter = styled.div`
