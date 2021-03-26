@@ -22,6 +22,8 @@ export const PROJECTS: ProjectsType = {
     },
     myRole:
       'I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.',
+    overview:
+      'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on make easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constrains and opportunities.',
     ownerCompany: {
       name: 'We Are Angular',
       country: 'Colombia',
