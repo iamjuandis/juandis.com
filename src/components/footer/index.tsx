@@ -4,7 +4,11 @@ import Headline from '../headline';
 import Paragraph from '../paragraph';
 import { FooterContainer, FooterContent, FooterTextContent } from './styled';
 
-const Footer = () => {
+interface FooterProps {
+  mainColor?: string;
+}
+
+const Footer = ({ mainColor }: FooterProps) => {
   const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
@@ -22,26 +26,37 @@ const Footer = () => {
         <Headline typeHeadline="h2">Get in touch</Headline>
         <FooterTextContent>
           <Paragraph
+            highlightColor={mainColor}
             children={`<a href="https://juandis.com/resume" title="Resume">
               Resume
             </a>`}
           />
 
           <Paragraph
+            highlightColor={mainColor}
             children={`<a href="mailto:me@juandis.com" title="me@juandis.com">
               me@juandis.com
             </a>`}
           />
-          <Paragraph children={`© ${new Date().getFullYear()}. All rights reserved.`} />
+          <Paragraph
+            highlightColor={mainColor}
+            children={`© ${new Date().getFullYear()}. All rights reserved.`}
+          />
 
-          <Paragraph children={`Designed & built by me.`} />
+          <Paragraph highlightColor={mainColor} children={`Designed & built by me.`} />
 
           <Paragraph
+            highlightColor={mainColor}
             children={`<a href="tel:573122659625" title="+57 312 265 9625">
               +57 312 265 9625
             </a>`}
           />
-          {lastUpdated && <Paragraph children={`Updated ${formatDate(`${lastUpdated}`)}`} />}
+          {lastUpdated && (
+            <Paragraph
+              highlightColor={mainColor}
+              children={`Updated ${formatDate(`${lastUpdated}`)}`}
+            />
+          )}
         </FooterTextContent>
       </FooterContent>
     </FooterContainer>

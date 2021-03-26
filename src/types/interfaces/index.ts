@@ -12,6 +12,7 @@ export interface NavOptionType {
 
 export interface ParagraphType {
   color?: string;
+  highlightColor?: string;
   size?: number;
   children?: any;
 }
@@ -42,16 +43,23 @@ export interface OwnerCompanyTypes {
 }
 
 export interface ProjectImagesTypes {
-  cardImage?: string;
+  cardImages?: string[];
   metaImage?: string;
-  coverImages: string[];
+  coverImage: string;
   sliderImages?: string[];
+  middleImage: string;
 }
 
+export interface MidSectionType {
+  title: string;
+  paragraph: string;
+}
 export interface ProjectInternalInfoTypes {
+  conclusion: string;
   myRole: string;
   overview: string;
   ownerCompany: OwnerCompanyTypes;
+  midSection: MidSectionType;
 }
 export interface ProjectMainTypes {
   client: string;

@@ -11,4 +11,12 @@ export const ParagraphContainer = styled.p<ParagraphType>`
     border-bottom: 1px solid
       ${(props) => (props.color ? `${props.color}55` : `${COLOR.blue_universe}55`)};
   }
+  &:hover {
+    a {
+      color: ${(props) =>
+        props.highlightColor ? props.highlightColor : `${COLOR.blue_universe}77`};
+      border-bottom-color: ${(props) =>
+        props.highlightColor ? props.highlightColor : COLOR.blue_universe};
+    }
+  }
 `;

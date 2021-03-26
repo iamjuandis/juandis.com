@@ -4,13 +4,15 @@ import { LOGO_WE_ARE_ANGULAR } from '../../images';
 export const PROJECTS: ProjectsType = {
   proper: {
     client: 'Proper',
+    conclusion:
+      'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.',
     headline: 'Shaping a new & open real state investment experience.',
     mainColor: '#ff0000',
     slug: 'proper',
     images: {
-      cardImage: '/assets/images/projects/proper/test-small.png',
+      coverImage: '/assets/images/projects/proper/test-small.png',
       metaImage: '/assets/images/projects/proper/test-small.png',
-      coverImages: [
+      cardImages: [
         '/assets/images/projects/proper/test-small.png',
         '/assets/images/projects/proper/test-small.png',
       ],
@@ -19,6 +21,13 @@ export const PROJECTS: ProjectsType = {
         '/assets/images/projects/proper/test-small.png',
         '/assets/images/projects/proper/test-small.png',
       ],
+      middleImage: '/assets/images/projects/proper/test-small.png',
+    },
+    midSection: {
+      title: 'Understand',
+      paragraph: `Understand the current flow to invest in Real State.<br/>
+      Understand the technology involved in the process. <br/>
+      Understand the whole new investment flow and the user perspective.`,
     },
     myRole:
       'I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.',

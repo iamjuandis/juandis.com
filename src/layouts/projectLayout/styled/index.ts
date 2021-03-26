@@ -4,6 +4,11 @@ interface BannerProps {
   background: string;
 }
 
+interface CompanyProps {
+  color: string;
+  oneColorIcon: boolean;
+}
+
 export const ProjectLayoutContainer = styled.section`
   width: 100%;
 `;
@@ -33,4 +38,53 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
   justify-content: flex-end;
   grid-column: 1 / 8;
   height: 100%;
+`;
+
+export const ProjectFooter = styled.div`
+  margin: auto;
+  margin-top: 50px;
+  max-width: 1200px;
+  width: calc(100% - 60px);
+`;
+
+export const ProjectRoleBanner = styled.div`
+  padding: 50px 0;
+  width: 100%;
+`;
+
+export const ProjectRoleBannerContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-column-gap: 30px;
+  height: 100%;
+  margin: auto;
+  max-width: 1200px;
+  width: calc(100% - 60px);
+`;
+
+export const ProjectRoleTextBoxes = styled.div`
+  grid-column: 3 / 8;
+  width: 100%;
+`;
+
+export const ProjectCompanyContainer = styled.div<CompanyProps>`
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  width: 100%;
+  ${(props) =>
+    props.oneColorIcon &&
+    `
+    svg {
+      path {
+        fill: ${props.color}
+      }
+    }
+  `}
+`;
+
+export const ProjectCompanyTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
 `;
