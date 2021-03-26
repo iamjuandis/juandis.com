@@ -23,7 +23,7 @@ const ProjectsBanner = ({ projects }: Props) => {
                 client={project.client}
                 gridRange={handleGridRangeProject(lenghtProjects, index)}
                 slug={project.slug}
-                coverImages={project.coverImages}
+                images={project.images}
                 key={`${key}-${index}`}
                 mainColor={project.mainColor}
                 headline={project.headline}

@@ -1,28 +1,12 @@
 import { useEffect, useState } from 'react';
+import { formatDate } from '../../assets/utils/components';
 import Headline from '../headline';
 import Paragraph from '../paragraph';
 import { FooterContainer, FooterContent, FooterTextContent } from './styled';
 
 const Footer = () => {
   const [lastUpdated, setLastUpdated] = useState(null);
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    const months = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ];
-    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-  };
+
   useEffect(() => {
     fetch('https://api.github.com/repos/iamjuandis/juandis.com/branches/main')
       .then((response) => {

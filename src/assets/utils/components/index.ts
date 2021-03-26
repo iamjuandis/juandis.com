@@ -31,3 +31,22 @@ export const handleGridRangeProject = (length: number, position: number) => {
       return [1, -1, 'large'];
   }
 };
+
+export const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+};

@@ -17,21 +17,16 @@ export interface ProjectCardComponentTypes {
 
 type ProjectCardType = ProjectMainTypes & ProjectCardComponentTypes;
 
-const ProjectCard = ({
-  mainColor,
-  client,
-  headline,
-  slug,
-  coverImages,
-  gridRange,
-}: ProjectCardType) => {
+const ProjectCard = ({ mainColor, client, headline, slug, images, gridRange }: ProjectCardType) => {
   return (
     <Link href={`/projects/${slug}`} passHref>
       <ProjectCardContainer title={client} gridRange={gridRange}>
         <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
           <ProjectCardCoverImage
             gridRange={gridRange}
-            src={gridRange && gridRange[2] === 'big' ? coverImages[1] : coverImages[0]}
+            src={
+              gridRange && gridRange[2] === 'big' ? images.coverImages[1] : images.coverImages[0]
+            }
             alt={client}
           />
         </ProjectCardCoverContainer>

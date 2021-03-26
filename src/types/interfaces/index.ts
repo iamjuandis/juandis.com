@@ -34,15 +34,33 @@ export interface MainBannerType {
   paragraphs: string[];
 }
 
+export interface OwnerCompanyTypes {
+  name: string;
+  country: string;
+  icon: ReactNode;
+  oneColorIcon?: boolean;
+}
+
+export interface ProjectImagesTypes {
+  cardImage?: string;
+  metaImage?: string;
+  coverImages: string[];
+  sliderImages?: string[];
+}
+
+export interface ProjectInternalInfoTypes {
+  myRole: string;
+  ownerCompany: OwnerCompanyTypes;
+}
 export interface ProjectMainTypes {
   client: string;
   headline: string;
   mainColor: string;
   slug: string;
-  coverImages: string[];
+  images: ProjectImagesTypes;
 }
 
-export type ProjectAllTypes = ProjectMainTypes;
+export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
 }
