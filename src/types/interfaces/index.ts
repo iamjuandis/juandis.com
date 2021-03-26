@@ -50,6 +50,7 @@ export interface ProjectImagesTypes {
 
 export interface ProjectInternalInfoTypes {
   myRole: string;
+  overview: string;
   ownerCompany: OwnerCompanyTypes;
 }
 export interface ProjectMainTypes {
@@ -61,6 +62,7 @@ export interface ProjectMainTypes {
 }
 
 export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
+
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
 }
