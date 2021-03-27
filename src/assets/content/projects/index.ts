@@ -21,24 +21,30 @@ export const PROJECTS: ProjectsType = {
     mainColor: '#E20B21',
     slug: 'proper',
     images: {
-      footerImage: '/assets/images/projects/proper/proper-cover.png',
-      coverImage: '/assets/images/projects/proper/proper-cover.png',
-      discoveryImage: '/assets/images/projects/proper/proper-cover.png',
-      metaImage: '/assets/images/projects/proper/test-small.png',
+      footerImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+      coverImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616888368/portfolio/projects/proper/proper-cover_syhtut.png',
+      discoveryImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
       cardImages: [
-        '/assets/images/projects/proper/test-small.png',
-        '/assets/images/projects/proper/test-small.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
       ],
       sliderImages: [
-        '/assets/images/projects/proper/test-small.png',
-        '/assets/images/projects/proper/test-small.png',
-        '/assets/images/projects/proper/test-small.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
       ],
-      middleImage: '/assets/images/projects/proper/test-small.png',
+      middleImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+      previewImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
       smallImages: [
-        '/assets/images/projects/proper/test-small.png',
-        '/assets/images/projects/proper/test-small.png',
-        '/assets/images/projects/proper/test-small.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
     },
     midSection: {

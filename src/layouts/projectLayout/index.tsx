@@ -60,7 +60,7 @@ const ProjectLayout = ({ project }: Props) => {
         description={project.headline}
         locale={`${router.locale}`}
         currentURL={currentURL}
-        image={`https://juandis.com/`}
+        image={project.images.previewImage}
       />
       <Header bgColor={project.mainColor} />
       <ProjectLayoutMainBanner background={project.mainColor}>
@@ -177,8 +177,12 @@ const ProjectLayout = ({ project }: Props) => {
               <Headline typeHeadline="h3" children={project.discovery.headline} />
             )}
             <Paragraph children={project.discovery.description} />
+            <br />
             {project.discovery.items.map((item: string, idx: number) => (
-              <Paragraph size={30} key={idx} children={item} />
+              <>
+                <Paragraph size={30} key={idx} children={item} />
+                <br />
+              </>
             ))}
           </ProjectDiscoveryTexts>
         </ProjectDiscoveryContent>

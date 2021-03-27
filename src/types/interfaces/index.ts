@@ -48,8 +48,8 @@ export interface ProjectImagesTypes {
   coverImage: string;
   discoveryImage: string;
   footerImage: string;
-  metaImage?: string;
   middleImage: string;
+  previewImage: string;
   sliderImages: string[];
   smallImages: string[];
 }
