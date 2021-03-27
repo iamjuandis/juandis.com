@@ -10,9 +10,7 @@ export const ParagraphContainer = styled.p<ParagraphType>`
     color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
     border-bottom: 1px solid
       ${(props) => (props.color ? `${props.color}55` : `${COLOR.blue_universe}55`)};
-  }
-  &:hover {
-    a {
+    &:hover {
       color: ${(props) =>
         props.highlightColor ? props.highlightColor : `${COLOR.blue_universe}77`};
       border-bottom-color: ${(props) =>
