@@ -25,7 +25,7 @@ const ProjectCard = ({ mainColor, client, headline, slug, images, gridRange }: P
           <ProjectCardCoverImage
             gridRange={gridRange}
             src={
-              gridRange && gridRange[2] === 'big' ? images.coverImages[1] : images.coverImages[0]
+              gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
             }
             alt={client}
           />

@@ -43,10 +43,10 @@ export interface OwnerCompanyTypes {
 }
 
 export interface ProjectImagesTypes {
-  cardImages?: string[];
+  cardImages: string[];
   metaImage?: string;
   coverImage: string;
-  sliderImages?: string[];
+  sliderImages: string[];
   middleImage: string;
 }
 

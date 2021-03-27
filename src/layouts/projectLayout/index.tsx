@@ -6,6 +6,7 @@ import HeadTags from '../../components/head';
 import Header from '../../components/header/header';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
+import Slider from '../../components/slider';
 import { ProjectAllTypes } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
@@ -19,6 +20,8 @@ import {
   ProjectRoleBanner,
   ProjectRoleBannerContent,
   ProjectRoleTextBoxes,
+  ProjectSliderContainer,
+  ProjectSliderContent,
 } from './styled';
 
 interface Props {
@@ -84,6 +87,11 @@ const ProjectLayout = ({ project }: Props) => {
           </ProjectRoleTextBoxes>
         </ProjectRoleBannerContent>
       </ProjectRoleBanner>
+      <ProjectSliderContainer>
+        <ProjectSliderContent>
+          <Slider slides={project.images.sliderImages} />
+        </ProjectSliderContent>
+      </ProjectSliderContainer>
       <ProjectFooter>
         <Paragraph
           color={`${COLOR.blue_universe}55`}

@@ -41,6 +41,8 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
 `;
 
 export const ProjectLayoutCoverImageContainer = styled.div`
+  grid-column: 8 / -1;
+  padding-top: 70px;
   position: relative;
   width: 100%;
   img {
@@ -96,4 +98,14 @@ export const ProjectCompanyTexts = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+`;
+
+export const ProjectSliderContainer = styled.div`
+  width: 100%;
+`;
+
+export const ProjectSliderContent = styled.div`
+  margin: auto;
+  max-width: 1200px;
+  width: calc(100% - 60px);
 `;
