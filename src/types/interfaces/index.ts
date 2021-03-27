@@ -12,6 +12,7 @@ export interface NavOptionType {
 
 export interface ParagraphType {
   color?: string;
+  columns?: number;
   highlightColor?: string;
   size?: number;
   children?: any;

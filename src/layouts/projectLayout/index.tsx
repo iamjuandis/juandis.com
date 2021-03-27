@@ -17,6 +17,11 @@ import {
   ProjectLayoutMainBanner,
   ProjectLayoutMainBannerContent,
   ProjectLayoutMainBannerTextContainer,
+  ProjectMidSectionContainer,
+  ProjectMidSectionContent,
+  ProjectMidSectionTexts,
+  ProjectOverviewContainer,
+  ProjectOverviewContent,
   ProjectRoleBanner,
   ProjectRoleBannerContent,
   ProjectRoleTextBoxes,
@@ -62,6 +67,7 @@ const ProjectLayout = ({ project }: Props) => {
           </ProjectLayoutCoverImageContainer>
         </ProjectLayoutMainBannerContent>
       </ProjectLayoutMainBanner>
+
       <ProjectRoleBanner>
         <ProjectRoleBannerContent>
           <ProjectRoleTextBoxes>
@@ -87,11 +93,36 @@ const ProjectLayout = ({ project }: Props) => {
           </ProjectRoleTextBoxes>
         </ProjectRoleBannerContent>
       </ProjectRoleBanner>
+
       <ProjectSliderContainer>
         <ProjectSliderContent>
           <Slider slides={project.images.sliderImages} />
         </ProjectSliderContent>
       </ProjectSliderContainer>
+
+      <ProjectOverviewContainer>
+        <ProjectOverviewContent>
+          <Headline typeHeadline="h3" color={project.mainColor}>
+            Overview
+          </Headline>
+          <br />
+          <Paragraph columns={2} children={project.overview} />
+        </ProjectOverviewContent>
+      </ProjectOverviewContainer>
+
+      <ProjectMidSectionContainer>
+        <ProjectMidSectionContent>
+          <ProjectMidSectionTexts>
+            <Headline typeHeadline="h3" color={project.mainColor}>
+              {project.midSection.title}
+            </Headline>
+            <br />
+            <Paragraph children={project.midSection.paragraph} />
+          </ProjectMidSectionTexts>
+          <img src={project.images.middleImage} alt={project.headline} />
+        </ProjectMidSectionContent>
+      </ProjectMidSectionContainer>
+
       <ProjectFooter>
         <Paragraph
           color={`${COLOR.blue_universe}55`}

@@ -109,3 +109,36 @@ export const ProjectSliderContent = styled.div`
   max-width: 1200px;
   width: calc(100% - 60px);
 `;
+
+export const ProjectOverviewContainer = styled.div`
+  padding: 50px 0;
+  width: 100%;
+`;
+
+export const ProjectOverviewContent = styled.div`
+  margin: auto;
+  max-width: 848px;
+  width: calc(100% - 60px);
+`;
+
+export const ProjectMidSectionContainer = styled.div`
+  width: 100%;
+`;
+
+export const ProjectMidSectionContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-column-gap: 30px;
+  margin: auto;
+  max-width: 1200px;
+  width: calc(100% - 60px);
+  img {
+    grid-column: 7 / -1;
+    width: 100%;
+  }
+`;
+
+export const ProjectMidSectionTexts = styled.div`
+  grid-column: 3 / 7;
+  margin: auto;
+`;

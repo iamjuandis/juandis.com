@@ -25,8 +25,8 @@ export const PROJECTS: ProjectsType = {
     },
     midSection: {
       title: 'Understand',
-      paragraph: `Understand the current flow to invest in Real State.<br/>
-      Understand the technology involved in the process. <br/>
+      paragraph: `Understand the current flow to invest in Real State.<br/><br/>
+      Understand the technology involved in the process. <br/><br/>
       Understand the whole new investment flow and the user perspective.`,
     },
     myRole:

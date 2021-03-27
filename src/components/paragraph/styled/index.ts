@@ -3,6 +3,8 @@ import COLOR from '../../../assets/style/colors';
 import { ParagraphType } from '../../../types/interfaces';
 
 export const ParagraphContainer = styled.p<ParagraphType>`
+  column-count: ${(props) => props.columns};
+  column-gap: 30px;
   color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
   line-height: 150%;
   font-size: ${(props) => (props.size ? `${props.size}px` : '20px')};

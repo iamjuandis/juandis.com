@@ -1,8 +1,9 @@
 import { ParagraphType } from '../../types/interfaces';
 import { ParagraphContainer } from './styled';
 
-const Paragraph = ({ color, highlightColor, size, children }: ParagraphType) => (
+const Paragraph = ({ color, columns = 1, highlightColor, size, children }: ParagraphType) => (
   <ParagraphContainer
+    columns={columns}
     highlightColor={highlightColor}
     color={color}
     size={size}
