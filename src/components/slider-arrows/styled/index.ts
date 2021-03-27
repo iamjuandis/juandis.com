@@ -5,9 +5,9 @@ interface ArrowProps {
   opacity: any;
 }
 
-export const ArrowComponent = styled.div`
+export const ArrowComponent = styled.div<ArrowProps>`
   display: flex;
-  ${(props: ArrowProps) => (props.direction === 'right' ? `right: 25px` : `left: 25px`)};
+  ${(props) => (props.direction === 'right' ? `right: 25px` : `left: 25px`)};
   height: 50px;
   width: 50px;
   justify-content: center;
@@ -16,13 +16,13 @@ export const ArrowComponent = styled.div`
   cursor: pointer;
   align-items: center;
   transition: transform ease-in 0.2s;
-  opacity: ${(props: ArrowProps) => props.opacity};
-  pointer-events: ${(props: ArrowProps) => (props.opacity && props.opacity === 1 ? 'all' : 'none')};
+  opacity: ${(props) => props.opacity};
+  pointer-events: ${(props) => (props.opacity && props.opacity === 1 ? 'all' : 'none')};
   &:hover {
     transform: scale(1.1);
   }
   img {
-    transform: translateX(${(props: ArrowProps) => (props.direction === 'left' ? '-2' : '2')}px);
+    transform: translateX(${(props) => (props.direction === 'left' ? '-2' : '2')}px);
     &:focus {
       outline: 0;
     }

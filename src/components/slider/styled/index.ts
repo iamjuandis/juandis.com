@@ -17,12 +17,12 @@ interface SliderContentProps {
   cantSlides: any;
 }
 
-export const SliderComponent = styled.section`
+export const SliderComponent = styled.section<SliderStyleProps>`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: ${(props: SliderStyleProps) => (props.marginTop ? `${props.marginTop}px` : 0)};
+  margin-top: ${(props) => (props.marginTop ? `${props.marginTop}px` : 0)};
   padding: 0 30px;
   width: 100%;
   @media screen and (max-width: 700px) {
@@ -50,11 +50,11 @@ export const SliderElement = styled.div`
   }
 `;
 
-export const SliderContent = styled.div`
-  transform: translateX(-${(props: SliderContentProps) => props.translate}%);
+export const SliderContent = styled.div<SliderContentProps>`
+  transform: translateX(-${(props) => props.translate}%);
   transition: all ease-in-out 0.5s;
   height: 100%;
-  width: calc(100% * ${(props: SliderContentProps) => props.cantSlides});
+  width: calc(100% * ${(props) => props.cantSlides});
   display: flex;
   flex-direction: row;
 `;
