@@ -31,6 +31,8 @@ import {
   ProjectRoleTextBoxes,
   ProjectSliderContainer,
   ProjectSliderContent,
+  ProjectSmallImgsContainer,
+  ProjectSmallImgsContent,
 } from './styled';
 
 interface Props {
@@ -153,6 +155,16 @@ const ProjectLayout = ({ project }: Props) => {
           <Paragraph columns={2} children={project.focusProject?.longDescription} />
         </ProjectFocusContent>
       </ProjectFocusContainer>
+
+      {project.images.smallImages && project.focusProject?.items.length > 0 && (
+        <ProjectSmallImgsContainer>
+          <ProjectSmallImgsContent>
+            {project.images.smallImages.map((image: string, idx: number) => (
+              <img src={image} alt={`${idx + 1}. ${project.client}`} />
+            ))}
+          </ProjectSmallImgsContent>
+        </ProjectSmallImgsContainer>
+      )}
 
       <ProjectFooter>
         <Paragraph

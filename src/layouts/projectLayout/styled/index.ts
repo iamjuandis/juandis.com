@@ -181,3 +181,21 @@ export const ItemFocus = styled.p<ItemFocusProps>`
     width: fit-content;
   }
 `;
+
+export const ProjectSmallImgsContainer = styled.div`
+  width: 100%;
+`;
+
+export const ProjectSmallImgsContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  margin: auto;
+  max-width: 1024px;
+  width: calc(100% - 60px);
+  img {
+    object-fit: cover;
+    height: 340px;
+    width: 100%;
+  }
+`;
