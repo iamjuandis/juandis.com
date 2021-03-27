@@ -9,8 +9,12 @@ import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
 import { ProjectAllTypes } from '../../types/interfaces';
 import {
+  ItemFocus,
+  ItemsFocusContainer,
   ProjectCompanyContainer,
   ProjectCompanyTexts,
+  ProjectFocusContainer,
+  ProjectFocusContent,
   ProjectFooter,
   ProjectLayoutContainer,
   ProjectLayoutCoverImageContainer,
@@ -114,14 +118,41 @@ const ProjectLayout = ({ project }: Props) => {
         <ProjectMidSectionContent>
           <ProjectMidSectionTexts>
             <Headline typeHeadline="h3" color={project.mainColor}>
-              {project.midSection.title}
+              {project.midSection?.title}
             </Headline>
             <br />
-            <Paragraph children={project.midSection.paragraph} />
+            <Paragraph children={project.midSection?.paragraph} />
           </ProjectMidSectionTexts>
           <img src={project.images.middleImage} alt={project.headline} />
         </ProjectMidSectionContent>
       </ProjectMidSectionContainer>
+
+      <ProjectFocusContainer>
+        <ProjectFocusContent>
+          {project.focusProject?.headline && (
+            <>
+              <Headline
+                typeHeadline="h3"
+                children={project.focusProject?.headline}
+                color={project.mainColor}
+              />
+              <br />
+            </>
+          )}
+          <Paragraph children={project.focusProject?.description} />
+          {project.focusProject?.items && project.focusProject?.items.length > 0 && (
+            <ItemsFocusContainer>
+              {project.focusProject?.items.map((item: string, idx: number) => (
+                <ItemFocus key={idx} color={project.mainColor}>
+                  <span>{item}</span>
+                </ItemFocus>
+              ))}
+            </ItemsFocusContainer>
+          )}
+          <br />
+          <Paragraph columns={2} children={project.focusProject?.longDescription} />
+        </ProjectFocusContent>
+      </ProjectFocusContainer>
 
       <ProjectFooter>
         <Paragraph

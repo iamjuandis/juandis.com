@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import COLOR from '../../../assets/style/colors';
 
 interface BannerProps {
   background: string;
@@ -141,4 +142,42 @@ export const ProjectMidSectionContent = styled.div`
 export const ProjectMidSectionTexts = styled.div`
   grid-column: 3 / 7;
   margin: auto;
+`;
+
+export const ProjectFocusContainer = styled.div`
+  padding: 50px 0;
+  width: 100%;
+`;
+
+export const ProjectFocusContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 848px;
+  width: calc(100% - 60px);
+`;
+
+export const ItemsFocusContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  padding: 50px 0;
+  width: 100%;
+`;
+
+interface ItemFocusProps {
+  color: string;
+}
+
+export const ItemFocus = styled.p<ItemFocusProps>`
+  display: flex;
+  width: 100%;
+  span {
+    background: ${(props) => (props.color ? `${props.color}1a` : `${COLOR.blue_universe}1a`)};
+    color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
+    font-size: 22px;
+    padding: 10px 20px;
+    width: fit-content;
+  }
 `;
