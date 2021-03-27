@@ -34,14 +34,15 @@ export const SliderComponent = styled.section`
 export const SliderComponentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1240px;
+  max-width: 1200px;
+  position: relative;
   width: 100%;
 `;
 
 export const SliderElement = styled.div`
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 457px;
   overflow: hidden;
   width: 100%;
   @media screen and (max-width: 700px) {
@@ -59,14 +60,14 @@ export const SliderContent = styled.div`
 `;
 
 export const ContainerArrows = styled.div`
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100%;
   padding: 0 20px;
-  position: relative;
-  margin-top: -325px;
-  margin-bottom: 275px;
+  position: absolute;
   width: 100%;
   @media screen and (max-width: 700px) {
     margin-top: -30%;
@@ -76,13 +77,14 @@ export const ContainerArrows = styled.div`
 
 export const SliderFooter = styled.div`
   box-sizing: border-box;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 100px;
-  max-width: 1240px;
+  max-width: 1200px;
+  padding: 0 30px 30px 30px;
+  position: absolute;
   width: 100%;
   a {
     display: flex;
