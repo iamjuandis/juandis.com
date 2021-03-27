@@ -6,11 +6,24 @@ export const PROJECTS: ProjectsType = {
     client: 'Proper',
     conclusion:
       'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.',
+    discovery: {
+      description:
+        'Talking with users and experts, we found that we should focus on the next specific <strong>principles</strong> that would allowed us build a comprehensive product.',
+      items: ['Easy to use', 'Diverse', 'Secure', '“You are the owner”', 'Open'],
+    },
+    focusProject: {
+      description: 'We focused on 4 main problems',
+      items: ['Bureaucracy', 'Safety', 'Accesibility', 'Time'],
+      longDescription:
+        'Thanks to the vision and the discoveries found in the first iteration, we built the first functional prototype to keep testing on users.<br/> In this new iteration I had the opportunity to lead the design process and the Frontend Development.',
+    },
     headline: 'Shaping a new & open real state investment experience.',
-    mainColor: '#ff0000',
+    mainColor: '#E20B21',
     slug: 'proper',
     images: {
+      footerImage: '/assets/images/projects/proper/proper-cover.png',
       coverImage: '/assets/images/projects/proper/proper-cover.png',
+      discoveryImage: '/assets/images/projects/proper/proper-cover.png',
       metaImage: '/assets/images/projects/proper/test-small.png',
       cardImages: [
         '/assets/images/projects/proper/test-small.png',
@@ -22,6 +35,11 @@ export const PROJECTS: ProjectsType = {
         '/assets/images/projects/proper/test-small.png',
       ],
       middleImage: '/assets/images/projects/proper/test-small.png',
+      smallImages: [
+        '/assets/images/projects/proper/test-small.png',
+        '/assets/images/projects/proper/test-small.png',
+        '/assets/images/projects/proper/test-small.png',
+      ],
     },
     midSection: {
       title: 'Understand',

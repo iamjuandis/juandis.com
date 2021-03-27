@@ -54,7 +54,7 @@ export const ProjectLayoutCoverImageContainer = styled.div`
 export const ProjectFooter = styled.div`
   margin: auto;
   margin-top: 50px;
-  max-width: 1200px;
+  max-width: 848px;
   width: calc(100% - 60px);
 `;
 

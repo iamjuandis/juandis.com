@@ -45,18 +45,36 @@ export interface OwnerCompanyTypes {
 
 export interface ProjectImagesTypes {
   cardImages: string[];
-  metaImage?: string;
   coverImage: string;
-  sliderImages: string[];
+  discoveryImage: string;
+  footerImage: string;
+  metaImage?: string;
   middleImage: string;
+  sliderImages: string[];
+  smallImages: string[];
 }
 
 export interface MidSectionType {
   title: string;
   paragraph: string;
 }
+
+export interface DiscoveryType {
+  headline?: string;
+  description: string;
+  items: string[];
+}
+
+export interface FocusType {
+  headline?: string;
+  description: string;
+  items: string[];
+  longDescription: string;
+}
 export interface ProjectInternalInfoTypes {
   conclusion: string;
+  discovery: DiscoveryType;
+  focusProject: FocusType;
   myRole: string;
   overview: string;
   ownerCompany: OwnerCompanyTypes;
