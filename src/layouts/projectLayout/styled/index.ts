@@ -199,3 +199,29 @@ export const ProjectSmallImgsContent = styled.div`
     width: 100%;
   }
 `;
+
+export const ProjectDiscoveryContainer = styled.div`
+  padding-top: 30px;
+  width: 100%;
+`;
+export const ProjectDiscoveryContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  margin: auto;
+  max-width: 1024px;
+  width: calc(100% - 60px);
+  img {
+    display: flex;
+    grid-column: 1 / 7;
+    width: 100%;
+  }
+`;
+
+export const ProjectDiscoveryTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 7 / -2;
+  width: 100%;
+`;

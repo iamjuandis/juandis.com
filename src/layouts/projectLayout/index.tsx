@@ -13,6 +13,9 @@ import {
   ItemsFocusContainer,
   ProjectCompanyContainer,
   ProjectCompanyTexts,
+  ProjectDiscoveryContainer,
+  ProjectDiscoveryContent,
+  ProjectDiscoveryTexts,
   ProjectFocusContainer,
   ProjectFocusContent,
   ProjectFooter,
@@ -165,6 +168,21 @@ const ProjectLayout = ({ project }: Props) => {
           </ProjectSmallImgsContent>
         </ProjectSmallImgsContainer>
       )}
+
+      <ProjectDiscoveryContainer>
+        <ProjectDiscoveryContent>
+          <img src={project.images.discoveryImage} alt={project.headline} />
+          <ProjectDiscoveryTexts>
+            {project.discovery.headline && (
+              <Headline typeHeadline="h3" children={project.discovery.headline} />
+            )}
+            <Paragraph children={project.discovery.description} />
+            {project.discovery.items.map((item: string, idx: number) => (
+              <Paragraph size={30} key={idx} children={item} />
+            ))}
+          </ProjectDiscoveryTexts>
+        </ProjectDiscoveryContent>
+      </ProjectDiscoveryContainer>
 
       <ProjectFooter>
         <Paragraph
