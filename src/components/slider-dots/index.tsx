@@ -4,19 +4,21 @@ interface DotProps {
   active?: boolean;
   callback?: any;
   slideNumber?: number;
+  mainColor?: string;
 }
 
 interface DotsProps {
   slides?: any;
   activeSlide?: number;
   callbackDots?: any;
+  mainColor?: string;
 }
 
-const Dot = ({ active, callback, slideNumber }: DotProps) => (
-  <DotComponent active={active} onClick={() => callback(slideNumber)} />
+const Dot = ({ active, callback, slideNumber, mainColor }: DotProps) => (
+  <DotComponent mainColor={mainColor} active={active} onClick={() => callback(slideNumber)} />
 );
 
-const Dots = ({ slides, activeSlide, callbackDots }: DotsProps) => (
+const Dots = ({ slides, activeSlide, callbackDots, mainColor }: DotsProps) => (
   <DotsComponent>
     {slides?.map((slide: any, idx: number) => (
       <Dot
@@ -24,6 +26,7 @@ const Dots = ({ slides, activeSlide, callbackDots }: DotsProps) => (
         active={activeSlide === idx}
         slideNumber={idx}
         callback={callbackDots}
+        mainColor={mainColor}
       />
     ))}
   </DotsComponent>

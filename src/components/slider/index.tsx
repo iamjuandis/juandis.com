@@ -8,17 +8,15 @@ import {
   ContainerArrows,
   SliderNumbers,
 } from './styled';
-import Dots from '../slider-dots';
+//import Dots from '../slider-dots';
 import Arrow from '../slider-arrows';
 import SlideImage from '../slide-image';
-import Link from 'next/link';
 
 interface SliderProps {
   slides: string[];
   showArrows?: boolean;
   showFooter?: boolean;
-  linkMoreURL?: any;
-  linkMoreText?: any;
+  mainColor?: string;
   marginTop?: number;
 }
 
@@ -26,8 +24,7 @@ const Slider = ({
   slides,
   showArrows = true,
   showFooter = true,
-  linkMoreURL,
-  linkMoreText,
+  mainColor,
   marginTop = 0,
 }: SliderProps) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -48,10 +45,10 @@ const Slider = ({
     setActiveSlide(activeSlide < slides?.length - 1 ? activeSlide + 1 : slides?.length - 1);
   };
 
-  const callbackDots = (e: any) => {
+  /* const callbackDots = (e: any) => {
     setTranslate(widthSlide * e);
     setActiveSlide(e);
-  };
+  }; */
 
   const handleGesure = () => {
     if (Math.abs(touchendX - touchstartX) > 20) {
@@ -99,8 +96,14 @@ const Slider = ({
 
         {showArrows && (
           <ContainerArrows>
-            <Arrow direction="left" handleClick={prevSlide} opacity={activeSlide !== 0 ? 1 : 0} />
             <Arrow
+              mainColor={mainColor}
+              direction="left"
+              handleClick={prevSlide}
+              opacity={activeSlide !== 0 ? 1 : 0}
+            />
+            <Arrow
+              mainColor={mainColor}
               direction="right"
               handleClick={nextSlide}
               opacity={activeSlide !== slides.length - 1 ? 1 : 0}
@@ -112,14 +115,19 @@ const Slider = ({
             <SliderNumbers>
               {activeSlide + 1} / {slides.length}
             </SliderNumbers>
-            <Dots slides={slides} activeSlide={activeSlide} callbackDots={callbackDots} />
+            {/* <Dots
+              mainColor={mainColor}
+              slides={slides}
+              activeSlide={activeSlide}
+              callbackDots={callbackDots}
+            />
             {linkMoreText && linkMoreURL ? (
               <Link href={linkMoreURL}>
                 <a>
                   <strong>{linkMoreText}</strong>
                 </a>
               </Link>
-            ) : null}
+            ) : null} */}
           </SliderFooter>
         ) : null}
       </SliderComponentContainer>

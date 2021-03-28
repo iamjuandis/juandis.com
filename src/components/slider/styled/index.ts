@@ -104,6 +104,14 @@ export const SliderFooter = styled.div`
 `;
 
 export const SliderNumbers = styled.p`
+  background: ${`${COLOR.blue_universe}55`};
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  color: ${COLOR.white_cloud};
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px 5px;
+  text-align: center;
   white-space: nowrap;
   width: 50px;
   @media screen and (max-width: 700px) {

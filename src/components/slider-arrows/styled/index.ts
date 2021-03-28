@@ -1,17 +1,15 @@
 import styled from 'styled-components';
-
-interface ArrowProps {
-  direction: any;
-  opacity: any;
-}
+import { ArrowProps } from '..';
+import COLOR from '../../../assets/style/colors';
 
 export const ArrowComponent = styled.div<ArrowProps>`
+  align-items: center;
   display: flex;
   ${(props) => (props.direction === 'right' ? `right: 25px` : `left: 25px`)};
   height: 50px;
   width: 50px;
   justify-content: center;
-  background: white;
+  background: ${COLOR.white_cloud};
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
@@ -21,8 +19,8 @@ export const ArrowComponent = styled.div<ArrowProps>`
   &:hover {
     transform: scale(1.1);
   }
-  img {
-    transform: translateX(${(props) => (props.direction === 'left' ? '-2' : '2')}px);
+  svg {
+    color: ${(props) => (props.mainColor ? props.mainColor : COLOR.blue_universe)};
     &:focus {
       outline: 0;
     }

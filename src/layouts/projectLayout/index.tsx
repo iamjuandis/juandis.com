@@ -105,7 +105,7 @@ const ProjectLayout = ({ project }: Props) => {
 
       <ProjectSliderContainer>
         <ProjectSliderContent>
-          <Slider slides={project.images.sliderImages} />
+          <Slider mainColor={project.mainColor} slides={project.images.sliderImages} />
         </ProjectSliderContent>
       </ProjectSliderContainer>
 
@@ -163,7 +163,7 @@ const ProjectLayout = ({ project }: Props) => {
         <ProjectSmallImgsContainer>
           <ProjectSmallImgsContent>
             {project.images.smallImages.map((image: string, idx: number) => (
-              <img src={image} alt={`${idx + 1}. ${project.client}`} />
+              <img key={idx} src={image} alt={`${idx + 1}. ${project.client}`} />
             ))}
           </ProjectSmallImgsContent>
         </ProjectSmallImgsContainer>
