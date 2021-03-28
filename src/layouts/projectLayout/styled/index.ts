@@ -39,6 +39,9 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
   justify-content: flex-end;
   grid-column: 1 / 8;
   height: 100%;
+  h1 {
+    font-weight: bolder;
+  }
 `;
 
 export const ProjectLayoutCoverImageContainer = styled.div`

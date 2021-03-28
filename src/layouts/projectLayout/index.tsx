@@ -68,7 +68,8 @@ const ProjectLayout = ({ project }: Props) => {
       <ProjectLayoutMainBanner background={project.mainColor}>
         <ProjectLayoutMainBannerContent>
           <ProjectLayoutMainBannerTextContainer>
-            <Paragraph color={COLOR.white_cloud}>{project.client}</Paragraph>
+            <Paragraph color={COLOR.white_cloud} children={project.client} />
+            <br />
             <Headline color={COLOR.white_cloud} typeHeadline="h1">
               {project.headline}
             </Headline>

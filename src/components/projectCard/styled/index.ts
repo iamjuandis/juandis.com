@@ -11,7 +11,7 @@ export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
   position: relative;
   width: 100%;
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 `;
 
@@ -37,9 +37,33 @@ export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
 `;
 
 export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background: ${(props) => props.background};
   bottom: ${(props) => (props.gridRange && props.gridRange[2] === 'big' ? 0 : 'auto')};
   padding: 30px;
   position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
+  h3 {
+    font-weight: bolder;
+  }
+`;
+
+export const ProjectSkillsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ProjectSkillElement = styled.strong<ProjectCardComponentTypes>`
+  color: ${(props) => props.mainColor};
+  font-size: 20px;
+  font-weight: 500;
+  &:not(:last-child) {
+    ::after {
+      content: '•';
+      padding: 0 5px;
+    }
+  }
 `;

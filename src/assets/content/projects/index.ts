@@ -63,5 +63,7 @@ export const PROJECTS: ProjectsType = {
       icon: LOGO_WE_ARE_ANGULAR,
       oneColorIcon: true,
     },
+    skills: ['Product Design', 'Frontend Development'],
+    year: '2019',
   },
 };

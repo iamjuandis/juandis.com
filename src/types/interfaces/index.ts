@@ -83,9 +83,11 @@ export interface ProjectInternalInfoTypes {
 export interface ProjectMainTypes {
   client: string;
   headline: string;
-  mainColor: string;
-  slug: string;
   images: ProjectImagesTypes;
+  mainColor: string;
+  skills: string[];
+  slug: string;
+  year?: string;
 }
 
 export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
