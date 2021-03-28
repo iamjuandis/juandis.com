@@ -41,7 +41,7 @@ export default class MyDocument extends Document<DocProps> {
   render() {
     const { isProduction } = this.props;
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <meta name="apple-mobile-web-app-title" content="Juan David Pérez • Portfolio" />
           <meta name="apple-mobile-web-app-capable" content="yes" />

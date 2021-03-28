@@ -17,7 +17,7 @@ const MainBanner = ({ headline, paragraphs }: MainBannerType) => {
         </HeadlineMainBanner>
         <ParagraphsContainerMainBanner>
           {paragraphs?.map((paragraph: string, idx: number) => (
-            <Paragraph size={22} key={idx}>
+            <Paragraph size={1} key={idx}>
               {paragraph}
             </Paragraph>
           ))}

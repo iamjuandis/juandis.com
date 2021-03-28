@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const ProjectsContainer = styled.div`
   padding-top: 100px;
   width: 100%;
+  @media screen and (max-width: 440px) {
+    padding-top: 50px;
+  }
 `;
 
 export const ProjectsContent = styled.div`
@@ -13,9 +16,15 @@ export const ProjectsContent = styled.div`
   margin: auto;
   max-width: 1024px;
   width: calc(100% - 60px);
+  @media screen and (max-width: 440px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ProjectsHeadlineContainer = styled.div`
   grid-column: 1 / -1;
   margin-bottom: 20px;
+  @media screen and (max-width: 440px) {
+    margin-bottom: 10px;
+  }
 `;

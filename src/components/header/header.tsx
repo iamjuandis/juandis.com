@@ -4,21 +4,35 @@ import { NAV_OPTIONS } from '../../assets/content/intex';
 import { LOGO_JUANDIS } from '../../assets/images';
 import { NavOptionType } from '../../types/interfaces';
 import NavOption from '../navOption';
-import { HeaderContainer, HeaderContent, LogoContainer, NavContainer } from './styled';
+import Paragraph from '../paragraph';
+import {
+  HeaderContainer,
+  HeaderContent,
+  LogoContainer,
+  MenuContactInfo,
+  MenuMobileContainer,
+  NavContainer,
+} from './styled';
 
 export interface HeaderTypes {
   bgColor?: string;
   scrollTop?: number;
   limitScroll?: number;
+  isOpen?: boolean;
 }
 
 const Header = ({ bgColor }: HeaderTypes) => {
   const limitScroll: number = 460;
   const [scrollTop, setScrollTop] = useState<number>(1);
   const [mounted, setMounted] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const onScroll = (e: any) => {
     setScrollTop(e.target.documentElement.scrollTop);
+  };
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
@@ -42,7 +56,20 @@ const Header = ({ bgColor }: HeaderTypes) => {
             </div>
           </LogoContainer>
         </Link>
-        <NavContainer bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
+        <MenuMobileContainer
+          onClick={openMenu}
+          bgColor={bgColor}
+          scrollTop={scrollTop}
+          limitScroll={limitScroll}
+        >
+          {isMenuOpen ? 'Close' : 'Menu'}
+        </MenuMobileContainer>
+        <NavContainer
+          bgColor={bgColor}
+          scrollTop={scrollTop}
+          limitScroll={limitScroll}
+          isOpen={isMenuOpen}
+        >
           {NAV_OPTIONS.map((option: NavOptionType, idx: number) => (
             <NavOption
               key={idx}
@@ -54,6 +81,22 @@ const Header = ({ bgColor }: HeaderTypes) => {
               route={option?.route}
             />
           ))}
+          <MenuContactInfo bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
+            <Paragraph
+              highlightColor={bgColor}
+              children={`<a href="mailto:me@juandis.com" title="me@juandis.com" target="_blank" rel="noopener noreferrer">
+              me@juandis.com
+            </a>`}
+            />
+            <br />
+            <br />
+            <Paragraph
+              highlightColor={bgColor}
+              children={`<a href="tel:573122659625" title="+57 312 265 9625">
+              +57 312 265 9625
+            </a>`}
+            />
+          </MenuContactInfo>
         </NavContainer>
       </HeaderContent>
     </HeaderContainer>

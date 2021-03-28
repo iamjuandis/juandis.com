@@ -40,8 +40,10 @@ export const HeaderContent = styled.div`
 
 export const LogoContainer = styled.a<HeaderTypes>`
   flex-direction: row;
+  cursor: pointer;
   display: flex;
   div {
+    justify-content: center;
     display: flex;
     flex-direction: column;
     strong {
@@ -52,6 +54,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
           : COLOR.blue_universe};
+      font-size: 0.8em;
       font-weight: 800;
     }
     span {
@@ -62,7 +65,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
           : COLOR.blue_universe};
-      font-size: 14px;
+      font-size: 0.7em;
     }
   }
   svg {
@@ -77,6 +80,17 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
           : COLOR.blue_universe};
+    }
+  }
+
+  @media (max-width: 510px) {
+    div {
+      strong {
+        font-size: 1em;
+      }
+      span {
+        display: none;
+      }
     }
   }
 `;
@@ -94,4 +108,81 @@ export const NavContainer = styled.nav<HeaderTypes>`
   }
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 510px) {
+    box-shadow: 0px 0px 50px #00000022;
+    box-sizing: border-box;
+    background: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? props.bgColor
+        : COLOR.white_cloud};
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+    flex-direction: column;
+    height: fit-content;
+    left: 0;
+    opacity: ${(props) => (props.isOpen ? 1 : 0)};
+    padding: 50px 30px;
+    position: fixed;
+    pointer-events: ${(props) => (props.isOpen ? 'all' : 'none')};
+    right: 0;
+    top: ${(props) => (props.isOpen ? '0px' : '-100vh')};
+    width: 100%;
+    z-index: 99;
+    a,
+    p {
+      font-size: 1.5em;
+    }
+  }
+`;
+
+export const MenuMobileContainer = styled.p<HeaderTypes>`
+  color: ${(props) =>
+    props.bgColor &&
+    props.scrollTop !== undefined &&
+    props.limitScroll &&
+    props.scrollTop < props.limitScroll
+      ? COLOR.white_cloud
+      : COLOR.blue_universe};
+  display: none;
+  @media screen and (max-width: 510px) {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+`;
+
+export const MenuContactInfo = styled.div<HeaderTypes>`
+  display: none;
+  p,
+  a {
+    color: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? COLOR.white_cloud
+        : COLOR.blue_universe};
+  }
+  a {
+    border-bottom-color: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? COLOR.white_cloud
+        : COLOR.blue_universe};
+  }
+  @media screen and (max-width: 510px) {
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.4em;
+    margin-top: 50px;
+    padding: 0 20px;
+    width: 100%;
+  }
 `;

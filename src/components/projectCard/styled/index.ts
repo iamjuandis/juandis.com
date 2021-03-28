@@ -13,6 +13,9 @@ export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
   &:hover {
     transform: scale(1.02);
   }
+  @media screen and (max-width: 510px) {
+    display: flex;
+  }
 `;
 
 export const ProjectCardCoverContainer = styled.div<ProjectCardComponentTypes>`
@@ -58,12 +61,15 @@ export const ProjectSkillsContainer = styled.div`
 
 export const ProjectSkillElement = styled.strong<ProjectCardComponentTypes>`
   color: ${(props) => props.mainColor};
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 500;
   &:not(:last-child) {
     ::after {
       content: '•';
       padding: 0 5px;
     }
+  }
+  @media screen and (max-width: 510px) {
+    font-size: 0.8em;
   }
 `;
