@@ -4,10 +4,12 @@ import { NAV_OPTIONS } from '../../assets/content/intex';
 import { LOGO_JUANDIS } from '../../assets/images';
 import { NavOptionType } from '../../types/interfaces';
 import NavOption from '../navOption';
+import Paragraph from '../paragraph';
 import {
   HeaderContainer,
   HeaderContent,
   LogoContainer,
+  MenuContactInfo,
   MenuMobileContainer,
   NavContainer,
 } from './styled';
@@ -79,6 +81,22 @@ const Header = ({ bgColor }: HeaderTypes) => {
               route={option?.route}
             />
           ))}
+          <MenuContactInfo bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
+            <Paragraph
+              highlightColor={bgColor}
+              children={`<a href="mailto:me@juandis.com" title="me@juandis.com" target="_blank" rel="noopener noreferrer">
+              me@juandis.com
+            </a>`}
+            />
+            <br />
+            <br />
+            <Paragraph
+              highlightColor={bgColor}
+              children={`<a href="tel:573122659625" title="+57 312 265 9625">
+              +57 312 265 9625
+            </a>`}
+            />
+          </MenuContactInfo>
         </NavContainer>
       </HeaderContent>
     </HeaderContainer>

@@ -155,3 +155,34 @@ export const MenuMobileContainer = styled.p<HeaderTypes>`
     z-index: 100;
   }
 `;
+
+export const MenuContactInfo = styled.div<HeaderTypes>`
+  display: none;
+  p,
+  a {
+    color: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? COLOR.white_cloud
+        : COLOR.blue_universe};
+  }
+  a {
+    border-bottom-color: ${(props) =>
+      props.bgColor &&
+      props.scrollTop !== undefined &&
+      props.limitScroll &&
+      props.scrollTop < props.limitScroll
+        ? COLOR.white_cloud
+        : COLOR.blue_universe};
+  }
+  @media screen and (max-width: 510px) {
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.4em;
+    margin-top: 50px;
+    padding: 0 20px;
+    width: 100%;
+  }
+`;
