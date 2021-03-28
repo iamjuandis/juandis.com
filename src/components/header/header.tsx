@@ -15,14 +15,18 @@ export interface HeaderTypes {
 const Header = ({ bgColor }: HeaderTypes) => {
   const limitScroll: number = 460;
   const [scrollTop, setScrollTop] = useState<number>(1);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   const onScroll = (e: any) => {
     setScrollTop(e.target.documentElement.scrollTop);
   };
 
   useEffect(() => {
-    if (typeof window !== undefined) {
-      window.addEventListener('scroll', onScroll);
+    if (!mounted) {
+      if (typeof window !== undefined && bgColor) {
+        window.addEventListener('scroll', onScroll);
+        setMounted(true);
+      }
     }
   }, []);
 

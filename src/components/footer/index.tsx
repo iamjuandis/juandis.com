@@ -28,14 +28,16 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
         <FooterTextContent>
           <Paragraph
             highlightColor={mainColor}
-            children={`<a href="https://juandis.com/resume" title="Resume">
+            children={`<a href="/resume" title="Resume" target="_blank" rel="noopener noreferrer">
               Resume
-            </a>`}
+            </a> • <a href="/in" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>`}
           />
 
           <Paragraph
             highlightColor={mainColor}
-            children={`<a href="mailto:me@juandis.com" title="me@juandis.com">
+            children={`<a href="mailto:me@juandis.com" title="me@juandis.com" target="_blank" rel="noopener noreferrer">
               me@juandis.com
             </a>`}
           />

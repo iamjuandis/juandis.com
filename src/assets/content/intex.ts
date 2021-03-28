@@ -7,7 +7,7 @@ export const NAV_OPTIONS: NavOptionType[] = [
     label: 'Projects',
     type: 'action',
     onClick: () => {
-      if (window.location.pathname !== '/') {
+      if (window?.location?.pathname !== '/') {
         Router.push({ pathname: '/', query: { g: 'projects' } });
       }
       scrollToIDElement('projects');
@@ -16,7 +16,7 @@ export const NAV_OPTIONS: NavOptionType[] = [
   {
     label: 'Resume',
     type: 'link',
-    route: 'https://weareangular.com',
+    route: '/resume',
     isExternal: true,
   },
   {
