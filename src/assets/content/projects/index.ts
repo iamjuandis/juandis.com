@@ -24,7 +24,7 @@ export const PROJECTS: ProjectsType = {
       footerImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
       coverImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888368/portfolio/projects/proper/proper-cover_syhtut.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
       discoveryImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
       cardImages: [
