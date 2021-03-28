@@ -12,6 +12,8 @@ export interface NavOptionType {
 
 export interface ParagraphType {
   color?: string;
+  columns?: number;
+  highlightColor?: string;
   size?: number;
   children?: any;
 }
@@ -34,15 +36,62 @@ export interface MainBannerType {
   paragraphs: string[];
 }
 
+export interface OwnerCompanyTypes {
+  name: string;
+  country: string;
+  icon: any;
+  oneColorIcon?: boolean;
+}
+
+export interface ProjectImagesTypes {
+  cardImages: string[];
+  coverImage: string;
+  discoveryImage: string;
+  footerImage: string;
+  middleImage: string;
+  previewImage: string;
+  sliderImages: string[];
+  smallImages: string[];
+}
+
+export interface MidSectionType {
+  title: string;
+  paragraph: string;
+}
+
+export interface DiscoveryType {
+  headline?: string;
+  description: string;
+  items: string[];
+}
+
+export interface FocusType {
+  headline?: string;
+  description: string;
+  items: string[];
+  longDescription: string;
+}
+export interface ProjectInternalInfoTypes {
+  conclusion: string;
+  discovery: DiscoveryType;
+  focusProject: FocusType;
+  myRole: string;
+  overview: string;
+  ownerCompany: OwnerCompanyTypes;
+  midSection: MidSectionType;
+}
 export interface ProjectMainTypes {
   client: string;
   headline: string;
+  images: ProjectImagesTypes;
   mainColor: string;
+  skills: string[];
   slug: string;
-  coverImages: string[];
+  year?: string;
 }
 
-export type ProjectAllTypes = ProjectMainTypes;
+export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
+
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
 }

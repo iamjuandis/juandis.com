@@ -20,17 +20,22 @@ const ProjectPage = ({ project, isValid }: Props) => {
   return <ProjectLayout project={project} />;
 };
 
-ProjectPage.getInitialProps = async ({ query }: any) => {
+export const getServerSideProps = async ({ query }: any) => {
   const projectSelected = PROJECTS[query.slug];
+
   if (projectSelected) {
     return {
-      project: PROJECTS[query.slug],
-      isValid: true,
+      props: {
+        project: PROJECTS[query.slug],
+        isValid: true,
+      },
     };
   } else {
     return {
-      project: {},
-      isValid: false,
+      props: {
+        project: {},
+        isValid: false,
+      },
     };
   }
 };

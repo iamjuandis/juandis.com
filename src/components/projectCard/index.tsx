@@ -8,11 +8,14 @@ import {
   ProjectCardCoverContainer,
   ProjectCardCoverImage,
   ProjectCardTextContainer,
+  ProjectSkillElement,
+  ProjectSkillsContainer,
 } from './styled';
 
 export interface ProjectCardComponentTypes {
   gridRange?: any[];
   background?: string;
+  mainColor?: string;
 }
 
 type ProjectCardType = ProjectMainTypes & ProjectCardComponentTypes;
@@ -22,7 +25,8 @@ const ProjectCard = ({
   client,
   headline,
   slug,
-  coverImages,
+  skills,
+  images,
   gridRange,
 }: ProjectCardType) => {
   return (
@@ -31,7 +35,9 @@ const ProjectCard = ({
         <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
           <ProjectCardCoverImage
             gridRange={gridRange}
-            src={gridRange && gridRange[2] === 'big' ? coverImages[1] : coverImages[0]}
+            src={
+              gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
+            }
             alt={client}
           />
         </ProjectCardCoverContainer>
@@ -39,13 +45,30 @@ const ProjectCard = ({
           background={gridRange && gridRange[2] === 'big' ? 'transparent' : `${mainColor}11`}
           gridRange={gridRange}
         >
-          <Paragraph>{client}</Paragraph>
+          <Paragraph
+            children={client}
+            color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
+          />
+          <br />
           <Headline
             color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
             typeHeadline="h3"
           >
             {headline}
           </Headline>
+          <br />
+          {skills && skills.length > 0 && (
+            <ProjectSkillsContainer>
+              {skills.map((skill: string, idx: number) => (
+                <ProjectSkillElement
+                  mainColor={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
+                  key={idx}
+                >
+                  {skill}
+                </ProjectSkillElement>
+              ))}
+            </ProjectSkillsContainer>
+          )}
         </ProjectCardTextContainer>
       </ProjectCardContainer>
     </Link>
