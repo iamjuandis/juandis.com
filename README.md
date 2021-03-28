@@ -1,5 +1,8 @@
 # Juan David Pérez • Portfolio
 
+![GitHub deployments](https://img.shields.io/github/deployments/iamjuandis/juandis.com/Production?label=Production%20Status)
+![GitHub deployments](https://img.shields.io/github/deployments/iamjuandis/juandis.com/Preview?label=Staging%20Status)
+
 ## Available Scripts
 
 In the project directory, you can run:
