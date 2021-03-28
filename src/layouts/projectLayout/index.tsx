@@ -98,8 +98,8 @@ const ProjectLayout = ({ project }: Props) => {
                 <div dangerouslySetInnerHTML={{ __html: project.ownerCompany.icon }} />
               )}
               <ProjectCompanyTexts>
-                <Paragraph size={14} children={`<strong>${project.ownerCompany.name}</strong>`} />
-                <Paragraph size={14}>{project.ownerCompany.country}</Paragraph>
+                <Paragraph size={0.7} children={`<strong>${project.ownerCompany.name}</strong>`} />
+                <Paragraph size={0.7}>{project.ownerCompany.country}</Paragraph>
               </ProjectCompanyTexts>
             </ProjectCompanyContainer>
           </ProjectRoleTextBoxes>
@@ -183,7 +183,7 @@ const ProjectLayout = ({ project }: Props) => {
             <br />
             {project.discovery.items.map((item: string, idx: number) => (
               <span key={idx}>
-                <Paragraph size={30} key={idx} children={item} />
+                <Paragraph size={1.5} key={idx} children={item} />
                 <br />
               </span>
             ))}
@@ -207,7 +207,7 @@ const ProjectLayout = ({ project }: Props) => {
       <ProjectFooter>
         <Paragraph
           color={`${COLOR.blue_universe}55`}
-          size={14}
+          size={0.7}
           children={`© 2021. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permited by copyright law.`}
         />
       </ProjectFooter>

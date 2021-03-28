@@ -7,11 +7,13 @@ export const ParagraphContainer = styled.p<ParagraphType>`
   column-gap: 30px;
   color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
   line-height: 150%;
-  font-size: ${(props) => (props.size ? `${props.size}px` : '20px')};
+  font-size: ${(props) => (props.size ? `${props.size}em` : '1em')};
+  width: 100%;
   a {
     color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
     border-bottom: 1px solid
       ${(props) => (props.color ? `${props.color}55` : `${COLOR.blue_universe}55`)};
+    font-size: 1em;
     &:hover {
       color: ${(props) =>
         props.highlightColor ? props.highlightColor : `${COLOR.blue_universe}77`};

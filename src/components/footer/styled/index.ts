@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   padding: 100px 0;
   width: 100%;
+  @media screen and (max-width: 510px) {
+    padding: 50px 0;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -20,6 +23,9 @@ export const FooterTextContent = styled.div`
   grid-row-gap: 30px;
   margin-top: 50px;
   width: 100%;
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const FooterTextGroup = styled.div`

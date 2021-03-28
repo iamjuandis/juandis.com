@@ -42,6 +42,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
   flex-direction: row;
   display: flex;
   div {
+    justify-content: center;
     display: flex;
     flex-direction: column;
     strong {
@@ -52,6 +53,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
           : COLOR.blue_universe};
+      font-size: 0.8em;
       font-weight: 800;
     }
     span {
@@ -62,7 +64,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
           : COLOR.blue_universe};
-      font-size: 14px;
+      font-size: 0.7em;
     }
   }
   svg {
@@ -77,6 +79,14 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
           : COLOR.blue_universe};
+    }
+  }
+
+  @media (max-width: 510px) {
+    div {
+      span {
+        display: none;
+      }
     }
   }
 `;
