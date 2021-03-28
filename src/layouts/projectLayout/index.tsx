@@ -45,7 +45,7 @@ interface Props {
 }
 
 const ProjectLayout = ({ project }: Props) => {
-  const [currentURL, setCurrentURL] = useState('https://juandis.com/');
+  const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const ProjectLayout = ({ project }: Props) => {
   return (
     <ProjectLayoutContainer>
       <HeadTags
-        title={`${project.client}, ${project.headline} • Projects • Juan David Pérez`}
+        title={`${project.client}: ${project.headline} • Projects • Juan David Pérez`}
         description={project.headline}
         locale={`${router.locale}`}
         currentURL={currentURL}
@@ -182,10 +182,10 @@ const ProjectLayout = ({ project }: Props) => {
             <Paragraph children={project.discovery.description} />
             <br />
             {project.discovery.items.map((item: string, idx: number) => (
-              <>
+              <span key={idx}>
                 <Paragraph size={30} key={idx} children={item} />
                 <br />
-              </>
+              </span>
             ))}
           </ProjectDiscoveryTexts>
         </ProjectDiscoveryContent>

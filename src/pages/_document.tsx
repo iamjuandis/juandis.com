@@ -50,6 +50,8 @@ export default class MyDocument extends Document<DocProps> {
           <meta name="twitter:account_id" property="twitter:account_id" content="3383871803" />
           <meta name="twitter:site" content="@iamjuandis" />
           <meta name="twitter:creator" content="@iamjuandis" />
+          <link rel="shortcut icon" href="/assets/images/favicon/favicon-light.png" />
+          <link rel="icon" sizes="192x192" href="/assets/images/favicon/favicon-light.png" />
           <link rel="stylesheet" href="https://use.typekit.net/lmz3qmg.css" />
           {isProduction && (
             <Fragment>
