@@ -13,6 +13,8 @@ import {
   ItemsFocusContainer,
   ProjectCompanyContainer,
   ProjectCompanyTexts,
+  ProjectConclusionContainer,
+  ProjectConclusionContent,
   ProjectDiscoveryContainer,
   ProjectDiscoveryContent,
   ProjectDiscoveryTexts,
@@ -187,6 +189,19 @@ const ProjectLayout = ({ project }: Props) => {
           </ProjectDiscoveryTexts>
         </ProjectDiscoveryContent>
       </ProjectDiscoveryContainer>
+
+      <ProjectConclusionContainer>
+        <ProjectConclusionContent>
+          <div>
+            <Headline typeHeadline="h3" children="Conclusion" color={project.mainColor} />
+            <br />
+            <Paragraph children={project.conclusion} />
+          </div>
+        </ProjectConclusionContent>
+        {project.images.footerImage && (
+          <img src={project.images.footerImage} alt={project.headline} />
+        )}
+      </ProjectConclusionContainer>
 
       <ProjectFooter>
         <Paragraph

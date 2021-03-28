@@ -121,13 +121,7 @@ const Slider = ({
               activeSlide={activeSlide}
               callbackDots={callbackDots}
             />
-            {linkMoreText && linkMoreURL ? (
-              <Link href={linkMoreURL}>
-                <a>
-                  <strong>{linkMoreText}</strong>
-                </a>
-              </Link>
-            ) : null} */}
+            */}
           </SliderFooter>
         ) : null}
       </SliderComponentContainer>

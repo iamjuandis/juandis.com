@@ -225,3 +225,26 @@ export const ProjectDiscoveryTexts = styled.div`
   grid-column: 7 / -2;
   width: 100%;
 `;
+
+export const ProjectConclusionContainer = styled.div`
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+  img {
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    width: 100%;
+  }
+`;
+
+export const ProjectConclusionContent = styled.div`
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-column-gap: 30px;
+  padding-bottom: 50px;
+  margin: auto;
+  max-width: 848px;
+  text-align: left;
+  width: calc(100% - 60px);
+`;
