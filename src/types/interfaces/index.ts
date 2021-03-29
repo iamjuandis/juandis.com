@@ -102,4 +102,5 @@ export interface HeadTagsProps {
   image: string;
   currentURL: string;
   locale: string;
+  mainColor?: string;
 }

@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { HeadTagsProps } from '../../types/interfaces';
 
-const HeadTags = ({ title, description, image, currentURL, locale }: HeadTagsProps) => (
+const HeadTags = ({ title, description, image, currentURL, locale, mainColor }: HeadTagsProps) => (
   <Head>
+    {mainColor && <meta name="theme-color" content={mainColor} />}
     <title>{title ?? 'Juan David Pérez • Portfolio'}</title>
     <meta name="title" property="title" content={title ?? 'Juan David Pérez • Portfolio'} />
     <meta
