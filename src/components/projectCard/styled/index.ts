@@ -53,6 +53,7 @@ export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
   h3 {
     font-weight: bolder;
+    width: ${(props) => (props.gridRange && props.gridRange[2] === 'big' ? '60%' : '100%')};
   }
 `;
 
