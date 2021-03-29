@@ -63,6 +63,7 @@ const ProjectLayout = ({ project }: Props) => {
         locale={`${router.locale}`}
         currentURL={currentURL}
         image={project.images.previewImage}
+        mainColor={project.mainColor}
       />
       <Header bgColor={project.mainColor} />
       <ProjectLayoutMainBanner background={project.mainColor}>

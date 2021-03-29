@@ -69,10 +69,6 @@ export const ContainerArrows = styled.div`
   padding: 0 20px;
   position: absolute;
   width: 100%;
-  @media screen and (max-width: 700px) {
-    margin-top: -30%;
-    margin-bottom: 20%;
-  }
 `;
 
 export const SliderFooter = styled.div`

@@ -33,6 +33,8 @@ export const ProjectCardCoverContainer = styled.div<ProjectCardComponentTypes>`
 
 export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
   object-fit: cover;
+  object-position: ${(props) =>
+    props.gridRange && props.gridRange[2] === 'large' ? 'top' : 'center'};
   height: ${(props) => (props.gridRange && props.gridRange[2] === 'large' ? '360px' : '100%')};
   position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};

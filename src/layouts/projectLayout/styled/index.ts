@@ -30,6 +30,9 @@ export const ProjectLayoutMainBannerContent = styled.div`
   margin: auto;
   max-width: 1200px;
   width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ProjectLayoutMainBannerTextContainer = styled.div`
@@ -42,6 +45,10 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
   h1 {
     font-weight: bolder;
   }
+  @media screen and (max-width: 510px) {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
 `;
 
 export const ProjectLayoutCoverImageContainer = styled.div`
@@ -53,18 +60,19 @@ export const ProjectLayoutCoverImageContainer = styled.div`
     position: absolute;
     width: 100%;
   }
-`;
-
-export const ProjectFooter = styled.div`
-  margin: auto;
-  margin-top: 50px;
-  max-width: 848px;
-  width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    grid-column: 1 / -1;
+    padding-top: 0px;
+    width: 100%;
+  }
 `;
 
 export const ProjectRoleBanner = styled.div`
   padding: 50px 0;
   width: 100%;
+  @media screen and (max-width: 510px) {
+    padding-top: 200px;
+  }
 `;
 
 export const ProjectRoleBannerContent = styled.div`
@@ -75,11 +83,17 @@ export const ProjectRoleBannerContent = styled.div`
   margin: auto;
   max-width: 1200px;
   width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ProjectRoleTextBoxes = styled.div`
   grid-column: 3 / 8;
   width: 100%;
+  @media screen and (max-width: 510px) {
+    grid-column: 1 / -1;
+  }
 `;
 
 export const ProjectCompanyContainer = styled.div<CompanyProps>`
@@ -112,6 +126,9 @@ export const ProjectSliderContent = styled.div`
   margin: auto;
   max-width: 1200px;
   width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    width: 100%;
+  }
 `;
 
 export const ProjectOverviewContainer = styled.div`
@@ -123,6 +140,11 @@ export const ProjectOverviewContent = styled.div`
   margin: auto;
   max-width: 848px;
   width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    p {
+      columns: 1;
+    }
+  }
 `;
 
 export const ProjectMidSectionContainer = styled.div`
@@ -140,11 +162,23 @@ export const ProjectMidSectionContent = styled.div`
     grid-column: 7 / -1;
     width: 100%;
   }
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+    img {
+      display: block;
+      grid-column: 1 / -1;
+      height: auto;
+      margin-top: 50px;
+    }
+  }
 `;
 
 export const ProjectMidSectionTexts = styled.div`
   grid-column: 3 / 7;
   margin: auto;
+  @media screen and (max-width: 510px) {
+    grid-column: 1 / -1;
+  }
 `;
 
 export const ProjectFocusContainer = styled.div`
@@ -201,6 +235,10 @@ export const ProjectSmallImgsContent = styled.div`
     height: 340px;
     width: 100%;
   }
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
 `;
 
 export const ProjectDiscoveryContainer = styled.div`
@@ -218,6 +256,12 @@ export const ProjectDiscoveryContent = styled.div`
     display: flex;
     grid-column: 1 / 7;
     width: 100%;
+  }
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+    img {
+      grid-row: 2;
+    }
   }
 `;
 
@@ -249,5 +293,15 @@ export const ProjectConclusionContent = styled.div`
   margin: auto;
   max-width: 848px;
   text-align: left;
+  width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const ProjectFooter = styled.div`
+  margin: auto;
+  margin-top: 50px;
+  max-width: 848px;
   width: calc(100% - 60px);
 `;
