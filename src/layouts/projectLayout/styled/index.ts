@@ -126,6 +126,9 @@ export const ProjectSliderContent = styled.div`
   margin: auto;
   max-width: 1200px;
   width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    width: 100%;
+  }
 `;
 
 export const ProjectOverviewContainer = styled.div`
@@ -159,11 +162,23 @@ export const ProjectMidSectionContent = styled.div`
     grid-column: 7 / -1;
     width: 100%;
   }
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+    img {
+      display: block;
+      grid-column: 1 / -1;
+      height: auto;
+      margin-top: 50px;
+    }
+  }
 `;
 
 export const ProjectMidSectionTexts = styled.div`
   grid-column: 3 / 7;
   margin: auto;
+  @media screen and (max-width: 510px) {
+    grid-column: 1 / -1;
+  }
 `;
 
 export const ProjectFocusContainer = styled.div`
@@ -220,6 +235,10 @@ export const ProjectSmallImgsContent = styled.div`
     height: 340px;
     width: 100%;
   }
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
 `;
 
 export const ProjectDiscoveryContainer = styled.div`
@@ -237,6 +256,12 @@ export const ProjectDiscoveryContent = styled.div`
     display: flex;
     grid-column: 1 / 7;
     width: 100%;
+  }
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+    img {
+      grid-row: 2;
+    }
   }
 `;
 
@@ -269,6 +294,9 @@ export const ProjectConclusionContent = styled.div`
   max-width: 848px;
   text-align: left;
   width: calc(100% - 60px);
+  @media screen and (max-width: 510px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ProjectFooter = styled.div`
