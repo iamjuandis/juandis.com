@@ -8,7 +8,7 @@ Shaping a new & open real estate investment experience.
 
 #### Role
 
-I was responsible of led and manage the project, collaborating in the user experience and interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.
+I was responsible for leading and managing the project, and collaborating in the user experience & interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.
 
 #### Company
 
@@ -55,11 +55,13 @@ In order to build a definitve solution, keeping in mind the complexity of the bu
 
 #### Conclusion
 
-Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users. 
+Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.
+
+------
 
 ## Aurora
 
-## Headline
+#### Headline
 
 Designing a new accessible and efficient eLearning tool.
 
@@ -73,11 +75,55 @@ Aurora, Colombia
 
 #### Overview
 
-Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities.
+One of the biggest problems and opportunities in Latin America, specially in countries like Colombia, is the education, and the equity in its accessibility. We know it by self experience, and in order to help to solve this problem, we decided to build a unique tool to give people an efficient and more accesible e-learning tool. So we built Aurora, a eLearning company that wants to change education in Latam by using technology and design to build an efficient, reliable and accessible platform where students, employees and companies can improve their skills and strengths.  
 
-Problem 
+#### Problem 
+
+Education in Latam has many threads that need to be enhanced, and in order to support that improvement we focused on: how to improve the engagement and high results in eLearning courses?
+
+#### Understand the main steps in an e-learning flow
+
+- Content
+- Medium
+- Evaluation
+
+------
+
+## Frostbyte
+
+#### Headline
 
 
+
+#### Company
+
+We Are Angular, Colombia
+
+------
+
+## Get2Wear
+
+#### Headline
+
+
+
+#### Company
+
+We Are Angular, Colombia
+
+------
+
+## We Are Angular
+
+#### Headline
+
+
+
+#### Company
+
+We Are Angular, Colombia
+
+------
 
 ## Content Guide
 
