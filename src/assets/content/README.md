@@ -8,7 +8,7 @@ Shaping a new & open real estate investment experience.
 
 #### Role
 
-I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.
+I was responsible of led and manage the project, collaborating in the user experience and interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.
 
 #### Company
 
@@ -16,42 +16,46 @@ We Are Angular, Colombia
 
 #### Overview
 
-Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities.
+Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.
 
 #### Problem
 
-When Squarepin came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.
+When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity. 
 
-#### Understand
+#### We needed to understand
 
-- Understand the current flow to invest in Real Estate.
-- Understand the technology involved in the process.
-- Understand the whole new investment flow and the user perspective.
+- The current state and context of invest in Real Estate in Colombia.
+- The technology and security involved in the process.
+- Of course, the user perspective, constraints and pain points.
 
-#### Focus
+#### Process
 
-We focused on 4 main problems:
+To decide how to proceed, we focused on 4 specific issues:
 
-- Bureaucracy
+- Intermediation 
 - Safety
 - Accessibility
 - Time
 
-Thanks to the vision and the discoveries found in the first iteration, we built the first functional prototype to keep testing on users.In this new iteration I had the opportunity to lead the design process and the Frontend Development.
+We used surveys, interviews and focus groups, to understand from first hand the pain points and put together the main elements to illustrate a user context. Thanks to the business vision and the user discoveries, we built a first prototype to test it on users, this helped Squarepin to find partners and advance the project to a new and functional prototype.
 
 #### Discovery
 
-Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a comprehensive product.
+Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a batter and comprehensive product:
 
-- Easy to use
-- Diverse
-- Secure
-- “You are the owner”
-- Open
+- Usability
+- Diversity
+- Security 
+- Ownership
+- Openness 
+
+#### Next steps
+
+In order to build a definitve solution, keeping in mind the complexity of the business and model, we are working on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market. 
 
 #### Conclusion
 
-Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.
+Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users. 
 
 ## Aurora
 
@@ -71,6 +75,10 @@ Aurora, Colombia
 
 Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities.
 
+Problem 
+
+
+
 ## Content Guide
 
 - What’s the problem you want to solve?
@@ -81,3 +89,9 @@ Proper (formerly Squarepin) is a real estate platform founded in Colombia and Me
 - What are the constrains and limitations?
 - How to validate your design?
 - What will be your next step?
+
+-
+
+- **Why** did you choose that method for that specific project?
+- **What** did you learn (or did not learn) by using that method?
+- **How** did your findings influence the project?
