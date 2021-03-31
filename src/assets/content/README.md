@@ -79,7 +79,7 @@ One of the biggest problems and opportunities in Latin America, specially in cou
 
 #### Problem 
 
-Education in Latam has many threads that need to be enhanced, and in order to support that improvement we focused on: how to improve the engagement and high results in eLearning courses?
+Education in Latam has many threads that need to be enhanced, and in order to support that improvement we focused on: how to improve the engagement and high results in eLearning courses for workers in Latam?
 
 #### Understand the main steps in an e-learning flow
 
@@ -87,17 +87,42 @@ Education in Latam has many threads that need to be enhanced, and in order to su
 - Medium
 - Evaluation
 
+#### Process 
+
+We started building a non-functional prototype that rapidly became a functional MVP, that we validated with around +50 users thanks to alliances with learning organizations and universities. Meanwhile we were able to work with experts and understand the complexity of education. We started creating content and a course focused on Biosecurity in Delivery workers and Messenger. Once we have acces to our first users, we got a special partnership with Pacífico Task Force, a Ford Fundation non-profit organization, to impact the Pacific region in Colombia through Aurora. 
+
+#### Discovery
+
+We know Aurora have a long path to drive through, and we strongly belive that design is a huge element to improve and build a better learning tool.
+In order to deliver value constantly, we focused on methologies as SCRUM and Enterprise Design Thinking, where the users come first and the comprehension in education comes secondly. 
+
+#### Next steps
+
+Thanks to the understaning of the financial model and the impact that we can focus on, we start working on a B2B version that includes refined experiences to our deily users and a complete suite to business and organizaions. 
+
+#### Conclusion
+
+This is currently the most ambitious project I've ever been as a leader in design. Also it has been a huge challenge creating something new in one of the biggest problems in latam and the impact we can achieve using design to deliver a unique tool. 
+
 ------
 
 ## Frostbyte
 
 #### Headline
 
-
+A modern and complete suite to visualize and monitoring realtime data
 
 #### Company
 
 We Are Angular, Colombia
+
+#### Overview
+
+Frostbyte is a company that helps industrial food companies to control and monitor their storehouses and gigant refrigerators and save money alerting and notifying important and unusual behaviors on temperature, operations and environment variables. 
+
+#### Problem
+
+The challenge was how to visualize a huge amount of data and the complexity to integrate a monitoring system to controll limits and optimize the performance and excesive expenses in energy. Besides, Frostbyte already had a monitoring system but wit a lot of improvement opportunities and a specific pain ponts list.
 
 ------
 
@@ -105,7 +130,7 @@ We Are Angular, Colombia
 
 #### Headline
 
-
+A refined experience to "rentabilizar" and manage your unique and special clothing. 
 
 #### Company
 
@@ -117,7 +142,7 @@ We Are Angular, Colombia
 
 #### Headline
 
-
+A complete brand transformation to go forward through design, strategy and technology
 
 #### Company
 
