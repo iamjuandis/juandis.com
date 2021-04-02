@@ -199,7 +199,7 @@ Thanks to that, we got a performance optimization of 79% less loading time and a
 
 This is one of those projects that I'm very proud of. Not only for the results behind that, but also for the process, execution and decitions made to do it better. I had the challenge to take the driver seat and get a diverse team together to involve strategy, marketing, business, design and technology decisions in order to refresh our whole company. 
 
-Special thanks to Stefanía Grimaldo, Stephany Rojas, Diego Barbosa, Santiago González, Luis Meneses and our special customers that made this possible.
+Special thanks to Stefanía Grimaldo, Stephany Rojas, Diego Barbosa, Santiago González, Luis Meneses, Juan E. Gallo and our special customers that made this possible.
 
 ------
 
