@@ -122,7 +122,23 @@ Frostbyte is a company that helps industrial food companies to control and monit
 
 #### Problem
 
-The challenge was how to visualize a huge amount of data and the complexity to integrate a monitoring system to controll limits and optimize the performance and excesive expenses in energy. Besides, Frostbyte already had a monitoring system but wit a lot of improvement opportunities and a specific pain ponts list.
+The challenge was how to visualize a huge amount of data and the complexity to integrate a monitoring system to controll limits and optimize the performance and excesive expenses in energy. Besides, Frostbyte already had a monitoring system but wit a lot of improvement opportunities and a specific pain points list.
+
+#### The output 
+
+After a very intense month of observation, interviews and field research, we were not only focused on the visualization problem, but we need to focus on a SaaS solution. Frostbyte customers, needed to visualize clearly and in realtime all of their sensors and alerts data. Based on technology and budget, we couldn't deliver a full and personalizable product, so we focused on a simple, usable and eficient wey to perceive the current storehouses environmental status. 
+
+#### We got
+
+- **+91%** less time to recolect and visualize data
+
++ **+20K** data points per week
++ **+400** more revenue
+
+#### The future
+
+The complexity and huge amount of data in monitoring environment variables would result on a challenging task to spend the less resources, equipement and money possible, so one of the main solutions for those industries was a realtime dashboard, simple, reliable and useful. 
+In fact, thanks to that renewal, Frostbyte reduced +91% the time spent on data visualization and increased the revenue on a +400%. 
 
 ------
 
@@ -130,11 +146,15 @@ The challenge was how to visualize a huge amount of data and the complexity to i
 
 #### Headline
 
-A refined experience to "rentabilizar" and manage your unique and special clothing. 
+A refined experience to make profitable and manage your unique and special clothing
 
 #### Company
 
 We Are Angular, Colombia
+
+Overview
+
+Get2Wear is a 
 
 ------
 
@@ -147,6 +167,40 @@ A complete brand transformation to go forward through design, strategy and techn
 #### Company
 
 We Are Angular, Colombia
+
+#### Overview
+
+Since 2016, We Are Angular have partnered startups and companies to help them grow from design and technology. Our main focus was influenced and inspired by a lean methology and design methologies, where customers were able to take an important step for validation and prototyping. I had the opportunity to be part of the journey from 2017, since then, I have worked as developer, designer, consultant, project manager and board member. Back in 2020, after a complicated inter-pandemic scenario, we started to reinvent ourselves. We had the challenge to transform our brand and include additional services focused on a 360º B2B solutions. 
+
+#### Opportunity 
+
+We needed to reorganise ourselves, from an internal structure, to a better communication that enhances the relationship with our customers. The way our industry works, require us to be clear, simple and assertive and those would be the basements to rebuild our brand. 
+
+#### Step by step
+
+Let our customers participate
+
+Reflect on the perception
+
+Team ideation
+
+Materialize the ideas
+
+Connect with a strategy
+
+Deliver a fresh new brand
+
+#### Output
+
+Thanks to the restyling and brand renewal, we were able to push 3 new services out the market, and start a planned strategy a long side experts in Marketing and Sales. In this process, we didn't only think about look nice, but also work nice. So we built a new, fast and powerful website, that would allow us to run strategies with better results.
+
+Thanks to that, we got a performance optimization of 79% less loading time and a +90% more organic visits the first 3 months. 
+
+#### Conclusion
+
+This is one of those projects that I'm very proud of. Not only for the results behind that, but also for the process, execution and decitions made to do it better. I had the challenge to take the driver seat and get a diverse team together to involve strategy, marketing, business, design and technology decisions in order to refresh our whole company. 
+
+Special thanks to Stefanía Grimaldo, Stephany Rojas, Diego Barbosa, Santiago González, Luis Meneses and our special customers that made this possible.
 
 ------
 
