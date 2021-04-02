@@ -126,14 +126,13 @@ The challenge was how to visualize a huge amount of data and the complexity to i
 
 #### The output 
 
-After a very intense month of observation, interviews and field research, we were not only focused on the visualization problem, but we need to focus on a SaaS solution. Frostbyte customers, needed to visualize clearly and in realtime all of their sensors and alerts data. Based on technology and budget, we couldn't deliver a full and personalizable product, so we focused on a simple, usable and eficient wey to perceive the current storehouses environmental status. 
+After a very intense month of observation, interviews and field research, we were not only focused on the visualization problem, but we need to focus on a SaaS solution. Frostbyte customers, needed to visualize clearly and in realtime all of their sensors and alerts data. Based on technology and budget, we couldn't deliver a full and customizable product, so we focused on a simple, usable and efficient way to perceive the current storehouses environmental status. 
 
 #### We got
 
 - **+91%** less time to recolect and visualize data
-
-+ **+20K** data points per week
-+ **+400** more revenue
+- **+20K** data points per week
+- **+400** more revenue
 
 #### The future
 
