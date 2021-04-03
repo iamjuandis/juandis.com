@@ -102,7 +102,7 @@ Thanks to the understaning of the financial model and the impact that we can foc
 
 #### Conclusion
 
-This is currently the most ambitious project I've ever been as a leader in design. Also it has been a huge challenge creating something new in one of the biggest problems in latam and the impact we can achieve using design to deliver a unique tool. 
+This is currently the most ambitious project I've ever been as a leader in design. Also it has been a huge challenge creating something new in one of the biggest problems in latam and the impact we can achieve using design to deliver a unique tool. Special thanks to Stephany Rojas, Santiago Ortíz, Stefanía Grimaldo, Diego Barbosa, Luis Meneses, Andrés García, Daniela Valencia, Erika Barbosa and Nestor Tobar. 
 
 ------
 
@@ -115,6 +115,10 @@ A modern and complete suite to visualize and monitoring realtime data
 #### Company
 
 We Are Angular, Colombia
+
+#### Role
+
+I was the Product Manager & Lead Designer on this project and I was responsible for creating user flows, wireframes and prototypes, set a roadmap, prioritise features and collaborate with outside stakeholders, developers and another UX Designer. Also I had the opprotunity to have a personal perspective of the development process participating as a Frontend Developer.
 
 #### Overview
 
@@ -151,9 +155,17 @@ A refined experience to make profitable and manage your unique and special cloth
 
 We Are Angular, Colombia
 
-Overview
+#### Role
 
-Get2Wear is a 
+I had to opportunity to be the Design Leader for this project. I was responsible for define and propose a new  of creating 
+
+#### Overview
+
+Get2Wear is a sustainable fashion Startup that focuses on give people the opportunity to make profitable their special dresses. 
+
+#### Problem
+
+Complexity to load a new product to Get2Wear, redesign and refine the user experience. Have a closer view to the customers status, and the management of internal billing variables.
 
 ------
 
@@ -166,6 +178,10 @@ A complete brand transformation to go forward through design, strategy and techn
 #### Company
 
 We Are Angular, Colombia
+
+#### My Role
+
+Since 2017, I've been a very active collaborator inside We Are Angular, that gave me the chance to be the Design Leader for our complete redesign and strategy processes. I was responisble to understand and analyze the status of the company, work along stakeholders and the management in order to have a panoramic view of the business. Then I lead the design process, sketching and proposing a new brand face, and connect the company strategy to all areas, form sales, to HR. 
 
 #### Overview
 
