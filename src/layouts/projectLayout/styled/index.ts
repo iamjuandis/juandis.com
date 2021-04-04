@@ -15,8 +15,8 @@ export const ProjectLayoutContainer = styled.section`
 
 export const ProjectLayoutMainBanner = styled.div<BannerProps>`
   background: ${(props) => props.background};
-  height: 300px;
-  padding-top: 100px;
+  height: auto;
+  padding-top: 150px;
   padding-bottom: 100px;
   width: 100%;
 `;

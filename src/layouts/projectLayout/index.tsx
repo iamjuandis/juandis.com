@@ -69,9 +69,16 @@ const ProjectLayout = ({ project }: Props) => {
           <ProjectLayoutMainBannerTextContainer>
             <Paragraph color={COLOR.white_cloud} children={project.client} />
             <br />
-            <Headline color={COLOR.white_cloud} typeHeadline="h1">
+            <Headline color={COLOR.white_cloud} typeHeadline="h1" fontSize={50}>
               {project.headline}
             </Headline>
+            <br />
+            <Paragraph
+              color={COLOR.white_cloud}
+              children={`${project.years?.first}${
+                project.years?.last && ` - ${project.years.last}`
+              }`}
+            />
           </ProjectLayoutMainBannerTextContainer>
           <ProjectLayoutCoverImageContainer>
             <img src={project.images.coverImage} alt={project.headline} />
