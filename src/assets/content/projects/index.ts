@@ -5,19 +5,33 @@ export const PROJECTS: ProjectsType = {
   proper: {
     client: 'Proper',
     conclusion:
-      'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.',
+      'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.',
     discovery: {
-      description:
-        'Talking with users and experts, we found that we should focus on the next specific <strong>principles</strong> that would allowed us build a comprehensive product.',
-      items: ['Easy to use', 'Diverse', 'Secure', '“You are the owner”', 'Open'],
+      content: `Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a batter and comprehensive product:
+      <ul>
+        <li>Usability</li>
+        <li>Diversity</li>
+        <li>Security</li>
+        <li>Ownership</li>
+        <li>Openness</li>
+      </ul>`,
     },
-    focusProject: {
-      description: 'We focused on 4 main problems',
-      items: ['Bureaucracy', 'Safety', 'Accesibility', 'Time'],
-      longDescription:
-        'Thanks to the vision and the discoveries found in the first iteration, we built the first functional prototype to keep testing on users.<br/> In this new iteration I had the opportunity to lead the design process and the Frontend Development.',
+    future: {
+      content:
+        'In order to build a definitve solution, keeping in mind the complexity of the business and model, we are working on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market.',
     },
-    headline: 'Shaping a new & open real state investment experience.',
+    nextProcess: {
+      content: `To decide how to proceed, we focused on 4 specific issues:
+      <ul>
+        <li>Intermediation</li>
+        <li>Safety</li>
+        <li>Accesibility</li>
+        <li>Time</li>
+      </ul>
+      We used surveys, interviews and focus groups, to understand from first hand the pain points and put together the main elements to illustrate a user context. Thanks to the business vision and the user discoveries, we built a first prototype to test it on users, this helped Squarepin to find partners and advance the project to a new and functional prototype.
+      `,
+    },
+    headline: 'Shaping a new & open real estate investment experience.',
     mainColor: '#E20B21',
     slug: 'proper',
     images: {
@@ -47,16 +61,22 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
     },
-    midSection: {
-      title: 'Understand',
-      paragraph: `Understand the current flow to invest in Real State.<br/><br/>
-      Understand the technology involved in the process. <br/><br/>
-      Understand the whole new investment flow and the user perspective.`,
+    firstProcess: {
+      title: 'We needed to understand',
+      content: `<ul>
+        <li>The current state and context of invest in Real Estate in Colombia.</li>
+        <li>The technology and security involved in the process.</li>
+        <li>Of course, the user perspective, constraints and pain points.</li>
+      </ul>`,
     },
     myRole:
-      'I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.',
+      'I was responsible for leading and managing the project, and collaborating in the user experience & interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
+    opportunity: {
+      content:
+        'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
+    },
     overview:
-      'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on make easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constrains and opportunities.',
+      'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.',
     ownerCompany: {
       name: 'We Are Angular',
       country: 'Colombia',
@@ -64,26 +84,19 @@ export const PROJECTS: ProjectsType = {
       oneColorIcon: true,
     },
     skills: ['Product Design', 'Frontend Development'],
-    year: '2019',
+    years: { first: '2019', last: '2020' },
   },
-  properi: {
-    client: 'Proper',
+
+  aurora: {
+    client: 'Aurora',
     conclusion:
       'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.',
     discovery: {
-      description:
-        'Talking with users and experts, we found that we should focus on the next specific <strong>principles</strong> that would allowed us build a comprehensive product.',
-      items: ['Easy to use', 'Diverse', 'Secure', '“You are the owner”', 'Open'],
-    },
-    focusProject: {
-      description: 'We focused on 4 main problems',
-      items: ['Bureaucracy', 'Safety', 'Accesibility', 'Time'],
-      longDescription:
-        'Thanks to the vision and the discoveries found in the first iteration, we built the first functional prototype to keep testing on users.<br/> In this new iteration I had the opportunity to lead the design process and the Frontend Development.',
+      content: 'Talking with',
     },
     headline: 'Shaping a new & open real state investment experience.',
-    mainColor: '#E20B21',
-    slug: 'proper',
+    mainColor: '#00BDE5',
+    slug: 'aurora',
     images: {
       footerImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
@@ -111,14 +124,11 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
     },
-    midSection: {
-      title: 'Understand',
-      paragraph: `Understand the current flow to invest in Real State.<br/><br/>
-      Understand the technology involved in the process. <br/><br/>
-      Understand the whole new investment flow and the user perspective.`,
-    },
     myRole:
       'I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.',
+    opportunity: {
+      content: 'Opportunity',
+    },
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on make easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constrains and opportunities.',
     ownerCompany: {
@@ -128,26 +138,20 @@ export const PROJECTS: ProjectsType = {
       oneColorIcon: true,
     },
     skills: ['Product Design', 'Frontend Development'],
-    year: '2019',
+    years: {
+      first: '2019',
+    },
   },
-  propera: {
-    client: 'Proper',
+  frostbyte: {
+    client: 'Frostbyte',
     conclusion:
       'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.',
     discovery: {
-      description:
-        'Talking with users and experts, we found that we should focus on the next specific <strong>principles</strong> that would allowed us build a comprehensive product.',
-      items: ['Easy to use', 'Diverse', 'Secure', '“You are the owner”', 'Open'],
-    },
-    focusProject: {
-      description: 'We focused on 4 main problems',
-      items: ['Bureaucracy', 'Safety', 'Accesibility', 'Time'],
-      longDescription:
-        'Thanks to the vision and the discoveries found in the first iteration, we built the first functional prototype to keep testing on users.<br/> In this new iteration I had the opportunity to lead the design process and the Frontend Development.',
+      content: 'Talking with',
     },
     headline: 'Shaping a new & open real state investment experience.',
-    mainColor: '#E20B21',
-    slug: 'proper',
+    mainColor: '#122769',
+    slug: 'frostbyte',
     images: {
       footerImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
@@ -175,14 +179,11 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
     },
-    midSection: {
-      title: 'Understand',
-      paragraph: `Understand the current flow to invest in Real State.<br/><br/>
-      Understand the technology involved in the process. <br/><br/>
-      Understand the whole new investment flow and the user perspective.`,
-    },
     myRole:
       'I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.',
+    opportunity: {
+      content: 'Opportunity',
+    },
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on make easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constrains and opportunities.',
     ownerCompany: {
@@ -192,6 +193,6 @@ export const PROJECTS: ProjectsType = {
       oneColorIcon: true,
     },
     skills: ['Product Design', 'Frontend Development'],
-    year: '2019',
+    years: { first: '2019' },
   },
 };

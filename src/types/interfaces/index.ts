@@ -56,31 +56,25 @@ export interface ProjectImagesTypes {
   smallImages: string[];
 }
 
-export interface MidSectionType {
-  title: string;
-  paragraph: string;
-}
-
-export interface DiscoveryType {
-  headline?: string;
-  description: string;
-  items: string[];
-}
-
-export interface FocusType {
-  headline?: string;
-  description: string;
-  items: string[];
-  longDescription: string;
+export interface SectionTypes {
+  title?: string;
+  content: string;
 }
 export interface ProjectInternalInfoTypes {
   conclusion: string;
-  discovery: DiscoveryType;
-  focusProject: FocusType;
+  discovery?: SectionTypes;
+  firstProcess?: SectionTypes;
+  future?: SectionTypes;
+  nextProcess?: SectionTypes;
   myRole: string;
+  opportunity: SectionTypes;
   overview: string;
   ownerCompany: OwnerCompanyTypes;
-  midSection: MidSectionType;
+}
+
+export interface YearsTypes {
+  first: string;
+  last?: string;
 }
 export interface ProjectMainTypes {
   client: string;
@@ -89,7 +83,7 @@ export interface ProjectMainTypes {
   mainColor: string;
   skills: string[];
   slug: string;
-  year?: string;
+  years?: YearsTypes;
 }
 
 export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
