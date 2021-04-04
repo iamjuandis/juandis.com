@@ -14,6 +14,10 @@ I was responsible for leading and managing the project, and collaborating in the
 
 We Are Angular, Colombia
 
+#### Years
+
+2019 - 2020
+
 #### Overview
 
 Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.
@@ -73,6 +77,10 @@ Since my partners and I founded Aurora in May 2020, I have had the opportunity t
 
 Aurora, Colombia
 
+#### Years
+
+2020 - Present
+
 #### Overview
 
 One of the biggest problems and opportunities in Latin America, specially in countries like Colombia, is the education, and the equity in its accessibility. We know it by self experience, and in order to help to solve this problem, we decided to build a unique tool to give people an efficient and more accesible e-learning tool. So we built Aurora, a eLearning company that wants to change education in Latam by using technology and design to build an efficient, reliable and accessible platform where students, employees and companies can improve their skills and strengths.  
@@ -116,6 +124,10 @@ A modern and complete suite to visualize and monitoring realtime data
 
 We Are Angular, Colombia
 
+#### Years
+
+2019 - 2020
+
 #### Role
 
 I was the Product Manager & Lead Designer on this project and I was responsible for creating user flows, wireframes and prototypes, set a roadmap, prioritise features and collaborate with outside stakeholders, developers and another UX Designer. Also I had the opprotunity to have a personal perspective of the development process participating as a Frontend Developer.
@@ -149,23 +161,37 @@ In fact, thanks to that renewal, Frostbyte reduced +91% the time spent on data v
 
 #### Headline
 
-A refined experience to make profitable and manage your unique and special clothing
+A refined experience to make profitable and manage unique and special clothing
 
 #### Company
 
 We Are Angular, Colombia
 
+#### Years
+
+2020 - 2021
+
 #### Role
 
-I had to opportunity to be the Design Leader for this project. I was responsible for define and propose a new  of creating 
+I had to opportunity to be the Design Leader for this project. I was responsible for define and propose a user flow, wireframes and a prototype that eventually would be handed to developers where I also participated as a Frontend Developer. 
 
 #### Overview
 
-Get2Wear is a sustainable fashion Startup that focuses on give people the opportunity to make profitable their special dresses. 
+Get2Wear is a sustainable fashion Startup that focuses on give people the opportunity to make profitable their special dresses. After a first iteration Get2Wear discovered that they would need to improve how users add their products to Get2Wear. Before this process were made by hand, and through a non-reliable user form and a complicated way to manage and visualize the first step of the logistics behind the business.  
 
 #### Problem
 
-Complexity to load a new product to Get2Wear, redesign and refine the user experience. Have a closer view to the customers status, and the management of internal billing variables.
+Thanks to the growth obtained in their first year running the business, they started to noticed the complexity to load a new product to Get2Wear, so they partnered us to redesign and refine the user experience and give cusomers a better way to make their dresses profitable, and in the other hand, have better management of the customers status, and the internal billing and logistic variables.
+
+#### How we did it
+
+- All starts with a closer view to the current perception of users, how that complexity is taking their experience down and what else can we discover. 
+- Then we took the previous user flow and we made a new one including additional features that would be tested with end users and admin users. 
+- We built a refined application with a improved feedback, a clear user flow, and clean interface that lets the most important actions be presence to the user. 
+
+#### Conclusion
+
+I feel really motivated when all what we do as designers is improve people lifes and help companies grow or even validate business opportunities. This was a validation case and for me, was a sign of proud and conviction to be part of a early stage business opportunity from a product design position. Besides, it let me a list of personal and professional improvements that I'm hungry to work on. 
 
 ------
 
@@ -178,6 +204,10 @@ A complete brand transformation to go forward through design, strategy and techn
 #### Company
 
 We Are Angular, Colombia
+
+#### Year
+
+2020
 
 #### My Role
 
