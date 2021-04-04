@@ -19,9 +19,11 @@ export interface ParagraphType {
 }
 
 export interface HeadlineType {
-  color?: string;
-  typeHeadline: string;
   children?: string;
+  color?: string;
+  fontSize?: number;
+  fontWeight?: number;
+  typeHeadline: string;
 }
 
 export interface PageLayoutTypes {

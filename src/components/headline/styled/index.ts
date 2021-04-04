@@ -33,8 +33,10 @@ export const HeadlineContainer = styled(HeadlineElement).attrs(tag)<HeadlineType
     props.typeHeadline === 'h6' || props.typeHeadline === 'h5' || props.typeHeadline === 'h4'
       ? '140%'
       : '150%'};
-  font-size: ${(props) => `${sizeHeadline(props.typeHeadline).size}em`};
-  font-weight: ${(props) => sizeHeadline(props.typeHeadline).weight};
+  font-size: ${(props) =>
+    props.fontSize ? `${props.fontSize}px` : `${sizeHeadline(props.typeHeadline).size}em`};
+  font-weight: ${(props) =>
+    props.fontWeight ? props.fontWeight : sizeHeadline(props.typeHeadline).weight};
   a {
     color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
     border-bottom: 2px solid
