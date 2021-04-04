@@ -29,7 +29,7 @@ const ProjectsBanner = ({ projects }: Props) => {
                   key={`${key}-${index}`}
                   mainColor={project?.mainColor}
                   headline={project?.headline}
-                  year={project?.year}
+                  years={project?.years}
                 />
               );
             }
