@@ -1,8 +1,9 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { PROJECTS } from '../../assets/content/projects';
 import ProjectLayout from '../../layouts/projectLayout';
-import { ProjectAllTypes } from '../../types/interfaces';
+import { ProjectAllTypes, ProjectsType } from '../../types/interfaces';
 
 interface Props {
   project: ProjectAllTypes;
@@ -20,13 +21,23 @@ const ProjectPage = ({ project, isValid }: Props) => {
   return <ProjectLayout project={project} />;
 };
 
-export const getServerSideProps = async ({ query }: any) => {
-  const projectSelected = PROJECTS[query.slug];
+export const getStaticPaths: GetStaticPaths = async () => {
+  const projects: ProjectsType = PROJECTS;
+
+  const paths = Object.keys(projects)?.map((project) => ({
+    params: { slug: projects[project].slug },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const projectSelected = PROJECTS[`${context?.params?.slug}`];
 
   if (projectSelected) {
     return {
       props: {
-        project: PROJECTS[query.slug],
+        project: PROJECTS[`${context?.params?.slug}`],
         isValid: true,
       },
     };
