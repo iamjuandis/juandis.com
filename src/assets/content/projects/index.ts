@@ -16,10 +16,19 @@ export const PROJECTS: ProjectsType = {
         <li>Openness</li>
       </ul>`,
     },
+    firstProcess: {
+      title: 'We needed to understand',
+      content: `<ul>
+        <li>The current state and context of invest in Real Estate in Colombia.</li>
+        <li>The technology and security involved in the process.</li>
+        <li>Of course, the user perspective, constraints and pain points.</li>
+      </ul>`,
+    },
     future: {
       content:
         'In order to build a definitve solution, keeping in mind the complexity of the business and model, we are working on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market.',
     },
+    headline: 'Shaping a new & open real estate investment experience.',
     nextProcess: {
       content: `To decide how to proceed, we focused on 4 specific issues:
       <ul>
@@ -31,7 +40,6 @@ export const PROJECTS: ProjectsType = {
       We used surveys, interviews and focus groups, to understand from first hand the pain points and put together the main elements to illustrate a user context. Thanks to the business vision and the user discoveries, we built a first prototype to test it on users, this helped Squarepin to find partners and advance the project to a new and functional prototype.
       `,
     },
-    headline: 'Shaping a new & open real estate investment experience.',
     mainColor: '#E20B21',
     slug: 'proper',
     images: {
@@ -60,14 +68,6 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
-    },
-    firstProcess: {
-      title: 'We needed to understand',
-      content: `<ul>
-        <li>The current state and context of invest in Real Estate in Colombia.</li>
-        <li>The technology and security involved in the process.</li>
-        <li>Of course, the user perspective, constraints and pain points.</li>
-      </ul>`,
     },
     myRole:
       'I was responsible for leading and managing the project, and collaborating in the user experience & interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',

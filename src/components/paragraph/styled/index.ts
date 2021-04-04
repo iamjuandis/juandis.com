@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import COLOR from '../../../assets/style/colors';
 import { ParagraphType } from '../../../types/interfaces';
 
-export const ParagraphContainer = styled.p<ParagraphType>`
+export const ParagraphContainer = styled.div<ParagraphType>`
   column-count: ${(props) => props.columns};
   column-gap: 30px;
   color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};

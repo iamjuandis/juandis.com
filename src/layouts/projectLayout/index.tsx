@@ -9,8 +9,6 @@ import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
 import { ProjectAllTypes } from '../../types/interfaces';
 import {
-  ItemFocus,
-  ItemsFocusContainer,
   ProjectCompanyContainer,
   ProjectCompanyTexts,
   ProjectConclusionContainer,
@@ -88,19 +86,17 @@ const ProjectLayout = ({ project }: Props) => {
               Role
             </Headline>
             <br />
-            <Paragraph
-              children={`I led the project, the user interface and experience design for the first and last functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback about the product.`}
-            />
+            <Paragraph children={project.myRole} />
             <ProjectCompanyContainer
               color={project.mainColor}
               oneColorIcon={project.ownerCompany?.oneColorIcon}
             >
               {project.ownerCompany.icon && (
-                <div dangerouslySetInnerHTML={{ __html: project.ownerCompany.icon }} />
+                <div dangerouslySetInnerHTML={{ __html: project.ownerCompany?.icon }} />
               )}
               <ProjectCompanyTexts>
-                <Paragraph size={0.7} children={`<strong>${project.ownerCompany.name}</strong>`} />
-                <Paragraph size={0.7}>{project.ownerCompany.country}</Paragraph>
+                <Paragraph size={0.7} children={`<strong>${project.ownerCompany?.name}</strong>`} />
+                <Paragraph size={0.7}>{project.ownerCompany?.country}</Paragraph>
               </ProjectCompanyTexts>
             </ProjectCompanyContainer>
           </ProjectRoleTextBoxes>
@@ -126,47 +122,41 @@ const ProjectLayout = ({ project }: Props) => {
       <ProjectMidSectionContainer>
         <ProjectMidSectionContent>
           <ProjectMidSectionTexts>
-            <Headline typeHeadline="h3" color={project.mainColor}>
-              {project.midSection?.title}
-            </Headline>
-            <br />
-            <Paragraph children={project.midSection?.paragraph} />
+            {project.firstProcess?.title && (
+              <>
+                <Headline typeHeadline="h3" color={project.mainColor}>
+                  {project.firstProcess?.title}
+                </Headline>
+                <br />
+              </>
+            )}
+
+            <Paragraph children={project.firstProcess?.content} />
           </ProjectMidSectionTexts>
-          <img src={project.images.middleImage} alt={project.headline} />
+          <img src={project.images?.middleImage} alt={project.headline} />
         </ProjectMidSectionContent>
       </ProjectMidSectionContainer>
 
       <ProjectFocusContainer>
         <ProjectFocusContent>
-          {project.focusProject?.headline && (
+          {project.nextProcess?.title && (
             <>
               <Headline
                 typeHeadline="h3"
-                children={project.focusProject?.headline}
+                children={project.nextProcess?.title}
                 color={project.mainColor}
               />
               <br />
             </>
           )}
-          <Paragraph children={project.focusProject?.description} />
-          {project.focusProject?.items && project.focusProject?.items.length > 0 && (
-            <ItemsFocusContainer>
-              {project.focusProject?.items.map((item: string, idx: number) => (
-                <ItemFocus key={idx} color={project.mainColor}>
-                  <span>{item}</span>
-                </ItemFocus>
-              ))}
-            </ItemsFocusContainer>
-          )}
-          <br />
-          <Paragraph columns={2} children={project.focusProject?.longDescription} />
+          <Paragraph children={project.nextProcess?.content} />
         </ProjectFocusContent>
       </ProjectFocusContainer>
 
-      {project.images.smallImages && project.focusProject?.items.length > 0 && (
+      {project.images?.smallImages && (
         <ProjectSmallImgsContainer>
           <ProjectSmallImgsContent>
-            {project.images.smallImages.map((image: string, idx: number) => (
+            {project.images?.smallImages?.map((image: string, idx: number) => (
               <img key={idx} src={image} alt={`${idx + 1}. ${project.client}`} />
             ))}
           </ProjectSmallImgsContent>
@@ -177,17 +167,10 @@ const ProjectLayout = ({ project }: Props) => {
         <ProjectDiscoveryContent>
           <img src={project.images.discoveryImage} alt={project.headline} />
           <ProjectDiscoveryTexts>
-            {project.discovery.headline && (
-              <Headline typeHeadline="h3" children={project.discovery.headline} />
+            {project.discovery?.title && (
+              <Headline typeHeadline="h3" children={project.discovery.title} />
             )}
-            <Paragraph children={project.discovery.description} />
-            <br />
-            {project.discovery.items.map((item: string, idx: number) => (
-              <span key={idx}>
-                <Paragraph size={1.5} key={idx} children={item} />
-                <br />
-              </span>
-            ))}
+            <Paragraph children={project.discovery?.content} />
           </ProjectDiscoveryTexts>
         </ProjectDiscoveryContent>
       </ProjectDiscoveryContainer>
