@@ -74,8 +74,12 @@ export const PROJECTS: ProjectsType = {
     opportunity: {
       content:
         'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
-      image:
-        'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
+      image: {
+        src:
+          'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
+        height: 1028 - 5,
+        width: 1800,
+      },
     },
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.',

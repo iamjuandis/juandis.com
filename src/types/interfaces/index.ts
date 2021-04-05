@@ -59,16 +59,32 @@ export interface ProjectImagesTypes {
 export interface SectionTypes {
   title?: string;
   content: string;
-  image?: string;
+  image?: ImageInterface;
   alignement?: string;
+}
+
+type AlignementTypes =
+  | 'wide-up'
+  | 'wide-left'
+  | 'wide-right'
+  | 'wide-bottom'
+  | 'mid-up'
+  | 'mid-left'
+  | 'mid-right'
+  | 'mid-bottom';
+
+interface ImageInterface {
+  height: number;
+  src: string;
+  width: number;
 }
 
 export interface ProjectSectionType {
   title?: string;
   content?: string;
-  columns?: number;
-  image?: string;
-  alignment?: string; // wide-up, wide-left, wide-right, wide-bottom, mid-up, mid-left, mid-right, mid-bottom
+  columns?: 0 | 1 | 2 | 3;
+  image?: ImageInterface;
+  alignment?: AlignementTypes;
   mainColor?: string;
   maxWidth?: number;
 }

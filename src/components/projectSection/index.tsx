@@ -16,7 +16,16 @@ const ProjectSection = ({
   return (
     <ProjectSectionContainer>
       <ProjectSectionContent alignment={alignment} maxWidth={maxWidth}>
-        {image && <Image src={image} width={1024} height={580} objectFit="cover" />}
+        {image && (
+          <Image
+            src={image.src}
+            width={image.width}
+            height={image.height}
+            objectFit="cover"
+            quality={100}
+            layout="responsive"
+          />
+        )}
         <ProjectSectionTexts>
           {title && (
             <>
