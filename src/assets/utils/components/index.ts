@@ -50,3 +50,36 @@ export const formatDate = (dateString: string) => {
   ];
   return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 };
+
+export const HandleAlignment = (alignment: string) => {
+  const splitAlignment: string[] = alignment.split('-');
+  const size: string = splitAlignment[0];
+  const position: string = splitAlignment[1];
+
+  switch (size) {
+    case 'wide':
+      return {
+        maxWidth: '1200px',
+        gridTemplate: position === 'left' || position === 'right' ? 'repeat(14, 1fr)' : '1fr',
+        direction: position === 'up' || position === 'right' ? 'rtl' : 'ltr',
+        size: size,
+        position: position,
+      };
+
+    case 'mid':
+      return {
+        maxWidth: '1024px',
+        gridTemplate: position === 'left' || position === 'right' ? 'repeat(12, 1fr)' : '1fr',
+        direction: position === 'up' || position === 'right' ? 'rtl' : 'ltr',
+        size: size,
+        position: position,
+      };
+
+    default:
+      return {
+        maxWidth: '1200px',
+        gridTemplate: 'repeat(14, 1fr)',
+        direction: 'rtl',
+      };
+  }
+};

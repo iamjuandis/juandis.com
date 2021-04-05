@@ -8,7 +8,7 @@ Shaping a new & open real estate investment experience.
 
 #### Role
 
-I was responsible for leading and managing the project, and collaborating in the user experience & interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.
+I was responsible for leading and managing the project, and collaborating in the user experience & interface design. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.
 
 #### Company
 

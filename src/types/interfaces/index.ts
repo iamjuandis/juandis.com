@@ -59,6 +59,18 @@ export interface ProjectImagesTypes {
 export interface SectionTypes {
   title?: string;
   content: string;
+  image?: string;
+  alignement?: string;
+}
+
+export interface ProjectSectionType {
+  title?: string;
+  content?: string;
+  columns?: number;
+  image?: string;
+  alignment?: string; // wide-up, wide-left, wide-right, wide-bottom, mid-up, mid-left, mid-right, mid-bottom
+  mainColor?: string;
+  maxWidth?: number;
 }
 export interface ProjectInternalInfoTypes {
   conclusion: string;

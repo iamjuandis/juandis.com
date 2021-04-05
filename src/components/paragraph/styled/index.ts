@@ -21,4 +21,35 @@ export const ParagraphContainer = styled.div<ParagraphType>`
         props.highlightColor ? props.highlightColor : COLOR.blue_universe};
     }
   }
+  ul,
+  ol {
+    display: table;
+    list-style-position: inside;
+    margin: 10px 0;
+    li {
+      display: table-row;
+      &::before {
+        content: '•';
+        display: table-cell;
+        text-align: right;
+        padding-right: 10px;
+      }
+    }
+    &.brick {
+      display: inline-flex;
+      margin: 30px 0;
+      width: 100%;
+      li {
+        background: ${(props) =>
+          props.highlightColor ? `${props.highlightColor}33` : `${COLOR.blue_universe}33`};
+        color: ${(props) => (props.highlightColor ? props.highlightColor : COLOR.blue_universe)};
+        display: inline-flex;
+        margin-right: 30px;
+        padding: 10px 15px;
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
 `;

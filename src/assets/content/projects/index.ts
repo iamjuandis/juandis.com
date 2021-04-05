@@ -31,7 +31,7 @@ export const PROJECTS: ProjectsType = {
     headline: 'Shaping a new & open real estate investment experience.',
     nextProcess: {
       content: `To decide how to proceed, we focused on 4 specific issues:
-      <ul>
+      <ul class="brick">
         <li>Intermediation</li>
         <li>Safety</li>
         <li>Accesibility</li>
@@ -70,10 +70,12 @@ export const PROJECTS: ProjectsType = {
       ],
     },
     myRole:
-      'I was responsible for leading and managing the project, and collaborating in the user experience & interface design. We got the challenge to understand the business, context and users to build a functional prototype. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
+      'I was responsible for leading and managing the project, and collaborating in the user experience & interface design. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
     opportunity: {
       content:
         'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
+      image:
+        'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
     },
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.',

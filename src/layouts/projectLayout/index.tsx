@@ -37,6 +37,7 @@ import {
   ProjectSmallImgsContainer,
   ProjectSmallImgsContent,
 } from './styled';
+import ProjectSection from '../../components/projectSection';
 
 interface Props {
   project: ProjectAllTypes;
@@ -125,6 +126,14 @@ const ProjectLayout = ({ project }: Props) => {
           <Paragraph columns={2} children={project.overview} />
         </ProjectOverviewContent>
       </ProjectOverviewContainer>
+      <ProjectSection
+        alignment="mid-up"
+        image={project.opportunity.image}
+        title="The opportunity"
+        content={project.opportunity.content}
+        columns={1}
+        mainColor={project.mainColor}
+      />
 
       <ProjectMidSectionContainer>
         <ProjectMidSectionContent>
