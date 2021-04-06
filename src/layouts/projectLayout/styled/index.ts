@@ -165,64 +165,6 @@ export const ProjectSmallImgsContent = styled.div`
   }
 `;
 
-export const ProjectDiscoveryContainer = styled.div`
-  padding-top: 30px;
-  width: 100%;
-`;
-export const ProjectDiscoveryContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
-  margin: auto;
-  max-width: 1024px;
-  width: calc(100% - 60px);
-  img {
-    display: flex;
-    grid-column: 1 / 7;
-    width: 100%;
-  }
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
-    img {
-      grid-row: 2;
-    }
-  }
-`;
-
-export const ProjectDiscoveryTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  grid-column: 7 / -2;
-  width: 100%;
-`;
-
-export const ProjectConclusionContainer = styled.div`
-  padding-top: 50px;
-  text-align: center;
-  width: 100%;
-  img {
-    max-width: 1200px;
-    margin: auto;
-    height: auto;
-    width: 100%;
-  }
-`;
-
-export const ProjectConclusionContent = styled.div`
-  display: grid;
-  grid-template-columns: 7fr 3fr;
-  grid-column-gap: 30px;
-  padding-bottom: 50px;
-  margin: auto;
-  max-width: 848px;
-  text-align: left;
-  width: calc(100% - 60px);
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
 export const ProjectFooter = styled.div`
   margin: auto;
   margin-top: 50px;

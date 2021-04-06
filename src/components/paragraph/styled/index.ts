@@ -51,5 +51,18 @@ export const ParagraphContainer = styled.div<ParagraphType>`
         }
       }
     }
+    &.big-letter {
+      display: inline-block;
+      margin: 0;
+      width: 100%;
+      li {
+        display: block;
+        font-size: 1.5em;
+        margin: 30px 0;
+        &::before {
+          content: none;
+        }
+      }
+    }
   }
 `;

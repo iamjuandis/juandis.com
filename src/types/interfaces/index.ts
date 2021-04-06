@@ -48,7 +48,6 @@ export interface OwnerCompanyTypes {
 export interface ProjectImagesTypes {
   cardImages: string[];
   coverImage: string;
-  discoveryImage: string;
   previewImage: string;
   sliderImages: string[];
   smallImages: string[];
@@ -99,8 +98,8 @@ export interface ProjectInternalInfoTypes {
 }
 
 export interface YearsTypes {
-  first: string;
-  last?: string;
+  first: number;
+  last?: string | number;
 }
 export interface ProjectMainTypes {
   client: string;

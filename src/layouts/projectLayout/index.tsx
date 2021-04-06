@@ -11,9 +11,6 @@ import { ProjectAllTypes } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
-  ProjectDiscoveryContainer,
-  ProjectDiscoveryContent,
-  ProjectDiscoveryTexts,
   ProjectFocusContainer,
   ProjectFocusContent,
   ProjectFooter,
@@ -152,6 +149,24 @@ const ProjectLayout = ({ project }: Props) => {
         </ProjectFocusContent>
       </ProjectFocusContainer>
 
+      <ProjectSection
+        alignment="mid-left"
+        image={project.discovery?.image}
+        title={project.discovery?.title ?? 'Discovery'}
+        content={project.discovery?.content}
+        columns={1}
+        mainColor={project.mainColor}
+      />
+
+      <ProjectSection
+        alignment="mid-bottom"
+        image={project.future?.image}
+        title={project.future?.title ?? 'Next steps'}
+        content={project.future?.content}
+        columns={1}
+        mainColor={project.mainColor}
+      />
+
       {project.images?.smallImages && (
         <ProjectSmallImgsContainer>
           <ProjectSmallImgsContent>
@@ -161,18 +176,6 @@ const ProjectLayout = ({ project }: Props) => {
           </ProjectSmallImgsContent>
         </ProjectSmallImgsContainer>
       )}
-
-      <ProjectDiscoveryContainer>
-        <ProjectDiscoveryContent>
-          <img src={project.images.discoveryImage} alt={project.headline} />
-          <ProjectDiscoveryTexts>
-            {project.discovery?.title && (
-              <Headline typeHeadline="h3" children={project.discovery.title} />
-            )}
-            <Paragraph children={project.discovery?.content} />
-          </ProjectDiscoveryTexts>
-        </ProjectDiscoveryContent>
-      </ProjectDiscoveryContainer>
 
       {project.conclusion && project.conclusion?.content && (
         <ProjectSection
@@ -189,7 +192,9 @@ const ProjectLayout = ({ project }: Props) => {
         <Paragraph
           color={`${COLOR.blue_universe}55`}
           size={0.7}
-          children={`© 2021. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permited by copyright law.`}
+          children={`© ${
+            project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
+          }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permited by copyright law.`}
         />
       </ProjectFooter>
       <Footer mainColor={project.mainColor} />

@@ -75,8 +75,8 @@ export const HandleAlignment = (alignment: string) => {
         direction: position === 'up' || position === 'right' ? 'ltr' : 'rtl',
         size: size,
         position: position,
-        gridColumnText: position === 'left' ? '6 / 11' : position === 'right' ? '1 / 6' : '1 / -1',
-        gridColumnImage: position === 'left' ? '1 / 6' : position === 'right' ? '6 / -1' : '1 / -1',
+        gridColumnText: position === 'left' ? '7 / -1' : position === 'right' ? '1 / 7' : '1 / -1',
+        gridColumnImage: position === 'left' ? '1 / 7' : position === 'right' ? '7 / -1' : '1 / -1',
       };
 
     default:
