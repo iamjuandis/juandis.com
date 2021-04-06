@@ -320,6 +320,98 @@ export const PROJECTS: ProjectsType = {
     years: { first: 2019, last: 2020 },
   },
 
+  weareangular: {
+    client: 'We Are Angular',
+    conclusion: {
+      alignment: 'wide-bottom',
+      columns: 2,
+      content: `This is one of those projects that I'm very proud of. Not only for the results behind that, but also for the process, execution and decitions made to do it better. I had the challenge to take the driver seat and get a diverse team together to involve strategy, marketing, business, design and technology decisions in order to refresh our whole company.<br/><br/>
+      Special thanks to Stefanía Grimaldo, Stephany Rojas, Diego Barbosa, Santiago González, Luis Meneses, Juan E. Gallo and our special customers that made this possible.`,
+      image: {
+        height: 914,
+        src:
+          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+        width: 2400,
+      },
+    },
+    headline:
+      'A complete brand transformation to go forward through design, strategy and technology',
+    images: {
+      coverImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
+      cardImages: [
+        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
+      ],
+      sliderImages: [
+        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
+      ],
+      previewImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
+      smallImages: [
+        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
+      ],
+    },
+    mainColor: '#FFB100',
+    myRole: `Since 2017, I've been a very active collaborator inside We Are Angular, that gave me the chance to be the Design Leader for our complete redesign and strategy processes. I was responisble to understand and analyze the status of the company, work along stakeholders and the management in order to have a panoramic view of the business. Then I lead the design process, sketching and proposing a new brand face, and connect the company strategy to all areas, form sales, to HR.`,
+    overview:
+      'Since 2016, We Are Angular have partnered startups and companies to help them grow from design and technology. Our main focus was influenced and inspired by a lean methology and design methologies, where customers were able to take an important step for validation and prototyping. I had the opportunity to be part of the journey from 2017, since then, I have worked as developer, designer, consultant, project manager and board member. Back in 2020, after a complicated inter-pandemic scenario, we started to reinvent ourselves. We had the challenge to transform our brand and include additional services focused on a 360º B2B solutions.',
+    ownerCompany: {
+      name: 'We Are Angular',
+      country: 'Colombia',
+      icon: LOGO_WE_ARE_ANGULAR,
+      oneColorIcon: true,
+    },
+    sections: {
+      opportunity: {
+        alignment: 'mid-up',
+        columns: 1,
+        content:
+          'We needed to reorganise ourselves, from an internal structure, to a better communication that enhances the relationship with our customers. The way our industry works, require us to be clear, simple and assertive and those would be the basements to rebuild our brand.',
+        image: {
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
+          height: 1028 - 5,
+          width: 1800,
+        },
+        title: 'Opprtunity',
+      },
+      firstProcess: {
+        alignment: 'wide-right',
+        columns: 1,
+        image: {
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+          width: 1346,
+          height: 1118,
+        },
+        title: 'Step by step',
+        content: `<ul class="big-letter">
+          <li>Let our customers participate</li>
+          <li>Reflect on the perception</li>
+          <li>Team ideation</li>
+          <li>Materialize the ideas</li>
+          <li>Connect with a strategy</li>
+          <li>Deliver a fresh new brand</li>
+        </ul>`,
+      },
+      output: {
+        alignment: 'wide-up',
+        content: `Thanks to the restyling and brand renewal, we were able to push 3 new services out the market, and start a planned strategy a long side experts in Marketing and Sales. In this process, we didn't only think about look nice, but also work nice. So we built a new, fast and powerful website, that would allow us to run strategies with better results.<br/><br/>
+        Thanks to that, we got a performance optimization of 79% less loading time and a +90% more organic visits the first 3 months.`,
+        columns: 2,
+      },
+    },
+    skills: ['Product Design', 'Frontend Development'],
+    slug: 'weareangular',
+    years: { first: 2020 },
+  },
+
   get2wear: {
     client: 'Get2Wear',
     conclusion: {
