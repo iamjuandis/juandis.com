@@ -4,18 +4,18 @@ import COLOR from '../../../assets/style/colors';
 
 export const ArrowComponent = styled.div<ArrowProps>`
   align-items: center;
+  background: ${COLOR.white_cloud};
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px ${(props) => `${props.mainColor}77`};
+  cursor: pointer;
   display: flex;
   ${(props) => (props.direction === 'right' ? `right: 25px` : `left: 25px`)};
   height: 50px;
-  width: 50px;
   justify-content: center;
-  background: ${COLOR.white_cloud};
-  border-radius: 50%;
-  cursor: pointer;
-  align-items: center;
-  transition: transform ease-in 0.2s;
   opacity: ${(props) => props.opacity};
   pointer-events: ${(props) => (props.opacity && props.opacity === 1 ? 'all' : 'none')};
+  transition: transform ease-in 0.2s;
+  width: 50px;
   &:hover {
     transform: scale(1.1);
   }

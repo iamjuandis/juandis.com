@@ -65,7 +65,7 @@ const ProjectLayout = ({ project }: Props) => {
             <Paragraph
               color={COLOR.white_cloud}
               children={`${project.years?.first}${
-                project.years?.last && ` - ${project.years.last}`
+                project.years?.last ? ` - ${project.years?.last}` : ''
               }`}
             />
           </ProjectLayoutMainBannerTextContainer>

@@ -357,7 +357,7 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
     },
-    mainColor: '#FFB100',
+    mainColor: '#FF9900',
     myRole: `Since 2017, I've been a very active collaborator inside We Are Angular, that gave me the chance to be the Design Leader for our complete redesign and strategy processes. I was responisble to understand and analyze the status of the company, work along stakeholders and the management in order to have a panoramic view of the business. Then I lead the design process, sketching and proposing a new brand face, and connect the company strategy to all areas, form sales, to HR.`,
     overview:
       'Since 2016, We Are Angular have partnered startups and companies to help them grow from design and technology. Our main focus was influenced and inspired by a lean methology and design methologies, where customers were able to take an important step for validation and prototyping. I had the opportunity to be part of the journey from 2017, since then, I have worked as developer, designer, consultant, project manager and board member. Back in 2020, after a complicated inter-pandemic scenario, we started to reinvent ourselves. We had the challenge to transform our brand and include additional services focused on a 360º B2B solutions.',
