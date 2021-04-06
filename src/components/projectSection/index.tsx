@@ -1,8 +1,14 @@
 import Image from 'next/image';
+import { HandleAlignment } from '../../assets/utils/components';
 import { ProjectSectionType } from '../../types/interfaces';
 import Headline from '../headline';
 import Paragraph from '../paragraph';
-import { ProjectSectionContainer, ProjectSectionContent, ProjectSectionTexts } from './styled';
+import {
+  ProjectSectionContainer,
+  ProjectSectionContent,
+  ProjectSectionTexts,
+  ProjectSectionImage,
+} from './styled';
 
 const ProjectSection = ({
   alignment,
@@ -16,17 +22,21 @@ const ProjectSection = ({
   return (
     <ProjectSectionContainer>
       <ProjectSectionContent alignment={alignment} maxWidth={maxWidth}>
-        {image && (
-          <Image
-            src={image.src}
-            width={image.width}
-            height={image.height}
-            objectFit="cover"
-            quality={100}
-            layout="responsive"
-          />
-        )}
-        <ProjectSectionTexts>
+        {image &&
+          (HandleAlignment(`${alignment}`).position === 'left' ||
+            HandleAlignment(`${alignment}`).position === 'up') && (
+            <ProjectSectionImage alignment={alignment}>
+              <Image
+                src={image.src}
+                width={image.width}
+                height={image.height}
+                objectFit="cover"
+                quality={100}
+                layout="responsive"
+              />
+            </ProjectSectionImage>
+          )}
+        <ProjectSectionTexts alignment={alignment}>
           {title && (
             <>
               <Headline color={mainColor} typeHeadline="h3" children={title} />
@@ -35,6 +45,20 @@ const ProjectSection = ({
           )}
           <Paragraph columns={columns} children={content} />
         </ProjectSectionTexts>
+        {image &&
+          (HandleAlignment(`${alignment}`).position === 'right' ||
+            HandleAlignment(`${alignment}`).position === 'bottom') && (
+            <ProjectSectionImage alignment={alignment}>
+              <Image
+                src={image.src}
+                width={image.width}
+                height={image.height}
+                objectFit="cover"
+                quality={100}
+                layout="responsive"
+              />
+            </ProjectSectionImage>
+          )}
       </ProjectSectionContent>
     </ProjectSectionContainer>
   );

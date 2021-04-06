@@ -17,6 +17,12 @@ export const PROJECTS: ProjectsType = {
       </ul>`,
     },
     firstProcess: {
+      image: {
+        src:
+          'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+        width: 1346,
+        height: 1118,
+      },
       title: 'We needed to understand',
       content: `<ul>
         <li>The current state and context of invest in Real Estate in Colombia.</li>

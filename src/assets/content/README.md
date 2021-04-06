@@ -45,7 +45,7 @@ We used surveys, interviews and focus groups, to understand from first hand the 
 
 #### Discovery
 
-Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a batter and comprehensive product:
+Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a better and comprehensive product:
 
 - Usability
 - Diversity
@@ -59,7 +59,7 @@ In order to build a definitve solution, keeping in mind the complexity of the bu
 
 #### Conclusion
 
-Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.
+Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and how important is to make it easy for the users.
 
 ---
 
@@ -106,7 +106,7 @@ In order to deliver value constantly, we focused on methologies as SCRUM and Ent
 
 #### Next steps
 
-Thanks to the understaning of the financial model and the impact that we can focus on, we start working on a B2B version that includes refined experiences to our deily users and a complete suite to business and organizaions.
+Thanks to the understanding of the financial model and the impact that we can focus on, we start working on a B2B version that includes refined experiences to our daily users and a complete suite to business and organisations.
 
 #### Conclusion
 
@@ -148,7 +148,7 @@ After a very intense month of observation, interviews and field research, we wer
 
 - **+91%** less time to recolect and visualize data
 - **+20K** data points per week
-- **+400** more revenue
+- **+400**% more revenue
 
 #### The future
 

@@ -24,11 +24,6 @@ import {
   ProjectLayoutMainBanner,
   ProjectLayoutMainBannerContent,
   ProjectLayoutMainBannerTextContainer,
-  ProjectMidSectionContainer,
-  ProjectMidSectionContent,
-  ProjectMidSectionTexts,
-  ProjectOverviewContainer,
-  ProjectOverviewContent,
   ProjectRoleBanner,
   ProjectRoleBannerContent,
   ProjectRoleTextBoxes,
@@ -117,42 +112,31 @@ const ProjectLayout = ({ project }: Props) => {
         </ProjectSliderContent>
       </ProjectSliderContainer>
 
-      <ProjectOverviewContainer>
-        <ProjectOverviewContent>
-          <Headline typeHeadline="h3" color={project.mainColor}>
-            Overview
-          </Headline>
-          <br />
-          <Paragraph columns={2} children={project.overview} />
-        </ProjectOverviewContent>
-      </ProjectOverviewContainer>
+      <ProjectSection
+        alignment="mid-up"
+        title="Overview"
+        content={project.overview}
+        columns={2}
+        mainColor={project.mainColor}
+      />
 
       <ProjectSection
         alignment="mid-up"
         image={project.opportunity?.image}
-        title="The opportunity"
+        title={project.opportunity?.title ?? 'The opportunity'}
         content={project.opportunity?.content}
         columns={1}
         mainColor={project.mainColor}
       />
 
-      <ProjectMidSectionContainer>
-        <ProjectMidSectionContent>
-          <ProjectMidSectionTexts>
-            {project.firstProcess?.title && (
-              <>
-                <Headline typeHeadline="h3" color={project.mainColor}>
-                  {project.firstProcess?.title}
-                </Headline>
-                <br />
-              </>
-            )}
-
-            <Paragraph children={project.firstProcess?.content} />
-          </ProjectMidSectionTexts>
-          <img src={project.images?.middleImage} alt={project.headline} />
-        </ProjectMidSectionContent>
-      </ProjectMidSectionContainer>
+      <ProjectSection
+        alignment="wide-right"
+        image={project.firstProcess?.image}
+        title={project.firstProcess?.title ?? ''}
+        content={project.firstProcess?.content}
+        columns={1}
+        mainColor={project.mainColor}
+      />
 
       <ProjectFocusContainer>
         <ProjectFocusContent>
