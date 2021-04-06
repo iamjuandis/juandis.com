@@ -5,6 +5,8 @@ export const PROJECTS: ProjectsType = {
   proper: {
     client: 'Proper',
     conclusion: {
+      alignment: 'wide-bottom',
+      columns: 2,
       content:
         'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.',
       image: {
@@ -14,56 +16,8 @@ export const PROJECTS: ProjectsType = {
         width: 2400,
       },
     },
-    discovery: {
-      image: {
-        height: 1240,
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
-        width: 994,
-      },
-      content: `Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a batter and comprehensive product:
-      <ul class="big-letter">
-        <li>Usability</li>
-        <li>Diversity</li>
-        <li>Security</li>
-        <li>Ownership</li>
-        <li>Openness</li>
-      </ul>`,
-    },
-    firstProcess: {
-      image: {
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
-        width: 1346,
-        height: 1118,
-      },
-      title: 'We needed to understand',
-      content: `<ul>
-        <li>The current state and context of invest in Real Estate in Colombia.</li>
-        <li>The technology and security involved in the process.</li>
-        <li>Of course, the user perspective, constraints and pain points.</li>
-      </ul>`,
-    },
-    future: {
-      title: 'Next steps',
-      content:
-        'In order to build a definitve solution, keeping in mind the complexity of the business and model, we are working on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market.',
-    },
     headline: 'Shaping a new & open real estate investment experience.',
-    nextProcess: {
-      title: 'Process',
-      content: `To decide how to proceed, we focused on 4 specific issues:
-      <ul class="brick">
-        <li>Intermediation</li>
-        <li>Safety</li>
-        <li>Accesibility</li>
-        <li>Time</li>
-      </ul>
-      We used surveys, interviews and focus groups, to understand from first hand the pain points and put together the main elements to illustrate a user context. Thanks to the business vision and the user discoveries, we built a first prototype to test it on users, this helped Squarepin to find partners and advance the project to a new and functional prototype.
-      `,
-    },
-    mainColor: '#E20B21',
-    slug: 'proper',
+
     images: {
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
@@ -85,18 +39,9 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
     },
+    mainColor: '#E20B21',
     myRole:
       'I was responsible for leading and managing the project, and collaborating in the user experience & interface design. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
-    opportunity: {
-      content:
-        'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
-      image: {
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
-        height: 1028 - 5,
-        width: 1800,
-      },
-    },
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.',
     ownerCompany: {
@@ -105,7 +50,77 @@ export const PROJECTS: ProjectsType = {
       icon: LOGO_WE_ARE_ANGULAR,
       oneColorIcon: true,
     },
+    sections: {
+      opportunity: {
+        alignment: 'mid-up',
+        columns: 1,
+        content:
+          'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
+        image: {
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
+          height: 1028 - 5,
+          width: 1800,
+        },
+      },
+      firstProcess: {
+        alignment: 'wide-right',
+        columns: 1,
+        image: {
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+          width: 1346,
+          height: 1118,
+        },
+        title: 'We needed to understand',
+        content: `<ul>
+          <li>The current state and context of invest in Real Estate in Colombia.</li>
+          <li>The technology and security involved in the process.</li>
+          <li>Of course, the user perspective, constraints and pain points.</li>
+        </ul>`,
+      },
+      nextProcess: {
+        alignment: 'mid-up',
+        columns: 1,
+        title: 'Process',
+        content: `To decide how to proceed, we focused on 4 specific issues:
+        <ul class="brick">
+          <li>Intermediation</li>
+          <li>Safety</li>
+          <li>Accesibility</li>
+          <li>Time</li>
+        </ul>
+        We used surveys, interviews and focus groups, to understand from first hand the pain points and put together the main elements to illustrate a user context. Thanks to the business vision and the user discoveries, we built a first prototype to test it on users, this helped Squarepin to find partners and advance the project to a new and functional prototype.
+        `,
+      },
+      discovery: {
+        alignment: 'mid-left',
+        columns: 1,
+        image: {
+          height: 1240,
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
+          width: 994,
+        },
+        content: `Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a batter and comprehensive product:
+        <ul class="big-letter">
+          <li>Usability</li>
+          <li>Diversity</li>
+          <li>Security</li>
+          <li>Ownership</li>
+          <li>Openness</li>
+        </ul>`,
+      },
+      future: {
+        alignment: 'mid-bottom',
+        columns: 1,
+        title: 'Next steps',
+        content:
+          'In order to build a definitve solution, keeping in mind the complexity of the business and model, we are working on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market.',
+      },
+    },
     skills: ['Product Design', 'Frontend Development'],
+    slug: 'proper',
     years: { first: 2019, last: 2020 },
   },
 };

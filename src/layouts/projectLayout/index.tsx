@@ -7,12 +7,10 @@ import Header from '../../components/header/header';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
-import { ProjectAllTypes } from '../../types/interfaces';
+import { ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
-  ProjectFocusContainer,
-  ProjectFocusContent,
   ProjectFooter,
   ProjectLayoutContainer,
   ProjectLayoutCoverImageContainer,
@@ -115,57 +113,22 @@ const ProjectLayout = ({ project }: Props) => {
         mainColor={project.mainColor}
       />
 
-      <ProjectSection
-        alignment="mid-up"
-        image={project.opportunity?.image}
-        title={project.opportunity?.title ?? 'The opportunity'}
-        content={project.opportunity?.content}
-        columns={1}
-        mainColor={project.mainColor}
-      />
-
-      <ProjectSection
-        alignment="wide-right"
-        image={project.firstProcess?.image}
-        title={project.firstProcess?.title ?? ''}
-        content={project.firstProcess?.content}
-        columns={1}
-        mainColor={project.mainColor}
-      />
-
-      <ProjectFocusContainer>
-        <ProjectFocusContent>
-          {project.nextProcess?.title && (
-            <>
-              <Headline
-                typeHeadline="h3"
-                children={project.nextProcess?.title}
-                color={project.mainColor}
+      {project.sections &&
+        Object.entries(project.sections)?.map(
+          ([key, section]: [string, ProjectSectionType], index: number) => {
+            return (
+              <ProjectSection
+                alignment={section.alignment}
+                columns={section.columns}
+                content={section.content}
+                image={section.image}
+                key={`${key}-${index}`}
+                mainColor={project.mainColor}
+                title={section.title}
               />
-              <br />
-            </>
-          )}
-          <Paragraph children={project.nextProcess?.content} />
-        </ProjectFocusContent>
-      </ProjectFocusContainer>
-
-      <ProjectSection
-        alignment="mid-left"
-        image={project.discovery?.image}
-        title={project.discovery?.title ?? 'Discovery'}
-        content={project.discovery?.content}
-        columns={1}
-        mainColor={project.mainColor}
-      />
-
-      <ProjectSection
-        alignment="mid-bottom"
-        image={project.future?.image}
-        title={project.future?.title ?? 'Next steps'}
-        content={project.future?.content}
-        columns={1}
-        mainColor={project.mainColor}
-      />
+            );
+          }
+        )}
 
       {project.images?.smallImages && (
         <ProjectSmallImgsContainer>

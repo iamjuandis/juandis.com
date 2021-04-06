@@ -130,19 +130,6 @@ export const ProjectSliderContent = styled.div`
   }
 `;
 
-export const ProjectFocusContainer = styled.div`
-  padding: 50px 0;
-  width: 100%;
-`;
-
-export const ProjectFocusContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  max-width: 848px;
-  width: calc(100% - 60px);
-`;
-
 export const ProjectSmallImgsContainer = styled.div`
   width: 100%;
 `;

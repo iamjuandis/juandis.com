@@ -53,13 +53,6 @@ export interface ProjectImagesTypes {
   smallImages: string[];
 }
 
-export interface SectionTypes {
-  title?: string;
-  content: string;
-  image?: ImageInterface;
-  alignement?: string;
-}
-
 type AlignementTypes =
   | 'wide-up'
   | 'wide-left'
@@ -77,24 +70,24 @@ interface ImageInterface {
 }
 
 export interface ProjectSectionType {
-  title?: string;
-  content?: string;
-  columns?: 0 | 1 | 2 | 3;
-  image?: ImageInterface;
   alignment?: AlignementTypes;
+  columns?: 0 | 1 | 2 | 3;
+  content?: string;
+  image?: ImageInterface;
   mainColor?: string;
   maxWidth?: number;
+  title?: string;
+}
+
+export interface SectionsType {
+  [key: string]: ProjectSectionType;
 }
 export interface ProjectInternalInfoTypes {
-  conclusion: SectionTypes;
-  discovery?: SectionTypes;
-  firstProcess?: SectionTypes;
-  future?: SectionTypes;
-  nextProcess?: SectionTypes;
+  conclusion: ProjectSectionType;
   myRole: string;
-  opportunity: SectionTypes;
   overview: string;
   ownerCompany: OwnerCompanyTypes;
+  sections: SectionsType;
 }
 
 export interface YearsTypes {
