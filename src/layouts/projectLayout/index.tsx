@@ -146,7 +146,7 @@ const ProjectLayout = ({ project }: Props) => {
           image={project.conclusion?.image}
           title={project.conclusion?.title ?? 'Conclusion'}
           content={project.conclusion?.content}
-          columns={2}
+          columns={project.conclusion?.columns}
           mainColor={project.mainColor}
         />
       )}

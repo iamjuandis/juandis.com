@@ -53,6 +53,7 @@ const ProjectCard = ({
           <Headline
             color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
             typeHeadline="h3"
+            fontSize={30}
           >
             {headline}
           </Headline>

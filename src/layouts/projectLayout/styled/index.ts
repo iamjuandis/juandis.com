@@ -96,19 +96,23 @@ export const ProjectRoleTextBoxes = styled.div`
 `;
 
 export const ProjectCompanyContainer = styled.div<CompanyProps>`
+  align-items: center;
   display: flex;
   flex-direction: row;
   margin-top: 30px;
   width: 100%;
-  ${(props) =>
-    props.oneColorIcon &&
-    `
-    svg {
+
+  svg {
+    height: 50px;
+    width: 50px;
+    ${(props) =>
+      props.oneColorIcon &&
+      `
       path {
         fill: ${props.color}
       }
-    }
-  `}
+      `}
+  }
 `;
 
 export const ProjectCompanyTexts = styled.div`
