@@ -11,8 +11,6 @@ import { ProjectAllTypes } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
-  ProjectConclusionContainer,
-  ProjectConclusionContent,
   ProjectDiscoveryContainer,
   ProjectDiscoveryContent,
   ProjectDiscoveryTexts,
@@ -176,18 +174,16 @@ const ProjectLayout = ({ project }: Props) => {
         </ProjectDiscoveryContent>
       </ProjectDiscoveryContainer>
 
-      <ProjectConclusionContainer>
-        <ProjectConclusionContent>
-          <div>
-            <Headline typeHeadline="h3" children="Conclusion" color={project.mainColor} />
-            <br />
-            <Paragraph children={project.conclusion} />
-          </div>
-        </ProjectConclusionContent>
-        {project.images.footerImage && (
-          <img src={project.images.footerImage} alt={project.headline} />
-        )}
-      </ProjectConclusionContainer>
+      {project.conclusion && project.conclusion?.content && (
+        <ProjectSection
+          alignment="wide-bottom"
+          image={project.conclusion?.image}
+          title={project.conclusion?.title ?? 'Conclusion'}
+          content={project.conclusion?.content}
+          columns={2}
+          mainColor={project.mainColor}
+        />
+      )}
 
       <ProjectFooter>
         <Paragraph

@@ -4,8 +4,16 @@ import { LOGO_WE_ARE_ANGULAR } from '../../images';
 export const PROJECTS: ProjectsType = {
   proper: {
     client: 'Proper',
-    conclusion:
-      'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.',
+    conclusion: {
+      content:
+        'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.',
+      image: {
+        height: 914,
+        src:
+          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+        width: 2400,
+      },
+    },
     discovery: {
       content: `Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a batter and comprehensive product:
       <ul>
@@ -49,8 +57,6 @@ export const PROJECTS: ProjectsType = {
     mainColor: '#E20B21',
     slug: 'proper',
     images: {
-      footerImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
       discoveryImage:
@@ -65,8 +71,6 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
       ],
-      middleImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
       previewImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
       smallImages: [
@@ -110,8 +114,6 @@ export const PROJECTS: ProjectsType = {
     mainColor: '#00BDE5',
     slug: 'aurora',
     images: {
-      footerImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
       discoveryImage:
@@ -126,8 +128,6 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
       ],
-      middleImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
       previewImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
       smallImages: [
@@ -165,8 +165,6 @@ export const PROJECTS: ProjectsType = {
     mainColor: '#122769',
     slug: 'frostbyte',
     images: {
-      footerImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
       discoveryImage:
@@ -181,8 +179,6 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
       ],
-      middleImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
       previewImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
       smallImages: [

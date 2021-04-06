@@ -49,8 +49,6 @@ export interface ProjectImagesTypes {
   cardImages: string[];
   coverImage: string;
   discoveryImage: string;
-  footerImage: string;
-  middleImage: string;
   previewImage: string;
   sliderImages: string[];
   smallImages: string[];
@@ -89,7 +87,7 @@ export interface ProjectSectionType {
   maxWidth?: number;
 }
 export interface ProjectInternalInfoTypes {
-  conclusion: string;
+  conclusion: SectionTypes;
   discovery?: SectionTypes;
   firstProcess?: SectionTypes;
   future?: SectionTypes;
