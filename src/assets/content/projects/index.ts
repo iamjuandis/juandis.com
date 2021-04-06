@@ -319,4 +319,86 @@ export const PROJECTS: ProjectsType = {
     slug: 'frostbyte',
     years: { first: 2019, last: 2020 },
   },
+
+  get2wear: {
+    client: 'Get2Wear',
+    conclusion: {
+      alignment: 'wide-bottom',
+      columns: 2,
+      content: `I feel really motivated when all what we do as designers is improve people lifes and help companies grow or even validate business opportunities. This was a validation case and for me, was a sign of proud and conviction to be part of a early stage business opportunity from a product design position. Besides, it let me a list of personal and professional improvements that I'm hungry to work on.`,
+      image: {
+        height: 914,
+        src:
+          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+        width: 2400,
+      },
+    },
+    headline: 'A refined experience to make profitable and manage unique and special clothing',
+    images: {
+      coverImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
+      cardImages: [
+        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
+      ],
+      sliderImages: [
+        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
+      ],
+      previewImage:
+        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
+      smallImages: [
+        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
+      ],
+    },
+    mainColor: '#C8115C',
+    myRole:
+      'I had to opportunity to be the Design Leader for this project. I was responsible for define and propose a user flow, wireframes and a prototype that eventually would be handed to developers where I also participated as a Frontend Developer.',
+    overview:
+      'Get2Wear is a sustainable fashion Startup that focuses on give people the opportunity to make profitable their special dresses. After a first iteration Get2Wear discovered that they would need to improve how users add their products to Get2Wear. Before this process were made by hand, and through a non-reliable user form and a complicated way to manage and visualize the first step of the logistics behind the business.',
+    ownerCompany: {
+      name: 'We Are Angular',
+      country: 'Colombia',
+      icon: LOGO_WE_ARE_ANGULAR,
+      oneColorIcon: true,
+    },
+    sections: {
+      opportunity: {
+        alignment: 'mid-up',
+        columns: 1,
+        content:
+          'Thanks to the growth obtained in their first year running the business, they started to noticed the complexity to load a new product to Get2Wear, so they partnered us to redesign and refine the user experience and give cusomers a better way to make their dresses profitable, and in the other hand, have better management of the customers status, and the internal billing and logistic variables.',
+        image: {
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
+          height: 1028 - 5,
+          width: 1800,
+        },
+        title: 'Problem',
+      },
+      firstProcess: {
+        alignment: 'wide-right',
+        columns: 1,
+        image: {
+          src:
+            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+          width: 1346,
+          height: 1118,
+        },
+        title: 'How we did it',
+        content: `<ul>
+          <li>All starts with a closer view to the current perception of users, how that complexity is taking their experience down and what else can we discover.</li>
+          <li>Then we took the previous user flow and we made a new one including additional features that would be tested with end users and admin users.</li>
+          <li>We built a refined application with a improved feedback, a clear user flow, and clean interface that lets the most important actions be presence to the user.</li>
+        </ul>`,
+      },
+    },
+    skills: ['Product Design', 'Frontend Development'],
+    slug: 'get2wear',
+    years: { first: 2020, last: 2021 },
+  },
 };
