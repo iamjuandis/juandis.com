@@ -130,32 +130,32 @@ export const PROJECTS: ProjectsType = {
       columns: 2,
       content: `This is currently the most ambitious project I've ever been as a leader in design. Also it has been a huge challenge creating something new in one of the biggest problems in latam and the impact we can achieve using design to deliver a unique tool. Special thanks to Stephany Rojas, Santiago Ortíz, Stefanía Grimaldo, Diego Barbosa, Luis Meneses, Andrés García, Daniela Valencia, Erika Barbosa and Nestor Tobar.`,
       image: {
-        height: 914,
+        height: 837,
         src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+          'https://res.cloudinary.com/juandis/image/upload/v1618028448/portfolio/projects/aurora/footer-aurora-mockups_cih1dq.jpg',
         width: 2400,
       },
     },
     headline: 'Designing a new accessible and efficient eLearning tool',
     images: {
       coverImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028991/portfolio/projects/aurora/cover-mockup-aurora_uop1ad.png',
       cardImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618029708/portfolio/projects/aurora/card-01_aiwm0n.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618029714/portfolio/projects/aurora/card-02_cnfydv.png',
       ],
       sliderImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028449/portfolio/projects/aurora/slide-aurora-01_ily8eh.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028451/portfolio/projects/aurora/slide-aurora-02_wxpesc.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028451/portfolio/projects/aurora/slide-aurora-03_c1zgw2.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028452/portfolio/projects/aurora/slide-aurora-04_jexg1t.jpg',
       ],
       previewImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028447/portfolio/projects/aurora/preview-aurora-juandis_nulkqf.jpg',
       smallImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028449/portfolio/projects/aurora/square-01_xuvzmy.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028452/portfolio/projects/aurora/square-02_ujowjq.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618028451/portfolio/projects/aurora/square-03_zg7d4d.jpg',
       ],
     },
     mainColor: '#00BDE5',
@@ -171,26 +171,26 @@ export const PROJECTS: ProjectsType = {
     },
     sections: {
       opportunity: {
-        alignment: 'mid-up',
+        alignment: 'wide-right',
         columns: 1,
         content:
           'Education in Latam has many threads that need to be enhanced, and in order to support that improvement we focused on: how to improve the engagement and high results in eLearning courses for workers in Latam?',
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
-          height: 1028 - 5,
-          width: 1800,
+            'https://res.cloudinary.com/juandis/image/upload/v1618028446/portfolio/projects/aurora/certificate-aurora-2021_plzrfd.jpg',
+          height: 1118,
+          width: 1346,
         },
         title: 'Problem',
       },
       firstProcess: {
-        alignment: 'wide-right',
+        alignment: 'mid-left',
         columns: 1,
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
-          width: 1346,
-          height: 1118,
+            'https://res.cloudinary.com/juandis/image/upload/v1618030735/portfolio/projects/aurora/ezgif.com-gif-maker_snzapc.gif',
+          width: 800 - 5,
+          height: 997,
         },
         title: 'Understand the main steps in an e-learning flow',
         content: `<ul class="big-letter">
@@ -211,7 +211,7 @@ export const PROJECTS: ProjectsType = {
         image: {
           height: 1240,
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
+            'https://res.cloudinary.com/juandis/image/upload/v1618028446/portfolio/projects/aurora/mockups-aurora-portrait_ardshs.jpg',
           width: 994,
         },
         content: `We know Aurora have a long path to drive through, and we strongly belive that design is a huge element to improve and build a better learning tool.<br/><br/>
