@@ -239,32 +239,33 @@ export const PROJECTS: ProjectsType = {
       content: `The complexity and huge amount of data in monitoring environment variables would result on a challenging task to spend the less resources, equipement and money possible, so one of the main solutions for those industries was a realtime dashboard, simple, reliable and useful.<br/><br/>
       In fact, thanks to that renewal, Frostbyte reduced +91% the time spent on data visualization and increased the revenue on a +400%.`,
       image: {
-        height: 914,
+        height: 838,
         src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+          'https://res.cloudinary.com/juandis/image/upload/v1618092440/portfolio/projects/frostbyte/footer-frostbyte_c9kdwq.jpg',
         width: 2400,
       },
     },
     headline: 'A modern and complete suite to visualize and monitoring realtime data',
     images: {
       coverImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092442/portfolio/projects/frostbyte/cover-frostbyte-mockup_jiiecl.png',
       cardImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092438/portfolio/projects/frostbyte/card-01_emuute.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092443/portfolio/projects/frostbyte/card-02_u5bwpi.png',
       ],
       sliderImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092444/portfolio/projects/frostbyte/slider-frostbyte-01_ucmekg.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092447/portfolio/projects/frostbyte/slider-frostbyte-02_mypb8y.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092446/portfolio/projects/frostbyte/slider-frostbyte-03_tsv3n2.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092448/portfolio/projects/frostbyte/slider-frostbyte-04_aglgyz.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092445/portfolio/projects/frostbyte/slider-frostbyte-05_gulch8.jpg',
       ],
       previewImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092442/portfolio/projects/frostbyte/preview-frostbyte_eqjduu.jpg',
       smallImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092444/portfolio/projects/frostbyte/square-01-frostbyte_uujxxy.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092448/portfolio/projects/frostbyte/square-02-frostbyte_r5ojsw.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618092447/portfolio/projects/frostbyte/square-03-frostbyte_qekpfh.jpg',
       ],
     },
     mainColor: '#122769',
@@ -280,15 +281,15 @@ export const PROJECTS: ProjectsType = {
     },
     sections: {
       opportunity: {
-        alignment: 'mid-up',
+        alignment: 'mid-left',
         columns: 1,
         content:
           'The challenge was how to visualize a huge amount of data and the complexity to integrate a monitoring system to controll limits and optimize the performance and excesive expenses in energy. Besides, Frostbyte already had a monitoring system but wit a lot of improvement opportunities and a specific pain points list.',
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
-          height: 1028 - 5,
-          width: 1800,
+            'https://res.cloudinary.com/juandis/image/upload/v1618092437/portfolio/projects/frostbyte/alerts-frostbyte_s1iape.jpg',
+          height: 1240,
+          width: 994,
         },
         title: 'Problem',
       },
@@ -297,7 +298,7 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+            'https://res.cloudinary.com/juandis/image/upload/v1618092440/portfolio/projects/frostbyte/email-frostbyte_vj9xtu.jpg',
           width: 1346,
           height: 1118,
         },
