@@ -329,33 +329,40 @@ export const PROJECTS: ProjectsType = {
       content: `This is one of those projects that I'm very proud of. Not only for the results behind that, but also for the process, execution and decitions made to do it better. I had the challenge to take the driver seat and get a diverse team together to involve strategy, marketing, business, design and technology decisions in order to refresh our whole company.<br/><br/>
       Special thanks to Stefanía Grimaldo, Stephany Rojas, Diego Barbosa, Santiago González, Luis Meneses, Juan E. Gallo and our special customers that made this possible.`,
       image: {
-        height: 914,
+        height: 700,
         src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
-        width: 2400,
+          'https://res.cloudinary.com/juandis/image/upload/v1618107575/portfolio/projects/weareangular/animated-text-weareangular_r6jyva.gif',
+        width: 1920,
       },
     },
     headline:
       'A complete brand transformation to go forward through design, strategy and technology',
     images: {
       coverImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107574/portfolio/projects/weareangular/cover-weareangular_hs5dqc.png',
       cardImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107571/portfolio/projects/weareangular/card-01_qhzsfl.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107572/portfolio/projects/weareangular/card-02_qjilqf.png',
       ],
       sliderImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107563/portfolio/projects/weareangular/slider-01-weareangular_fs4iu6.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107575/portfolio/projects/weareangular/slider-02-weareangular_wpqtou.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107577/portfolio/projects/weareangular/slider-03-weareangular_tpzl9g.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107574/portfolio/projects/weareangular/slider-04-weareangular_ldea8q.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107579/portfolio/projects/weareangular/slider-05-weareangular_xyoc9t.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107576/portfolio/projects/weareangular/slider-06-weareangular_ynfayx.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107579/portfolio/projects/weareangular/slider-07-weareangular_gzhmzl.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107581/portfolio/projects/weareangular/slider-08-weareangular_oueoat.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107580/portfolio/projects/weareangular/slider-09-weareangular_trsym1.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107579/portfolio/projects/weareangular/slider-10-weareangular_fbadih.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107583/portfolio/projects/weareangular/slider-11-weareangular_t4leqn.jpg',
       ],
       previewImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107572/portfolio/projects/weareangular/preview-weareangular_mpb2yj.jpg',
       smallImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107581/portfolio/projects/weareangular/square-01_pbiffq.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107581/portfolio/projects/weareangular/square-02_zmnatn.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618107581/portfolio/projects/weareangular/square-03_mldsbo.jpg',
       ],
     },
     mainColor: '#FF9900',
@@ -370,15 +377,15 @@ export const PROJECTS: ProjectsType = {
     },
     sections: {
       opportunity: {
-        alignment: 'mid-up',
+        alignment: 'mid-left',
         columns: 1,
         content:
           'We needed to reorganise ourselves, from an internal structure, to a better communication that enhances the relationship with our customers. The way our industry works, require us to be clear, simple and assertive and those would be the basements to rebuild our brand.',
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
-          height: 1028 - 5,
-          width: 1800,
+            'https://res.cloudinary.com/juandis/image/upload/v1618107569/portfolio/projects/weareangular/logo-animated-weareangular_mocd7c.gif',
+          height: 800,
+          width: 800,
         },
         title: 'Opprtunity',
       },
@@ -387,7 +394,7 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+            'https://res.cloudinary.com/juandis/image/upload/v1618107567/portfolio/projects/weareangular/mid-hoodie_vxymx2.jpg',
           width: 1346,
           height: 1118,
         },
@@ -408,7 +415,7 @@ export const PROJECTS: ProjectsType = {
         columns: 2,
       },
     },
-    skills: ['Product Design', 'Frontend Development'],
+    skills: ['Branding', 'Project Management'],
     slug: 'weareangular',
     years: { first: 2020 },
   },
