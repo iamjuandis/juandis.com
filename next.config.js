@@ -15,6 +15,11 @@ module.exports = {
         destination: 'https://bit.ly/linkedinjuandis',
         permanent: true,
       },
+      {
+        source: '/github',
+        destination: 'https://bit.ly/githubjuandis',
+        permanent: true,
+      },
     ];
   },
 };

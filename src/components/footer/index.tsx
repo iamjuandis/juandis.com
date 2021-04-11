@@ -32,7 +32,9 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
               Resume
             </a> • <a href="/in" title="LinkedIn" target="_blank" rel="noopener noreferrer">
             LinkedIn
-          </a>`}
+          </a> • <a href="/github" title="GitHub" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>`}
           />
 
           <Paragraph
