@@ -44,3 +44,20 @@ export const MAIN_BANNER_TEXTS: MainBannerType = {
     transform education in Latam.`,
   ],
 };
+
+export const EXPERIENCES: any = [
+  {
+    years: [],
+    position: 'Position',
+    company: 'We Arre Angular',
+  },
+];
+
+export const ALL_PROJECTS: any = [
+  {
+    years: [],
+    position: 'Name',
+    company: 'We Arre Angular',
+    mainActivities: [],
+  },
+];
