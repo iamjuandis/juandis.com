@@ -2,12 +2,13 @@ import { ReactNode } from 'react';
 
 export interface NavOptionType {
   label?: string;
-  type: string;
-  route?: string | undefined;
+  highlightColor?: string;
   icon?: any;
   isExternal?: boolean;
   onClick?: any;
+  route?: string | undefined;
   target?: any;
+  type: string;
 }
 
 export interface ParagraphType {

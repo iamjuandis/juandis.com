@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { NAV_OPTIONS } from '../../assets/content/intex';
 import { LOGO_JUANDIS } from '../../assets/images';
+import COLOR from '../../assets/style/colors';
 import { NavOptionType } from '../../types/interfaces';
 import NavOption from '../navOption';
 import Paragraph from '../paragraph';
@@ -72,6 +73,11 @@ const Header = ({ bgColor }: HeaderTypes) => {
         >
           {NAV_OPTIONS.map((option: NavOptionType, idx: number) => (
             <NavOption
+              highlightColor={
+                bgColor && scrollTop !== undefined && limitScroll && scrollTop < limitScroll
+                  ? COLOR.white_cloud
+                  : bgColor
+              }
               key={idx}
               type={option?.type}
               label={option?.label}
