@@ -56,9 +56,10 @@ export const PROJECTS: ProjectsType = {
         content:
           'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
         image: {
+          height: 1028 - 5,
+          priority: true,
           src:
             'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
-          height: 1028 - 5,
           width: 1800,
         },
       },
@@ -188,10 +189,11 @@ export const PROJECTS: ProjectsType = {
         alignment: 'mid-left',
         columns: 1,
         image: {
+          height: 997,
+          priority: true,
           src:
             'https://res.cloudinary.com/juandis/image/upload/v1618030735/portfolio/projects/aurora/ezgif.com-gif-maker_snzapc.gif',
           width: 800 - 5,
-          height: 997,
         },
         title: 'Understand the main steps in an e-learning flow',
         content: `<ul class="big-letter">
@@ -332,6 +334,7 @@ export const PROJECTS: ProjectsType = {
       Special thanks to Stefanía Grimaldo, Stephany Rojas, Diego Barbosa, Santiago González, Luis Meneses, Juan E. Gallo and our special customers that made this possible.`,
       image: {
         height: 700,
+        priority: true,
         src:
           'https://res.cloudinary.com/juandis/image/upload/v1618107575/portfolio/projects/weareangular/animated-text-weareangular_r6jyva.gif',
         width: 1920,
@@ -384,9 +387,10 @@ export const PROJECTS: ProjectsType = {
         content:
           'We needed to reorganise ourselves, from an internal structure, to a better communication that enhances the relationship with our customers. The way our industry works, require us to be clear, simple and assertive and those would be the basements to rebuild our brand.',
         image: {
+          height: 800,
+          priority: true,
           src:
             'https://res.cloudinary.com/juandis/image/upload/v1618107569/portfolio/projects/weareangular/logo-animated-weareangular_mocd7c.gif',
-          height: 800,
           width: 800,
         },
         marginBottom: true,

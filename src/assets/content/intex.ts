@@ -4,6 +4,12 @@ import Router from 'next/router';
 
 export const NAV_OPTIONS: NavOptionType[] = [
   {
+    label: 'Home',
+    type: 'link',
+    route: '/',
+    isExternal: false,
+  },
+  {
     label: 'Projects',
     type: 'action',
     onClick: () => {

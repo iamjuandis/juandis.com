@@ -32,6 +32,7 @@ const ProjectSection = ({
                 width={image.width}
                 height={image.height}
                 objectFit="cover"
+                priority={image.priority}
                 quality={100}
                 layout="responsive"
               />
@@ -55,6 +56,7 @@ const ProjectSection = ({
                 width={image.width}
                 height={image.height}
                 objectFit="cover"
+                priority={image.priority}
                 quality={100}
                 layout="responsive"
               />

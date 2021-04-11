@@ -65,6 +65,7 @@ type AlignementTypes =
 
 interface ImageInterface {
   height: number;
+  priority?: boolean;
   src: string;
   width: number;
 }

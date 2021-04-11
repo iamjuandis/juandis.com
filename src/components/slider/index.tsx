@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   SliderComponent,
   SliderComponentContainer,
@@ -31,10 +31,6 @@ const Slider = ({
   const [translate, setTranslate] = useState(0);
   const widthSlide = 100 / slides?.length;
 
-  // Swipe const
-  const [touchstartX, setTouchstartX] = useState(0);
-  const [touchendX, setTouchendX] = useState(0);
-
   const prevSlide = () => {
     setTranslate(translate > widthSlide ? translate - widthSlide : 0);
     setActiveSlide(translate > widthSlide ? activeSlide - 1 : 0);
@@ -45,45 +41,9 @@ const Slider = ({
     setActiveSlide(activeSlide < slides?.length - 1 ? activeSlide + 1 : slides?.length - 1);
   };
 
-  /* const callbackDots = (e: any) => {
-    setTranslate(widthSlide * e);
-    setActiveSlide(e);
-  }; */
-
-  const handleGesure = () => {
-    if (Math.abs(touchendX - touchstartX) > 20) {
-      if (touchendX < touchstartX) {
-        nextSlide();
-      }
-      if (touchendX > touchstartX) {
-        prevSlide();
-      }
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      const element = document.getElementById('slider');
-      const handleTouchStart = (event: any) => {
-        setTouchstartX(event.changedTouches[0].screenX);
-      };
-      const handleTouchEnd = (event: any) => {
-        setTouchendX(event.changedTouches[0].screenX);
-        handleGesure();
-      };
-      element?.addEventListener('touchstart', handleTouchStart);
-      element?.addEventListener('touchend', handleTouchEnd);
-
-      return () => {
-        element?.removeEventListener('touchstart', handleTouchStart);
-        element?.removeEventListener('touchend', handleTouchEnd);
-      };
-    }
-  });
-
   return (
     <SliderComponent marginTop={marginTop}>
-      <SliderComponentContainer id="slider">
+      <SliderComponentContainer>
         <SliderElement>
           <SliderContent cantSlides={slides?.length} translate={translate}>
             {slides && slides.length > 0
@@ -115,13 +75,6 @@ const Slider = ({
             <SliderNumbers>
               {activeSlide + 1} / {slides.length}
             </SliderNumbers>
-            {/* <Dots
-              mainColor={mainColor}
-              slides={slides}
-              activeSlide={activeSlide}
-              callbackDots={callbackDots}
-            />
-            */}
           </SliderFooter>
         ) : null}
       </SliderComponentContainer>

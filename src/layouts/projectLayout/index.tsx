@@ -26,6 +26,7 @@ import {
   ProjectSmallImgsContent,
 } from './styled';
 import ProjectSection from '../../components/projectSection';
+import Image from 'next/image';
 
 interface Props {
   project: ProjectAllTypes;
@@ -135,7 +136,14 @@ const ProjectLayout = ({ project }: Props) => {
         <ProjectSmallImgsContainer>
           <ProjectSmallImgsContent>
             {project.images?.smallImages?.map((image: string, idx: number) => (
-              <img key={idx} src={image} alt={`${idx + 1}. ${project.client}`} />
+              <Image
+                alt={`${idx + 1}. ${project.client}`}
+                key={idx}
+                quality={100}
+                src={image}
+                height={340}
+                width={340}
+              />
             ))}
           </ProjectSmallImgsContent>
         </ProjectSmallImgsContainer>
