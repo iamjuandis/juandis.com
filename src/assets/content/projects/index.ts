@@ -128,7 +128,7 @@ export const PROJECTS: ProjectsType = {
     conclusion: {
       alignment: 'wide-bottom',
       columns: 2,
-      content: `This is currently the most ambitious project I've ever been as a leader in design. Also it has been a huge challenge creating something new in one of the biggest problems in latam and the impact we can achieve using design to deliver a unique tool. Special thanks to Stephany Rojas, Santiago Ortíz, Stefanía Grimaldo, Diego Barbosa, Luis Meneses, Andrés García, Daniela Valencia, Erika Barbosa and Nestor Tobar.`,
+      content: `This is currently the most ambitious project I've ever been as a leader in design. Also it has been a huge challenge creating something new in one of the biggest problems in latam and the impact we can achieve using design to deliver a unique tool.<br/> Special thanks to Stephany Rojas, Santiago Ortíz, Stefanía Grimaldo, Diego Barbosa, Luis Meneses, Andrés García, Daniela Valencia, Erika Barbosa and Nestor Tobar.`,
       image: {
         height: 837,
         src:
@@ -160,7 +160,7 @@ export const PROJECTS: ProjectsType = {
     },
     mainColor: '#00BDE5',
     myRole:
-      'Since my partners and I founded Aurora in May 2020, I have had the opportunity to be part of a bold and resilient design team. We built Aurora from sketching our first wireframe, to Design our first MVP that allowed us to reach our first alliances and +2K users. Currently, I had the challenge to be the Head of Product and sometimes a Frontend Developer comrade.',
+      'Since my partners and I founded Aurora in May 2020, I have had the opportunity to be part of a bold and resilient design team. We built Aurora from sketching our first wireframe, to Design our first MVP that allowed us to reach our first alliances and +2K users.<br/>Currently, I had the challenge to be the Head of Product and sometimes a Frontend Developer comrade.',
     overview:
       'One of the biggest problems and opportunities in Latin America, specially in countries like Colombia, is the education, and the equity in its accessibility. We know it by self experience, and in order to help to solve this problem, we decided to build a unique tool to give people an efficient and more accesible e-learning tool. So we built Aurora, a eLearning company that wants to change education in Latam by using technology and design to build an efficient, reliable and accessible platform where students, employees and companies can improve their skills and strengths.',
     ownerCompany: {
