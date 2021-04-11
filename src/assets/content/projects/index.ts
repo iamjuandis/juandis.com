@@ -21,7 +21,7 @@ export const PROJECTS: ProjectsType = {
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
       cardImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618120482/portfolio/projects/proper/card-01-proper-new_dppnnk.png',
         'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
       ],
       sliderImages: [
@@ -142,7 +142,7 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1618028991/portfolio/projects/aurora/cover-mockup-aurora_uop1ad.png',
       cardImages: [
         'https://res.cloudinary.com/juandis/image/upload/v1618029708/portfolio/projects/aurora/card-01_aiwm0n.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1618029714/portfolio/projects/aurora/card-02_cnfydv.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618120680/portfolio/projects/aurora/card-02-aurora-new_xsdwdp.png',
       ],
       sliderImages: [
         'https://res.cloudinary.com/juandis/image/upload/v1618028449/portfolio/projects/aurora/slide-aurora-01_ily8eh.jpg',
@@ -346,7 +346,7 @@ export const PROJECTS: ProjectsType = {
       ],
       sliderImages: [
         'https://res.cloudinary.com/juandis/image/upload/v1618107563/portfolio/projects/weareangular/slider-01-weareangular_fs4iu6.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1618107575/portfolio/projects/weareangular/slider-02-weareangular_wpqtou.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618121052/portfolio/projects/weareangular/slider-02-weareangular-new_aas2n5.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618107577/portfolio/projects/weareangular/slider-03-weareangular_tpzl9g.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618107574/portfolio/projects/weareangular/slider-04-weareangular_ldea8q.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618107579/portfolio/projects/weareangular/slider-05-weareangular_xyoc9t.jpg',

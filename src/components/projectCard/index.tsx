@@ -44,6 +44,7 @@ const ProjectCard = ({
         <ProjectCardTextContainer
           background={gridRange && gridRange[2] === 'big' ? 'transparent' : `${mainColor}11`}
           gridRange={gridRange}
+          mainColor={mainColor}
         >
           <Paragraph
             children={client}

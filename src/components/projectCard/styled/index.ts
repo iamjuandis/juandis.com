@@ -52,6 +52,8 @@ export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
   position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
   h3 {
+    text-shadow: ${(props) =>
+      props.gridRange && props.gridRange[2] === 'big' ? `0px 0px 15px ${props.mainColor}` : 'none'};
     font-weight: bolder;
     width: ${(props) => (props.gridRange && props.gridRange[2] === 'big' ? '60%' : '100%')};
   }
