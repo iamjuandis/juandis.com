@@ -427,32 +427,34 @@ export const PROJECTS: ProjectsType = {
       columns: 2,
       content: `I feel really motivated when all what we do as designers is improve people lifes and help companies grow or even validate business opportunities. This was a validation case and for me, was a sign of proud and conviction to be part of a early stage business opportunity from a product design position. Besides, it let me a list of personal and professional improvements that I'm hungry to work on.`,
       image: {
-        height: 914,
+        height: 838,
         src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+          'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/footer-g2w_okg88d.jpg',
         width: 2400,
       },
     },
     headline: 'A refined experience to make profitable and manage unique and special clothing',
     images: {
       coverImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616892534/portfolio/projects/proper/proper-cover_syhtut.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159472/portfolio/projects/get2wear/cover-g2w_nfx6df.png',
       cardImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888120/portfolio/projects/proper/proper-card-small_haobsu.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888116/portfolio/projects/proper/proper-card-big_fiya0m.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159464/portfolio/projects/get2wear/card-01-g2w_xyweui.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159467/portfolio/projects/get2wear/card-02-g2w_xdpcdl.png',
       ],
       sliderImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616888572/portfolio/projects/proper/slider-proper-01_tfkbsx.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888582/portfolio/projects/proper/slider-proper-02_xzs0a1.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-03_m3dyeq.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1616888577/portfolio/projects/proper/slider-proper-04_n0brjc.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159473/portfolio/projects/get2wear/slider-00-g2w_dnh9nx.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159470/portfolio/projects/get2wear/slider-01-g2w_pmo8wx.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159470/portfolio/projects/get2wear/slider-02-g2w_qbkrsh.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159469/portfolio/projects/get2wear/slider-03-g2w_t8smrl.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159472/portfolio/projects/get2wear/slider-04-g2w_xakeim.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159473/portfolio/projects/get2wear/slider-05-g2w_gup4vc.jpg',
       ],
       previewImage:
-        'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159463/portfolio/projects/get2wear/preview-g2w_gdc53s.jpg',
       smallImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
-        'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618160626/portfolio/projects/get2wear/square-01-g2w_qyznr4.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159473/portfolio/projects/get2wear/square-02-g2w_yt5xd5.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618159473/portfolio/projects/get2wear/square-03-g2w_hgpzvj.jpg',
       ],
     },
     mainColor: '#C8115C',
@@ -468,15 +470,15 @@ export const PROJECTS: ProjectsType = {
     },
     sections: {
       opportunity: {
-        alignment: 'mid-up',
+        alignment: 'wide-up',
         columns: 1,
         content:
           'Thanks to the growth obtained in their first year running the business, they started to noticed the complexity to load a new product to Get2Wear, so they partnered us to redesign and refine the user experience and give cusomers a better way to make their dresses profitable, and in the other hand, have better management of the customers status, and the internal billing and logistic variables.',
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
-          height: 1028 - 5,
-          width: 1800,
+            'https://res.cloudinary.com/juandis/image/upload/v1618160911/portfolio/projects/get2wear/previous-g2w_zezk8g.jpg',
+          height: 838,
+          width: 2400,
         },
         title: 'Problem',
       },
@@ -485,7 +487,7 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         image: {
           src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+            'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/mid-g2w_a2na42.jpg',
           width: 1346,
           height: 1118,
         },

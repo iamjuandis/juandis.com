@@ -52,7 +52,7 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
 
 export const ProjectLayoutCoverImageContainer = styled.div`
   grid-column: 8 / -1;
-  padding-top: 70px;
+  padding-top: 100px;
   position: relative;
   width: 100%;
   img {
