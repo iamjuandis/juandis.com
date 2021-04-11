@@ -387,7 +387,7 @@ export const PROJECTS: ProjectsType = {
           height: 800,
           width: 800,
         },
-        title: 'Opprtunity',
+        title: 'Opportunity',
       },
       firstProcess: {
         alignment: 'wide-right',
