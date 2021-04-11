@@ -44,6 +44,7 @@ const ProjectCard = ({
         <ProjectCardTextContainer
           background={gridRange && gridRange[2] === 'big' ? 'transparent' : `${mainColor}11`}
           gridRange={gridRange}
+          mainColor={mainColor}
         >
           <Paragraph
             children={client}
@@ -53,6 +54,7 @@ const ProjectCard = ({
           <Headline
             color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
             typeHeadline="h3"
+            fontSize={30}
           >
             {headline}
           </Headline>

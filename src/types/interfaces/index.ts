@@ -19,9 +19,11 @@ export interface ParagraphType {
 }
 
 export interface HeadlineType {
-  color?: string;
-  typeHeadline: string;
   children?: string;
+  color?: string;
+  fontSize?: number;
+  fontWeight?: number;
+  typeHeadline: string;
 }
 
 export interface PageLayoutTypes {
@@ -46,39 +48,52 @@ export interface OwnerCompanyTypes {
 export interface ProjectImagesTypes {
   cardImages: string[];
   coverImage: string;
-  discoveryImage: string;
-  footerImage: string;
-  middleImage: string;
   previewImage: string;
   sliderImages: string[];
   smallImages: string[];
 }
 
-export interface MidSectionType {
-  title: string;
-  paragraph: string;
+type AlignementTypes =
+  | 'wide-up'
+  | 'wide-left'
+  | 'wide-right'
+  | 'wide-bottom'
+  | 'mid-up'
+  | 'mid-left'
+  | 'mid-right'
+  | 'mid-bottom';
+
+interface ImageInterface {
+  height: number;
+  src: string;
+  width: number;
 }
 
-export interface DiscoveryType {
-  headline?: string;
-  description: string;
-  items: string[];
+export interface ProjectSectionType {
+  alignment?: AlignementTypes;
+  columns?: 0 | 1 | 2 | 3;
+  content?: string;
+  image?: ImageInterface;
+  mainColor?: string;
+  marginBottom?: boolean;
+  maxWidth?: number;
+  title?: string;
 }
 
-export interface FocusType {
-  headline?: string;
-  description: string;
-  items: string[];
-  longDescription: string;
+export interface SectionsType {
+  [key: string]: ProjectSectionType;
 }
 export interface ProjectInternalInfoTypes {
-  conclusion: string;
-  discovery: DiscoveryType;
-  focusProject: FocusType;
+  conclusion: ProjectSectionType;
   myRole: string;
   overview: string;
   ownerCompany: OwnerCompanyTypes;
-  midSection: MidSectionType;
+  sections: SectionsType;
+}
+
+export interface YearsTypes {
+  first: number;
+  last?: string | number;
 }
 export interface ProjectMainTypes {
   client: string;
@@ -87,7 +102,7 @@ export interface ProjectMainTypes {
   mainColor: string;
   skills: string[];
   slug: string;
-  year?: string;
+  years?: YearsTypes;
 }
 
 export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;

@@ -13,7 +13,7 @@ export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
   &:hover {
     transform: scale(1.02);
   }
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 750px) {
     display: flex;
   }
 `;
@@ -27,8 +27,11 @@ export const ProjectCardCoverContainer = styled.div<ProjectCardComponentTypes>`
       : props.gridRange && props.gridRange[2] === 'big'
       ? '100%'
       : 'auto'};
-  position: 'relative';
+  position: relative;
   width: 100%;
+  @media screen and (max-width: 750px) {
+    display: flex;
+  }
 `;
 
 export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
@@ -39,6 +42,12 @@ export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
   position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
   width: 100%;
+  @media screen and (max-width: 750px) {
+    display: flex;
+    height: 100%;
+    object-position: center;
+    position: relative;
+  }
 `;
 
 export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
@@ -52,7 +61,19 @@ export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
   position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
   h3 {
+    text-shadow: ${(props) =>
+      props.gridRange && props.gridRange[2] === 'big' ? `0px 0px 15px ${props.mainColor}` : 'none'};
     font-weight: bolder;
+    width: ${(props) => (props.gridRange && props.gridRange[2] === 'big' ? '60%' : '100%')};
+  }
+  @media screen and (max-width: 750px) {
+    background: ${(props) =>
+      props.gridRange && props.gridRange[2] === 'big' ? props.mainColor : props.background};
+    position: relative;
+    h3 {
+      text-shadow: none;
+      width: 100%;
+    }
   }
 `;
 
@@ -71,7 +92,7 @@ export const ProjectSkillElement = styled.strong<ProjectCardComponentTypes>`
       padding: 0 5px;
     }
   }
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 750px) {
     font-size: 0.8em;
   }
 `;

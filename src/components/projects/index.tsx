@@ -15,24 +15,25 @@ const ProjectsBanner = ({ projects }: Props) => {
         <ProjectsHeadlineContainer>
           <Headline typeHeadline="h5">Featured projects</Headline>
         </ProjectsHeadlineContainer>
-        {Object.entries(projects).map(
-          ([key, project]: [string, ProjectMainTypes], index: number) => {
-            const lenghtProjects = Object.entries(projects).length;
-            return (
-              <ProjectCard
-                client={project.client}
-                gridRange={handleGridRangeProject(lenghtProjects, index)}
-                slug={project.slug}
-                skills={project.skills}
-                images={project.images}
-                key={`${key}-${index}`}
-                mainColor={project.mainColor}
-                headline={project.headline}
-                year={project.year}
-              />
-            );
-          }
-        )}
+        {projects &&
+          Object.entries(projects)?.map(
+            ([key, project]: [string, ProjectMainTypes], index: number) => {
+              const lenghtProjects = Object?.entries(projects)?.length;
+              return (
+                <ProjectCard
+                  client={project?.client}
+                  gridRange={handleGridRangeProject(lenghtProjects, index)}
+                  slug={project?.slug}
+                  skills={project?.skills}
+                  images={project?.images}
+                  key={`${key}-${index}`}
+                  mainColor={project?.mainColor}
+                  headline={project?.headline}
+                  years={project?.years}
+                />
+              );
+            }
+          )}
       </ProjectsContent>
     </ProjectsContainer>
   );

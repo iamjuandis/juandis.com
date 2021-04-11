@@ -77,7 +77,10 @@ const Header = ({ bgColor }: HeaderTypes) => {
               label={option?.label}
               icon={option?.icon}
               isExternal={option?.isExternal}
-              onClick={option?.onClick}
+              onClick={() => {
+                option?.onClick();
+                setIsMenuOpen(false);
+              }}
               route={option?.route}
             />
           ))}

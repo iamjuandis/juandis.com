@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import COLOR from '../../../assets/style/colors';
 
 interface BannerProps {
   background: string;
@@ -16,8 +15,8 @@ export const ProjectLayoutContainer = styled.section`
 
 export const ProjectLayoutMainBanner = styled.div<BannerProps>`
   background: ${(props) => props.background};
-  height: 300px;
-  padding-top: 100px;
+  height: auto;
+  padding-top: 150px;
   padding-bottom: 100px;
   width: 100%;
 `;
@@ -53,7 +52,7 @@ export const ProjectLayoutMainBannerTextContainer = styled.div`
 
 export const ProjectLayoutCoverImageContainer = styled.div`
   grid-column: 8 / -1;
-  padding-top: 70px;
+  padding-top: 100px;
   position: relative;
   width: 100%;
   img {
@@ -97,19 +96,23 @@ export const ProjectRoleTextBoxes = styled.div`
 `;
 
 export const ProjectCompanyContainer = styled.div<CompanyProps>`
+  align-items: center;
   display: flex;
   flex-direction: row;
   margin-top: 30px;
   width: 100%;
-  ${(props) =>
-    props.oneColorIcon &&
-    `
-    svg {
+
+  svg {
+    height: 50px;
+    width: 50px;
+    ${(props) =>
+      props.oneColorIcon &&
+      `
       path {
         fill: ${props.color}
       }
-    }
-  `}
+      `}
+  }
 `;
 
 export const ProjectCompanyTexts = styled.div`
@@ -128,94 +131,6 @@ export const ProjectSliderContent = styled.div`
   width: calc(100% - 60px);
   @media screen and (max-width: 510px) {
     width: 100%;
-  }
-`;
-
-export const ProjectOverviewContainer = styled.div`
-  padding: 50px 0;
-  width: 100%;
-`;
-
-export const ProjectOverviewContent = styled.div`
-  margin: auto;
-  max-width: 848px;
-  width: calc(100% - 60px);
-  @media screen and (max-width: 510px) {
-    p {
-      columns: 1;
-    }
-  }
-`;
-
-export const ProjectMidSectionContainer = styled.div`
-  width: 100%;
-`;
-
-export const ProjectMidSectionContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 30px;
-  margin: auto;
-  max-width: 1200px;
-  width: calc(100% - 60px);
-  img {
-    grid-column: 7 / -1;
-    width: 100%;
-  }
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
-    img {
-      display: block;
-      grid-column: 1 / -1;
-      height: auto;
-      margin-top: 50px;
-    }
-  }
-`;
-
-export const ProjectMidSectionTexts = styled.div`
-  grid-column: 3 / 7;
-  margin: auto;
-  @media screen and (max-width: 510px) {
-    grid-column: 1 / -1;
-  }
-`;
-
-export const ProjectFocusContainer = styled.div`
-  padding: 50px 0;
-  width: 100%;
-`;
-
-export const ProjectFocusContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  max-width: 848px;
-  width: calc(100% - 60px);
-`;
-
-export const ItemsFocusContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  padding: 50px 0;
-  width: 100%;
-`;
-
-interface ItemFocusProps {
-  color: string;
-}
-
-export const ItemFocus = styled.p<ItemFocusProps>`
-  display: flex;
-  width: 100%;
-  span {
-    background: ${(props) => (props.color ? `${props.color}1a` : `${COLOR.blue_universe}1a`)};
-    color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
-    font-size: 22px;
-    padding: 10px 20px;
-    width: fit-content;
   }
 `;
 
@@ -238,64 +153,6 @@ export const ProjectSmallImgsContent = styled.div`
   @media screen and (max-width: 510px) {
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
-  }
-`;
-
-export const ProjectDiscoveryContainer = styled.div`
-  padding-top: 30px;
-  width: 100%;
-`;
-export const ProjectDiscoveryContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
-  margin: auto;
-  max-width: 1024px;
-  width: calc(100% - 60px);
-  img {
-    display: flex;
-    grid-column: 1 / 7;
-    width: 100%;
-  }
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
-    img {
-      grid-row: 2;
-    }
-  }
-`;
-
-export const ProjectDiscoveryTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  grid-column: 7 / -2;
-  width: 100%;
-`;
-
-export const ProjectConclusionContainer = styled.div`
-  padding-top: 50px;
-  text-align: center;
-  width: 100%;
-  img {
-    max-width: 1200px;
-    margin: auto;
-    height: auto;
-    width: 100%;
-  }
-`;
-
-export const ProjectConclusionContent = styled.div`
-  display: grid;
-  grid-template-columns: 7fr 3fr;
-  grid-column-gap: 30px;
-  padding-bottom: 50px;
-  margin: auto;
-  max-width: 848px;
-  text-align: left;
-  width: calc(100% - 60px);
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
   }
 `;
 
