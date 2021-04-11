@@ -124,6 +124,7 @@ const ProjectLayout = ({ project }: Props) => {
                 image={section.image}
                 key={`${key}-${index}`}
                 mainColor={project.mainColor}
+                marginBottom={section.marginBottom}
                 title={section.title}
               />
             );

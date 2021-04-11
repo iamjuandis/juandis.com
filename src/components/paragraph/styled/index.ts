@@ -58,9 +58,40 @@ export const ParagraphContainer = styled.div<ParagraphType>`
       li {
         display: block;
         font-size: 1.5em;
+        line-height: 150%;
         margin: 30px 0;
         &::before {
           content: none;
+        }
+        strong,
+        b {
+          color: ${(props) => (props.highlightColor ? props.highlightColor : COLOR.blue_universe)};
+          font-weight: bolder;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 510px) {
+    column-count: 1;
+    ul,
+    ol {
+      margin: 0;
+      li {
+        margin: 10px 0;
+      }
+      &.brick {
+        display: inline-block;
+        margin: 0;
+        li {
+          margin: 10px 0;
+          margin-right: 15px;
+        }
+      }
+      &.big-letter {
+        margin: 0;
+        li {
+          margin: 10px 0;
         }
       }
     }

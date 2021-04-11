@@ -181,6 +181,7 @@ export const PROJECTS: ProjectsType = {
           height: 1118,
           width: 1346,
         },
+        marginBottom: true,
         title: 'Problem',
       },
       firstProcess: {
@@ -291,6 +292,7 @@ export const PROJECTS: ProjectsType = {
           height: 1240,
           width: 994,
         },
+        marginBottom: true,
         title: 'Problem',
       },
       firstProcess: {
@@ -310,9 +312,9 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         title: 'We got',
         content: `<ul class="big-letter">
-        <li>+91% less time to recolect and visualize data</li>
-        <li>+20K data points per week</li>
-        <li>+400% more revenue</li>
+        <li><strong>+91%</strong> less time to recolect and visualize data</li>
+        <li><strong>+20K</strong> data points per week</li>
+        <li><strong>+400%</strong> more revenue</li>
         </ul>`,
       },
     },
@@ -387,6 +389,7 @@ export const PROJECTS: ProjectsType = {
           height: 800,
           width: 800,
         },
+        marginBottom: true,
         title: 'Opportunity',
       },
       firstProcess: {
@@ -400,12 +403,12 @@ export const PROJECTS: ProjectsType = {
         },
         title: 'Step by step',
         content: `<ul class="big-letter">
-          <li>Let our customers participate</li>
-          <li>Reflect on the perception</li>
-          <li>Team ideation</li>
-          <li>Materialize the ideas</li>
-          <li>Connect with a strategy</li>
-          <li>Deliver a fresh new brand</li>
+          <li>Let our customers participate.</li>
+          <li>Reflect on the perception.</li>
+          <li>Team ideation.</li>
+          <li>Materialize the idea.s</li>
+          <li>Connect with a strategy.</li>
+          <li>Deliver a fresh new brand.</li>
         </ul>`,
       },
       output: {
@@ -485,18 +488,19 @@ export const PROJECTS: ProjectsType = {
       firstProcess: {
         alignment: 'wide-right',
         columns: 1,
+        content: `<ul>
+          <li>All starts with a closer view to the current perception of users, how that complexity is taking their experience down and what else can we discover.</li>
+          <li>Then we took the previous user flow and we made a new one including additional features that would be tested with end users and admin users.</li>
+          <li>We built a refined application with a improved feedback, a clear user flow, and clean interface that lets the most important actions be presence to the user.</li>
+        </ul>`,
         image: {
           src:
             'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/mid-g2w_a2na42.jpg',
           width: 1346,
           height: 1118,
         },
+        marginBottom: true,
         title: 'How we did it',
-        content: `<ul>
-          <li>All starts with a closer view to the current perception of users, how that complexity is taking their experience down and what else can we discover.</li>
-          <li>Then we took the previous user flow and we made a new one including additional features that would be tested with end users and admin users.</li>
-          <li>We built a refined application with a improved feedback, a clear user flow, and clean interface that lets the most important actions be presence to the user.</li>
-        </ul>`,
       },
     },
     skills: ['Product Design', 'Frontend Development'],

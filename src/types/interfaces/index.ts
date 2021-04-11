@@ -75,6 +75,7 @@ export interface ProjectSectionType {
   content?: string;
   image?: ImageInterface;
   mainColor?: string;
+  marginBottom?: boolean;
   maxWidth?: number;
   title?: string;
 }

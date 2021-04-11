@@ -16,11 +16,12 @@ const ProjectSection = ({
   columns,
   image,
   mainColor,
+  marginBottom,
   maxWidth,
   title,
 }: ProjectSectionType) => {
   return (
-    <ProjectSectionContainer>
+    <ProjectSectionContainer marginBottom={marginBottom}>
       <ProjectSectionContent alignment={alignment} maxWidth={maxWidth}>
         {image &&
           (HandleAlignment(`${alignment}`).position === 'left' ||
