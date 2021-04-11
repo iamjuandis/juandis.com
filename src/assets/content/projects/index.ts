@@ -8,7 +8,7 @@ export const PROJECTS: ProjectsType = {
       alignment: 'wide-bottom',
       columns: 2,
       content:
-        'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product. Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.',
+        'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building an user-based product.<br/> Initially, I was intimidated by the complexity of the business and the whole market, I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and hwo important is to make it easy for the users.',
       image: {
         height: 914,
         src:
@@ -40,7 +40,7 @@ export const PROJECTS: ProjectsType = {
     },
     mainColor: '#E20B21',
     myRole:
-      'I was responsible for leading and managing the project, and collaborating in the user experience & interface design. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
+      'I was responsible for <strong>leading and managing the project</strong>, and collaborating in the user experience & interface design. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making it easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, that helped us to understand and illustrate the constraints and opportunities for the users.',
     ownerCompany: {
@@ -73,9 +73,9 @@ export const PROJECTS: ProjectsType = {
         },
         title: 'We needed to understand',
         content: `<ul>
-          <li>The current state and context of invest in Real Estate in Colombia.</li>
-          <li>The technology and security involved in the process.</li>
-          <li>Of course, the user perspective, constraints and pain points.</li>
+          <li>The current <strong>state and context</strong> of invest in Real Estate in Colombia.</li>
+          <li>The <strong>technology and security</strong> involved in the process.</li>
+          <li>Of course, the <strong>user perspective</strong>, constraints and pain points.</li>
         </ul>`,
       },
       nextProcess: {
