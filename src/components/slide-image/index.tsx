@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { SlideImageComponent } from './styled';
 
 interface SlideImageProps {
@@ -6,7 +7,9 @@ interface SlideImageProps {
 }
 
 const SlideImage = ({ content, width }: SlideImageProps) => (
-  <SlideImageComponent widthImage={width} src={content} />
+  <SlideImageComponent widthImage={width}>
+    <Image width={2400} src={content} height={963} objectFit="cover" priority />
+  </SlideImageComponent>
 );
 
 export default SlideImage;

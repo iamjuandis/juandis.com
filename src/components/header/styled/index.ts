@@ -180,8 +180,8 @@ export const MenuContactInfo = styled.div<HeaderTypes>`
   @media screen and (max-width: 510px) {
     box-sizing: border-box;
     display: block;
-    font-size: 0.4em;
-    margin-top: 50px;
+    font-size: 0.6em;
+    margin-top: 30px;
     padding: 0 20px;
     width: 100%;
   }

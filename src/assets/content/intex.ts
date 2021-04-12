@@ -4,6 +4,12 @@ import Router from 'next/router';
 
 export const NAV_OPTIONS: NavOptionType[] = [
   {
+    label: 'Home',
+    type: 'link',
+    route: '/',
+    isExternal: false,
+  },
+  {
     label: 'Projects',
     type: 'action',
     onClick: () => {
@@ -32,9 +38,26 @@ export const MAIN_BANNER_TEXTS: MainBannerType = {
   Development area at <a href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> where we design comprehensive and user-based products
   & services for startups and companies.`,
   paragraphs: [
-    `I have a BsC. in IxDesign and Human Computer Interaction and I love build, design and
+    `I have a BsC. in Interaction Design and Human-Computer Interaction and I love to build, design, and
     code user-based products & services.`,
     `Also, I co-founded and lead the Product Design Team at <a href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an eLearning platform to
     transform education in Latam.`,
   ],
 };
+
+export const EXPERIENCES: any = [
+  {
+    years: [],
+    position: 'Position',
+    company: 'We Arre Angular',
+  },
+];
+
+export const ALL_PROJECTS: any = [
+  {
+    years: [],
+    position: 'Name',
+    company: 'We Arre Angular',
+    mainActivities: [],
+  },
+];
