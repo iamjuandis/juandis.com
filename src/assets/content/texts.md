@@ -4,7 +4,7 @@ Create and build technology-based products is a crazy thing and I love it. It's 
 
 I have to say that since I was in high school I became a daily learner of technology. My first passion was coding and eventually, I discovered that I love to create things and improve people's lives with design.
 
-------
+---
 
 Some of my professional skills are Product Design, Interaction Design, User Experience, Team Leadership, Project Management, SCRUM & Frontend Development.
 
