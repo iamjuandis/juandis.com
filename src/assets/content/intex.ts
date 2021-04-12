@@ -38,7 +38,7 @@ export const MAIN_BANNER_TEXTS: MainBannerType = {
   Development area at <a href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> where we design comprehensive and user-based products
   & services for startups and companies.`,
   paragraphs: [
-    `I have a BsC. in IxDesign and Human Computer Interaction and I love build, design and
+    `I have a BsC. in Interaction Design and Human-Computer Interaction and I love to build, design, and
     code user-based products & services.`,
     `Also, I co-founded and lead the Product Design Team at <a href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an eLearning platform to
     transform education in Latam.`,
