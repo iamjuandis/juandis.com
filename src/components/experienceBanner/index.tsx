@@ -16,6 +16,7 @@ const ExperienceBanner = ({ experiences }: Props) => {
           <ExperienceItem
             key={index}
             company={experience?.company}
+            country={experience?.country}
             years={experience?.years}
             position={experience?.position}
           />

@@ -32,22 +32,23 @@ export const handleGridRangeProject = (length: number, position: number) => {
   }
 };
 
+const months: string[] = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
 export const formatDate = (dateString: string) => {
   const date = new Date(dateString);
-  const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
   return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 };
 
@@ -86,4 +87,11 @@ export const HandleAlignment = (alignment: string) => {
         direction: 'rtl',
       };
   }
+};
+
+export const SetYearFromString = (stringDate: string) => {
+  const month: string = stringDate.split('/')[0];
+  const year: number | string = stringDate.split('/')[1];
+  if (month === 'Present') return month;
+  return `${months[parseFloat(month) - 1]}. ${year}`;
 };

@@ -60,11 +60,75 @@ export const MAIN_BANNER_TEXTS: MainBannerType = {
 
 export const EXPERIENCES: ExperienceProps[] = [
   {
-    company: 'We Are Angular',
-    position: 'Position',
+    company: 'Aurora',
+    country: 'Colombia',
+    position: 'Co-Founder & Product Design Lead',
     years: {
-      first: 2020,
-      last: 2021,
+      first: '04/2020',
+      last: 'Present',
+    },
+  },
+  {
+    company: 'We Are Angular',
+    country: 'Colombia',
+    position: 'Product Design Manager',
+    years: {
+      first: '08/2019',
+      last: 'Present',
+    },
+  },
+  {
+    company: 'We Are Angular',
+    country: 'Colombia',
+    position: 'Project Manager & Board Member',
+    years: {
+      first: '01/2020',
+      last: '12/2020',
+    },
+  },
+  {
+    company: 'We Are Angular',
+    country: 'Colombia',
+    position: 'Frontend Developer',
+    years: {
+      first: '01/2018',
+      last: '07/2019',
+    },
+  },
+  {
+    company: 'We Are Angular',
+    country: 'Colombia',
+    position: 'Design Consultant',
+    years: {
+      first: '08/2017',
+      last: '08/2019',
+    },
+  },
+  {
+    company: 'UXLab Icesi',
+    country: 'Colombia',
+    position: 'Designer',
+    years: {
+      first: '01/2019',
+      last: '08/2020',
+    },
+  },
+  {
+    company: 'Pródigos',
+    country: 'Colombia',
+    position: 'Mobile Developer',
+    years: {
+      first: '08/2018',
+      last: '01/2019',
+    },
+  },
+  {
+    company: 'Icesi University',
+    country: 'Colombia',
+    position: 'Designer',
+    years: {
+      first: '07/2017',
+      last: '12/2018',
     },
   },
 ];

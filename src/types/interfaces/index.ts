@@ -94,7 +94,7 @@ export interface ProjectInternalInfoTypes {
 }
 
 export interface YearsTypes {
-  first: number;
+  first: string | number;
   last?: string | number;
 }
 export interface ProjectMainTypes {
@@ -129,6 +129,7 @@ export interface MetaInfoProps {
 }
 
 export interface ExperienceProps {
+  country: string;
   company: string;
   position: string;
   years: YearsTypes;
