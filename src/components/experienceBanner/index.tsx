@@ -1,7 +1,38 @@
-import { ExperienceBannerContainer } from './styled';
+import { ExperienceProps } from '../../types/interfaces';
+import ExperienceItem from '../experienceItem';
+import Headline from '../headline';
+import {
+  ExperienceBannerContainer,
+  ExperienceBannerContent,
+  ExperiencesContainerHeadline,
+  ExperiencesContainerList,
+} from './styled';
 
-const ExperienceBanner = () => {
-  return <ExperienceBannerContainer></ExperienceBannerContainer>;
+interface Props {
+  experiences: ExperienceProps[];
+}
+
+const ExperienceBanner = ({ experiences }: Props) => {
+  return (
+    <ExperienceBannerContainer>
+      <ExperienceBannerContent>
+        <ExperiencesContainerHeadline>
+          <Headline children="Experience" typeHeadline="h4" />
+        </ExperiencesContainerHeadline>
+        <ExperiencesContainerList>
+          {experiences?.map((experience: ExperienceProps, index: number) => (
+            <ExperienceItem
+              key={index}
+              company={experience?.company}
+              country={experience?.country}
+              years={experience?.years}
+              position={experience?.position}
+            />
+          ))}
+        </ExperiencesContainerList>
+      </ExperienceBannerContent>
+    </ExperienceBannerContainer>
+  );
 };
 
 export default ExperienceBanner;

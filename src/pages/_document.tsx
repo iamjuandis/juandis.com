@@ -47,7 +47,7 @@ export default class MyDocument extends Document<DocProps> {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="application-name" content="Juan David Pérez • Portfolio" />
           <meta property="og:type" content="website" />
-          <meta name="twitter:account_id" property="twitter:account_id" content="3383871803" />
+          <meta name="twitter:account_id" property="twitter:account_id" content="717185162" />
           <meta name="twitter:site" content="@iamjuandis" />
           <meta name="twitter:creator" content="@iamjuandis" />
           <link rel="shortcut icon" href="/assets/images/favicon/favicon-light.png" />

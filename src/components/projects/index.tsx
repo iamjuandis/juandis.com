@@ -13,7 +13,7 @@ const ProjectsBanner = ({ projects }: Props) => {
     <ProjectsContainer id="projects">
       <ProjectsContent>
         <ProjectsHeadlineContainer>
-          <Headline typeHeadline="h5">Featured projects</Headline>
+          <Headline typeHeadline="h4">Featured projects</Headline>
         </ProjectsHeadlineContainer>
         {projects &&
           Object.entries(projects)?.map(

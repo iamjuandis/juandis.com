@@ -36,7 +36,7 @@ export interface PageLayoutTypes {
 
 export interface MainBannerType {
   headline: string;
-  paragraphs: string[];
+  paragraph: string;
 }
 
 export interface OwnerCompanyTypes {
@@ -94,7 +94,7 @@ export interface ProjectInternalInfoTypes {
 }
 
 export interface YearsTypes {
-  first: number;
+  first: string | number;
   last?: string | number;
 }
 export interface ProjectMainTypes {
@@ -120,4 +120,17 @@ export interface HeadTagsProps {
   currentURL: string;
   locale: string;
   mainColor?: string;
+}
+
+export interface MetaInfoProps {
+  description: string;
+  mainTitle: string;
+  previewImage: string;
+}
+
+export interface ExperienceProps {
+  country: string;
+  company: string;
+  position: string;
+  years: YearsTypes;
 }
