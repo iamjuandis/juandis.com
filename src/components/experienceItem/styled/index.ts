@@ -4,4 +4,6 @@ export const ExperienceItemContainer = styled.div`
   width: 100%;
 `;
 
-export const ExperienceItemContent = styled.div``;
+export const ExperienceItemContent = styled.div`
+  width: 100%;
+`;

@@ -8,9 +8,10 @@ const ExperienceItem = ({ company, country, position, years }: ExperienceProps) 
   return (
     <ExperienceItemContainer>
       <ExperienceItemContent>
-        <Headline typeHeadline="h4" children={position} />
-        <Paragraph children={`${company}, ${country}`} />
+        <Headline typeHeadline="h5" children={position} />
+        <Paragraph size={0.9} children={`${company}, ${country}`} />
         <Paragraph
+          size={0.9}
           children={`${SetYearFromString(`${years.first}`)}${
             years.last && ` - ${SetYearFromString(`${years.last}`)}`
           }`}

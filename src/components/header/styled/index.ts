@@ -83,7 +83,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
     }
   }
 
-  @media (max-width: 510px) {
+  @media (max-width: 640px) {
     div {
       strong {
         font-size: 1em;
@@ -108,7 +108,7 @@ export const NavContainer = styled.nav<HeaderTypes>`
   }
   display: flex;
   flex-direction: row;
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 640px) {
     box-shadow: 0px 0px 50px #00000022;
     box-sizing: border-box;
     background: ${(props) =>
@@ -149,7 +149,7 @@ export const MenuMobileContainer = styled.p<HeaderTypes>`
       ? COLOR.white_cloud
       : COLOR.blue_universe};
   display: none;
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 640px) {
     display: block;
     position: relative;
     z-index: 100;
@@ -177,7 +177,7 @@ export const MenuContactInfo = styled.div<HeaderTypes>`
         ? COLOR.white_cloud
         : COLOR.blue_universe};
   }
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 640px) {
     box-sizing: border-box;
     display: block;
     font-size: 0.6em;
