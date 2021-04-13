@@ -121,3 +121,15 @@ export interface HeadTagsProps {
   locale: string;
   mainColor?: string;
 }
+
+export interface MetaInfoProps {
+  description: string;
+  mainTitle: string;
+  previewImage: string;
+}
+
+export interface ExperienceProps {
+  company: string;
+  position: string;
+  years: YearsTypes;
+}

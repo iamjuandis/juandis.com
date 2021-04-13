@@ -1,19 +1,23 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { MAIN_BANNER_TEXTS } from '../assets/content/intex';
+import { EXPERIENCES, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/intex';
 import { PROJECTS } from '../assets/content/projects';
 import { scrollToIDElement } from '../assets/utils/components';
+import ExperienceBanner from '../components/experienceBanner';
 import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/pageLayout/intex';
-import { ProjectsType } from '../types/interfaces';
+import { ExperienceProps, MainBannerType, MetaInfoProps, ProjectsType } from '../types/interfaces';
 
 interface Props {
+  experiences: ExperienceProps[];
   projects: ProjectsType;
+  metaInfo: MetaInfoProps;
+  bannerTexts: MainBannerType;
 }
 
-const Home = ({ projects }: Props) => {
+const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
   const router = useRouter();
   useEffect(() => {
     if (router.query.g && router.query.g === 'projects') {
@@ -22,11 +26,13 @@ const Home = ({ projects }: Props) => {
   }, []);
   return (
     <PageLayout
-      title="Juan David Pérez • Portfolio"
-      description="I’m an Interactive Designer & Frontend Developer and I love design comprehensive and user-based products & services for startups and companies."
+      image={metaInfo?.previewImage}
+      title={metaInfo?.mainTitle}
+      description={metaInfo?.description}
     >
-      <MainBanner headline={MAIN_BANNER_TEXTS.headline} paragraphs={MAIN_BANNER_TEXTS.paragraphs} />
+      <MainBanner headline={bannerTexts?.headline} paragraphs={bannerTexts?.paragraphs} />
       <ProjectsBanner projects={projects} />
+      <ExperienceBanner experiences={experiences} />
     </PageLayout>
   );
 };
@@ -34,7 +40,10 @@ const Home = ({ projects }: Props) => {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
+      experiences: EXPERIENCES,
       projects: PROJECTS,
+      metaInfo: META_INFO,
+      bannerTexts: MAIN_BANNER_TEXTS,
     },
   };
 };

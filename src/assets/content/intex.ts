@@ -1,4 +1,9 @@
-import { MainBannerType, NavOptionType } from '../../types/interfaces';
+import {
+  ExperienceProps,
+  MainBannerType,
+  MetaInfoProps,
+  NavOptionType,
+} from '../../types/interfaces';
 import { scrollToIDElement } from '../utils/components';
 import Router from 'next/router';
 
@@ -33,6 +38,14 @@ export const NAV_OPTIONS: NavOptionType[] = [
   },
 ];
 
+export const META_INFO: MetaInfoProps = {
+  description:
+    'Product, Interactive Designer & Frontend Developer that loves design and build products for people.',
+  previewImage:
+    'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
+  mainTitle: 'Juan David Pérez • Portfolio',
+};
+
 export const MAIN_BANNER_TEXTS: MainBannerType = {
   headline: `I’m an Interactive Designer & Frontend Developer from Colombia. I lead the Product
   Development area at <a href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> where we design comprehensive and user-based products
@@ -45,11 +58,14 @@ export const MAIN_BANNER_TEXTS: MainBannerType = {
   ],
 };
 
-export const EXPERIENCES: any = [
+export const EXPERIENCES: ExperienceProps[] = [
   {
-    years: [],
+    company: 'We Are Angular',
     position: 'Position',
-    company: 'We Arre Angular',
+    years: {
+      first: 2020,
+      last: 2021,
+    },
   },
 ];
 
