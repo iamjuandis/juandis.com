@@ -33,7 +33,7 @@ export const PROJECTS: ProjectsType = {
       previewImage:
         'https://res.cloudinary.com/juandis/image/upload/v1616888115/portfolio/projects/proper/proper-preview-image_jggvr4.png',
       smallImages: [
-        'https://res.cloudinary.com/juandis/image/upload/v1616889178/portfolio/projects/proper/proper-ind-1_yv5p7o.png',
+        'https://res.cloudinary.com/juandis/image/upload/v1618352651/portfolio/projects/proper/user-testing-proper-op_pypl5g.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1616889179/portfolio/projects/proper/proper-ind-2_lp2aej.png',
         'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-ind-3_ouv9ei.png',
       ],
@@ -156,7 +156,7 @@ export const PROJECTS: ProjectsType = {
       smallImages: [
         'https://res.cloudinary.com/juandis/image/upload/v1618028449/portfolio/projects/aurora/square-01_xuvzmy.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618028452/portfolio/projects/aurora/square-02_ujowjq.jpg',
-        'https://res.cloudinary.com/juandis/image/upload/v1618028451/portfolio/projects/aurora/square-03_zg7d4d.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618354619/portfolio/projects/aurora/planning-aurora_k8dcy1.jpg',
       ],
     },
     mainColor: '#00BDE5',
@@ -361,6 +361,7 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1618107580/portfolio/projects/weareangular/slider-09-weareangular_trsym1.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618107579/portfolio/projects/weareangular/slider-10-weareangular_fbadih.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618107583/portfolio/projects/weareangular/slider-11-weareangular_t4leqn.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618354162/portfolio/projects/weareangular/Slider-11_tatcgv.jpg',
       ],
       previewImage:
         'https://res.cloudinary.com/juandis/image/upload/v1618107572/portfolio/projects/weareangular/preview-weareangular_mpb2yj.jpg',
@@ -455,6 +456,7 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1618159469/portfolio/projects/get2wear/slider-03-g2w_t8smrl.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618159472/portfolio/projects/get2wear/slider-04-g2w_xakeim.jpg',
         'https://res.cloudinary.com/juandis/image/upload/v1618159473/portfolio/projects/get2wear/slider-05-g2w_gup4vc.jpg',
+        'https://res.cloudinary.com/juandis/image/upload/v1618353560/portfolio/projects/get2wear/slider-06-g2w_vlb2vf.jpg',
       ],
       previewImage:
         'https://res.cloudinary.com/juandis/image/upload/v1618159463/portfolio/projects/get2wear/preview-g2w_gdc53s.jpg',
