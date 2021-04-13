@@ -47,9 +47,8 @@ export const META_INFO: MetaInfoProps = {
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `I’m a curious Product Designer from Colombia that helps companies to build user-based products that deliver value to people through design and technology.`,
-  paragraph: `I have a BE. in Interaction Design and Human-Computer Interaction and I love to build, design and code. Currently, I lead the Product Design projects at <a href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> where we design comprehensive and user-based products for startups and companies.
-    Also, I co-founded and lead the Product Design Team at <a href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform created to transform education in Latam.`,
+  headline: `I’m a curious Product Designer from <span class="color">Colombia</span> that helps companies to build user-based products that deliver value to people through design and technology.`,
+  paragraph: `I have a BE. in Interaction Design and Human-Computer Interaction and I love to build, design and code. Currently, I lead the Product Design projects at <a href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> and I co-founded and lead the Product Design Team at <a href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform created to transform education in Latam.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
