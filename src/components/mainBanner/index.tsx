@@ -8,19 +8,17 @@ import {
   ParagraphsContainerMainBanner,
 } from './styled';
 
-const MainBanner = ({ headline, paragraphs }: MainBannerType) => {
+const MainBanner = ({ headline, paragraph }: MainBannerType) => {
   return (
     <MainBannerContainer>
       <MainBannerContent>
         <HeadlineMainBanner>
-          <Headline typeHeadline="h1">{headline}</Headline>
+          <Headline fontSize={45} typeHeadline="h1">
+            {headline}
+          </Headline>
         </HeadlineMainBanner>
         <ParagraphsContainerMainBanner>
-          {paragraphs?.map((paragraph: string, idx: number) => (
-            <Paragraph size={1} key={idx}>
-              {paragraph}
-            </Paragraph>
-          ))}
+          <Paragraph size={1} columns={2} children={paragraph} />
         </ParagraphsContainerMainBanner>
       </MainBannerContent>
     </MainBannerContainer>

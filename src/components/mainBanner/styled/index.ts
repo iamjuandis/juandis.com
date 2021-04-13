@@ -26,9 +26,6 @@ export const HeadlineMainBanner = styled.div`
 `;
 
 export const ParagraphsContainerMainBanner = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 4fr);
-  grid-column-gap: 30px;
   grid-column: 3 / 11;
   padding-top: 60px;
   width: 100%;

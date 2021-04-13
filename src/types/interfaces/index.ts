@@ -36,7 +36,7 @@ export interface PageLayoutTypes {
 
 export interface MainBannerType {
   headline: string;
-  paragraphs: string[];
+  paragraph: string;
 }
 
 export interface OwnerCompanyTypes {

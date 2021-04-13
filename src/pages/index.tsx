@@ -30,7 +30,7 @@ const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
       title={metaInfo?.mainTitle}
       description={metaInfo?.description}
     >
-      <MainBanner headline={bannerTexts?.headline} paragraphs={bannerTexts?.paragraphs} />
+      <MainBanner headline={bannerTexts?.headline} paragraph={bannerTexts?.paragraph} />
       <ProjectsBanner projects={projects} />
       <ExperienceBanner experiences={experiences} />
     </PageLayout>
