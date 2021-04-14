@@ -34,7 +34,7 @@ export const ProjectCardCoverContainer = styled.div<ProjectCardComponentTypes>`
   }
 `;
 
-export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
+export const ProjectCardCoverImage = styled.div<ProjectCardComponentTypes>`
   object-fit: cover;
   object-position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'large' ? 'top' : 'center'};
@@ -42,6 +42,16 @@ export const ProjectCardCoverImage = styled.img<ProjectCardComponentTypes>`
   position: ${(props) =>
     props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
   width: 100%;
+  &:first-child {
+    div {
+      height: 100%;
+      img {
+        height: 100%;
+        object-position: top center;
+        width: 100%;
+      }
+    }
+  }
   @media screen and (max-width: 750px) {
     display: flex;
     height: 100%;
