@@ -43,7 +43,7 @@ export const META_INFO: MetaInfoProps = {
     'Product, Interactive Designer & Frontend Developer that loves design and build products for people.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Pérez • Portfolio',
+  mainTitle: 'Juan David Pérez',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
