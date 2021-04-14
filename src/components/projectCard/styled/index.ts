@@ -44,7 +44,7 @@ export const ProjectCardCoverImage = styled.div<ProjectCardComponentTypes>`
   width: 100%;
   &:first-child {
     div {
-      height: 100% !important;
+      height: 100%;
       img {
         height: 100%;
         object-position: top center;

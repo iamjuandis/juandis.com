@@ -14,17 +14,18 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
 
   useEffect(() => {
     fetch('https://api.github.com/repos/iamjuandis/juandis.com/branches/main')
-      .then((response) => {
-        response.json().then((json) => setLastUpdated(json.commit.commit.author.date));
-      })
+      .then((response) =>
+        response.json().then((json) => setLastUpdated(json.commit.commit.author.date))
+      )
       .catch((error) => {
         console.error('error', error);
+        return error;
       });
   }, []);
   return (
     <FooterContainer suppressHydrationWarning={true}>
       <FooterContent>
-        <Headline typeHeadline="h2">Get in touch</Headline>
+        <Headline typeHeadline="h3">Get in touch</Headline>
         <FooterTextContent>
           <Paragraph
             highlightColor={mainColor}
