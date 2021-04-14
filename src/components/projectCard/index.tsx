@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import COLOR from '../../assets/style/colors';
 import { ProjectMainTypes } from '../../types/interfaces';
@@ -33,13 +34,18 @@ const ProjectCard = ({
     <Link href={`/projects/${slug}`} passHref>
       <ProjectCardContainer title={client} gridRange={gridRange}>
         <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
-          <ProjectCardCoverImage
-            gridRange={gridRange}
-            src={
-              gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
-            }
-            alt={client}
-          />
+          <ProjectCardCoverImage gridRange={gridRange}>
+            <Image
+              alt={client}
+              width={gridRange && gridRange[2] === 'big' ? 1000 : 1139}
+              height={gridRange && gridRange[2] === 'big' ? 1091 : 1000}
+              src={
+                gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
+              }
+              objectFit="cover"
+              objectPosition="top center"
+            />
+          </ProjectCardCoverImage>
         </ProjectCardCoverContainer>
         <ProjectCardTextContainer
           background={gridRange && gridRange[2] === 'big' ? 'transparent' : `${mainColor}11`}

@@ -48,7 +48,7 @@ export const META_INFO: MetaInfoProps = {
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
   headline: `I’m a curious Product Designer from <span class="color">Colombia</span> that helps companies to build user-based products that deliver value to people through design and technology.`,
-  paragraph: `I have a BE. in Interaction Design and Human-Computer Interaction and I love to build, design and code. Currently, I lead the Product Design projects at <a href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> and I co-founded and lead the Product Design Team at <a href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform created to transform education in Latam.`,
+  paragraph: `I have a BE. in Interaction Design and Human-Computer Interaction and I love to build, design and code. Currently, I lead the Product Design projects at <a rel="noopener noreferrer" href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> and I co-founded and lead the Product Design Team at <a rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform created to transform education in Latam.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
@@ -123,14 +123,5 @@ export const EXPERIENCES: ExperienceProps[] = [
       first: '07/2017',
       last: '12/2018',
     },
-  },
-];
-
-export const ALL_PROJECTS: any = [
-  {
-    years: [],
-    position: 'Name',
-    company: 'We Arre Angular',
-    mainActivities: [],
   },
 ];
