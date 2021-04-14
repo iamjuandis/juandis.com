@@ -37,13 +37,14 @@ const ProjectCard = ({
           <ProjectCardCoverImage gridRange={gridRange}>
             <Image
               alt={client}
-              width={gridRange && gridRange[2] === 'big' ? 1000 : 1139}
               height={gridRange && gridRange[2] === 'big' ? 1091 : 1000}
+              objectFit="cover"
+              objectPosition="top center"
+              quality={100}
               src={
                 gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
               }
-              objectFit="cover"
-              objectPosition="top center"
+              width={gridRange && gridRange[2] === 'big' ? 1000 : 1139}
             />
           </ProjectCardCoverImage>
         </ProjectCardCoverContainer>

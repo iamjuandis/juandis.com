@@ -17,7 +17,7 @@ const ExperienceBanner = ({ experiences }: Props) => {
     <ExperienceBannerContainer>
       <ExperienceBannerContent>
         <ExperiencesContainerHeadline>
-          <Headline children="Experience" typeHeadline="h4" />
+          <Headline children="Experience" typeHeadline="h2" />
         </ExperiencesContainerHeadline>
         <ExperiencesContainerList>
           {experiences?.map((experience: ExperienceProps, index: number) => (
