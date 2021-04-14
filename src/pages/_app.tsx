@@ -1,14 +1,10 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import type { AppProps } from 'next/app';
 import * as gtag from '../lib/gtag';
 import '../assets/style/styles.css';
 
-interface MyAppProps {
-  Component: any;
-  pageProps: any;
-}
-
-const MyPortfolio = ({ Component, pageProps }: MyAppProps) => {
+const MyPortfolio = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
   useEffect(() => {

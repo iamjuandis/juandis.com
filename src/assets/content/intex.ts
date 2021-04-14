@@ -43,11 +43,11 @@ export const META_INFO: MetaInfoProps = {
     'Product, Interactive Designer & Frontend Developer that loves design and build products for people.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Pérez • Portfolio',
+  mainTitle: 'Juan David Pérez',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `I’m a curious Product Designer from <span class="color">Colombia</span> that helps companies to build user-based products that deliver value to people through design and technology.`,
+  headline: `I’m a curious Product Designer & Frontend Developer from <span class="color">Colombia</span> that helps companies to build user-based products that deliver value to people through design and technology.`,
   paragraph: `I have a BE. in Interaction Design and Human-Computer Interaction and I love to build, design and code. Currently, I lead the Product Design projects at <a rel="noopener noreferrer" href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> and I co-founded and lead the Product Design Team at <a rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform created to transform education in Latam.`,
 };
 
