@@ -8,7 +8,7 @@ export const PROJECTS: ProjectsType = {
       alignment: 'wide-bottom',
       columns: 2,
       content:
-        'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design building a user-based product.<br/> Initially, I was intimidated by the complexity of the business and the whole market. I had no idea about real estate, but the curiosity and love to build, got me to understand from experts how the market works, and see how important is to make it easy for the users.',
+        'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design to build a user-based product.<br/> Initially, I was intimidated by the complexity of the business and the whole market. I had no idea about real estate, but the curiosity and the love to build, got me to understand from experts how the market works, and see how important it is to make it easy for the users.',
       image: {
         height: 914,
         src:
@@ -40,7 +40,7 @@ export const PROJECTS: ProjectsType = {
     },
     mainColor: '#E20B21',
     myRole:
-      'I was responsible for <strong>leading and managing the project</strong>, and collaborating in the user experience & interface design. Also, I develop from scratch the functional web prototype to get precise and deep feedback from users.',
+      'I was responsible for <strong>leading and managing the project</strong> and also collaborate in the user experience & interface design. Additionally, I developed from scratch the functional web prototype to get precise and deep feedback from users.',
     overview:
       'Proper (formerly Squarepin) is a real estate platform founded in Colombia and Mexico. It mainly focuses on making easier and secure the real estate investment process. We worked side-by-side with real estate experts from Mexico and Colombia, which helped us to understand and illustrate the constraints and opportunities for the users.',
     ownerCompany: {
@@ -54,7 +54,7 @@ export const PROJECTS: ProjectsType = {
         alignment: 'mid-up',
         columns: 1,
         content:
-          'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easiest and more accessible reducing intermediary complexity.',
+          'When Squarepin/Proper came to us, a market study was already done. This study showed us that we needed to focus on a big problem: How to make real estate investment easier and more accessible reducing intermediary complexity.',
         image: {
           height: 1028 - 5,
           priority: true,
@@ -74,7 +74,7 @@ export const PROJECTS: ProjectsType = {
         },
         title: 'We needed to understand',
         content: `<ul>
-          <li>The current <strong>state and context</strong> of invest in Real Estate in Colombia.</li>
+          <li>The <strong>state and context</strong> of invest in Real Estate in Colombia.</li>
           <li>The <strong>technology and security</strong> involved in the process.</li>
           <li>Of course, the <strong>user perspective</strong>, constraints, and pain points.</li>
         </ul>`,
@@ -116,7 +116,7 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         title: 'Next steps',
         content:
-          'In order to build a definitve solution, keeping in mind the complexity of the business and model, we are working on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market.',
+          'In order to build a definitive solution, keeping in mind the complexity of the business and investment model, we worked on a strategy to keep researching on users, testing the prototype and including new incremental features to get the first MVP on te market.',
       },
     },
     skills: ['Product Design', 'Frontend Development'],
@@ -248,7 +248,7 @@ export const PROJECTS: ProjectsType = {
         width: 2400,
       },
     },
-    headline: 'A modern and complete suite to visualize and monitoring real-time data',
+    headline: 'A modern and complete suite to monitor and visualize real-time data',
     images: {
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1618092442/portfolio/projects/frostbyte/cover-frostbyte-mockup_jiiecl.png',
@@ -441,7 +441,7 @@ export const PROJECTS: ProjectsType = {
         width: 2400,
       },
     },
-    headline: 'A refined experience to make profitable and manage unique and special clothing',
+    headline: 'A refined experience to make profitable and to manage unique and special clothing',
     images: {
       coverImage:
         'https://res.cloudinary.com/juandis/image/upload/v1618159472/portfolio/projects/get2wear/cover-g2w_nfx6df.png',
