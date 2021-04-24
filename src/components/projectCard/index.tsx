@@ -68,7 +68,7 @@ const ProjectCard = ({
           <br />
           {skills && skills.length > 0 && (
             <ProjectSkillsContainer>
-              {skills.map((skill: string, idx: number) => (
+              {skills.slice(0, 2).map((skill: string, idx: number) => (
                 <ProjectSkillElement
                   mainColor={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
                   key={idx}
