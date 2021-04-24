@@ -1,24 +1,25 @@
 import styled from 'styled-components';
-import COLOR from '../../../assets/style/colors';
 import { ParagraphType } from '../../../types/interfaces';
 
 export const ParagraphContainer = styled.div<ParagraphType>`
   column-count: ${(props) => props.columns};
   column-gap: 30px;
-  color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
+  color: ${(props) => (props.color ? props.color : props.theme.text)};
   line-height: 150%;
   font-size: ${(props) => (props.size ? `${props.size}em` : '1em')};
   width: 100%;
   a {
-    color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
+    color: ${(props) => (props.color ? props.color : props.theme.text)};
     border-bottom: 1px solid
-      ${(props) => (props.color ? `${props.color}55` : `${COLOR.blue_universe}55`)};
+      ${(props) => (props.color ? `${props.color}55` : `${props.theme.text}55`)};
     font-size: 1em;
     &:hover {
-      color: ${(props) =>
-        props.highlightColor ? props.highlightColor : `${COLOR.blue_universe}77`};
+      color: ${(props) => (props.highlightColor ? props.highlightColor : `${props.theme.text}77`)};
       border-bottom-color: ${(props) =>
-        props.highlightColor ? props.highlightColor : COLOR.blue_universe};
+        props.highlightColor ? props.highlightColor : props.theme.text};
+    }
+    &.external-link {
+      cursor: ne-resize;
     }
   }
   ul,
@@ -41,8 +42,8 @@ export const ParagraphContainer = styled.div<ParagraphType>`
       width: 100%;
       li {
         background: ${(props) =>
-          props.highlightColor ? `${props.highlightColor}33` : `${COLOR.blue_universe}33`};
-        color: ${(props) => (props.highlightColor ? props.highlightColor : COLOR.blue_universe)};
+          props.highlightColor ? `${props.highlightColor}33` : `${props.theme.text}33`};
+        color: ${(props) => (props.highlightColor ? props.highlightColor : props.theme.text)};
         display: inline-flex;
         margin-right: 30px;
         padding: 10px 15px;
@@ -65,7 +66,7 @@ export const ParagraphContainer = styled.div<ParagraphType>`
         }
         strong,
         b {
-          color: ${(props) => (props.highlightColor ? props.highlightColor : COLOR.blue_universe)};
+          color: ${(props) => (props.highlightColor ? props.highlightColor : props.theme.text)};
           font-weight: bolder;
           font-size: 1em;
         }

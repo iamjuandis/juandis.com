@@ -10,6 +10,7 @@ interface CompanyProps {
 }
 
 export const ProjectLayoutContainer = styled.section`
+  background: ${(props) => props.theme.background};
   width: 100%;
 `;
 
