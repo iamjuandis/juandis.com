@@ -191,15 +191,16 @@ export const MenuCloser = styled.div<HeaderTypes>`
   background: transparent;
   bottom: 0;
   display: none;
-  height: 50%;
+  height: 100vh;
   left: 0;
   pointer-events: none;
   position: fixed;
   right: 0;
+  top: 0%;
   width: 100%;
   z-index: 10;
   @media screen and (max-width: 640px) {
-    display: ${(props) => (props.isOpen ? 'block !important' : 'none')};
-    pointer-events: ${(props) => (props.isOpen ? 'all !important' : 'none')};
+    display: ${(props) => (props.isOpen ? 'block' : 'none')};
+    pointer-events: ${(props) => (props.isOpen ? 'all' : 'none')};
   }
 `;
