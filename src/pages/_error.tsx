@@ -3,7 +3,7 @@ import PageLayout from '../layouts/pageLayout/intex';
 
 const Error = ({ statusCode }: any) => {
   return (
-    <PageLayout title={`Error ${statusCode} • Juan David Pérez`}>
+    <PageLayout title={`Error ${statusCode} • Juan David Pérez • Portfolio`}>
       <Errors typeError={statusCode} />
     </PageLayout>
   );
