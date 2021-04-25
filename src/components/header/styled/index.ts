@@ -199,7 +199,7 @@ export const MenuCloser = styled.div<HeaderTypes>`
   width: 100%;
   z-index: 10;
   @media screen and (max-width: 640px) {
-    display: ${(props) => (props.isOpen ? 'block' : 'none')};
-    pointer-events: ${(props) => (props.isOpen ? 'all' : 'none')};
+    display: ${(props) => (props.isOpen ? 'block !important' : 'none')};
+    pointer-events: ${(props) => (props.isOpen ? 'all !important' : 'none')};
   }
 `;
