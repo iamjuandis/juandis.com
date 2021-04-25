@@ -1,14 +1,15 @@
-import { ICON_SUN } from '../../assets/images';
+import { ICON_MOON, ICON_SUN } from '../../assets/images';
 import { ButtonThemeContainer, TextTheme } from './styled';
 
 interface ThemeMode {
+  darkMode: boolean;
   callback: () => void;
 }
 
-const ButtonThemeMode = ({ callback }: ThemeMode) => {
+const ButtonThemeMode = ({ callback, darkMode }: ThemeMode) => {
   return (
     <ButtonThemeContainer onClick={callback} title="Disable dark mode">
-      {ICON_SUN} <TextTheme>Disable dark mode</TextTheme>
+      {darkMode ? ICON_SUN : ICON_MOON} <TextTheme>Lights {darkMode ? 'on' : 'off'}</TextTheme>
     </ButtonThemeContainer>
   );
 };
