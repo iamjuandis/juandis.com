@@ -8,8 +8,8 @@ export const HeaderContainer = styled.header<HeaderTypes>`
     props.scrollTop !== undefined &&
     props.limitScroll &&
     props.scrollTop < props.limitScroll
-      ? `${props.bgColor}11`
-      : `${COLOR.white_cloud}77`};
+      ? `${props.bgColor}55`
+      : `${props.theme.background}77`};
   backdrop-filter: blur(20px);
   position: fixed;
   width: 100%;
@@ -53,7 +53,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.limitScroll &&
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
-          : COLOR.blue_universe};
+          : props.theme.text};
       font-size: 0.8em;
       font-weight: 800;
     }
@@ -64,7 +64,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.limitScroll &&
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
-          : COLOR.blue_universe};
+          : props.theme.text};
       font-size: 0.7em;
     }
   }
@@ -79,7 +79,7 @@ export const LogoContainer = styled.a<HeaderTypes>`
         props.limitScroll &&
         props.scrollTop < props.limitScroll
           ? COLOR.white_cloud
-          : COLOR.blue_universe};
+          : props.theme.text};
     }
   }
 
@@ -104,7 +104,7 @@ export const NavContainer = styled.nav<HeaderTypes>`
       props.limitScroll &&
       props.scrollTop < props.limitScroll
         ? COLOR.white_cloud
-        : COLOR.blue_universe};
+        : props.theme.text};
   }
   display: flex;
   flex-direction: row;
@@ -117,7 +117,7 @@ export const NavContainer = styled.nav<HeaderTypes>`
       props.limitScroll &&
       props.scrollTop < props.limitScroll
         ? props.bgColor
-        : COLOR.white_cloud};
+        : props.theme.text};
     bottom: 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -147,7 +147,7 @@ export const MenuMobileContainer = styled.p<HeaderTypes>`
     props.limitScroll &&
     props.scrollTop < props.limitScroll
       ? COLOR.white_cloud
-      : COLOR.blue_universe};
+      : props.theme.text};
   display: none;
   @media screen and (max-width: 640px) {
     display: block;
@@ -166,7 +166,7 @@ export const MenuContactInfo = styled.div<HeaderTypes>`
       props.limitScroll &&
       props.scrollTop < props.limitScroll
         ? COLOR.white_cloud
-        : COLOR.blue_universe};
+        : props.theme.text};
   }
   a {
     border-bottom-color: ${(props) =>
@@ -175,7 +175,7 @@ export const MenuContactInfo = styled.div<HeaderTypes>`
       props.limitScroll &&
       props.scrollTop < props.limitScroll
         ? COLOR.white_cloud
-        : COLOR.blue_universe};
+        : props.theme.text};
   }
   @media screen and (max-width: 640px) {
     box-sizing: border-box;

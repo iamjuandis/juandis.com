@@ -28,7 +28,7 @@ const sizeHeadline = (type: string) => {
 };
 
 export const HeadlineContainer = styled(HeadlineElement).attrs(tag)<HeadlineType>`
-  color: ${(props) => (props.color ? props.color : COLOR.blue_universe)};
+  color: ${(props) => (props.color ? props.color : props.theme.text)};
   line-height: ${(props) =>
     props.typeHeadline === 'h6' || props.typeHeadline === 'h5' || props.typeHeadline === 'h4'
       ? '140%'

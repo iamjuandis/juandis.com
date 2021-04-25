@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import * as gtag from '../lib/gtag';
 import '../assets/style/styles.css';
+import Provider from '../components/provider';
 
 const MyPortfolio = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -17,7 +18,11 @@ const MyPortfolio = ({ Component, pageProps }: AppProps) => {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <Provider>
+      <Component {...pageProps} />
+    </Provider>
+  );
 };
 
 export default MyPortfolio;
