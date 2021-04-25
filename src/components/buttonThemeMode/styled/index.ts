@@ -22,15 +22,17 @@ export const ButtonThemeContainer = styled.div`
     height: 30px;
     width: 30px;
   }
-  &:hover {
-    background: ${(props) => props.theme.text};
-    color: ${(props) => props.theme.background};
-    p {
-      opacity: 1;
-      right: 50px;
-    }
-    svg {
+  @media screen and (min-width: 510px) {
+    &:hover {
+      background: ${(props) => props.theme.text};
       color: ${(props) => props.theme.background};
+      p {
+        opacity: 1;
+        right: 50px;
+      }
+      svg {
+        color: ${(props) => props.theme.background};
+      }
     }
   }
 `;

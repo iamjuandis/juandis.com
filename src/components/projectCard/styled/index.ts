@@ -10,8 +10,10 @@ export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
   grid-column: ${(props) => props.gridRange && `${props.gridRange[0]} / ${props.gridRange[1]}`};
   position: relative;
   width: 100%;
-  &:hover {
-    transform: scale(1.02);
+  @media screen and (min-width: 750px) {
+    &:hover {
+      transform: scale(1.02);
+    }
   }
   @media screen and (max-width: 750px) {
     display: flex;

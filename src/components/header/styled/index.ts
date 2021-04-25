@@ -117,7 +117,7 @@ export const NavContainer = styled.nav<HeaderTypes>`
       props.limitScroll &&
       props.scrollTop < props.limitScroll
         ? props.bgColor
-        : props.theme.text};
+        : props.theme.background};
     bottom: 0;
     display: grid;
     grid-template-columns: 1fr;
