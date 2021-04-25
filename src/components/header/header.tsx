@@ -10,6 +10,7 @@ import {
   HeaderContainer,
   HeaderContent,
   LogoContainer,
+  MenuCloser,
   MenuContactInfo,
   MenuMobileContainer,
   NavContainer,
@@ -108,6 +109,7 @@ const Header = ({ bgColor }: HeaderTypes) => {
           </MenuContactInfo>
         </NavContainer>
       </HeaderContent>
+      <MenuCloser onClick={openMenu} isOpen={isMenuOpen} />
     </HeaderContainer>
   );
 };

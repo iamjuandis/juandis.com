@@ -186,3 +186,20 @@ export const MenuContactInfo = styled.div<HeaderTypes>`
     width: 100%;
   }
 `;
+
+export const MenuCloser = styled.div<HeaderTypes>`
+  background: transparent;
+  bottom: 0;
+  display: none;
+  height: 50%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  @media screen and (max-width: 640px) {
+    display: ${(props) => (props.isOpen ? 'block' : 'none')};
+    pointer-events: ${(props) => (props.isOpen ? 'all' : 'none')};
+  }
+`;
