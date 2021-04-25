@@ -1,3 +1,4 @@
+import COLOR from '../../assets/style/colors';
 import { MainBannerType } from '../../types/interfaces';
 import Headline from '../headline';
 import Paragraph from '../paragraph';
@@ -18,7 +19,12 @@ const MainBanner = ({ headline, paragraph }: MainBannerType) => {
           </Headline>
         </HeadlineMainBanner>
         <ParagraphsContainerMainBanner>
-          <Paragraph size={1} columns={2} children={paragraph} />
+          <Paragraph
+            size={1}
+            columns={2}
+            children={paragraph}
+            highlightColor={COLOR.yellow_sunrise}
+          />
         </ParagraphsContainerMainBanner>
       </MainBannerContent>
     </MainBannerContainer>

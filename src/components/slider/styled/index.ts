@@ -42,7 +42,7 @@ export const SliderComponentContainer = styled.div`
 export const SliderElement = styled.div`
   display: flex;
   flex-direction: column;
-  height: 457px;
+  height: auto;
   overflow: hidden;
   width: 100%;
   @media screen and (max-width: 700px) {

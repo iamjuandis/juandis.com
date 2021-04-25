@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { darken } from 'polished';
+import useDarkMode from 'use-dark-mode';
 import COLOR from '../../assets/style/colors';
 import { ProjectMainTypes } from '../../types/interfaces';
 import Headline from '../headline';
@@ -30,6 +32,7 @@ const ProjectCard = ({
   images,
   gridRange,
 }: ProjectCardType) => {
+  const darkmode = useDarkMode();
   return (
     <Link href={`/projects/${slug}`} passHref>
       <ProjectCardContainer title={client} gridRange={gridRange}>
@@ -49,17 +52,35 @@ const ProjectCard = ({
           </ProjectCardCoverImage>
         </ProjectCardCoverContainer>
         <ProjectCardTextContainer
-          background={gridRange && gridRange[2] === 'big' ? 'transparent' : `${mainColor}11`}
+          background={
+            gridRange && gridRange[2] === 'big'
+              ? 'transparent'
+              : darkmode.value
+              ? darken(0.24, mainColor)
+              : `${mainColor}11`
+          }
           gridRange={gridRange}
           mainColor={mainColor}
         >
           <Paragraph
             children={client}
-            color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
+            color={
+              gridRange && gridRange[2] === 'big'
+                ? COLOR.white_cloud
+                : darkmode.value
+                ? COLOR.white_cloud
+                : mainColor
+            }
           />
           <br />
           <Headline
-            color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
+            color={
+              gridRange && gridRange[2] === 'big'
+                ? COLOR.white_cloud
+                : darkmode.value
+                ? COLOR.white_cloud
+                : mainColor
+            }
             typeHeadline="h3"
             fontSize={30}
           >
@@ -70,7 +91,13 @@ const ProjectCard = ({
             <ProjectSkillsContainer>
               {skills.slice(0, 2).map((skill: string, idx: number) => (
                 <ProjectSkillElement
-                  mainColor={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
+                  mainColor={
+                    gridRange && gridRange[2] === 'big'
+                      ? COLOR.white_cloud
+                      : darkmode.value
+                      ? COLOR.white_cloud
+                      : mainColor
+                  }
                   key={idx}
                 >
                   {skill}

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import COLOR from '../../assets/style/colors';
 import Footer from '../../components/footer';
 import Header from '../../components/header/header';
 import { PageLayoutTypes } from '../../types/interfaces';
@@ -56,7 +57,7 @@ const PageLayout = ({ children, description, image, title }: PageLayoutTypes) =>
       </Head>
       <Header />
       <PageMainContent>{children}</PageMainContent>
-      <Footer />
+      <Footer mainColor={COLOR.yellow_sunrise} />
     </PageLayoutContainer>
   );
 };

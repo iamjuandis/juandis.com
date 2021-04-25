@@ -83,15 +83,15 @@ export const ProjectRoleBannerContent = styled.div`
   margin: auto;
   max-width: 1200px;
   width: calc(100% - 60px);
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
   }
 `;
 
 export const ProjectRoleTextBoxes = styled.div`
-  grid-column: 3 / 8;
+  grid-column: 3 / 9;
   width: 100%;
-  @media screen and (max-width: 510px) {
+  @media screen and (max-width: 700px) {
     grid-column: 1 / -1;
   }
 `;
