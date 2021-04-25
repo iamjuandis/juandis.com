@@ -56,7 +56,7 @@ const ProjectCard = ({
             gridRange && gridRange[2] === 'big'
               ? 'transparent'
               : darkmode.value
-              ? darken(0.24, mainColor)
+              ? darken(0.1, mainColor)
               : `${mainColor}11`
           }
           gridRange={gridRange}
