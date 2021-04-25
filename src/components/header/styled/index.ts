@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import COLOR from '../../../assets/style/colors';
-import { HeaderTypes } from '../header';
+import { HeaderTypes } from '../../../types/interfaces';
 
 export const HeaderContainer = styled.header<HeaderTypes>`
   background: ${(props) =>

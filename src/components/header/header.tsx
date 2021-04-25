@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { NAV_OPTIONS } from '../../assets/content/intex';
 import { LOGO_JUANDIS } from '../../assets/images';
 import COLOR from '../../assets/style/colors';
-import { NavOptionType } from '../../types/interfaces';
+import { HeaderTypes, NavOptionType } from '../../types/interfaces';
 import NavOption from '../navOption';
 import Paragraph from '../paragraph';
 import {
@@ -15,13 +15,6 @@ import {
   MenuMobileContainer,
   NavContainer,
 } from './styled';
-
-export interface HeaderTypes {
-  bgColor?: string;
-  scrollTop?: number;
-  limitScroll?: number;
-  isOpen?: boolean;
-}
 
 const Header = ({ bgColor }: HeaderTypes) => {
   const limitScroll: number = 460;

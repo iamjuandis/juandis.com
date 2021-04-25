@@ -1,10 +1,6 @@
 import { ICON_MOON, ICON_SUN } from '../../assets/images';
+import { ThemeMode } from '../../types/interfaces';
 import { ButtonThemeContainer, TextTheme } from './styled';
-
-interface ThemeMode {
-  darkMode: boolean;
-  callback: () => void;
-}
 
 const ButtonThemeMode = ({ callback, darkMode }: ThemeMode) => {
   return (
