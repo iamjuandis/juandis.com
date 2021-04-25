@@ -6,6 +6,9 @@ const HeadTags = ({ title, description, image, currentURL, locale, mainColor }: 
   const darkmode = useDarkMode();
   return (
     <Head>
+      <meta name="apple-mobile-web-app-title" content={title ?? 'Juan David Pérez • Portfolio'} />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="application-name" content={title ?? 'Juan David Pérez • Portfolio'} />
       {mainColor && <meta name="theme-color" content={mainColor} />}
       <title>{title ?? 'Juan David Pérez • Portfolio'}</title>
       <meta name="title" property="title" content={title ?? 'Juan David Pérez • Portfolio'} />

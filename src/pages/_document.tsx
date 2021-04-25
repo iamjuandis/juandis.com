@@ -43,14 +43,13 @@ export default class MyDocument extends Document<DocProps> {
     return (
       <Html lang="en">
         <Head>
-          <meta name="apple-mobile-web-app-title" content="Juan David Pérez • Portfolio" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="application-name" content="Juan David Pérez • Portfolio" />
           <meta property="og:type" content="website" />
           <meta name="twitter:account_id" property="twitter:account_id" content="717185162" />
           <meta name="twitter:site" content="@iamjuandis" />
           <meta name="twitter:creator" content="@iamjuandis" />
           <link rel="stylesheet" href="https://use.typekit.net/lmz3qmg.css" />
+          <meta name="robots" content="index,follow" />
+          <meta name="googlebot" content="index,follow" />
           {isProduction && (
             <Fragment>
               <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />

@@ -134,3 +134,15 @@ export interface ExperienceProps {
   position: string;
   years: YearsTypes;
 }
+
+export interface HeaderTypes {
+  bgColor?: string;
+  scrollTop?: number;
+  limitScroll?: number;
+  isOpen?: boolean;
+}
+
+export interface ThemeMode {
+  darkMode: boolean;
+  callback: () => void;
+}
