@@ -168,7 +168,7 @@ export const PROJECTS: ProjectsType = {
     },
     mainColor: '#00BDE5',
     myRole:
-      'Since my partners and I founded Aurora in May 2020, I have had the opportunity to be part of a bold and resilient design team. We built Aurora from sketching our first wireframe to Design our first MVP that allowed us to reach our first alliances and +2K users.<br/>Currently, I had the challenge to be the Head of Product and sometimes a Frontend Developer comrade.',
+      'Since my partners and I founded Aurora in May 2020, I have had the opportunity to be part of a bold and resilient design team. We built Aurora from sketching our first wireframe to Design our first MVP that allowed us to reach our first alliances and users.<br/>Currently, I had the challenge to be the Head of Product and sometimes a Frontend Developer comrade.',
     overview:
       'One of the biggest problems and opportunities in Latin America, especially in countries like Colombia, is education, and the equity in its accessibility. We know it by self-experience, and to help to solve this problem, we decided to build a unique tool to give people an efficient and more accessible e-learning tool. So we built Aurora, an e-learning company that wants to change education in Latam by using technology and design to build an efficient, reliable, and accessible platform where students, employees, and companies can improve their skills and strengths.',
     ownerCompany: {
