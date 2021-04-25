@@ -191,11 +191,12 @@ export const MenuCloser = styled.div<HeaderTypes>`
   background: transparent;
   bottom: 0;
   display: none;
-  height: 50%;
+  height: 100vh;
   left: 0;
   pointer-events: none;
   position: fixed;
   right: 0;
+  top: 0%;
   width: 100%;
   z-index: 10;
   @media screen and (max-width: 640px) {
