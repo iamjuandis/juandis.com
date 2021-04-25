@@ -73,7 +73,7 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
           )}
         </FooterTextContent>
       </FooterContent>
-      {onDarkMode && <ButtonThemeMode callback={() => darkmode.disable()} />}
+      <ButtonThemeMode callback={() => darkmode.toggle()} darkMode={onDarkMode} />
     </FooterContainer>
   );
 };

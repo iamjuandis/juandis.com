@@ -286,7 +286,7 @@ export const PROJECTS: ProjectsType = {
         'https://res.cloudinary.com/juandis/image/upload/v1618092447/portfolio/projects/frostbyte/square-03-frostbyte_qekpfh.jpg',
       ],
     },
-    mainColor: '#122769',
+    mainColor: '#07349d',
     myRole:
       'I was the Product Manager & Lead Designer on this project and I was responsible for creating user flows, wireframes, and prototypes, set a roadmap, prioritize features and collaborate with outside stakeholders, developers, and another UX Designer.<br/> Also, I had the opportunity to have a personal perspective of the development process participating as a Frontend Developer.',
     overview:

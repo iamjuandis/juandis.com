@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import COLOR from '../../../assets/style/colors';
 
 export const ButtonThemeContainer = styled.div`
   align-items: center;
@@ -7,27 +6,28 @@ export const ButtonThemeContainer = styled.div`
   border-radius: 50px;
   box-sizing: border-box;
   bottom: 30px;
+  color: ${(props) => props.theme.text};
   cursor: pointer;
   display: flex;
+  height: 40px;
   justify-content: center;
-  min-width: 47px;
   padding: 10px;
   position: relative;
   position: fixed;
   right: 30px;
-  color: ${COLOR.white_cloud};
+  width: 40px;
   z-index: 100;
   svg {
-    color: ${COLOR.white_cloud};
+    color: ${(props) => props.theme.text};
+    height: 30px;
+    width: 30px;
   }
   &:hover {
-    background: ${COLOR.white_cloud};
+    background: ${(props) => props.theme.text};
     color: ${(props) => props.theme.background};
     p {
-      color: ${(props) => props.theme.background};
       opacity: 1;
-      position: relative;
-      margin-right: 0px;
+      right: 50px;
     }
     svg {
       color: ${(props) => props.theme.background};
@@ -36,11 +36,14 @@ export const ButtonThemeContainer = styled.div`
 `;
 
 export const TextTheme = styled.p`
-  color: ${COLOR.white_cloud};
+  background: ${(props) => props.theme.background};
+  border-radius: 50px;
+  color: ${(props) => props.theme.text};
+  font-size: 0.8em;
   opacity: 0;
-  margin-left: 15px;
-  position: relative;
+  padding: 10px 20px;
+  position: absolute;
   pointer-events: none;
-  margin-right: -172px;
+  right: 0px;
   white-space: nowrap;
 `;
