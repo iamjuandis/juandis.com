@@ -8,7 +8,7 @@ interface ThemeMode {
 
 const ButtonThemeMode = ({ callback, darkMode }: ThemeMode) => {
   return (
-    <ButtonThemeContainer onClick={callback} title="Disable dark mode">
+    <ButtonThemeContainer onClick={callback} title={`Lights ${darkMode ? 'on' : 'off'}`}>
       {darkMode ? ICON_SUN : ICON_MOON} <TextTheme>Lights {darkMode ? 'on' : 'off'}</TextTheme>
     </ButtonThemeContainer>
   );
