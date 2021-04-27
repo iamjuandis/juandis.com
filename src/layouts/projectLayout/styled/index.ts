@@ -71,7 +71,7 @@ export const ProjectRoleBanner = styled.div`
   padding: 50px 0;
   width: 100%;
   @media screen and (max-width: 510px) {
-    padding-top: 200px;
+    padding-top: 240px;
   }
 `;
 
