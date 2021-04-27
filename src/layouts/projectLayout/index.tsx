@@ -7,7 +7,7 @@ import Header from '../../components/header/header';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
-import { ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
+import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
@@ -27,14 +27,17 @@ import {
 } from './styled';
 import ProjectSection from '../../components/projectSection';
 import Image from 'next/image';
+import useDarkMode from 'use-dark-mode';
 
 interface Props {
+  metaInfo: MetaInfoProps;
   project: ProjectAllTypes;
 }
 
-const ProjectLayout = ({ project }: Props) => {
+const ProjectLayout = ({ metaInfo, project }: Props) => {
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
+  const darkmode = useDarkMode();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -46,7 +49,7 @@ const ProjectLayout = ({ project }: Props) => {
   return (
     <ProjectLayoutContainer>
       <HeadTags
-        title={`${project.client}: ${project.headline} • Projects • Juan David Pérez`}
+        title={`${project.client}: ${project.headline} • ${metaInfo?.mainTitle}`}
         description={project.headline}
         locale={`${router.locale}`}
         currentURL={currentURL}
@@ -162,7 +165,7 @@ const ProjectLayout = ({ project }: Props) => {
 
       <ProjectFooter>
         <Paragraph
-          color={`${COLOR.blue_universe}55`}
+          color={`${darkmode.value ? COLOR.white_dark : COLOR.blue_universe}55`}
           size={0.7}
           children={`© ${
             project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
