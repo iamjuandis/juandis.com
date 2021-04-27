@@ -1,16 +1,18 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { META_INFO } from '../../assets/content/intex';
 import { PROJECTS } from '../../assets/content/projects';
 import ProjectLayout from '../../layouts/projectLayout';
-import { ProjectAllTypes, ProjectsType } from '../../types/interfaces';
+import { MetaInfoProps, ProjectAllTypes, ProjectsType } from '../../types/interfaces';
 
 interface Props {
+  metaInfo: MetaInfoProps;
   project: ProjectAllTypes;
   isValid: boolean;
 }
 
-const ProjectPage = ({ project, isValid }: Props) => {
+const ProjectPage = ({ metaInfo, project, isValid }: Props) => {
   const router = useRouter();
   useEffect(() => {
     if (!isValid) {
@@ -18,7 +20,7 @@ const ProjectPage = ({ project, isValid }: Props) => {
     }
   }, []);
 
-  return <ProjectLayout project={project} />;
+  return <ProjectLayout project={project} metaInfo={metaInfo} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -33,10 +35,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const projectSelected = PROJECTS[`${context?.params?.slug}`];
+  const metaInfo = META_INFO;
 
   if (projectSelected) {
     return {
       props: {
+        metaInfo: metaInfo,
         project: PROJECTS[`${context?.params?.slug}`],
         isValid: true,
       },
@@ -44,6 +48,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   } else {
     return {
       props: {
+        metaInfo: metaInfo,
         project: {},
         isValid: false,
       },

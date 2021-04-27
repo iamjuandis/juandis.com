@@ -7,7 +7,7 @@ import Header from '../../components/header/header';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
-import { ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
+import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
@@ -29,10 +29,11 @@ import ProjectSection from '../../components/projectSection';
 import Image from 'next/image';
 
 interface Props {
+  metaInfo: MetaInfoProps;
   project: ProjectAllTypes;
 }
 
-const ProjectLayout = ({ project }: Props) => {
+const ProjectLayout = ({ metaInfo, project }: Props) => {
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
 
@@ -46,7 +47,7 @@ const ProjectLayout = ({ project }: Props) => {
   return (
     <ProjectLayoutContainer>
       <HeadTags
-        title={`${project.client}: ${project.headline} • Projects • Juan David Pérez`}
+        title={`${project.client}: ${project.headline} • ${metaInfo?.mainTitle}`}
         description={project.headline}
         locale={`${router.locale}`}
         currentURL={currentURL}
