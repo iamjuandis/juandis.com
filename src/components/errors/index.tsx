@@ -1,3 +1,4 @@
+import COLOR from '../../assets/style/colors';
 import Headline from '../headline';
 import Paragraph from '../paragraph';
 import { ErrorContainer, ErrorContent } from './styled';
@@ -29,7 +30,10 @@ const Errors = ({ typeError }: ErrorsType) => {
           }
         />
         <br />
-        <Paragraph children={`<a href="/" title="Back home">Back home</a>`} />
+        <Paragraph
+          highlightColor={COLOR.yellow_sunrise}
+          children={`<a href="/" title="Back home">Back home</a>`}
+        />
       </ErrorContent>
     </ErrorContainer>
   );

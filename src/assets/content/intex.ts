@@ -47,7 +47,7 @@ export const META_INFO: MetaInfoProps = {
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `I’m a pragmatic and curious Interactive & Product Designer from <span class="color">Colombia</span>. For the last 5 years, I helped to shape the future by building people-based products.`,
+  headline: `I’m a pragmatic and curious Interactive & Product Designer from <span class="color">Colombia</span>. For the last +4 years, I helped to shape the future by building people-based products.`,
   paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. Currently, I'm leading the Product Design Team at <a class="external-link" rel="noopener noreferrer" href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> 
   and at our biggest project, <a class="external-link" rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform that we founded to transform education in Latam. Since high school, I love to build, design and code.`,
 };
