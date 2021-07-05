@@ -50,6 +50,7 @@
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-netflix": "^2.0.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
