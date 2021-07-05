@@ -47,7 +47,7 @@ const Header = ({ bgColor }: HeaderTypes) => {
             {LOGO_JUANDIS}
             <div>
               <strong>Juan David Pérez</strong>
-              <span>Product Designer & Frontend Developer</span>
+              <span>Product Designer</span>
             </div>
           </LogoContainer>
         </Link>

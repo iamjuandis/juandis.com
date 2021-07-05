@@ -48,11 +48,20 @@ export const META_INFO: MetaInfoProps = {
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
   headline: `I’m a pragmatic and curious Interactive & Product Designer from <span class="color">Colombia</span>. For the last +4 years, I helped to shape the future by building people-based products.`,
-  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. Currently, I'm leading the Product Design Team at <a class="external-link" rel="noopener noreferrer" href="https://weareangular.com/" target="_blank" title="We Are Angular &#8599;">We Are Angular</a> 
-  and at our biggest project, <a class="external-link" rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform that we founded to transform education in Latam. Since high school, I love to build, design and code.`,
+  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. Currently, I'm part of the UX and UI team at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga</a>, 
+  and I'm building and designing <a class="external-link" rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform that we founded to transform education in Latam.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
+  {
+    company: 'Zemoga Inc.',
+    country: 'Colombia',
+    position: 'UX · UI Designer',
+    years: {
+      first: '06/2021',
+      last: 'Present',
+    },
+  },
   {
     company: 'Aurora',
     country: 'Colombia',
@@ -68,7 +77,7 @@ export const EXPERIENCES: ExperienceProps[] = [
     position: 'Product Design Manager',
     years: {
       first: '08/2019',
-      last: 'Present',
+      last: '05/2021',
     },
   },
   {
