@@ -52,18 +52,13 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
               me@juandis.com
             </a>`}
           />
-          <Paragraph
-            highlightColor={mainColor}
-            children={`<a href="tel:573122659625" title="+57 312 265 9625">
-              +57 312 265 9625
-            </a>`}
-          />
+
+          <Paragraph highlightColor={mainColor} children={`Designed & built by me.`} />
+
           <Paragraph
             highlightColor={mainColor}
             children={`© ${new Date().getFullYear()}. All rights reserved.`}
           />
-
-          <Paragraph highlightColor={mainColor} children={`Designed & built by me.`} />
 
           {lastUpdated && (
             <Paragraph
