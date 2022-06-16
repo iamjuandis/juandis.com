@@ -24,12 +24,12 @@ export const NAV_OPTIONS: NavOptionType[] = [
       scrollToIDElement('projects');
     },
   },
-  {
+  /*   {
     label: 'Resume',
     type: 'link',
     route: '/resume',
     isExternal: true,
-  },
+  }, */
   {
     label: 'LinkedIn',
     type: 'link',
@@ -40,16 +40,16 @@ export const NAV_OPTIONS: NavOptionType[] = [
 
 export const META_INFO: MetaInfoProps = {
   description:
-    'I’m a pragmatic and curious Interactive & Product Designer from Colombia. For the last +5 years, I helped to shape the future by building people-based products.',
+    'I am Juan David, a pragmatic and curious Product Designer from Colombia. I collaborated with experienced product teams more than 5 years to shape solutions for people',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Pérez • Portfolio • Product & Interactive Designer',
+  mainTitle: 'Juan David Pérez • Product Designer',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `I’m a pragmatic and curious Interactive & Product Designer from <span class="color">Colombia</span>. For the last +5 years, I helped to shape the future by building people-based products.`,
-  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. Currently, I'm part of the UX and UI team at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga</a>, 
-  and I'm building and designing <a class="external-link" rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform that we founded to transform education in Latam.`,
+  headline: `Hey there! I am Juan David, a pragmatic and curious Product Designer from <span class="color">Colombia</span>. For nearly 6 years, I've been collaborating with experienced product teams to shape solutions for people.`,
+  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. With nearly 6 years of experience building and designing products focussed on people, I've collaborated with cross-functional teams to build reliable, empathetic and user-obsessed products. I'm currently collaborating with world-class teams at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga Inc.</a>. 
+  Previously, I empowered a team of +10 designers, developers, and strategist, to push solutions for a diverse group of industries and audiences.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
