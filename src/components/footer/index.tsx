@@ -37,7 +37,9 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
         <FooterTextContent>
           <Paragraph
             highlightColor={mainColor}
-            children={`<a href="/in" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+            children={`<a href="/resume" title="Resume" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a> • <a href="/in" title="LinkedIn" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a> • <a href="/github" title="GitHub" target="_blank" rel="noopener noreferrer">
           GitHub

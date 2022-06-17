@@ -24,12 +24,12 @@ export const NAV_OPTIONS: NavOptionType[] = [
       scrollToIDElement('projects');
     },
   },
-  /*   {
+  {
     label: 'Resume',
     type: 'link',
     route: '/resume',
     isExternal: true,
-  }, */
+  },
   {
     label: 'LinkedIn',
     type: 'link',
@@ -40,7 +40,7 @@ export const NAV_OPTIONS: NavOptionType[] = [
 
 export const META_INFO: MetaInfoProps = {
   description:
-    'I am Juan David, a pragmatic and curious Product Designer from Colombia. I collaborated with experienced product teams more than 5 years to shape solutions for people',
+    'Product Designer from Colombia with nearly 6 years collaborating with experienced product teams to shape solutions for people.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
   mainTitle: 'Juan David Pérez • Product Designer',
@@ -48,8 +48,8 @@ export const META_INFO: MetaInfoProps = {
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
   headline: `Hey there! I am Juan David, a pragmatic and curious Product Designer from <span class="color">Colombia</span>. For nearly 6 years, I've been collaborating with experienced product teams to shape solutions for people.`,
-  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. With nearly 6 years of experience building and designing products focussed on people, I've collaborated with cross-functional teams to build reliable, empathetic and user-obsessed products. I'm currently collaborating with world-class teams at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga Inc.</a>. 
-  Previously, I empowered a team of +10 designers, developers, and strategist, to push solutions for a diverse group of industries and audiences.`,
+  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. I've collaborated with cross-functional teams to build reliable, empathetic, and user-obsessed products. I'm currently collaborating with world-class teams at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga Inc.</a> 
+  Previously, I empowered a team of +10 designers, developers, and strategists, to push solutions for a diverse group of industries and audiences.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
@@ -64,7 +64,7 @@ export const EXPERIENCES: ExperienceProps[] = [
   {
     company: 'Aurora',
     country: 'Colombia',
-    position: 'Lead Product Designer, Co-founder',
+    position: 'Product Designer, Co-founder',
     years: {
       first: '04/2020',
       last: '09/2021',
@@ -82,7 +82,7 @@ export const EXPERIENCES: ExperienceProps[] = [
   {
     company: 'We Are Angular',
     country: 'Colombia',
-    position: 'Product Designer',
+    position: 'Product Designer & Frontend Developer',
     years: {
       first: '08/2017',
       last: '08/2019',
