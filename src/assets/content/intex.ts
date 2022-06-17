@@ -40,23 +40,22 @@ export const NAV_OPTIONS: NavOptionType[] = [
 
 export const META_INFO: MetaInfoProps = {
   description:
-    'I’m a pragmatic and curious Interactive & Product Designer from Colombia. For the last +4 years, I helped to shape the future by building people-based products.',
+    'Product Designer from Colombia with nearly 6 years collaborating with experienced product teams to shape solutions for people.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Pérez • Portfolio • Product & Interactive Designer',
+  mainTitle: 'Juan David Pérez • Product Designer',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `I’m a pragmatic and curious Interactive & Product Designer from <span class="color">Colombia</span>. For the last +4 years, I helped to shape the future by building people-based products.`,
-  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. Currently, I'm part of the UX and UI team at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga</a>, 
-  and I'm building and designing <a class="external-link" rel="noopener noreferrer" href="https://somosaurora.co/" target="_blank" title="Aurora &#8599;">Aurora</a>, an e-Learning platform that we founded to transform education in Latam.`,
+  headline: `Hey there! I am Juan David, a pragmatic and curious Product Designer from <span class="color">Colombia</span>. For nearly 6 years, I've been collaborating with experienced product teams to shape solutions for people.`,
+  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. I've collaborated with cross-functional teams to build reliable, empathetic, and user-obsessed products. I'm currently collaborating with world-class teams at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga Inc.</a> 
+  Previously, I empowered a team of +10 designers, developers, and strategists, to push solutions for a diverse group of industries and audiences.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
   {
     company: 'Zemoga Inc.',
-    country: 'Colombia',
-    position: 'UX · UI Designer',
+    position: 'User Experience Designer',
     years: {
       first: '06/2021',
       last: 'Present',
@@ -65,16 +64,16 @@ export const EXPERIENCES: ExperienceProps[] = [
   {
     company: 'Aurora',
     country: 'Colombia',
-    position: 'Co-Founder & Product Design Lead',
+    position: 'Product Designer, Co-founder',
     years: {
       first: '04/2020',
-      last: 'Present',
+      last: '09/2021',
     },
   },
   {
     company: 'We Are Angular',
     country: 'Colombia',
-    position: 'Product Design Manager',
+    position: 'Lead Product Designer, Partner',
     years: {
       first: '08/2019',
       last: '05/2021',
@@ -83,34 +82,16 @@ export const EXPERIENCES: ExperienceProps[] = [
   {
     company: 'We Are Angular',
     country: 'Colombia',
-    position: 'Project Manager & Board Member',
-    years: {
-      first: '01/2020',
-      last: '12/2020',
-    },
-  },
-  {
-    company: 'We Are Angular',
-    country: 'Colombia',
-    position: 'Frontend Developer',
-    years: {
-      first: '01/2018',
-      last: '07/2019',
-    },
-  },
-  {
-    company: 'We Are Angular',
-    country: 'Colombia',
-    position: 'Designer & Design Consultant',
+    position: 'Product Designer & Frontend Developer',
     years: {
       first: '08/2017',
       last: '08/2019',
     },
   },
   {
-    company: 'UXLab Icesi',
+    company: 'Icesi University',
     country: 'Colombia',
-    position: 'Designer',
+    position: 'Designer at UXLab Icesi',
     years: {
       first: '01/2019',
       last: '08/2020',
@@ -128,10 +109,19 @@ export const EXPERIENCES: ExperienceProps[] = [
   {
     company: 'Icesi University',
     country: 'Colombia',
-    position: 'Designer',
+    position: 'Visual Designer',
     years: {
       first: '07/2017',
       last: '12/2018',
+    },
+  },
+  {
+    company: 'Freelance',
+    country: 'Colombia',
+    position: 'Web Designer & Developer',
+    years: {
+      first: '01/2014',
+      last: '12/2017',
     },
   },
 ];
