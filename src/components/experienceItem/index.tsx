@@ -9,7 +9,7 @@ const ExperienceItem = ({ company, country, position, years }: ExperienceProps) 
     <ExperienceItemContainer>
       <ExperienceItemContent>
         <Headline typeHeadline="h5" children={position} />
-        <Paragraph size={0.9} children={`${company}, ${country}`} />
+        <Paragraph size={0.9} children={`${company}${country ? `, ${country}` : ''}`} />
         <Paragraph
           size={0.9}
           children={`${SetYearFromString(`${years.first}`)}${

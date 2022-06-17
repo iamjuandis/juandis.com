@@ -129,7 +129,7 @@ export interface MetaInfoProps {
 }
 
 export interface ExperienceProps {
-  country: string;
+  country?: string;
   company: string;
   position: string;
   years: YearsTypes;
