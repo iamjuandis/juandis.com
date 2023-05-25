@@ -11,8 +11,7 @@ export const PROJECTS: ProjectsType = {
         'Personally, it was a big journey where I had the opportunity to discover new knowledge, be curious, and show the value of design to build a user-based product.<br/> Initially, I was intimidated by the complexity of the business and the whole market. I had no idea about real estate, but the curiosity and the love to build, got me to understand from experts how the market works, and see how important it is to make it easy for the users.',
       image: {
         height: 914,
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
+        src: 'https://res.cloudinary.com/juandis/image/upload/v1616888580/portfolio/projects/proper/slider-proper-05_nzzk7h.jpg',
         width: 2400,
       },
     },
@@ -58,8 +57,7 @@ export const PROJECTS: ProjectsType = {
         image: {
           height: 1028 - 5,
           priority: true,
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1617592149/portfolio/projects/proper/animated-proper-squarepin_zpgn10.gif',
           width: 1800,
         },
       },
@@ -67,8 +65,7 @@ export const PROJECTS: ProjectsType = {
         alignment: 'wide-right',
         columns: 1,
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1616889180/portfolio/projects/proper/proper-mid_kozz3y.png',
           width: 1346,
           height: 1118,
         },
@@ -98,8 +95,7 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         image: {
           height: 1240,
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1616889181/portfolio/projects/proper/proper-footer_cfvcxj.png',
           width: 994,
         },
         content: `Talking with users and experts, we found that we should focus on the next specific principles that would allow us to build a better and comprehensive product:
@@ -139,8 +135,7 @@ export const PROJECTS: ProjectsType = {
       content: `This is currently the most ambitious project I've ever been as a leader in design. Also, it has been a huge challenge creating something new in one of the biggest problems in Latam and the impact we can achieve using design to deliver a unique tool.<br/> Special thanks to Stephany Rojas, Santiago Ortíz, Stefanía Grimaldo, Diego Barbosa, Luis Meneses, Andrés García, Daniela Valencia, Erika Barbosa and Nestor Tobar.`,
       image: {
         height: 837,
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1618028448/portfolio/projects/aurora/footer-aurora-mockups_cih1dq.jpg',
+        src: 'https://res.cloudinary.com/juandis/image/upload/v1618028448/portfolio/projects/aurora/footer-aurora-mockups_cih1dq.jpg',
         width: 2400,
       },
     },
@@ -184,8 +179,7 @@ export const PROJECTS: ProjectsType = {
         content:
           'Education in Latam has many threads that need to be enhanced, and to support that improvement we focused on: <strong>how to improve the engagement and high results in eLearning courses for workers in Latam?</strong>',
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618028446/portfolio/projects/aurora/certificate-aurora-2021_plzrfd.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618028446/portfolio/projects/aurora/certificate-aurora-2021_plzrfd.jpg',
           height: 1118,
           width: 1346,
         },
@@ -198,8 +192,7 @@ export const PROJECTS: ProjectsType = {
         image: {
           height: 997,
           priority: true,
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618030735/portfolio/projects/aurora/ezgif.com-gif-maker_snzapc.gif',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618030735/portfolio/projects/aurora/ezgif.com-gif-maker_snzapc.gif',
           width: 800 - 5,
         },
         title: 'Understand the main steps in an e-learning flow',
@@ -220,8 +213,7 @@ export const PROJECTS: ProjectsType = {
         columns: 1,
         image: {
           height: 1240,
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618028446/portfolio/projects/aurora/mockups-aurora-portrait_ardshs.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618028446/portfolio/projects/aurora/mockups-aurora-portrait_ardshs.jpg',
           width: 994,
         },
         content: `We know Aurora has a long path to drive through, and we strongly believe that design is a huge element to improve and build a better learning tool.<br/><br/>
@@ -258,8 +250,7 @@ export const PROJECTS: ProjectsType = {
       Thanks to that renewal, Frostbyte reduced +91% the time spent on data visualization and increased the revenue by +400%.`,
       image: {
         height: 838,
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1618092440/portfolio/projects/frostbyte/footer-frostbyte_c9kdwq.jpg',
+        src: 'https://res.cloudinary.com/juandis/image/upload/v1618092440/portfolio/projects/frostbyte/footer-frostbyte_c9kdwq.jpg',
         width: 2400,
       },
     },
@@ -304,8 +295,7 @@ export const PROJECTS: ProjectsType = {
         content:
           'The challenge was how to visualize a huge amount of data and the complexity to integrate a monitoring system to control limits and optimize the performance and excessive expenses in energy. Besides, Frostbyte already had a monitoring system but with a lot of improvement opportunities and specific pain points list.',
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618092437/portfolio/projects/frostbyte/alerts-frostbyte_s1iape.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618092437/portfolio/projects/frostbyte/alerts-frostbyte_s1iape.jpg',
           height: 1240,
           width: 994,
         },
@@ -316,8 +306,7 @@ export const PROJECTS: ProjectsType = {
         alignment: 'wide-right',
         columns: 1,
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618092440/portfolio/projects/frostbyte/email-frostbyte_vj9xtu.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618092440/portfolio/projects/frostbyte/email-frostbyte_vj9xtu.jpg',
           width: 1346,
           height: 1118,
         },
@@ -355,8 +344,7 @@ export const PROJECTS: ProjectsType = {
       image: {
         height: 700,
         priority: true,
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1618107575/portfolio/projects/weareangular/animated-text-weareangular_r6jyva.gif',
+        src: 'https://res.cloudinary.com/juandis/image/upload/v1618107575/portfolio/projects/weareangular/animated-text-weareangular_r6jyva.gif',
         width: 1920,
       },
     },
@@ -410,8 +398,7 @@ export const PROJECTS: ProjectsType = {
         image: {
           height: 800,
           priority: true,
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618107569/portfolio/projects/weareangular/logo-animated-weareangular_mocd7c.gif',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618107569/portfolio/projects/weareangular/logo-animated-weareangular_mocd7c.gif',
           width: 800,
         },
         marginBottom: true,
@@ -421,8 +408,7 @@ export const PROJECTS: ProjectsType = {
         alignment: 'wide-right',
         columns: 1,
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618107567/portfolio/projects/weareangular/mid-hoodie_vxymx2.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618107567/portfolio/projects/weareangular/mid-hoodie_vxymx2.jpg',
           width: 1346,
           height: 1118,
         },
@@ -463,8 +449,7 @@ export const PROJECTS: ProjectsType = {
       content: `I feel really motivated when all we do as designers is improve people's lives and help companies grow or even validate business opportunities. This was a validation case and for me, was a sign of pride and conviction to be part of an early-stage business opportunity from a product design position. Besides, it let me a list of personal and professional improvements that I'm hungry to work on.`,
       image: {
         height: 838,
-        src:
-          'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/footer-g2w_okg88d.jpg',
+        src: 'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/footer-g2w_okg88d.jpg',
         width: 2400,
       },
     },
@@ -511,8 +496,7 @@ export const PROJECTS: ProjectsType = {
         content:
           'Thanks to the growth obtained in their first year running the business, they started to noticed the complexity to load a new product to Get2Wear, so they partnered with us to redesign and refine the user experience and give customers a better way to make their dresses profitable, and in the other hand, have better management of the customers status, and the internal billing and logistic variables.',
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618160911/portfolio/projects/get2wear/previous-g2w_zezk8g.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618160911/portfolio/projects/get2wear/previous-g2w_zezk8g.jpg',
           height: 838,
           width: 2400,
         },
@@ -527,8 +511,7 @@ export const PROJECTS: ProjectsType = {
           <li>We built a refined application with improved feedback, a clear user flow, and a clean interface that lets the most important actions be presented to the user.</li>
         </ul>`,
         image: {
-          src:
-            'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/mid-g2w_a2na42.jpg',
+          src: 'https://res.cloudinary.com/juandis/image/upload/v1618159466/portfolio/projects/get2wear/mid-g2w_a2na42.jpg',
           width: 1346,
           height: 1118,
         },
