@@ -43,7 +43,7 @@ export const META_INFO: MetaInfoProps = {
     'Product Designer from Colombia with nearly 6 years collaborating with experienced product teams to shape solutions for people.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Pérez • Product Designer',
+  mainTitle: 'Juan David Perez · Product Designer & Frontend Hobbyistr',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {

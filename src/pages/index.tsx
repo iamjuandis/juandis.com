@@ -25,11 +25,7 @@ const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
     }
   }, []);
   return (
-    <PageLayout
-      image={metaInfo?.previewImage}
-      title={metaInfo?.mainTitle}
-      description={metaInfo?.description}
-    >
+    <PageLayout image={metaInfo?.previewImage} description={metaInfo?.description}>
       <MainBanner headline={bannerTexts?.headline} paragraph={bannerTexts?.paragraph} />
       <ProjectsBanner projects={projects} />
       <ExperienceBanner experiences={experiences} />

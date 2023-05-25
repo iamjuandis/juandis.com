@@ -29,7 +29,7 @@ export interface HeadlineType {
 
 export interface PageLayoutTypes {
   children: ReactNode;
-  title: string;
+  title?: string;
   description?: string;
   image?: string;
 }

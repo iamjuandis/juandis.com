@@ -21,8 +21,8 @@ const PageLayout = ({ children, description, image, title }: PageLayoutTypes) =>
   return (
     <PageLayoutContainer>
       <HeadTags
-        title={title ?? 'Juan David Pérez • Portfolio'}
-        description={description ?? 'Juan David Pérez • Portfolio'}
+        title={`${title}`}
+        description={`${description}`}
         locale={`${router.locale}`}
         currentURL={currentURL}
         image={`${image}`}

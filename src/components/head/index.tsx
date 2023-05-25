@@ -6,22 +6,46 @@ const HeadTags = ({ title, description, image, currentURL, locale, mainColor }: 
   const darkmode = useDarkMode();
   return (
     <Head>
-      <meta name="apple-mobile-web-app-title" content={title ?? 'Juan David Pérez • Portfolio'} />
+      <meta
+        name="apple-mobile-web-app-title"
+        content={`${
+          title !== 'undefined' ? `${title} · ` : ''
+        }Juan David Perez · Product Designer & Frontend Hobbyist`}
+      />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="application-name" content={title ?? 'Juan David Pérez • Portfolio'} />
+      <meta
+        name="application-name"
+        content={`${
+          title !== 'undefined' ? `${title} · ` : ''
+        }Juan David Perez · Product Designer & Frontend Hobbyist`}
+      />
       {mainColor && <meta name="theme-color" content={mainColor} />}
-      <title>{title ?? 'Juan David Pérez • Portfolio'}</title>
-      <meta name="title" property="title" content={title ?? 'Juan David Pérez • Portfolio'} />
+      <title>{`${
+        title !== 'undefined' ? `${title} · ` : ''
+      }Juan David Perez · Product Designer & Frontend Hobbyist`}</title>
+      <meta
+        name="title"
+        property="title"
+        content={`${
+          title !== 'undefined' ? `${title} · ` : ''
+        }Juan David Perez · Product Designer & Frontend Hobbyist`}
+      />
       <meta
         name="description"
         property="description"
-        content={description ?? 'Juan David Pérez • Portfolio'}
+        content={description ?? 'Juan David Perez · Product Designer & Frontend Hobbyist'}
       />
-      <meta name="og:title" property="og:title" content={title ?? 'Juan David Pérez • Portfolio'} />
+      <meta
+        name="og:title"
+        property="og:title"
+        content={`${
+          title !== 'undefined' ? `${title} · ` : ''
+        }Juan David Perez · Product Designer & Frontend Hobbyist`}
+      />
       <meta
         name="og:description"
         property="og:description"
-        content={description ?? 'Juan David Pérez • Portfolio'}
+        content={description ?? 'Juan David Perez · Product Designer & Frontend Hobbyist'}
       />
       <meta name="og:image" property="og:image" content={image} />
       <meta name="og:url" property="og:url" content={currentURL} />
@@ -32,12 +56,14 @@ const HeadTags = ({ title, description, image, currentURL, locale, mainColor }: 
       <meta
         name="twitter:title"
         property="twitter:title"
-        content={title ?? 'Juan David Pérez • Portfolio'}
+        content={`${
+          title !== 'undefined' ? `${title} · ` : ''
+        }Juan David Perez · Product Designer & Frontend Hobbyist`}
       />
       <meta
         name="twitter:description"
         property="twitter:description"
-        content={description ?? 'Juan David Pérez • Portfolio'}
+        content={description ?? 'Juan David Perez · Product Designer & Frontend Hobbyist'}
       />
       <link
         rel="shortcut icon"

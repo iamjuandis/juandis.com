@@ -7,7 +7,7 @@ import Header from '../../components/header/header';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
-import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
+import { ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
@@ -30,11 +30,10 @@ import Image from 'next/image';
 import useDarkMode from 'use-dark-mode';
 
 interface Props {
-  metaInfo: MetaInfoProps;
   project: ProjectAllTypes;
 }
 
-const ProjectLayout = ({ metaInfo, project }: Props) => {
+const ProjectLayout = ({ project }: Props) => {
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
   const darkmode = useDarkMode();
@@ -49,7 +48,7 @@ const ProjectLayout = ({ metaInfo, project }: Props) => {
   return (
     <ProjectLayoutContainer>
       <HeadTags
-        title={`${project.client}: ${project.headline} • ${metaInfo?.mainTitle}`}
+        title={`${project.client}: ${project.headline}`}
         description={project.headline}
         locale={`${router.locale}`}
         currentURL={currentURL}
