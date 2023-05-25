@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ProjectCardComponentTypes } from '..';
 import COLOR from '../../../assets/style/colors';
 
-export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
+export const ProjectCardContainer = styled.div<ProjectCardComponentTypes>`
   display: ${(props) => (props.gridRange && props.gridRange[2] === 'large' ? 'grid' : 'flex')};
   flex-direction: column;
   grid-template-columns: 57.1289% 5fr;

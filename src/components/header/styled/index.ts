@@ -38,7 +38,7 @@ export const HeaderContent = styled.div`
   width: calc(100% - 60px);
 `;
 
-export const LogoContainer = styled.a<HeaderTypes>`
+export const LogoContainer = styled.div<HeaderTypes>`
   flex-direction: row;
   cursor: pointer;
   display: flex;

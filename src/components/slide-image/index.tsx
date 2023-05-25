@@ -8,7 +8,7 @@ interface SlideImageProps {
 
 const SlideImage = ({ content, width }: SlideImageProps) => (
   <SlideImageComponent widthImage={width}>
-    <Image width={2400} src={content} height={963} objectFit="cover" priority />
+    <Image width={2400} src={content} height={963} priority alt={'Slide image'} />
   </SlideImageComponent>
 );
 

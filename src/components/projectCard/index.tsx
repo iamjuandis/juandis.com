@@ -41,8 +41,8 @@ const ProjectCard = ({
             <Image
               alt={client}
               height={gridRange && gridRange[2] === 'big' ? 1091 : 1000}
-              objectFit="cover"
-              objectPosition="top center"
+              //objectFit="cover"
+              //objectPosition="top center"
               quality={100}
               src={
                 gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]

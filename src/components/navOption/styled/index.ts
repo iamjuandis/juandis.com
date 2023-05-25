@@ -32,7 +32,7 @@ export const Nav = styled.div<NavOptionType>`
   }
 `;
 
-const tag = (props: NavOptionType) => (props.type === 'link' ? { as: 'a' } : { as: 'p' });
+const tag = (props: NavOptionType) => (props.type === 'link' ? { as: 'div' } : { as: 'p' });
 
 export const NavOptionContainer = styled(Nav).attrs(tag)<NavOptionType>`
   width: fit-content;
