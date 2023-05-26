@@ -7,7 +7,7 @@ import Header from '../../components/header/header';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
-import { ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
+import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
 import {
   ProjectCompanyContainer,
   ProjectCompanyTexts,
@@ -29,6 +29,7 @@ import ProjectSection from '../../components/projectSection';
 import Image from 'next/image';
 
 interface Props {
+  metaInfo: MetaInfoProps;
   project: ProjectAllTypes;
 }
 

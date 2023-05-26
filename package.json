@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.26",
