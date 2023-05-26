@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import useDarkMode from 'use-dark-mode';
 import COLOR from '../../assets/style/colors';
 import { formatDate } from '../../assets/utils/components';
-import ButtonThemeMode from '../buttonThemeMode';
 import Headline from '../headline';
 import Paragraph from '../paragraph';
 import { FooterContainer, FooterContent, FooterTextContent } from './styled';
@@ -13,12 +11,6 @@ interface FooterProps {
 
 const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
   const [lastUpdated, setLastUpdated] = useState(null);
-  const [onDarkMode, setOnDarkMode] = useState(false);
-  const darkmode = useDarkMode();
-
-  useEffect(() => {
-    setOnDarkMode(darkmode.value);
-  }, [darkmode]);
 
   useEffect(() => {
     fetch('https://api.github.com/repos/iamjuandis/juandis.com/branches/main')
@@ -68,7 +60,6 @@ const Footer = ({ mainColor = COLOR.blue_universe }: FooterProps) => {
           )}
         </FooterTextContent>
       </FooterContent>
-      <ButtonThemeMode callback={() => darkmode.toggle()} darkMode={onDarkMode} />
     </FooterContainer>
   );
 };

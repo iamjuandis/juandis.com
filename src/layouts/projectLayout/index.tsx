@@ -27,7 +27,6 @@ import {
 } from './styled';
 import ProjectSection from '../../components/projectSection';
 import Image from 'next/image';
-import useDarkMode from 'use-dark-mode';
 
 interface Props {
   project: ProjectAllTypes;
@@ -36,7 +35,6 @@ interface Props {
 const ProjectLayout = ({ project }: Props) => {
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
-  const darkmode = useDarkMode();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -164,7 +162,7 @@ const ProjectLayout = ({ project }: Props) => {
 
       <ProjectFooter>
         <Paragraph
-          color={`${darkmode.value ? COLOR.white_dark : COLOR.blue_universe}55`}
+          color={`${COLOR.blue_universe}55`}
           size={0.7}
           children={`© ${
             project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''

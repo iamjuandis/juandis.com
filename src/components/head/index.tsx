@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import useDarkMode from 'use-dark-mode';
 import { HeadTagsProps } from '../../types/interfaces';
 
 const HeadTags = ({ title, description, image, currentURL, locale, mainColor }: HeadTagsProps) => {
-  const darkmode = useDarkMode();
   return (
     <Head>
       <meta
@@ -65,15 +63,8 @@ const HeadTags = ({ title, description, image, currentURL, locale, mainColor }: 
         property="twitter:description"
         content={description ?? 'Juan David Perez · Product Designer & Frontend Hobbyist'}
       />
-      <link
-        rel="shortcut icon"
-        href={`/assets/images/favicon/favicon-${darkmode.value ? 'dark' : 'light'}.png`}
-      />
-      <link
-        rel="icon"
-        sizes="192x192"
-        href={`/assets/images/favicon/favicon-${darkmode.value ? 'dark' : 'light'}.png`}
-      />
+      <link rel="shortcut icon" href={`/assets/images/favicon/favicon-dark.png`} />
+      <link rel="icon" sizes="192x192" href={`/assets/images/favicon/favicon-dark.png`} />
     </Head>
   );
 };

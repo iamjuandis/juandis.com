@@ -1,5 +1,5 @@
 import Errors from '../components/errors';
-import PageLayout from '../layouts/pageLayout/intex';
+import PageLayout from '../layouts/pageLayout/index';
 
 const Error404 = () => {
   return (

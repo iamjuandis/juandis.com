@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
-import useDarkMode from 'use-dark-mode';
-import { darkTheme, lightTheme } from '../../assets/style/themes';
+import { lightTheme } from '../../assets/style/themes';
 import { ThemeProvider } from 'styled-components';
 
 const Provider = ({ children }: any) => {
-  const { value } = useDarkMode(false, { storageKey: undefined, onChange: undefined });
-  const theme = value ? darkTheme : lightTheme;
+  const theme = lightTheme;
 
   const [mounted, setMounted] = useState(false);
 

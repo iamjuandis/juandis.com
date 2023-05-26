@@ -7,7 +7,7 @@ import { scrollToIDElement } from '../assets/utils/components';
 import ExperienceBanner from '../components/experienceBanner';
 import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
-import PageLayout from '../layouts/pageLayout/intex';
+import PageLayout from '../layouts/pageLayout/index';
 import { ExperienceProps, MainBannerType, MetaInfoProps, ProjectsType } from '../types/interfaces';
 
 interface Props {
