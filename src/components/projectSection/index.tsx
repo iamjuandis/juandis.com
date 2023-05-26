@@ -28,13 +28,12 @@ const ProjectSection = ({
             HandleAlignment(`${alignment}`).position === 'up') && (
             <ProjectSectionImage alignment={alignment}>
               <Image
+                alt="Project Image"
                 src={image.src}
                 width={image.width}
                 height={image.height}
-                objectFit="cover"
                 priority={image.priority}
                 quality={100}
-                layout="responsive"
               />
             </ProjectSectionImage>
           )}
@@ -52,13 +51,12 @@ const ProjectSection = ({
             HandleAlignment(`${alignment}`).position === 'bottom') && (
             <ProjectSectionImage alignment={alignment}>
               <Image
+                alt="Project section"
                 src={image.src}
                 width={image.width}
                 height={image.height}
-                objectFit="cover"
                 priority={image.priority}
                 quality={100}
-                layout="responsive"
               />
             </ProjectSectionImage>
           )}

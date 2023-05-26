@@ -23,6 +23,7 @@
     "@types/react": "^16.14.41",
     "@types/react-dom": "^16.9.19",
     "cross-env": "^7.0.3",
+    "eslint": "^8.41.0",
     "lint-staged": "^10.5.4",
     "typescript": "^4.9.5"
   }
