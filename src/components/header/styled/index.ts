@@ -3,27 +3,10 @@ import COLOR from '../../../assets/style/colors';
 import { HeaderTypes } from '../../../types/interfaces';
 
 export const HeaderContainer = styled.header<HeaderTypes>`
-  background: ${(props) =>
-    props.bgColor &&
-    props.scrollTop !== undefined &&
-    props.limitScroll &&
-    props.scrollTop < props.limitScroll
-      ? `${props.bgColor}55`
-      : `${props.theme.background}77`};
-  backdrop-filter: blur(20px);
+  background: transparent;
   position: fixed;
   width: 100%;
   z-index: 100;
-  /* Firefox */
-  @-moz-document url-prefix() {
-    background: ${(props) =>
-      props.bgColor &&
-      props.scrollTop !== undefined &&
-      props.limitScroll &&
-      props.scrollTop < props.limitScroll
-        ? props.bgColor
-        : COLOR.white_cloud};
-  }
 `;
 
 export const HeaderContent = styled.div`
@@ -42,10 +25,17 @@ export const LogoContainer = styled.div<HeaderTypes>`
   flex-direction: row;
   cursor: pointer;
   display: flex;
-  div {
+  background: hsla(0, 0%, 100%, 0.5);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 40px;
+
+  div.name {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
     strong {
       color: ${(props) =>
         props.bgColor &&

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { NAV_OPTIONS } from '../../assets/content/intex';
-import { LOGO_JUANDIS } from '../../assets/images';
+import { NAV_OPTIONS } from '../../assets/content/index';
+import { PROFILE_JUAN } from '../../assets/images';
 import COLOR from '../../assets/style/colors';
 import { HeaderTypes, NavOptionType } from '../../types/interfaces';
 import NavOption from '../navOption';
@@ -15,6 +15,7 @@ import {
   MenuMobileContainer,
   NavContainer,
 } from './styled';
+import Image from 'next/image';
 
 const Header = ({ bgColor }: HeaderTypes) => {
   const limitScroll: number = 460;
@@ -44,10 +45,9 @@ const Header = ({ bgColor }: HeaderTypes) => {
       <HeaderContent>
         <Link href="/">
           <LogoContainer bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
-            {LOGO_JUANDIS}
-            <div>
-              <strong>Juan David Pérez</strong>
-              <span>Product Designer</span>
+            <Image src={PROFILE_JUAN} alt={`Juan David's profile picture`} width={40} height={40} />
+            <div className="name">
+              <strong>Juan David Perez</strong>
             </div>
           </LogoContainer>
         </Link>

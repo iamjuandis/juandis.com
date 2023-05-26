@@ -40,19 +40,26 @@ export const NAV_OPTIONS: NavOptionType[] = [
 
 export const META_INFO: MetaInfoProps = {
   description:
-    'Product Designer from Colombia with nearly 6 years collaborating with experienced product teams to shape solutions for people.',
+    'Juan David is an experienced Product Designer driven to build future and friendly things, based in Colombia.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
   mainTitle: 'Juan David Perez · Product Designer & Frontend Hobbyistr',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `Hey there! I am Juan David, a pragmatic and curious Product Designer from <span class="color">Colombia</span>. For nearly 6 years, I've been collaborating with experienced product teams to shape solutions for people.`,
-  paragraph: `I got a BE. in Interaction Design and Human-Computer Interaction. I've collaborated with cross-functional teams to build reliable, empathetic, and user-obsessed products. I'm currently collaborating with world-class teams at <a class="external-link" rel="noopener noreferrer" href="https://zemoga.com/" target="_blank" title="Zemoga &#8599;">Zemoga Inc.</a> 
-  Previously, I empowered a team of +10 designers, developers, and strategists, to push solutions for a diverse group of industries and audiences.`,
+  headline: `<span class="color">Juan David</span> is an experienced Product Designer driven to build future and friendly things, based in Colombia.`,
+  paragraph: `Recently designing intuitive and efficient tools for Walmart, Bridgestone and Design Systems at Verizon.`,
 };
 
 export const EXPERIENCES: ExperienceProps[] = [
+  {
+    company: 'Zemoga Inc.',
+    position: 'Senior Product Designer at Walmart',
+    years: {
+      first: '06/2022',
+      last: '2023',
+    },
+  },
   {
     company: 'Zemoga Inc.',
     position: 'User Experience Designer',

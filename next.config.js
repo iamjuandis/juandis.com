@@ -7,11 +7,11 @@ module.exports = {
       {
         source: '/resume',
         destination:
-          'https://drive.google.com/file/d/1-5jTi991bUSBmLdkpPchRM54k2EwBZlR/view?usp=sharing',
+          'https://drive.google.com/file/d/1BftXa9azSnw0dOJgQvvZ2Ukqh0W8Qdhp/view?usp=sharing',
         permanent: true,
       },
       {
-        source: '/in',
+        source: '/linkedin',
         destination: 'https://bit.ly/linkedinjuandis',
         permanent: true,
       },

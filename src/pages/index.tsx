@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { EXPERIENCES, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/intex';
+import { EXPERIENCES, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/index';
 import { PROJECTS } from '../assets/content/projects';
 import { scrollToIDElement } from '../assets/utils/components';
 import ExperienceBanner from '../components/experienceBanner';
