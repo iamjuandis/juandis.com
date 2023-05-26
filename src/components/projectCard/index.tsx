@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { darken } from 'polished';
 import COLOR from '../../assets/style/colors';
 import { ProjectMainTypes } from '../../types/interfaces';
 import Headline from '../headline';
