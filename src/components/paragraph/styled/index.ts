@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import { ParagraphType } from '../../../types/interfaces';
 
-export const ParagraphContainer = styled.div<ParagraphType>`
+export const ParagraphContainer = styled.p<ParagraphType>`
   column-count: ${(props) => props.columns};
   column-gap: 30px;
   color: ${(props) => (props.color ? props.color : props.theme.text)};
-  line-height: 150%;
-  font-size: ${(props) => (props.size ? `${props.size}em` : '1em')};
   width: 100%;
   a {
     color: ${(props) => (props.color ? props.color : props.theme.text)};

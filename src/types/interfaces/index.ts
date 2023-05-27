@@ -25,9 +25,11 @@ export interface ParagraphType {
   color?: string;
   columns?: number;
   highlightColor?: string;
-  size?: number;
+  paragraphSize?: paragrapSizeTypes;
   children?: any;
 }
+
+type paragrapSizeTypes = 'text-huge' | 'text-large' | 'text-medium' | 'text-small' | 'text-caption';
 
 export interface HeadlineType {
   children?: string;

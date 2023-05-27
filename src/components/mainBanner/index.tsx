@@ -17,7 +17,7 @@ const MainBanner = ({ headline, paragraph }: MainBannerType) => {
         </HeadlineMainBanner>
         <ParagraphsContainerMainBanner>
           <Paragraph
-            size={1}
+            paragraphSize="text-huge"
             columns={1}
             children={paragraph}
             highlightColor={COLOR.yellow_sunrise}
