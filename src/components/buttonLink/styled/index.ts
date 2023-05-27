@@ -10,7 +10,7 @@ interface ButtonStyleType {
 export const ButtonStyle = styled(Link)<ButtonStyleType>`
   background-color: ${(props) => ButtonVariantColor(props.variant).background};
   border-radius: 40px;
-  padding: 12px 24px;
+  padding: 12px ${(props) => (props.variant === 'tiertiary' ? 0 : '24px')};
   p {
     color: ${(props) => ButtonVariantColor(props.variant).font};
   }

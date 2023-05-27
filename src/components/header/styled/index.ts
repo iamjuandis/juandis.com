@@ -35,7 +35,7 @@ export const LogoContainer = styled.div<HeaderTypes>`
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 0 16px;
+    padding: 0 24px 0 16px;
     strong {
       color: ${(props) =>
         props.bgColor &&
@@ -96,13 +96,15 @@ export const NavContainer = styled.nav<HeaderTypes>`
         ? COLOR.white_cloud
         : props.theme.text};
   }
-  background: hsla(0, 0%, 100%, 0.5);
+  background: hsla(0, 0%, 100%, 0.8);
   -webkit-backdrop-filter: blur(8px) saturate(180%);
   backdrop-filter: blur(8px);
   backface-visibility: hidden;
   border-radius: 40px;
+  column-gap: 24px;
   display: flex;
   flex-direction: row;
+  padding-left: 24px;
   @media screen and (max-width: 640px) {
     box-shadow: 0px 0px 50px #00000022;
     box-sizing: border-box;
