@@ -32,9 +32,6 @@ export interface ParagraphType {
 export interface HeadlineType {
   children?: string;
   color?: string;
-  fontSize?: number;
-  fontWeight?: number;
-  typeHeadline: string;
 }
 
 export interface PageLayoutTypes {

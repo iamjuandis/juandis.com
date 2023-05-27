@@ -5,23 +5,19 @@ export const MainBannerContainer = styled.div`
 `;
 
 export const MainBannerContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  max-width: 1200px;
-  padding-top: 100px;
-  width: calc(100% - 60px);
-  @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
+  max-width: 996px;
+  padding: 100px 48px 48px 48px;
+  width: 100%;
 `;
 
 export const HeadlineMainBanner = styled.div`
-  grid-column: 2 / 11;
   width: 100%;
   .color {
-    font-size: 1em;
+    color: #16c973;
     transition: all ease 0.3s;
     position: relative;
     &::after {
@@ -48,17 +44,7 @@ export const HeadlineMainBanner = styled.div`
       }
     }
   }
-  @media screen and (max-width: 700px) {
-    grid-column: 1 / -1;
-    .color {
-      &::after {
-        height: 2px;
-        opacity: 1;
-        transition: all ease 0.3s;
-        width: 100%;
-      }
-    }
-  }
+
   @keyframes shine {
     to {
       background-position: 200% center;
