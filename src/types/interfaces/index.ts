@@ -1,5 +1,15 @@
 import { ReactNode } from 'react';
 
+export interface ButtonType {
+  label: string;
+  route?: any;
+  variant: variantButtonTypes;
+  onClick?: any;
+  target?: linkTargetTypes;
+}
+export type variantButtonTypes = 'primary' | 'secondary' | 'tiertiary';
+type linkTargetTypes = '_blank' | '_self';
+
 export interface NavOptionType {
   label?: string;
   highlightColor?: string;

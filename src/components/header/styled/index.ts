@@ -16,9 +16,9 @@ export const HeaderContent = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  max-width: 1200px;
-  padding: 20px 0px;
-  width: calc(100% - 60px);
+  max-width: 1440px;
+  padding: 32px;
+  width: 100%;
 `;
 
 export const LogoContainer = styled.div<HeaderTypes>`
@@ -96,6 +96,11 @@ export const NavContainer = styled.nav<HeaderTypes>`
         ? COLOR.white_cloud
         : props.theme.text};
   }
+  background: hsla(0, 0%, 100%, 0.5);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 40px;
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 640px) {

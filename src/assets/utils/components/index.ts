@@ -1,3 +1,6 @@
+import { variantButtonTypes } from '../../../types/interfaces';
+import COLOR from '../../style/colors';
+
 export const scrollToIDElement = (id: any) => {
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const yOffset = -50;
@@ -94,4 +97,24 @@ export const SetYearFromString = (stringDate: string) => {
   const year: number | string = stringDate.split('/')[1];
   if (month === 'Present') return month;
   return `${months[parseFloat(month) - 1]}. ${year}`;
+};
+
+export const ButtonVariantColor = (variant: variantButtonTypes) => {
+  switch (variant) {
+    case 'primary':
+      return {
+        background: COLOR.green_dark,
+        font: COLOR.white_cloud,
+      };
+    case 'secondary':
+      return {
+        background: COLOR.green_light,
+        font: COLOR.green_dark,
+      };
+    case 'tiertiary':
+      return {
+        background: 'transparent',
+        font: COLOR.green_dark,
+      };
+  }
 };

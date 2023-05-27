@@ -1,40 +1,29 @@
-import {
-  ExperienceProps,
-  MainBannerType,
-  MetaInfoProps,
-  NavOptionType,
-} from '../../types/interfaces';
-import { scrollToIDElement } from '../utils/components';
-import Router from 'next/router';
+import { ButtonType, ExperienceProps, MainBannerType, MetaInfoProps } from '../../types/interfaces';
 
-export const NAV_OPTIONS: NavOptionType[] = [
+export const NAV_OPTIONS: ButtonType[] = [
   {
     label: 'Home',
-    type: 'link',
+    variant: 'tiertiary',
     route: '/',
-    isExternal: false,
+    target: '_self',
   },
   {
-    label: 'Projects',
-    type: 'action',
-    onClick: () => {
-      if (window?.location?.pathname !== '/') {
-        Router.push({ pathname: '/', query: { g: 'projects' } });
-      }
-      scrollToIDElement('projects');
-    },
-  },
-  {
-    label: 'Resume',
-    type: 'link',
-    route: '/resume',
-    isExternal: true,
+    label: 'About',
+    variant: 'tiertiary',
+    route: '/about',
+    target: '_self',
   },
   {
     label: 'LinkedIn',
-    type: 'link',
+    variant: 'tiertiary',
     route: 'http://bit.ly/linkedinjuandis',
-    isExternal: true,
+    target: '_blank',
+  },
+  {
+    label: 'Get resume',
+    variant: 'primary',
+    route: '/resume',
+    target: '_blank',
   },
 ];
 

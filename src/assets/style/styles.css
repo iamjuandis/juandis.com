@@ -6,13 +6,13 @@
 
 @font-face {
   font-family: 'San Francisco Pro Display';
-  font-weight: 500;
+  font-weight: 600;
   src: url(/assets/fonts/sf-pro-display_semibold.woff2);
 }
 
 @font-face {
   font-family: 'San Francisco Pro Display';
-  font-weight: 600;
+  font-weight: 700;
   src: url(/assets/fonts/sf-pro-display_bold.woff2);
 }
 
@@ -67,27 +67,31 @@ h3 {
 
 /* Paragraphs */
 
-p.text-huge {
+.semibold {
+  font-weight: 600;
+}
+
+.text-huge {
   font-size: 24px;
   line-height: 32px;
 }
 
-p.text-large {
+.text-large {
   font-size: 20px;
   line-height: 28px;
 }
 
-p.text-medium {
+.text-medium {
   font-size: 16px;
   line-height: 24px;
 }
 
-p.text-small {
+.text-small {
   font-size: 14px;
   line-height: 20px;
 }
 
-p.text-caption {
+.text-caption {
   font-size: 12px;
   line-height: 16px;
 }

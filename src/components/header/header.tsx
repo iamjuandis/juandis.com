@@ -2,9 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { NAV_OPTIONS } from '../../assets/content/index';
 import { PROFILE_JUAN } from '../../assets/images';
-import COLOR from '../../assets/style/colors';
-import { HeaderTypes, NavOptionType } from '../../types/interfaces';
-import NavOption from '../navOption';
+import { ButtonType, HeaderTypes } from '../../types/interfaces';
 import Paragraph from '../paragraph';
 import {
   HeaderContainer,
@@ -16,6 +14,7 @@ import {
   NavContainer,
 } from './styled';
 import Image from 'next/image';
+import ButtonLink from '../buttonLink';
 
 const Header = ({ bgColor }: HeaderTypes) => {
   const limitScroll: number = 460;
@@ -47,7 +46,7 @@ const Header = ({ bgColor }: HeaderTypes) => {
           <LogoContainer bgColor={bgColor} scrollTop={scrollTop} limitScroll={limitScroll}>
             <Image src={PROFILE_JUAN} alt={`Juan David's profile picture`} width={40} height={40} />
             <div className="name">
-              <strong>Juan David Perez</strong>
+              <p className="text-medium">Juan David Perez</p>
             </div>
           </LogoContainer>
         </Link>
@@ -65,20 +64,13 @@ const Header = ({ bgColor }: HeaderTypes) => {
           limitScroll={limitScroll}
           isOpen={isMenuOpen}
         >
-          {NAV_OPTIONS.map((option: NavOptionType, idx: number) => (
-            <NavOption
-              highlightColor={
-                bgColor && scrollTop !== undefined && limitScroll && scrollTop < limitScroll
-                  ? COLOR.white_cloud
-                  : bgColor
-              }
+          {NAV_OPTIONS.map((option: ButtonType, idx: number) => (
+            <ButtonLink
               key={idx}
-              type={option?.type}
+              variant={option?.variant}
               label={option?.label}
-              icon={option?.icon}
-              isExternal={option?.isExternal}
+              target={option?.target}
               onClick={() => {
-                option?.onClick();
                 setIsMenuOpen(false);
               }}
               route={option?.route}
