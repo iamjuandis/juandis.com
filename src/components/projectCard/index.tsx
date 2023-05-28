@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import COLOR from '../../assets/style/colors';
 import { ProjectMainTypes } from '../../types/interfaces';
-import Headline from '../headline';
 import Paragraph from '../paragraph';
 import {
   ProjectCardContainer,
@@ -41,9 +40,7 @@ const ProjectCard = ({
               //objectFit="cover"
               //objectPosition="top center"
               quality={100}
-              src={
-                gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
-              }
+              src={images}
               width={gridRange && gridRange[2] === 'big' ? 1000 : 1139}
             />
           </ProjectCardCoverImage>
@@ -58,13 +55,7 @@ const ProjectCard = ({
             color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
           />
           <br />
-          <Headline
-            color={gridRange && gridRange[2] === 'big' ? COLOR.white_cloud : mainColor}
-            typeHeadline="h3"
-            fontSize={30}
-          >
-            {headline}
-          </Headline>
+          <h3>{headline}</h3>
           <br />
           {skills && skills.length > 0 && (
             <ProjectSkillsContainer>

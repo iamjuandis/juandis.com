@@ -9,13 +9,15 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectsContent = styled.div`
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   margin: auto;
-  max-width: 1024px;
-  width: calc(100% - 60px);
+  max-width: 996px;
+  padding: 48px;
+  width: 100%;
   @media screen and (max-width: 750px) {
     display: flex;
     flex-direction: column;

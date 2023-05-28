@@ -2,22 +2,25 @@ import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { EXPERIENCES, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/index';
-import { PROJECTS } from '../assets/content/projects';
+//import { PROJECTS } from '../assets/content/projects';
 import { scrollToIDElement } from '../assets/utils/components';
 import ExperienceBanner from '../components/experienceBanner';
 import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/pageLayout/index';
-import { ExperienceProps, MainBannerType, MetaInfoProps, ProjectsType } from '../types/interfaces';
+import { ExperienceProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
+import { postsToProjects } from '../lib/functions';
 
 interface Props {
   experiences: ExperienceProps[];
-  projects: ProjectsType;
+  projects: any;
   metaInfo: MetaInfoProps;
   bannerTexts: MainBannerType;
 }
 
 const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
+  console.log('PROJECTS:', projects);
+
   const router = useRouter();
   useEffect(() => {
     if (router.query.g && router.query.g === 'projects') {
@@ -34,10 +37,14 @@ const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  // Projects category: 5
+  const postsData = await fetch(`${process.env.WORDPRESS_API_URL}/posts?categories=5`);
+  const posts = await postsData.json();
+  const projects = await postsToProjects(posts);
   return {
     props: {
       experiences: EXPERIENCES,
-      projects: PROJECTS,
+      projects: projects,
       metaInfo: META_INFO,
       bannerTexts: MAIN_BANNER_TEXTS,
     },

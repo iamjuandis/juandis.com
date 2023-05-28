@@ -109,7 +109,7 @@ export interface YearsTypes {
 export interface ProjectMainTypes {
   client: string;
   headline: string;
-  images: ProjectImagesTypes;
+  images: any;
   mainColor: string;
   skills: string[];
   slug: string;

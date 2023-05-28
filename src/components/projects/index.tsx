@@ -1,11 +1,11 @@
 import { handleGridRangeProject } from '../../assets/utils/components';
-import { ProjectMainTypes, ProjectsType } from '../../types/interfaces';
-import Headline from '../headline';
+//import { ProjectMainTypes } from '../../types/interfaces';
+//import Headline from '../headline';
 import ProjectCard from '../projectCard';
 import { ProjectsContainer, ProjectsContent, ProjectsHeadlineContainer } from './styled';
 
 interface Props {
-  projects: ProjectsType;
+  projects: any;
 }
 
 const ProjectsBanner = ({ projects }: Props) => {
@@ -13,27 +13,25 @@ const ProjectsBanner = ({ projects }: Props) => {
     <ProjectsContainer id="projects">
       <ProjectsContent>
         <ProjectsHeadlineContainer>
-          <Headline typeHeadline="h2">Featured projects</Headline>
+          <h2>Featured work</h2>
         </ProjectsHeadlineContainer>
         {projects &&
-          Object.entries(projects)?.map(
-            ([key, project]: [string, ProjectMainTypes], index: number) => {
-              const lenghtProjects = Object?.entries(projects)?.length;
-              return (
-                <ProjectCard
-                  client={project?.client}
-                  gridRange={handleGridRangeProject(lenghtProjects, index)}
-                  slug={project?.slug}
-                  skills={project?.skills}
-                  images={project?.images}
-                  key={`${key}-${index}`}
-                  mainColor={project?.mainColor}
-                  headline={project?.headline}
-                  years={project?.years}
-                />
-              );
-            }
-          )}
+          projects.map((project: any, index: number) => {
+            const lenghtProjects = projects.length;
+            return (
+              <ProjectCard
+                client={project?.client}
+                gridRange={handleGridRangeProject(lenghtProjects, index)}
+                slug={project?.slug}
+                skills={project?.skills}
+                images={project?.featuredImage}
+                key={`${index}`}
+                mainColor={project?.mainColor}
+                headline={project?.title}
+                years={project?.date}
+              />
+            );
+          })}
       </ProjectsContent>
     </ProjectsContainer>
   );
