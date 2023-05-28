@@ -21,7 +21,7 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   return json.data;
 }
 
-/* export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
+export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
   const data = await fetchAPI(
     `
       query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -36,27 +36,55 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
     }
   );
   return data.post;
-} */
+}
 
-/* export async function getAllPostsWithSlug() {
-  const data = await fetchAPI(`
-      {
-        posts(first: 10000) {
-          edges {
-            node {
-              slug
-            }
-          }
+export async function getProjectBySlug(id: any, idType = 'SLUG') {
+  const data = await fetchAPI(
+    `
+  query getProjectBySlug($id: ID!, $idType: PostIdType!) {
+    post(id: $id, idType: $idType) {
+      acfProjects {
+        company
+      }
+      content
+      excerpt
+      featuredImage {
+        node {
+          altText
+          sourceUrl
+          uri
         }
       }
+      slug
+      title
+      uri
+    }
+  }
+  `,
+    {
+      variables: { id, idType },
+    }
+  );
+  return data.post;
+}
+
+export async function getAllProjectsSlug() {
+  const data = await fetchAPI(`
+    query getAllProjectsSlug {
+      posts(where: {categoryName: "Project"}) {
+        nodes {
+          slug
+        }
+      }
+    }
     `);
   return data?.posts;
-} */
+}
 
 export async function getAllProjects(preview: any) {
   const data = await fetchAPI(
     `
-    query NewQuery {
+    query getAllProjects {
       posts(where: {categoryName: "Project"}) {
         nodes {
           featuredImage {

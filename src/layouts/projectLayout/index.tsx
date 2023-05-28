@@ -4,7 +4,6 @@ import COLOR from '../../assets/style/colors';
 import Footer from '../../components/footer';
 import HeadTags from '../../components/head';
 import Header from '../../components/header/header';
-import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Slider from '../../components/slider';
 import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
@@ -30,12 +29,14 @@ import Image from 'next/image';
 
 interface Props {
   metaInfo: MetaInfoProps;
-  project: ProjectAllTypes;
+  project: any;
 }
 
 const ProjectLayout = ({ project }: Props) => {
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
+
+  console.log('PROJECT CONTENT', project);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -46,23 +47,22 @@ const ProjectLayout = ({ project }: Props) => {
   }, []);
   return (
     <ProjectLayoutContainer>
-      <HeadTags
+      {project?.title}
+      {/* <HeadTags
         title={`${project.client}: ${project.headline}`}
         description={project.headline}
         locale={`${router.locale}`}
         currentURL={currentURL}
         image={project.images.previewImage}
         mainColor={project.mainColor}
-      />
-      <Header bgColor={project.mainColor} />
-      <ProjectLayoutMainBanner background={project.mainColor}>
+      /> */}
+      {/* <Header />
+      <ProjectLayoutMainBanner background={'#fff'}>
         <ProjectLayoutMainBannerContent>
           <ProjectLayoutMainBannerTextContainer>
             <Paragraph color={COLOR.white_cloud} children={project.client} />
             <br />
-            <Headline color={COLOR.white_cloud} typeHeadline="h1" fontSize={50}>
-              {project.headline}
-            </Headline>
+            <h1>{project.headline}</h1>
             <br />
             <Paragraph
               color={COLOR.white_cloud}
@@ -80,9 +80,7 @@ const ProjectLayout = ({ project }: Props) => {
       <ProjectRoleBanner>
         <ProjectRoleBannerContent>
           <ProjectRoleTextBoxes>
-            <Headline typeHeadline="h3" color={project.mainColor}>
-              Role
-            </Headline>
+            <h3>Role</h3>
             <br />
             <Paragraph children={project.myRole} />
             <ProjectCompanyContainer
@@ -93,8 +91,8 @@ const ProjectLayout = ({ project }: Props) => {
                 <div dangerouslySetInnerHTML={{ __html: project.ownerCompany?.icon }} />
               )}
               <ProjectCompanyTexts>
-                <Paragraph size={0.7} children={`<strong>${project.ownerCompany?.name}</strong>`} />
-                <Paragraph size={0.7}>{project.ownerCompany?.country}</Paragraph>
+                <Paragraph children={`<strong>${project.ownerCompany?.name}</strong>`} />
+                <Paragraph>{project.ownerCompany?.country}</Paragraph>
               </ProjectCompanyTexts>
             </ProjectCompanyContainer>
           </ProjectRoleTextBoxes>
@@ -164,13 +162,12 @@ const ProjectLayout = ({ project }: Props) => {
       <ProjectFooter>
         <Paragraph
           color={`${COLOR.blue_universe}55`}
-          size={0.7}
           children={`© ${
             project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
           }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
         />
       </ProjectFooter>
-      <Footer mainColor={project.mainColor} />
+      <Footer mainColor={project.mainColor} /> */}
     </ProjectLayoutContainer>
   );
 };
