@@ -20,11 +20,11 @@ const ProjectsBanner = ({ projects }: Props) => {
             const lenghtProjects = projects.length;
             return (
               <ProjectCard
-                client={project?.client}
+                client={project?.acfProjects.company}
                 gridRange={handleGridRangeProject(lenghtProjects, index)}
                 slug={project?.slug}
                 skills={project?.skills}
-                images={project?.featuredImage}
+                images={project?.featuredImage.node.sourceUrl}
                 key={`${index}`}
                 mainColor={project?.mainColor}
                 headline={project?.title}

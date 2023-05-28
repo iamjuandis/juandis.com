@@ -9,7 +9,8 @@ import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/pageLayout/index';
 import { ExperienceProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
-import { postsToProjects } from '../lib/functions';
+//import { postsToProjects } from '../lib/functions';
+import { getAllProjects } from '../lib/api';
 
 interface Props {
   experiences: ExperienceProps[];
@@ -20,6 +21,7 @@ interface Props {
 
 const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
   console.log('PROJECTS:', projects);
+  //console.log('GPOSTS', gposts.nodes);
 
   const router = useRouter();
   useEffect(() => {
@@ -30,7 +32,7 @@ const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
   return (
     <PageLayout image={metaInfo?.previewImage} description={metaInfo?.description}>
       <MainBanner headline={bannerTexts?.headline} paragraph={bannerTexts?.paragraph} />
-      <ProjectsBanner projects={projects} />
+      <ProjectsBanner projects={projects.nodes} />
       <ExperienceBanner experiences={experiences} />
     </PageLayout>
   );
@@ -38,9 +40,10 @@ const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   // Projects category: 5
-  const postsData = await fetch(`${process.env.WORDPRESS_API_URL}/posts?categories=5`);
-  const posts = await postsData.json();
-  const projects = await postsToProjects(posts);
+  //const postsData = await fetch(`${process.env.WORDPRESS_API_URL}/posts?categories=5`);
+  //const posts = await postsData.json();
+  //const projects = await postsToProjects(posts);
+  const projects = await getAllProjects(false);
   return {
     props: {
       experiences: EXPERIENCES,

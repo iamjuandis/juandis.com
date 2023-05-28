@@ -1,4 +1,4 @@
-const API_URL: any = process.env.WORDPRESS_API_URL;
+const API_URL: any = process.env.WORDPRESS_GRAPHQL_API_URL;
 
 async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   const headers = { 'Content-Type': 'application/json' };
@@ -21,7 +21,7 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   return json.data;
 }
 
-export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
+/* export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
   const data = await fetchAPI(
     `
       query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -36,9 +36,9 @@ export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
     }
   );
   return data.post;
-}
+} */
 
-export async function getAllPostsWithSlug() {
+/* export async function getAllPostsWithSlug() {
   const data = await fetchAPI(`
       {
         posts(first: 10000) {
@@ -51,38 +51,29 @@ export async function getAllPostsWithSlug() {
       }
     `);
   return data?.posts;
-}
+} */
 
-export async function getAllPostsForHome(preview: any) {
+export async function getAllProjects(preview: any) {
   const data = await fetchAPI(
     `
-      query AllPosts {
-        posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
-          edges {
+    query NewQuery {
+      posts(where: {categoryName: "Project"}) {
+        nodes {
+          featuredImage {
             node {
-              title
-              excerpt
-              slug
-              date
-              featuredImage {
-                node {
-                  sourceUrl
-                }
-              }
-              author {
-                node {
-                  name
-                  firstName
-                  lastName
-                  avatar {
-                    url
-                  }
-                }
-              }
+              altText
+              sourceUrl
             }
           }
+          slug
+          acfProjects {
+            company
+          }
+          excerpt
+          title
         }
       }
+    }
     `,
     {
       variables: {
