@@ -114,7 +114,7 @@ export async function getAllProjects(preview: any) {
   return data?.posts;
 }
 
-export async function getPostAndMorePosts(slug: any, preview: any, previewData: any) {
+/* export async function getPostAndMorePosts(slug: any, preview: any, previewData: any) {
   const postPreview = preview && previewData?.post;
   // The slug may be the id of an unpublished post
   const isId = Number.isInteger(Number(slug));
@@ -221,3 +221,4 @@ export async function getPostAndMorePosts(slug: any, preview: any, previewData: 
 
   return data;
 }
+ */

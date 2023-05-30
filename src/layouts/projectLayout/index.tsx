@@ -1,31 +1,31 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import COLOR from '../../assets/style/colors';
+//import { useRouter } from 'next/router';
+//import { useEffect, useState } from 'react';
+/* import COLOR from '../../assets/style/colors';
 import Footer from '../../components/footer';
 import HeadTags from '../../components/head';
 import Header from '../../components/header/header';
 import Paragraph from '../../components/paragraph';
-import Slider from '../../components/slider';
-import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
+import Slider from '../../components/slider'; */
+import { MetaInfoProps } from '../../types/interfaces';
 import {
-  ProjectCompanyContainer,
-  ProjectCompanyTexts,
-  ProjectFooter,
+  //ProjectCompanyContainer,
+  //ProjectCompanyTexts,
+  //ProjectFooter,
   ProjectLayoutContainer,
-  ProjectLayoutCoverImageContainer,
-  ProjectLayoutMainBanner,
-  ProjectLayoutMainBannerContent,
-  ProjectLayoutMainBannerTextContainer,
-  ProjectRoleBanner,
-  ProjectRoleBannerContent,
-  ProjectRoleTextBoxes,
-  ProjectSliderContainer,
-  ProjectSliderContent,
-  ProjectSmallImgsContainer,
-  ProjectSmallImgsContent,
+  //ProjectLayoutCoverImageContainer,
+  //ProjectLayoutMainBanner,
+  // ProjectLayoutMainBannerContent,
+  //ProjectLayoutMainBannerTextContainer,
+  //ProjectRoleBanner,
+  // ProjectRoleBannerContent,
+  //ProjectRoleTextBoxes,
+  //ProjectSliderContainer,
+  //ProjectSliderContent,
+  //ProjectSmallImgsContainer,
+  //ProjectSmallImgsContent,
 } from './styled';
-import ProjectSection from '../../components/projectSection';
-import Image from 'next/image';
+//import ProjectSection from '../../components/projectSection';
+//import Image from 'next/image';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -33,10 +33,8 @@ interface Props {
 }
 
 const ProjectLayout = ({ project }: Props) => {
-  const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
+  /* const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
   const router = useRouter();
-
-  console.log('PROJECT CONTENT', project);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -44,7 +42,7 @@ const ProjectLayout = ({ project }: Props) => {
         `${window.location.protocol}//${window.location.host}${window.location.pathname}`
       );
     }
-  }, []);
+  }, []); */
   return (
     <ProjectLayoutContainer>
       {project?.title}
