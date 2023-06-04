@@ -109,6 +109,7 @@ export interface YearsTypes {
 export interface ProjectMainInterface {
   company: string;
   featuredImage: FeaturedImageTypes;
+  protectedProject: boolean;
   role: string;
   slug: string;
   title: string;

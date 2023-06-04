@@ -18,37 +18,21 @@ export const MainBannerContent = styled.div`
 export const HeadlineMainBanner = styled.div`
   width: 100%;
   .color {
-    color: #16c973;
-    transition: all ease 0.3s;
-    position: relative;
-    &::after {
-      bottom: 0;
-      content: ' ';
-      background: linear-gradient(90deg, #ffca00 25%, #09f 50%, #f00 75%, #ffca00 100%);
-      background-size: 200% auto;
-      height: 3px;
-      left: 0;
-      margin: auto;
-      width: 0%;
-      opacity: 0;
-      position: absolute;
-      transition: all ease 0.3s;
-      animation: shine 1s linear infinite;
-    }
-  }
-  &:hover {
-    .color {
-      &::after {
-        opacity: 1;
-        transition: all ease 0.3s;
-        width: 100%;
-      }
-    }
+    background: linear-gradient(to right, #16c973 20%, #ffca00 30%, #62957c 70%, #16c973 80%);
+    animation: shine 10s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 500% auto;
+    -webkit-text-fill-color: transparent;
+    transition: all ease 0.5s;
   }
 
   @keyframes shine {
-    to {
-      background-position: 200% center;
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
     }
   }
 `;

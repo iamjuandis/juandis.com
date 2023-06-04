@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ProjectsContainer = styled.div`
-  padding-top: 100px;
   width: 100%;
   @media screen and (max-width: 750px) {
     padding-top: 50px;

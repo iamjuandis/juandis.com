@@ -7,7 +7,15 @@ import {
   ProjectSkillElement,
 } from './styled';
 
-const ProjectCard = ({ company, featuredImage, role, slug, title, year }: ProjectMainInterface) => {
+const ProjectCard = ({
+  company,
+  featuredImage,
+  protectedProject,
+  role,
+  slug,
+  title,
+  year,
+}: ProjectMainInterface) => {
   return (
     <ProjectCardContainer href={`/work/${slug}`} title={title}>
       <ProjectCardCoverImage
@@ -23,6 +31,7 @@ const ProjectCard = ({ company, featuredImage, role, slug, title, year }: Projec
         <ProjectSkillElement>
           {role}
           {year}
+          {protectedProject && 'Protected'}
         </ProjectSkillElement>
       </ProjectCardTextContainer>
     </ProjectCardContainer>
