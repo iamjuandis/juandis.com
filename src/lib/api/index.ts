@@ -69,7 +69,7 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
       variables: { id, idType },
     }
   );
-  return data.post;
+  return data?.post;
 }
 
 export async function getAllProjectsSlug() {

@@ -9,13 +9,15 @@ import { getAllProjectsSlug, getProjectBySlug } from '../../lib/api';
 interface Props {
   metaInfo: MetaInfoProps;
   project: ProjectAllTypes;
-  isValid: boolean;
+  notFound: boolean;
 }
 
-const ProjectPage = ({ metaInfo, project, isValid }: Props) => {
+const ProjectPage = ({ metaInfo, project, notFound }: Props) => {
   const router = useRouter();
+
   useEffect(() => {
-    if (!isValid) {
+    if (notFound) {
+      console.log('va a 404');
       router.push('/404');
     }
   }, []);
@@ -28,31 +30,33 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: allPosts?.edges?.map(({ node }: any) => `${node.slug}`) || [],
-    fallback: true,
+    fallback: 'blocking',
   };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const project = await getProjectBySlug(`${context?.params?.slug}`);
   const metaInfo = META_INFO;
+  const project: any = await getProjectBySlug(`${context?.params?.slug}`).then((value: any) => {
+    if (value === 'null' || value === null) {
+      return {
+        props: {
+          metaInfo: metaInfo,
+          project: {},
+          notFound: true,
+        },
+      };
+    } else {
+      return {
+        props: {
+          metaInfo: metaInfo,
+          project: value,
+          notFound: false,
+        },
+      };
+    }
+  });
 
-  if (project) {
-    return {
-      props: {
-        metaInfo: metaInfo,
-        project: project,
-        isValid: true,
-      },
-    };
-  } else {
-    return {
-      props: {
-        metaInfo: metaInfo,
-        project: {},
-        isValid: false,
-      },
-    };
-  }
+  return project;
 };
 
 export default ProjectPage;
