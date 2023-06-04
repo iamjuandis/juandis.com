@@ -45,6 +45,10 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
     post(id: $id, idType: $idType) {
       acfProjects {
         company
+        location
+        protected
+        role
+        year
       }
       content
       excerpt
@@ -96,6 +100,9 @@ export async function getAllProjects(preview: any) {
           slug
           acfProjects {
             company
+            protected
+            role
+            year
           }
           excerpt
           title

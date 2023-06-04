@@ -1,8 +1,5 @@
-import { handleGridRangeProject } from '../../assets/utils/components';
-//import { ProjectMainTypes } from '../../types/interfaces';
-//import Headline from '../headline';
 import ProjectCard from '../projectCard';
-import { ProjectsContainer, ProjectsContent, ProjectsHeadlineContainer } from './styled';
+import { ProjectsContainer, ProjectsContent } from './styled';
 
 interface Props {
   projects: any;
@@ -12,23 +9,19 @@ const ProjectsBanner = ({ projects }: Props) => {
   return (
     <ProjectsContainer id="projects">
       <ProjectsContent>
-        <ProjectsHeadlineContainer>
-          <h2>Featured work</h2>
-        </ProjectsHeadlineContainer>
+        <h2>Featured work</h2>
+
         {projects &&
           projects.map((project: any, index: number) => {
-            const lenghtProjects = projects.length;
             return (
               <ProjectCard
-                client={project?.acfProjects.company}
-                gridRange={handleGridRangeProject(lenghtProjects, index)}
+                company={project?.acfProjects.company}
                 slug={project?.slug}
-                skills={project?.skills}
-                images={project?.featuredImage.node.sourceUrl}
+                role={project?.acfProjects.role}
+                featuredImage={project?.featuredImage.node}
                 key={`${index}`}
-                mainColor={project?.mainColor}
-                headline={project?.title}
-                years={project?.date}
+                title={project?.title}
+                year={project?.acfProjects.year}
               />
             );
           })}

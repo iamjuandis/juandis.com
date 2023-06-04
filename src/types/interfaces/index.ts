@@ -106,17 +106,21 @@ export interface YearsTypes {
   first: string | number;
   last?: string | number;
 }
-export interface ProjectMainTypes {
-  client: string;
-  headline: string;
-  images: any;
-  mainColor: string;
-  skills: string[];
+export interface ProjectMainInterface {
+  company: string;
+  featuredImage: FeaturedImageTypes;
+  role: string;
   slug: string;
-  years?: YearsTypes;
+  title: string;
+  year: string | number;
 }
 
-export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
+export interface FeaturedImageTypes {
+  altText: string;
+  sourceUrl: string;
+}
+
+export type ProjectAllTypes = ProjectInternalInfoTypes;
 
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
