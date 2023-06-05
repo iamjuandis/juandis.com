@@ -167,7 +167,9 @@ export const ProjectContent = styled.div`
   & > h6,
   & > img,
   & > table,
-  & > div {
+  & > div,
+  & > ul,
+  & > ol {
     box-sizing: border-box;
     width: 100%;
     margin: auto;
@@ -181,8 +183,70 @@ export const ProjectContent = styled.div`
     line-height: 28px;
   }
 
+  figure {
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 24px;
+    width: 100%;
+    figcaption {
+      font-size: 14px;
+      line-height: 18px;
+      opacity: 0.5;
+    }
+
+    img {
+      width: 100%;
+    }
+    &.alignfull {
+      max-width: 100% !important;
+    }
+    &.alignwide {
+      max-width: 1200px !important;
+      padding: 0 48px;
+    }
+    &.size-large {
+      max-width: 996px;
+      padding: 0 48px;
+
+      img {
+        border-radius: 24px;
+      }
+    }
+  }
+
+  blockquote {
+    box-sizing: border-box;
+    padding-left: 32px;
+    margin: 24px 0;
+    width: 100%;
+    border-left: 1px solid #000;
+    p {
+      font-size: 32px;
+      line-height: 40px;
+      &::before {
+        content: '“';
+      }
+      &::after {
+        content: '”';
+      }
+    }
+    cite {
+      font-size: 16px;
+      font-style: italic;
+      line-height: 24px;
+    }
+  }
+
+  .wp-block-columns {
+    flex-direction: row;
+    .wp-block-column {
+      width: 100%;
+    }
+  }
+
   .is-layout-flex {
     display: flex;
+    column-gap: 32px;
   }
 `;
 

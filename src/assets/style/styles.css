@@ -49,18 +49,18 @@ h3 {
 }
 
 h4 {
-  font-size: 36px;
-  line-height: 44px;
-}
-
-h5 {
   font-size: 32px;
   line-height: 40px;
 }
 
+h5 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
 h6 {
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 @media screen and (max-width: 724px) {
@@ -75,23 +75,23 @@ h6 {
   }
   
   h3 {
-    font-size: 36px;
-    line-height: 44px;
-  }
-
-  h4 {
     font-size: 32px;
     line-height: 40px;
   }
+
+  h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
   
   h5 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 28px;
   }
   
   h6 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
