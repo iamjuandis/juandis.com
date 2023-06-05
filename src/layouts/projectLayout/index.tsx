@@ -11,10 +11,6 @@ import {
   ProjectCompanyTexts,
   ProjectFooter,
   ProjectLayoutContainer,
-  ProjectLayoutCoverImageContainer,
-  ProjectLayoutMainBanner,
-  ProjectLayoutMainBannerContent,
-  ProjectLayoutMainBannerTextContainer,
   ProjectRoleBanner,
   ProjectRoleBannerContent,
   ProjectRoleTextBoxes,
@@ -24,6 +20,7 @@ import {
 } from './styled';
 import ProjectSection from '../../components/projectSection';
 import Image from 'next/image';
+import ProjectMainBanner from '../../components/projectMainBanner';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -52,25 +49,14 @@ const ProjectLayout = ({ project }: Props) => {
         image={project.featuredImage.sourceUrl}
       />
       <Header />
-      <ProjectLayoutMainBanner>
-        <ProjectLayoutMainBannerContent>
-          <ProjectLayoutMainBannerTextContainer>
-            <Paragraph color={COLOR.white_cloud} children={project.client} />
-            <br />
-            <h1>{project?.title}</h1>
-            <br />
-            <Paragraph
-              color={COLOR.white_cloud}
-              children={`${project.years?.first}${
-                project.years?.last ? ` - ${project.years?.last}` : ''
-              }`}
-            />
-          </ProjectLayoutMainBannerTextContainer>
-          <ProjectLayoutCoverImageContainer>
-            <img src={project.featuredImage.sourceUrl} alt={project.title} />
-          </ProjectLayoutCoverImageContainer>
-        </ProjectLayoutMainBannerContent>
-      </ProjectLayoutMainBanner>
+
+      <ProjectMainBanner
+        title={project.title}
+        company={project.acfProjects.company}
+        location={project.acfProjects.location}
+        role={project.acfProjects.role}
+        year={project.acfProjects.year}
+      />
 
       <ProjectRoleBanner>
         <ProjectRoleBannerContent>

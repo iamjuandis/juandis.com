@@ -160,3 +160,12 @@ export interface ThemeMode {
   darkMode: boolean;
   callback: () => void;
 }
+
+// Project Main Banner Types
+export interface ProjectMainBannerInterface {
+  title: string;
+  company: string;
+  location: string;
+  role: string;
+  year: number;
+}

@@ -5,6 +5,7 @@ import { HeaderTypes } from '../../../types/interfaces';
 export const HeaderContainer = styled.header<HeaderTypes>`
   background: transparent;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 100;
 `;

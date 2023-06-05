@@ -10,58 +10,6 @@ export const ProjectLayoutContainer = styled.section`
   width: 100%;
 `;
 
-export const ProjectLayoutMainBanner = styled.div`
-  height: auto;
-  padding-top: 150px;
-  padding-bottom: 100px;
-  width: 100%;
-`;
-
-export const ProjectLayoutMainBannerContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 30px;
-  height: 100%;
-  margin: auto;
-  max-width: 1200px;
-  width: calc(100% - 60px);
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-export const ProjectLayoutMainBannerTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  grid-column: 1 / 8;
-  height: 100%;
-  h1 {
-    font-weight: bolder;
-  }
-  @media screen and (max-width: 510px) {
-    grid-column: 1 / -1;
-    width: 100%;
-  }
-`;
-
-export const ProjectLayoutCoverImageContainer = styled.div`
-  grid-column: 8 / -1;
-  padding-top: 100px;
-  position: relative;
-  width: 100%;
-  img {
-    position: absolute;
-    width: 100%;
-  }
-  @media screen and (max-width: 510px) {
-    grid-column: 1 / -1;
-    padding-top: 0px;
-    width: 100%;
-  }
-`;
-
 export const ProjectRoleBanner = styled.div`
   padding: 50px 0;
   width: 100%;
@@ -195,10 +143,15 @@ export const ProjectContent = styled.div`
     }
 
     img {
+      border-radius: 24px;
       width: 100%;
     }
+
     &.alignfull {
       max-width: 100% !important;
+      img {
+        border-radius: 0px;
+      }
     }
     &.alignwide {
       max-width: 1200px !important;
@@ -207,10 +160,6 @@ export const ProjectContent = styled.div`
     &.size-large {
       max-width: 996px;
       padding: 0 48px;
-
-      img {
-        border-radius: 24px;
-      }
     }
   }
 
