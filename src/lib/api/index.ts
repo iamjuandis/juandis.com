@@ -21,7 +21,7 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   return json.data;
 }
 
-export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
+/* export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
   const data = await fetchAPI(
     `
       query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -36,7 +36,7 @@ export async function getPreviewPost(id: any, idType = 'DATABASE_ID') {
     }
   );
   return data.post;
-}
+} */
 
 export async function getProjectBySlug(id: any, idType = 'SLUG') {
   const data = await fetchAPI(

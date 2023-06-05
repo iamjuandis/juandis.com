@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-const ProjectsPage = () => {
+const WorkPage = () => {
   const router = useRouter();
   useEffect(() => {
     router.push('/?g=projects');
@@ -9,4 +9,4 @@ const ProjectsPage = () => {
   return <div></div>;
 };
 
-export default ProjectsPage;
+export default WorkPage;

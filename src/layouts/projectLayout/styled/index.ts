@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-interface BannerProps {
-  background: string;
-}
-
 interface CompanyProps {
   color: string;
   oneColorIcon: boolean | undefined;
@@ -14,8 +10,7 @@ export const ProjectLayoutContainer = styled.section`
   width: 100%;
 `;
 
-export const ProjectLayoutMainBanner = styled.div<BannerProps>`
-  background: ${(props) => props.background};
+export const ProjectLayoutMainBanner = styled.div`
   height: auto;
   padding-top: 150px;
   padding-bottom: 100px;
@@ -121,7 +116,7 @@ export const ProjectCompanyTexts = styled.div`
   flex-direction: column;
   padding-left: 10px;
 `;
-
+/* 
 export const ProjectSliderContainer = styled.div`
   width: 100%;
 `;
@@ -133,7 +128,7 @@ export const ProjectSliderContent = styled.div`
   @media screen and (max-width: 510px) {
     width: 100%;
   }
-`;
+`; */
 
 export const ProjectSmallImgsContainer = styled.div`
   width: 100%;
@@ -154,6 +149,40 @@ export const ProjectSmallImgsContent = styled.div`
   @media screen and (max-width: 510px) {
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
+  }
+`;
+
+export const ProjectContent = styled.div`
+  width: 100%;
+
+  /* WordPress Content */
+
+  // Width
+  & > p,
+  & > hr,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > img,
+  & > table,
+  & > div {
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 16px;
+    max-width: 996px;
+    padding: 0 48px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .is-layout-flex {
+    display: flex;
   }
 `;
 

@@ -3,7 +3,7 @@ import PageLayout from '../layouts/pageLayout/index';
 
 const Error = ({ statusCode }: any) => {
   return (
-    <PageLayout title={`Error ${statusCode} • Juan David Pérez • Portfolio`}>
+    <PageLayout title={`Error ${statusCode}`}>
       <Errors typeError={statusCode} />
     </PageLayout>
   );
