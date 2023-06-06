@@ -1,6 +1,5 @@
 import { ExperienceProps } from '../../types/interfaces';
 import ExperienceItem from '../experienceItem';
-import Headline from '../headline';
 import {
   ExperienceBannerContainer,
   ExperienceBannerContent,
@@ -17,7 +16,7 @@ const ExperienceBanner = ({ experiences }: Props) => {
     <ExperienceBannerContainer>
       <ExperienceBannerContent>
         <ExperiencesContainerHeadline>
-          <Headline children="Experience" typeHeadline="h2" />
+          <h2>Experience</h2>
         </ExperiencesContainerHeadline>
         <ExperiencesContainerList>
           {experiences?.map((experience: ExperienceProps, index: number) => (

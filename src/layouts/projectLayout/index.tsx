@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import COLOR from '../../assets/style/colors';
 import Footer from '../../components/footer';
 import HeadTags from '../../components/head';
 import Header from '../../components/header/header';
@@ -19,8 +18,8 @@ import {
   ProjectSmallImgsContent,
 } from './styled';
 import ProjectSection from '../../components/projectSection';
-import Image from 'next/image';
 import ProjectMainBanner from '../../components/projectMainBanner';
+import COLORS from '../../assets/style/colors';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -89,7 +88,7 @@ const ProjectLayout = ({ project }: Props) => {
 
       <ProjectFooter>
         <Paragraph
-          color={`${COLOR.blue_universe}55`}
+          color={`${COLORS.green_dark}55`}
           children={`© ${
             project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
           }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
