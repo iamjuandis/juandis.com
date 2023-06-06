@@ -16,7 +16,7 @@ export const FooterContainer = styled.footer`
 
 export const FooterContent = styled.div`
   background: ${COLORS.green_opacity};
-  border-radius: 48px;
+  border-radius: 32px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 5fr 7fr;

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <h3>Get in touch</h3>
+        <h4>Get in touch</h4>
         <FooterTextContent>
           <ButtonLink route="mailto:me@juandis.com" label="me@juandis.com" variant="tiertiary" />
           <ButtonLink route="/resume" label="Resume" variant="tiertiary" />

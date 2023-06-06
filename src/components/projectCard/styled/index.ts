@@ -70,7 +70,7 @@ export const ProjectCardTextContainer = styled.div`
 export const ProjectSkillElement = styled.div`
   display: flex;
   flex-direction: row;
-  column-gap: 32px;
+  column-gap: 24px;
   font-size: 1em;
   font-weight: 500;
   &:not(:last-child) {

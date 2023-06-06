@@ -9,6 +9,8 @@ import PageLayout from '../layouts/pageLayout/index';
 import { ListBannerProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
 import { getAllProjects } from '../lib/api';
 import ListBanner from '../components/listBanner';
+import CTABanner from '../components/ctaBanner';
+import ButtonLink from '../components/buttonLink';
 
 interface Props {
   otherProjects: ListBannerProps[];
@@ -29,6 +31,11 @@ const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
     <PageLayout image={metaInfo?.previewImage} description={metaInfo?.description}>
       <MainBanner headline={bannerTexts?.headline} paragraph={bannerTexts?.paragraph} />
       <ProjectsBanner projects={projects.nodes} />
+      <CTABanner
+        title="Know more about me"
+        mainCTA={<ButtonLink label="About me" route="/about" variant="tiertiary" />}
+        secondaryCTA={<ButtonLink label="Get resume" route="/resume" variant="primary" />}
+      />
       <ListBanner list={otherProjects} title={`Other projects I've worked on`} />
     </PageLayout>
   );
