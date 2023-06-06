@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import COLOR from '../../../assets/style/colors';
 import Link from 'next/link';
 import Image from 'next/image';
+import COLORS from '../../../assets/style/colors';
 
 interface ProjectCardLocalInterface {
   title: string;
@@ -46,12 +47,12 @@ export const ProjectCardCoverImage = styled(Image)`
 
 export const ProjectCardTextContainer = styled.div`
   align-items: flex-start;
+  color: ${COLORS.green_dark};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 24px 0;
   h3 {
-    font-weight: bolder;
     width: 100%;
   }
   @media screen and (max-width: 750px) {

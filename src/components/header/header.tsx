@@ -2,13 +2,11 @@ import { useState } from 'react';
 import { NAV_OPTIONS } from '../../assets/content/index';
 import { PROFILE_JUAN } from '../../assets/images';
 import { ButtonType } from '../../types/interfaces';
-import Paragraph from '../paragraph';
 import {
   HeaderContainer,
   HeaderContent,
   LogoContainer,
   MenuCloser,
-  MenuContactInfo,
   MenuMobileContainer,
   NavContainer,
 } from './styled';
@@ -50,18 +48,6 @@ const Header = () => {
               route={option?.route}
             />
           ))}
-          <MenuContactInfo>
-            <Paragraph
-              children={`<a href="mailto:me@juandis.com" title="me@juandis.com" target="_blank" rel="noopener noreferrer">
-              me@juandis.com
-            </a>`}
-            />
-            <Paragraph
-              children={`<a href="tel:573122659625" title="+57 312 265 9625">
-              +57 312 265 9625
-            </a>`}
-            />
-          </MenuContactInfo>
         </NavContainer>
       </HeaderContent>
       <MenuCloser onClick={openMenu} isOpen={isMenuOpen} />

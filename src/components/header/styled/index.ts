@@ -84,25 +84,6 @@ export const MenuMobileContainer = styled.p<HeaderTypes>`
   }
 `;
 
-export const MenuContactInfo = styled.div<HeaderTypes>`
-  display: none;
-  p,
-  a {
-    color: ${COLORS.green_vibrant};
-  }
-  a {
-    border-bottom-color: ${COLORS.green_vibrant};
-  }
-  @media screen and (max-width: 640px) {
-    box-sizing: border-box;
-    display: block;
-    font-size: 0.6em;
-    margin-top: 30px;
-    padding: 0 20px;
-    width: 100%;
-  }
-`;
-
 export const MenuCloser = styled.div<HeaderTypes>`
   background: transparent;
   bottom: 0;

@@ -11,6 +11,7 @@ export const ProjectsContent = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  row-gap: 32px;
   margin: auto;
   max-width: 996px;
   padding: 48px;

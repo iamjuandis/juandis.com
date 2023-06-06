@@ -95,7 +95,7 @@ export const ButtonVariantColor = (variant: variantButtonTypes) => {
         },
         hover: {
           background: COLORS.green_pale,
-          font: COLORS.green_dark,
+          font: COLORS.white_cloud,
         },
       };
     case 'tiertiary':
