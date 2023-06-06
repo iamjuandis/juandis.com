@@ -1,11 +1,14 @@
-const COLOR = {
+const COLORS = {
+  black_text: '#0C1512',
+  gray_light: '#F8F8F8',
+  gray_medium: '#D7D7D7',
   green_dark: '#073D23',
   green_light: '#EAFFF1',
-  blue_universe: '#06223C',
-  yellow_sunrise: '#FFB800',
-  blue_sky: '#00AFE7',
+  green_pale_light: '#CED6D2',
+  green_pale: '#62957C',
+  green_vibrant: '#16C973',
+  yellow_vibrant: '#FFB800',
   white_cloud: '#F7FDFA',
-  white_dark: '#C9D1D9',
 };
 
-export default COLOR;
+export default COLORS;

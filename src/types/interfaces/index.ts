@@ -150,9 +150,6 @@ export interface ExperienceProps {
 }
 
 export interface HeaderTypes {
-  bgColor?: string;
-  scrollTop?: number;
-  limitScroll?: number;
   isOpen?: boolean;
 }
 
