@@ -76,7 +76,7 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
 export async function getAllProjectsSlug() {
   const data = await fetchAPI(`
     query getAllProjectsSlug {
-      posts(where: {categoryName: "Project"}) {
+      posts(where: {categoryName: "work"}) {
         nodes {
           slug
         }
@@ -90,7 +90,7 @@ export async function getAllProjects(preview: any) {
   const data = await fetchAPI(
     `
     query getAllProjects {
-      posts(where: {categoryName: "Project"}) {
+      posts(where: {categoryName: "work"}) {
         nodes {
           featuredImage {
             node {

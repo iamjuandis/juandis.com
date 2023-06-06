@@ -12,6 +12,7 @@ export const ProjectCardContainer = styled(Link)<ProjectCardLocalInterface>`
   display: flex;
   flex-direction: column;
   background: ${COLOR.white_cloud};
+  position: relative;
   width: 100%;
   @media screen and (min-width: 750px) {
     &:hover {
@@ -50,6 +51,7 @@ export const ProjectCardTextContainer = styled.div`
   color: ${COLORS.green_dark};
   display: flex;
   flex-direction: column;
+  row-gap: 8px;
   justify-content: flex-end;
   padding: 24px 0;
   h3 {
@@ -64,7 +66,10 @@ export const ProjectCardTextContainer = styled.div`
   }
 `;
 
-export const ProjectSkillElement = styled.strong`
+export const ProjectSkillElement = styled.div`
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
   font-size: 1em;
   font-weight: 500;
   &:not(:last-child) {
@@ -75,5 +80,23 @@ export const ProjectSkillElement = styled.strong`
   }
   @media screen and (max-width: 750px) {
     font-size: 0.8em;
+  }
+`;
+
+export const ProtectedLabel = styled.div`
+  background: hsla(0, 0%, 100%, 0.2);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 40px;
+  padding: 12px 24px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  top: 24px;
+  left: 24px;
+  span {
+    color: ${COLORS.white_cloud};
   }
 `;
