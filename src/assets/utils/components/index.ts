@@ -1,5 +1,5 @@
 import { variantButtonTypes } from '../../../types/interfaces';
-import COLOR from '../../style/colors';
+import COLORS from '../../style/colors';
 
 export const scrollToIDElement = (id: any) => {
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -78,18 +78,36 @@ export const ButtonVariantColor = (variant: variantButtonTypes) => {
   switch (variant) {
     case 'primary':
       return {
-        background: COLOR.green_dark,
-        font: COLOR.white_cloud,
+        default: {
+          background: COLORS.green_dark,
+          font: COLORS.white_cloud,
+        },
+        hover: {
+          background: COLORS.green_pale,
+          font: COLORS.white_cloud,
+        },
       };
     case 'secondary':
       return {
-        background: COLOR.green_light,
-        font: COLOR.green_dark,
+        default: {
+          background: COLORS.green_light,
+          font: COLORS.green_dark,
+        },
+        hover: {
+          background: COLORS.green_pale,
+          font: COLORS.green_dark,
+        },
       };
     case 'tiertiary':
       return {
-        background: 'transparent',
-        font: COLOR.green_dark,
+        default: {
+          background: 'transparent',
+          font: COLORS.green_dark,
+        },
+        hover: {
+          background: 'transparent',
+          font: COLORS.green_pale,
+        },
       };
   }
 };

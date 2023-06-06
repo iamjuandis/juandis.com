@@ -94,7 +94,7 @@ const ProjectLayout = ({ project }: Props) => {
           }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
         />
       </ProjectFooter>
-      <Footer mainColor={project.mainColor} />
+      <Footer />
     </ProjectLayoutContainer>
   );
 };

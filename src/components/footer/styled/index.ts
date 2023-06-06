@@ -29,10 +29,9 @@ export const FooterContent = styled.div`
 `;
 
 export const FooterTextContent = styled.div`
-  display: grid;
-  grid-template-columns: 6fr 4fr 4fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
   width: 100%;
   @media screen and (max-width: 510px) {
     grid-template-columns: 1fr;
