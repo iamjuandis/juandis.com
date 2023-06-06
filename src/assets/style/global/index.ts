@@ -1,19 +1,24 @@
+import { createGlobalStyle } from 'styled-components';
+import COLORS from '../colors';
+
+export const GlobalStyles = createGlobalStyle`
+
 @font-face {
   font-family: 'San Francisco Pro Display';
   font-weight: 400;
-  src: url(/assets/fonts/sf-pro-display_regular.woff2);
+  src: url(/assets/fonts/sf-pro-display_regular.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'San Francisco Pro Display';
   font-weight: 600;
-  src: url(/assets/fonts/sf-pro-display_semibold.woff2);
+  src: url(/assets/fonts/sf-pro-display_semibold.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'San Francisco Pro Display';
   font-weight: 700;
-  src: url(/assets/fonts/sf-pro-display_bold.woff2);
+  src: url(/assets/fonts/sf-pro-display_bold.woff2) format('woff2');
 }
 
 * {
@@ -30,7 +35,11 @@
 /* Headlines */
 
 h1, h2, h3, h4, h5, h6 {
+  color: ${COLORS.green_dark};
   font-weight: 600;
+  /* @media (prefers-color-scheme: dark) {
+    color: ${COLORS.white_cloud};
+  } */
 }
 
 h1 {
@@ -125,3 +134,11 @@ h6 {
   font-size: 12px;
   line-height: 16px;
 }
+
+p > a, li > a {
+  color: ${COLORS.green_vibrant};
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-decoration-color: ${COLORS.green_pale};
+}
+`;

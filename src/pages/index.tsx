@@ -18,8 +18,7 @@ interface Props {
 }
 
 const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
-  console.log('PROJECTS:', projects);
-
+  //console.log('PROJECTS:', projects);
   const router = useRouter();
   useEffect(() => {
     if (router.query.g && router.query.g === 'projects') {

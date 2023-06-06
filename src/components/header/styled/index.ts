@@ -30,7 +30,7 @@ export const LogoContainer = styled(Link)`
   flex-direction: row;
   cursor: pointer;
   display: flex;
-  background: hsla(0, 0%, 100%, 0.5);
+  background: hsla(148, 60%, 98%, 0.7);
   -webkit-backdrop-filter: blur(8px) saturate(180%);
   backdrop-filter: blur(8px);
   backface-visibility: hidden;
@@ -46,7 +46,7 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const NavContainer = styled.nav<HeaderTypes>`
-  background: hsla(0, 0%, 100%, 0.8);
+  background: hsla(148, 60%, 98%, 0.7);
   -webkit-backdrop-filter: blur(8px) saturate(180%);
   backdrop-filter: blur(8px);
   backface-visibility: hidden;

@@ -55,6 +55,7 @@ export const ProjectCardTextContainer = styled.div`
   justify-content: flex-end;
   padding: 24px 0;
   h3 {
+    color: ${(props) => props.theme.text};
     width: 100%;
   }
   @media screen and (max-width: 750px) {

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import COLORS from '../../../assets/style/colors';
 
 interface CompanyProps {
   color: string;
@@ -6,8 +7,12 @@ interface CompanyProps {
 }
 
 export const ProjectLayoutContainer = styled.section`
-  background: ${(props) => props.theme.background};
+  background: ${COLORS.white_cloud};
+  padding-top: 110px;
   width: 100%;
+  /* @media (prefers-color-scheme: dark) {
+    background: ${COLORS.black_background};
+  } */
 `;
 
 export const ProjectRoleBanner = styled.div`

@@ -15,12 +15,6 @@ export const ProjectAuthFormContainer = styled.section`
   width: calc(100% - 96px);
   p {
     color: ${COLORS.black_text};
-    a {
-      color: ${COLORS.green_vibrant};
-      text-decoration-style: dotted;
-      text-decoration-line: underline;
-      text-decoration-color: ${COLORS.green_pale};
-    }
   }
 `;
 
