@@ -38,6 +38,7 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   return data.post;
 } */
 
+// Get one project by Slug
 export async function getProjectBySlug(id: any, idType = 'SLUG') {
   const data = await fetchAPI(
     `

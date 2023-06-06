@@ -35,4 +35,7 @@ module.exports = {
       },
     ];
   },
+  env: {
+    PASSWORD: process.env.PASSWORD,
+  },
 };

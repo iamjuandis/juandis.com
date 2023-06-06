@@ -20,6 +20,9 @@ import {
 import ProjectSection from '../../components/projectSection';
 import ProjectMainBanner from '../../components/projectMainBanner';
 import COLORS from '../../assets/style/colors';
+import ButtonLink from '../../components/buttonLink';
+import hoursBetweenDates from '../../assets/utils/functions/hoursBetweenDates';
+import ProjectAuthForm from '../../components/projectAuthForm';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -27,8 +30,46 @@ interface Props {
 }
 
 const ProjectLayout = ({ project }: Props) => {
+  const [loading, setLoading] = useState<boolean>(true);
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
+  const [auth, setAuth] = useState<boolean>(false);
+  const [enteredPassword, setEnteredPassword] = useState<string>('');
+  const [errorPassword, setErrorPassword] = useState<boolean>(false);
   const router = useRouter();
+
+  const blockAuth = () => {
+    // Sets false Auth
+    localStorage.setItem('authLocal', 'false');
+    // Clean date local
+    localStorage.removeItem('dateAuthLocal');
+    setAuth(false);
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      //Validate if projects needs protection
+      if (project?.acfProjects?.protected === true) {
+        let authLocal = localStorage.getItem('authLocal');
+        let dateAuthLocal = localStorage.getItem('dateAuthLocal');
+
+        if (authLocal === null) {
+          blockAuth();
+          setLoading(false);
+        } else if (authLocal === 'true' && dateAuthLocal !== null) {
+          if (hoursBetweenDates(dateAuthLocal) > 12) {
+            blockAuth();
+            setLoading(false);
+          } else {
+            setAuth(true);
+            setLoading(false);
+          }
+        } else {
+          blockAuth();
+          setLoading(false);
+        }
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -37,6 +78,24 @@ const ProjectLayout = ({ project }: Props) => {
       );
     }
   }, []);
+
+  const onChangePassword = (e: any) => {
+    e.preventDefault();
+    setEnteredPassword(e.target.value);
+  };
+
+  const checkPassword = (event: any) => {
+    event.preventDefault();
+
+    if (enteredPassword === process.env.PASSWORD) {
+      localStorage.setItem('authLocal', 'true');
+      localStorage.setItem('dateAuthLocal', `${new Date().toISOString()}`);
+      setAuth(true);
+    } else {
+      blockAuth();
+      setErrorPassword(true);
+    }
+  };
 
   return (
     <ProjectLayoutContainer>
@@ -49,42 +108,52 @@ const ProjectLayout = ({ project }: Props) => {
       />
       <Header />
 
-      <ProjectMainBanner
-        title={project.title}
-        company={project.acfProjects.company}
-        location={project.acfProjects.location}
-        role={project.acfProjects.role}
-        year={project.acfProjects.year}
-      />
-
-      <ProjectRoleBanner>
-        <ProjectRoleBannerContent>
-          <ProjectRoleTextBoxes>
-            <h3>Role</h3>
-            <Paragraph children={project.acfProjects.role} />
-            <ProjectCompanyContainer
-              color={project.mainColor}
-              oneColorIcon={project.ownerCompany?.oneColorIcon}
-            >
-              {/* {project.ownerCompany.icon && (
+      {loading ? (
+        <h1>LOADING</h1>
+      ) : auth === false ? (
+        <ProjectAuthForm
+          onSubmitForm={checkPassword}
+          onChangeInput={onChangePassword}
+          passwordValue={enteredPassword}
+          errorPassword={errorPassword}
+        />
+      ) : (
+        <>
+          <ProjectMainBanner
+            title={project.title}
+            company={project.acfProjects.company}
+            location={project.acfProjects.location}
+            role={project.acfProjects.role}
+            year={project.acfProjects.year}
+          />
+          <ProjectRoleBanner>
+            <ProjectRoleBannerContent>
+              <ProjectRoleTextBoxes>
+                <h3>Role</h3>
+                <Paragraph children={project.acfProjects.role} />
+                <ProjectCompanyContainer
+                  color={project.mainColor}
+                  oneColorIcon={project.ownerCompany?.oneColorIcon}
+                >
+                  {/* {project.ownerCompany.icon && (
                 <div dangerouslySetInnerHTML={{ __html: project.ownerCompany?.icon }} />
               )} */}
-              <ProjectCompanyTexts>
-                <Paragraph children={`<strong>${project.acfProjects.company}</strong>`} />
-                <Paragraph>{project.acfProjects.location}</Paragraph>
-              </ProjectCompanyTexts>
-            </ProjectCompanyContainer>
-          </ProjectRoleTextBoxes>
-        </ProjectRoleBannerContent>
-      </ProjectRoleBanner>
-
-      {/* <ProjectSliderContainer>
+                  <ProjectCompanyTexts>
+                    <Paragraph children={`<strong>${project.acfProjects.company}</strong>`} />
+                    <Paragraph>{project.acfProjects.location}</Paragraph>
+                  </ProjectCompanyTexts>
+                </ProjectCompanyContainer>
+              </ProjectRoleTextBoxes>
+            </ProjectRoleBannerContent>
+          </ProjectRoleBanner>
+          {/* <ProjectSliderContainer>
         <ProjectSliderContent>
           <Slider mainColor={project.mainColor} slides={project.images.sliderImages} />
         </ProjectSliderContent>
       </ProjectSliderContainer> */}
-
-      <ProjectContent dangerouslySetInnerHTML={{ __html: project.content }} />
+          <ProjectContent dangerouslySetInnerHTML={{ __html: project.content }} />{' '}
+        </>
+      )}
 
       <ProjectFooter>
         <Paragraph

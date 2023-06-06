@@ -17,7 +17,6 @@ const ProjectPage = ({ metaInfo, project, notFound }: Props) => {
 
   useEffect(() => {
     if (notFound) {
-      console.log('va a 404');
       router.push('/404');
     }
   }, []);
