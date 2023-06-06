@@ -103,8 +103,8 @@ export interface ProjectInternalInfoTypes {
 }
 
 export interface YearsTypes {
-  first: string | number;
-  last?: string | number;
+  first: string;
+  last?: string;
 }
 export interface ProjectMainInterface {
   company: string;
@@ -142,10 +142,11 @@ export interface MetaInfoProps {
   previewImage: string;
 }
 
-export interface ExperienceProps {
-  country?: string;
+// ListBanner
+export interface ListBannerProps {
+  location?: string;
   company: string;
-  position: string;
+  title: string;
   years: YearsTypes;
 }
 

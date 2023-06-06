@@ -67,12 +67,12 @@ export const HandleAlignment = (alignment: string) => {
   }
 };
 
-export const SetYearFromString = (stringDate: string) => {
+/* export const SetYearFromString = (stringDate: string) => {
   const month: string = stringDate.split('/')[0];
   const year: number | string = stringDate.split('/')[1];
   if (month === 'Present') return month;
   return `${months[parseFloat(month) - 1]}. ${year}`;
-};
+}; */
 
 export const ButtonVariantColor = (variant: variantButtonTypes) => {
   switch (variant) {

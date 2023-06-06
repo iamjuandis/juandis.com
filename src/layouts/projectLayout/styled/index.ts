@@ -83,7 +83,7 @@ export const ProjectSliderContent = styled.div`
   }
 `; */
 
-export const ProjectSmallImgsContainer = styled.div`
+/* export const ProjectSmallImgsContainer = styled.div`
   width: 100%;
 `;
 
@@ -103,7 +103,7 @@ export const ProjectSmallImgsContent = styled.div`
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
   }
-`;
+`; */
 
 export const ProjectContent = styled.div`
   width: 100%;

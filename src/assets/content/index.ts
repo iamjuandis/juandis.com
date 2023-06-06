@@ -1,4 +1,4 @@
-import { ButtonType, ExperienceProps, MainBannerType, MetaInfoProps } from '../../types/interfaces';
+import { ButtonType, ListBannerProps, MainBannerType, MetaInfoProps } from '../../types/interfaces';
 
 export const NAV_OPTIONS: ButtonType[] = [
   {
@@ -40,10 +40,44 @@ export const MAIN_BANNER_TEXTS: MainBannerType = {
   paragraph: `Recently designing intuitive and efficient tools for Walmart, Bridgestone and Design Systems at Verizon.`,
 };
 
-export const EXPERIENCES: ExperienceProps[] = [
+export const OTHER_PROJECTS: ListBannerProps[] = [
+  {
+    location: 'US, Canada & Mexico',
+    company: 'Walmart',
+    title: 'Designing a better shift management experience for +1M Walmart hourly associates.',
+    years: {
+      first: '2022',
+    },
+  },
+  {
+    location: 'United States',
+    company: 'Verizon',
+    title: 'Leading the Design System for Verizon Family Money',
+    years: {
+      first: '2021',
+    },
+  },
+  {
+    location: 'United States',
+    company: 'Zemoga Inc. acquired by Media.Monks',
+    title: 'Designing a new admission experience for the University of Arizona Global Campus',
+    years: {
+      first: '2021',
+    },
+  },
+  {
+    company: 'Personal Project',
+    title: 'Designing a seamless personal finance experience for Gen Ys and Xs.',
+    years: {
+      first: '2022',
+    },
+  },
+];
+
+export const EXPERIENCES: ListBannerProps[] = [
   {
     company: 'Zemoga Inc.',
-    position: 'Senior Product Designer at Walmart',
+    title: 'Senior Product Designer at Walmart',
     years: {
       first: '06/2022',
       last: '2023',
@@ -51,7 +85,7 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'Zemoga Inc.',
-    position: 'User Experience Designer',
+    title: 'User Experience Designer',
     years: {
       first: '06/2021',
       last: 'Present',
@@ -59,8 +93,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'Aurora',
-    country: 'Colombia',
-    position: 'Product Designer, Co-founder',
+    location: 'Colombia',
+    title: 'Product Designer, Co-founder',
     years: {
       first: '04/2020',
       last: '09/2021',
@@ -68,8 +102,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'We Are Angular',
-    country: 'Colombia',
-    position: 'Lead Product Designer, Partner',
+    location: 'Colombia',
+    title: 'Lead Product Designer, Partner',
     years: {
       first: '08/2019',
       last: '05/2021',
@@ -77,8 +111,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'We Are Angular',
-    country: 'Colombia',
-    position: 'Product Designer & Frontend Developer',
+    location: 'Colombia',
+    title: 'Product Designer & Frontend Developer',
     years: {
       first: '08/2017',
       last: '08/2019',
@@ -86,8 +120,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'Icesi University',
-    country: 'Colombia',
-    position: 'Designer at UXLab Icesi',
+    location: 'Colombia',
+    title: 'Designer at UXLab Icesi',
     years: {
       first: '01/2019',
       last: '08/2020',
@@ -95,8 +129,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'Pródigos',
-    country: 'Colombia',
-    position: 'Mobile Developer',
+    location: 'Colombia',
+    title: 'Mobile Developer',
     years: {
       first: '08/2018',
       last: '01/2019',
@@ -104,8 +138,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'Icesi University',
-    country: 'Colombia',
-    position: 'Visual Designer',
+    location: 'Colombia',
+    title: 'Visual Designer',
     years: {
       first: '07/2017',
       last: '12/2018',
@@ -113,8 +147,8 @@ export const EXPERIENCES: ExperienceProps[] = [
   },
   {
     company: 'Freelance',
-    country: 'Colombia',
-    position: 'Web Designer & Developer',
+    location: 'Colombia',
+    title: 'Web Designer & Developer',
     years: {
       first: '01/2014',
       last: '12/2017',

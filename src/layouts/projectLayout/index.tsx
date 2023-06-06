@@ -14,10 +14,7 @@ import {
   ProjectRoleBannerContent,
   ProjectRoleTextBoxes,
   ProjectContent,
-  ProjectSmallImgsContainer,
-  ProjectSmallImgsContent,
 } from './styled';
-import ProjectSection from '../../components/projectSection';
 import ProjectMainBanner from '../../components/projectMainBanner';
 import COLORS from '../../assets/style/colors';
 import hoursBetweenDates from '../../assets/utils/functions/hoursBetweenDates';
@@ -36,6 +33,7 @@ const ProjectLayout = ({ project }: Props) => {
   const [errorPassword, setErrorPassword] = useState<boolean>(false);
   const router = useRouter();
 
+  // Block auth to protected projects
   const blockAuth = () => {
     // Sets false Auth
     localStorage.setItem('authLocal', 'false');
@@ -44,6 +42,7 @@ const ProjectLayout = ({ project }: Props) => {
     setAuth(false);
   };
 
+  // Hook to check project protection status
   useEffect(() => {
     if (typeof window !== 'undefined' && window.localStorage) {
       //Validate if projects needs protection

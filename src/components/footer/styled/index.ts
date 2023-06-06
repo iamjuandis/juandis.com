@@ -19,7 +19,7 @@ export const FooterContent = styled.div`
   border-radius: 48px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 356px auto;
+  grid-template-columns: 5fr 7fr;
   grid-column-gap: 32px;
   align-items: center;
   margin: auto;

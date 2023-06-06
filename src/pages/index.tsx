@@ -1,23 +1,23 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { EXPERIENCES, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/index';
+import { OTHER_PROJECTS, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/index';
 import { scrollToIDElement } from '../assets/utils/components';
-import ExperienceBanner from '../components/experienceBanner';
 import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/pageLayout/index';
-import { ExperienceProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
+import { ListBannerProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
 import { getAllProjects } from '../lib/api';
+import ListBanner from '../components/listBanner';
 
 interface Props {
-  experiences: ExperienceProps[];
+  otherProjects: ListBannerProps[];
   projects: any;
   metaInfo: MetaInfoProps;
   bannerTexts: MainBannerType;
 }
 
-const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
+const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
   //console.log('PROJECTS:', projects);
   const router = useRouter();
   useEffect(() => {
@@ -29,7 +29,7 @@ const Home = ({ experiences, projects, metaInfo, bannerTexts }: Props) => {
     <PageLayout image={metaInfo?.previewImage} description={metaInfo?.description}>
       <MainBanner headline={bannerTexts?.headline} paragraph={bannerTexts?.paragraph} />
       <ProjectsBanner projects={projects.nodes} />
-      <ExperienceBanner experiences={experiences} />
+      <ListBanner list={otherProjects} title={`Other projects I've worked on`} />
     </PageLayout>
   );
 };
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const projects = await getAllProjects(false);
   return {
     props: {
-      experiences: EXPERIENCES,
+      otherProjects: OTHER_PROJECTS,
       projects: projects,
       metaInfo: META_INFO,
       bannerTexts: MAIN_BANNER_TEXTS,

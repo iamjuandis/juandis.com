@@ -105,6 +105,9 @@ h6 {
 }
 
 /* Paragraphs */
+p {
+  color: ${COLORS.green_dark};
+}
 
 .semibold {
   font-weight: 600;
