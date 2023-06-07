@@ -1,7 +1,7 @@
 const API_URL: any = process.env.WORDPRESS_GRAPHQL_API_URL;
 
 async function fetchAPI(query: any, { variables }: Record<string, any> = {}) {
-  console.log('ENTERS FETCH API');
+  console.log('ENTERS FETCH API - QUERY:', query);
   const headers = { 'Content-Type': 'application/json' };
 
   // WPGraphQL Plugin must be enabled
@@ -57,25 +57,30 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
   return data?.post;
 }
 
-export async function getAllProjectsSlug() {
+export async function getAllProjectsSlug(categoryName = 'work') {
   console.log('ENTERS getAllProjectsSlug');
-  const data = await fetchAPI(`
-    query getAllProjectsSlug {
-      posts(where: {categoryName: "work"}) {
-        nodes {
-          slug
-        }
+  const data = await fetchAPI(
+    `
+  query getAllProjectsSlug($categoryName: String) {
+    posts(where: {categoryName: $categoryName}) {
+      nodes {
+        slug
       }
     }
-    `);
+  }
+    `,
+    {
+      variables: { categoryName },
+    }
+  );
   return data?.posts;
 }
 
-export async function getAllProjects(preview: any) {
+export async function getAllProjects(preview: any, categoryName = 'work') {
   console.log('ENTERS getAllProjects');
   const data = await fetchAPI(
-    `query getAllProjects {
-      posts(where: {categoryName: "work"}) {
+    `query getAllProjects($categoryName: String) {
+      posts(where: {categoryName: $categoryName}) {
         nodes {
           featuredImage {
             node {
@@ -100,6 +105,7 @@ export async function getAllProjects(preview: any) {
       variables: {
         onlyEnabled: !preview,
         preview,
+        categoryName,
       },
     }
   );
