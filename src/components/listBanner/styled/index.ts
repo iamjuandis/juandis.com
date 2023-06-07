@@ -6,7 +6,6 @@ interface ContainerInterface {
 
 export const ListBannerContainer = styled.div<ContainerInterface>`
   background: ${(props: any) => props.background ?? 'transparent'};
-  padding-top: 100px;
   width: 100%;
   @media screen and (max-width: 700px) {
     padding-top: 50px;
@@ -33,6 +32,9 @@ export const ListContainerHeadline = styled.div`
   flex-direction: column;
   row-gap: 32px;
   width: 100%;
+  a {
+    width: fit-content;
+  }
   @media screen and (max-width: 700px) {
     margin-bottom: 30px;
   }

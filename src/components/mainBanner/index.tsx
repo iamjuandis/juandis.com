@@ -1,4 +1,3 @@
-import COLOR from '../../assets/style/colors';
 import { MainBannerType } from '../../types/interfaces';
 import Paragraph from '../paragraph';
 import {
@@ -16,12 +15,7 @@ const MainBanner = ({ headline, paragraph }: MainBannerType) => {
           <h1 dangerouslySetInnerHTML={{ __html: `${headline}` }} />
         </HeadlineMainBanner>
         <ParagraphsContainerMainBanner>
-          <Paragraph
-            paragraphSize="text-huge"
-            columns={1}
-            children={paragraph}
-            highlightColor={COLOR.yellow_sunrise}
-          />
+          <Paragraph paragraphSize="text-huge" columns={1} children={paragraph} />
         </ParagraphsContainerMainBanner>
       </MainBannerContent>
     </MainBannerContainer>

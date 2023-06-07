@@ -3,6 +3,7 @@ import COLORS from '../../../assets/style/colors';
 
 export const PageLayoutContainer = styled.div`
   background: ${COLORS.white_cloud};
+  padding-top: 110px;
   width: 100%;
 `;
 

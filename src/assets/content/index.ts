@@ -74,7 +74,7 @@ export const OTHER_PROJECTS: ListBannerProps[] = [
   },
 ];
 
-export const EXPERIENCES: ListBannerProps[] = [
+export const EXPERIENCE: ListBannerProps[] = [
   {
     company: 'Zemoga Inc.',
     title: 'Senior Product Designer at Walmart',
@@ -155,3 +155,7 @@ export const EXPERIENCES: ListBannerProps[] = [
     },
   },
 ];
+
+export const INTRODUCTION = `<p class="text-large">I've been designing and building digital products for over 6 years.</p>
+<p class="text-large">I hold a BE in Interactive Design with emphasis in Human Computer Interaction from Icesi University, Colombia where I started a joyful career in tech by driving design decisions to build intuitive and friendly human experiences.</p> 
+<p class="text-large">Fun fact - I'm one of those designers that had a close and genuine interest in coding.</p></>`;

@@ -10,7 +10,7 @@ export const MainBannerContent = styled.div`
   flex-direction: column;
   margin: auto;
   max-width: 996px;
-  padding: 100px 48px 48px 48px;
+  padding: 48px;
   row-gap: 32px;
   width: 100%;
 `;
