@@ -6,7 +6,6 @@ import AboutHero from '../../components/aboutHero';
 import ButtonLink from '../../components/buttonLink';
 
 const AboutPage = ({ experience, introduction }: any) => {
-  console.log('EXPERIENCE', experience);
   return (
     <PageLayout title="About">
       <AboutHero
