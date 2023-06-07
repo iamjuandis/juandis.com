@@ -1,6 +1,7 @@
 const API_URL: any = process.env.WORDPRESS_GRAPHQL_API_URL;
 
-async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
+async function fetchAPI(query: any, { variables }: Record<string, any> = {}) {
+  console.log('ENTERS FETCH API');
   const headers = { 'Content-Type': 'application/json' };
 
   // WPGraphQL Plugin must be enabled
