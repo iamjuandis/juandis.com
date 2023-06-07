@@ -8,12 +8,7 @@ export interface ArrowProps {
   handleClick?: any;
   opacity?: number;
 }
-const Arrow = ({
-  mainColor = COLOR.blue_universe,
-  direction,
-  handleClick,
-  opacity,
-}: ArrowProps) => (
+const Arrow = ({ mainColor = COLOR.green_dark, direction, handleClick, opacity }: ArrowProps) => (
   <ArrowComponent
     onClick={handleClick}
     direction={direction}

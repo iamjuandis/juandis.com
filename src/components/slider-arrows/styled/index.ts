@@ -20,7 +20,7 @@ export const ArrowComponent = styled.div<ArrowProps>`
     transform: scale(1.1);
   }
   svg {
-    color: ${(props) => (props.mainColor ? props.mainColor : COLOR.blue_universe)};
+    color: ${(props) => (props.mainColor ? props.mainColor : COLOR.green_dark)};
     &:focus {
       outline: 0;
     }

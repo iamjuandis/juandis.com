@@ -8,7 +8,6 @@ import {
   ContainerArrows,
   SliderNumbers,
 } from './styled';
-//import Dots from '../slider-dots';
 import Arrow from '../slider-arrows';
 import SlideImage from '../slide-image';
 

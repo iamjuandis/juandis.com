@@ -86,12 +86,12 @@ export const SliderFooter = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${COLOR.blue_universe};
+    color: ${COLOR.green_dark};
     svg {
       margin-left: 10px;
     }
     &:hover {
-      color: ${COLOR.yellow_sunrise};
+      color: ${COLOR.green_vibrant};
     }
   }
   @media screen and (max-width: 700px) {
@@ -100,7 +100,7 @@ export const SliderFooter = styled.div`
 `;
 
 export const SliderNumbers = styled.p`
-  background: ${`${COLOR.blue_universe}55`};
+  background: ${`${COLOR.green_dark}55`};
   backdrop-filter: blur(10px);
   border-radius: 50px;
   color: ${COLOR.white_cloud};
