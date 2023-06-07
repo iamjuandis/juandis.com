@@ -143,5 +143,8 @@ p > a, li > a {
   text-decoration-style: dotted;
   text-decoration-line: underline;
   text-decoration-color: ${COLORS.green_pale};
+  &:hover {
+    color: ${COLORS.green_pale};
+  }
 }
 `;

@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 import COLORS from '../../../assets/style/colors';
+import Image from 'next/image';
 
 export const ProjectAuthFormContainer = styled.section`
+  align-items: center;
   border-radius: 48px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  row-gap: 32px;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-column-gap: 64px;
   max-width: 996px;
   margin: auto;
-  margin-top: 110px;
-  margin-bottom: 110px;
+  margin-top: 0px;
+  margin-bottom: 48;
   padding: 48px;
   width: calc(100% - 96px);
   p {
@@ -18,11 +20,17 @@ export const ProjectAuthFormContainer = styled.section`
   }
 `;
 
+export const ProjectFormContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  width: auto;
+`;
+
 export const FormAuth = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 0px !important;
-  max-width: 500px;
   width: 100%;
 
   .input-container {
@@ -51,4 +59,52 @@ export const InputField = styled.input`
   &:focus {
     border-color: ${COLORS.green_vibrant};
   }
+`;
+
+export const ProjectPreview = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  .texts-prev {
+    mask: linear-gradient(90deg, black, black, transparent);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+  }
+  h4,
+  p {
+    color: ${COLORS.white_cloud};
+    width: 100%;
+  }
+`;
+
+export const ProjectPrevImage = styled(Image)`
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+`;
+
+export const IconPrev = styled.div`
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${COLORS.white_cloud};
+  width: 48px;
+  height: 48px;
 `;

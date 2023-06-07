@@ -102,7 +102,7 @@ const ProjectLayout = ({ project }: Props) => {
         description={project.excerpt}
         locale={`${router.locale}`}
         currentURL={currentURL}
-        image={project.featuredImage.sourceUrl}
+        image={project?.featuredImage?.node.sourceUrl}
       />
       <Header />
 
@@ -114,6 +114,9 @@ const ProjectLayout = ({ project }: Props) => {
           onChangeInput={onChangePassword}
           passwordValue={enteredPassword}
           errorPassword={errorPassword}
+          projectImage={project?.featuredImage?.node.sourceUrl}
+          projectTitle={project.title}
+          projectCompany={project.acfProjects.company}
         />
       ) : (
         <>
