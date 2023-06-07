@@ -76,37 +76,48 @@ export const OTHER_PROJECTS: ListBannerProps[] = [
 
 export const EXPERIENCE: ListBannerProps[] = [
   {
-    company: 'Zemoga Inc.',
-    title: 'Senior Product Designer at Walmart',
+    company: 'Walmart',
+    location: 'United States',
+    title: 'Senior Product Designer',
     years: {
-      first: '06/2022',
-      last: '2023',
+      first: '2022',
+      last: 'Present',
+    },
+  },
+  {
+    company: 'Verizon',
+    location: 'United States',
+    title: 'Product Designer & Design Systems',
+    years: {
+      first: '2021',
+      last: 'Present',
     },
   },
   {
     company: 'Zemoga Inc.',
-    title: 'User Experience Designer',
+    location: 'Colombia',
+    title: 'Product Designer',
     years: {
-      first: '06/2021',
+      first: '2021',
       last: 'Present',
     },
   },
   {
     company: 'Aurora',
     location: 'Colombia',
-    title: 'Product Designer, Co-founder',
+    title: 'Lead Product Designer & Frontend Developer',
     years: {
-      first: '04/2020',
-      last: '09/2021',
+      first: '2020',
+      last: '2021',
     },
   },
   {
     company: 'We Are Angular',
     location: 'Colombia',
-    title: 'Lead Product Designer, Partner',
+    title: 'Senior Product Designer',
     years: {
-      first: '08/2019',
-      last: '05/2021',
+      first: '2019',
+      last: '2021',
     },
   },
   {
@@ -114,17 +125,17 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Product Designer & Frontend Developer',
     years: {
-      first: '08/2017',
-      last: '08/2019',
+      first: '2017',
+      last: '2019',
     },
   },
   {
     company: 'Icesi University',
     location: 'Colombia',
-    title: 'Designer at UXLab Icesi',
+    title: 'UX Designer at UXLab Icesi',
     years: {
-      first: '01/2019',
-      last: '08/2020',
+      first: '2019',
+      last: '2020',
     },
   },
   {
@@ -132,14 +143,14 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Mobile Developer',
     years: {
-      first: '08/2018',
-      last: '01/2019',
+      first: '2018',
+      last: '2019',
     },
   },
   {
     company: 'Icesi University',
     location: 'Colombia',
-    title: 'Visual Designer',
+    title: 'Creative Designer',
     years: {
       first: '07/2017',
       last: '12/2018',
@@ -150,8 +161,8 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Web Designer & Developer',
     years: {
-      first: '01/2014',
-      last: '12/2017',
+      first: '2014',
+      last: '2018',
     },
   },
 ];

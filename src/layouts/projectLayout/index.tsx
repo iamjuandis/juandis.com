@@ -65,6 +65,8 @@ const ProjectLayout = ({ project }: Props) => {
           blockAuth();
           setLoading(false);
         }
+      } else {
+        setLoading(false);
       }
     }
   }, []);
@@ -108,7 +110,7 @@ const ProjectLayout = ({ project }: Props) => {
 
       {loading ? (
         <h1>LOADING</h1>
-      ) : auth === false ? (
+      ) : project?.acfProjects?.protected === true && auth === false ? (
         <ProjectAuthForm
           onSubmitForm={checkPassword}
           onChangeInput={onChangePassword}
@@ -136,9 +138,6 @@ const ProjectLayout = ({ project }: Props) => {
                   color={project.mainColor}
                   oneColorIcon={project.ownerCompany?.oneColorIcon}
                 >
-                  {/* {project.ownerCompany.icon && (
-                <div dangerouslySetInnerHTML={{ __html: project.ownerCompany?.icon }} />
-              )} */}
                   <ProjectCompanyTexts>
                     <Paragraph children={`<strong>${project.acfProjects.company}</strong>`} />
                     <Paragraph>{project.acfProjects.location}</Paragraph>
@@ -147,11 +146,6 @@ const ProjectLayout = ({ project }: Props) => {
               </ProjectRoleTextBoxes>
             </ProjectRoleBannerContent>
           </ProjectRoleBanner>
-          {/* <ProjectSliderContainer>
-        <ProjectSliderContent>
-          <Slider mainColor={project.mainColor} slides={project.images.sliderImages} />
-        </ProjectSliderContent>
-      </ProjectSliderContainer> */}
           <ProjectContent dangerouslySetInnerHTML={{ __html: project.content }} />{' '}
         </>
       )}
