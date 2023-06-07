@@ -15,15 +15,16 @@ async function fetchAPI(query: any, { variables }: Record<string, any> = {}) {
   });
 
   const json = await res.json();
-  if (json.errors) {
-    console.error(json.errors);
+  if (json?.errors) {
+    console.error(json?.errors);
     throw new Error('Failed to fetch API');
   }
-  return json.data;
+  return json?.data;
 }
 
 // Get one project by Slug
 export async function getProjectBySlug(id: any, idType = 'SLUG') {
+  console.log('ENTERS getProjectBySlug');
   const data = await fetchAPI(
     `query getProjectBySlug($id: ID!, $idType: PostIdType!) {
     post(id: $id, idType: $idType) {
@@ -57,6 +58,7 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
 }
 
 export async function getAllProjectsSlug() {
+  console.log('ENTERS getAllProjectsSlug');
   const data = await fetchAPI(`
     query getAllProjectsSlug {
       posts(where: {categoryName: "work"}) {
@@ -70,6 +72,7 @@ export async function getAllProjectsSlug() {
 }
 
 export async function getAllProjects(preview: any) {
+  console.log('ENTERS getAllProjects');
   const data = await fetchAPI(
     `query getAllProjects {
       posts(where: {categoryName: "work"}) {
