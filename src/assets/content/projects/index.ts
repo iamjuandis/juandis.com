@@ -1,7 +1,6 @@
-import { ProjectsType } from '../../../types/interfaces';
 import { LOGO_AURORA, LOGO_WE_ARE_ANGULAR } from '../../images';
 
-export const PROJECTS: ProjectsType = {
+export const PROJECTS: any = {
   proper: {
     client: 'Proper',
     conclusion: {
