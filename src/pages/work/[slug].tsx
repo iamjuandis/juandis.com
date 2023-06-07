@@ -34,12 +34,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const metaInfo = META_INFO;
   const project: any = await getProjectBySlug(`${context?.params?.slug}`).then((value: any) => {
     if (value === 'null' || value === null) {
       return {
         props: {
-          metaInfo: metaInfo,
+          metaInfo: META_INFO,
           project: {},
           notFound: true,
         },
@@ -47,7 +46,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     } else {
       return {
         props: {
-          metaInfo: metaInfo,
+          metaInfo: META_INFO,
           project: value,
           notFound: false,
         },

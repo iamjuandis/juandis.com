@@ -35,11 +35,13 @@ const ProjectLayout = ({ project }: Props) => {
 
   // Block auth to protected projects
   const blockAuth = () => {
-    // Sets false Auth
-    localStorage.setItem('authLocal', 'false');
-    // Clean date local
-    localStorage.removeItem('dateAuthLocal');
-    setAuth(false);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      // Sets false Auth
+      localStorage.setItem('authLocal', 'false');
+      // Clean date local
+      localStorage.removeItem('dateAuthLocal');
+      setAuth(false);
+    }
   };
 
   // Hook to check project protection status
