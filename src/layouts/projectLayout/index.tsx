@@ -5,20 +5,12 @@ import HeadTags from '../../components/head';
 import Header from '../../components/header/header';
 import Paragraph from '../../components/paragraph';
 import { MetaInfoProps } from '../../types/interfaces';
-import {
-  ProjectCompanyContainer,
-  ProjectCompanyTexts,
-  ProjectFooter,
-  ProjectLayoutContainer,
-  ProjectRoleBanner,
-  ProjectRoleBannerContent,
-  ProjectRoleTextBoxes,
-  ProjectContent,
-} from './styled';
+import { ProjectFooter, ProjectLayoutContainer, ProjectContent } from './styled';
 import ProjectMainBanner from '../../components/projectMainBanner';
 import COLORS from '../../assets/style/colors';
 import hoursBetweenDates from '../../assets/utils/functions/hoursBetweenDates';
 import ProjectAuthForm from '../../components/projectAuthForm';
+import { getFullProjectById } from '../../lib/api';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -32,6 +24,14 @@ const ProjectLayout = ({ project }: Props) => {
   const [enteredPassword, setEnteredPassword] = useState<string>('');
   const [errorPassword, setErrorPassword] = useState<boolean>(false);
   const router = useRouter();
+  const [content, setContent] = useState<any>(null);
+
+  const getContent = async () => {
+    setLoading(true);
+    const postContent = await getFullProjectById(project.databaseId);
+    setContent(postContent);
+    setLoading(false);
+  };
 
   // Block auth to protected projects
   const blockAuth = () => {
@@ -46,6 +46,7 @@ const ProjectLayout = ({ project }: Props) => {
 
   // Hook to check project protection status
   useEffect(() => {
+    setLoading(true);
     if (typeof window !== 'undefined' && window.localStorage) {
       //Validate if projects needs protection
       if (project?.acfProjects?.protected === true) {
@@ -60,15 +61,16 @@ const ProjectLayout = ({ project }: Props) => {
             blockAuth();
             setLoading(false);
           } else {
+            // Get access
+            getContent();
             setAuth(true);
-            setLoading(false);
           }
         } else {
           blockAuth();
           setLoading(false);
         }
       } else {
-        setLoading(false);
+        getContent();
       }
     }
   }, []);
@@ -90,8 +92,10 @@ const ProjectLayout = ({ project }: Props) => {
     event.preventDefault();
 
     if (enteredPassword === process.env.PASSWORD) {
+      // Get access
       localStorage.setItem('authLocal', 'true');
       localStorage.setItem('dateAuthLocal', `${new Date().toISOString()}`);
+      getContent();
       setAuth(true);
     } else {
       blockAuth();
@@ -131,24 +135,7 @@ const ProjectLayout = ({ project }: Props) => {
             role={project.acfProjects.role}
             year={project.acfProjects.year}
           />
-          <ProjectRoleBanner>
-            <ProjectRoleBannerContent>
-              <ProjectRoleTextBoxes>
-                <h3>Role</h3>
-                <Paragraph children={project.acfProjects.role} />
-                <ProjectCompanyContainer
-                  color={project.mainColor}
-                  oneColorIcon={project.ownerCompany?.oneColorIcon}
-                >
-                  <ProjectCompanyTexts>
-                    <Paragraph children={`<strong>${project.acfProjects.company}</strong>`} />
-                    <Paragraph>{project.acfProjects.location}</Paragraph>
-                  </ProjectCompanyTexts>
-                </ProjectCompanyContainer>
-              </ProjectRoleTextBoxes>
-            </ProjectRoleBannerContent>
-          </ProjectRoleBanner>
-          <ProjectContent dangerouslySetInnerHTML={{ __html: project.content }} />{' '}
+          <ProjectContent dangerouslySetInnerHTML={{ __html: content }} />
         </>
       )}
 
@@ -156,7 +143,9 @@ const ProjectLayout = ({ project }: Props) => {
         <Paragraph
           color={`${COLORS.green_dark}55`}
           children={`© ${
-            project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
+            project?.acfProjects?.year !== new Date()?.getFullYear()
+              ? `${project?.acfProjects?.year} - `
+              : ''
           }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
         />
       </ProjectFooter>

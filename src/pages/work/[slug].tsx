@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { META_INFO } from '../../assets/content/index';
 import ProjectLayout from '../../layouts/projectLayout';
 import { MetaInfoProps, ProjectAllTypes } from '../../types/interfaces';
-import { getAllProjectsSlug, getProjectBySlug } from '../../lib/api';
+import { getAllProjectsSlug, getPreviewProjectBySlug } from '../../lib/api';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -14,6 +14,8 @@ interface Props {
 
 const ProjectPage = ({ metaInfo, project, notFound }: Props) => {
   const router = useRouter();
+
+  //console.log('PROJECT---', project);
 
   useEffect(() => {
     if (notFound) {
@@ -34,25 +36,27 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const project: any = await getProjectBySlug(`${context?.params?.slug}`).then((value: any) => {
-    if (value === 'null' || value === null) {
-      return {
-        props: {
-          metaInfo: META_INFO,
-          project: {},
-          notFound: true,
-        },
-      };
-    } else {
-      return {
-        props: {
-          metaInfo: META_INFO,
-          project: value,
-          notFound: false,
-        },
-      };
+  const project: any = await getPreviewProjectBySlug(`${context?.params?.slug}`).then(
+    (value: any) => {
+      if (value === 'null' || value === null) {
+        return {
+          props: {
+            metaInfo: META_INFO,
+            project: {},
+            notFound: true,
+          },
+        };
+      } else {
+        return {
+          props: {
+            metaInfo: META_INFO,
+            project: value,
+            notFound: false,
+          },
+        };
+      }
     }
-  });
+  );
 
   return project;
 };

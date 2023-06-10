@@ -1,8 +1,10 @@
 const API_URL: any = process.env.WORDPRESS_GRAPHQL_API_URL;
+const WORDPRESS_API_URL: any = process.env.WORDPRESS_API_URL;
 
 async function fetchAPI(query: any, { variables }: Record<string, any> = {}) {
-  console.log('ENTERS FETCH API - QUERY:', query);
-  const headers = { 'Content-Type': 'application/json' };
+  const headers = {
+    'Content-Type': 'application/json',
+  };
 
   // WPGraphQL Plugin must be enabled
   const res = await fetch(API_URL, {
@@ -23,8 +25,7 @@ async function fetchAPI(query: any, { variables }: Record<string, any> = {}) {
 }
 
 // Get one project by Slug
-export async function getProjectBySlug(id: any, idType = 'SLUG') {
-  console.log('ENTERS getProjectBySlug');
+export async function getPreviewProjectBySlug(id: any, idType = 'SLUG') {
   const data = await fetchAPI(
     `query getProjectBySlug($id: ID!, $idType: PostIdType!) {
     post(id: $id, idType: $idType) {
@@ -35,18 +36,44 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
         role
         year
       }
-      content
       excerpt
       featuredImage {
         node {
           altText
           sourceUrl
-          uri
         }
       }
       slug
       title
-      uri
+      databaseId
+    }
+  }
+  `,
+    {
+      variables: { id, idType },
+    }
+  );
+  return data?.post;
+}
+
+export async function getFullProjectById(id: any) {
+  const post = await fetch(`${WORDPRESS_API_URL}/posts/${id}`, {
+    method: 'GET',
+    redirect: 'follow',
+  })
+    .then((res) => res.json())
+    .then((data) => data?.content?.rendered); //gets content node
+
+  return post;
+}
+
+// Get one project by Slug
+export async function getProjectContentBySlug(id: any, idType = 'SLUG') {
+  const data = await fetchAPI(
+    `query getProjectContentBySlug($id: ID!, $idType: PostIdType!) {
+    post(id: $id, idType: $idType) {
+      content
+      slug
     }
   }
   `,
@@ -58,7 +85,6 @@ export async function getProjectBySlug(id: any, idType = 'SLUG') {
 }
 
 export async function getAllProjectsSlug(categoryName = 'work') {
-  console.log('ENTERS getAllProjectsSlug');
   const data = await fetchAPI(
     `
   query getAllProjectsSlug($categoryName: String) {
@@ -77,7 +103,6 @@ export async function getAllProjectsSlug(categoryName = 'work') {
 }
 
 export async function getAllProjects(preview: any, categoryName = 'work') {
-  console.log('ENTERS getAllProjects');
   const data = await fetchAPI(
     `query getAllProjects($categoryName: String) {
       posts(where: {categoryName: $categoryName}) {

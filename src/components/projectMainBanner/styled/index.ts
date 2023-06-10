@@ -11,6 +11,7 @@ export const BannerContainer = styled.div`
   padding: 48px;
   justify-self: center;
   margin: auto;
+  margin-bottom: 48px;
   max-width: 996px;
   width: calc(100% - 96px);
 `;

@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import COLORS from '../../../assets/style/colors';
 
-interface CompanyProps {
-  color: string;
-  oneColorIcon: boolean | undefined;
-}
-
 export const ProjectLayoutContainer = styled.section`
   background: ${COLORS.white_cloud};
   padding-top: 110px;
@@ -14,7 +9,7 @@ export const ProjectLayoutContainer = styled.section`
     background: ${COLORS.black_background};
   } */
 `;
-
+/* 
 export const ProjectRoleBanner = styled.div`
   padding: 50px 0;
   width: 100%;
@@ -68,7 +63,7 @@ export const ProjectCompanyTexts = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-`;
+`; */
 /* 
 export const ProjectSliderContainer = styled.div`
   width: 100%;
@@ -124,11 +119,11 @@ export const ProjectContent = styled.div`
   & > ul,
   & > ol {
     box-sizing: border-box;
-    width: 100%;
+    width: calc(100% - 96px);
     margin: auto;
     margin-bottom: 16px;
-    max-width: 996px;
-    padding: 0 48px;
+    max-width: 680px;
+    padding: 0;
   }
 
   p {
@@ -163,7 +158,7 @@ export const ProjectContent = styled.div`
       padding: 0 48px;
     }
     &.size-large {
-      max-width: 996px;
+      max-width: 680px;
       padding: 0 48px;
     }
   }
@@ -193,20 +188,42 @@ export const ProjectContent = styled.div`
 
   .wp-block-columns {
     flex-direction: row;
+    column-gap: 32px;
     .wp-block-column {
       width: 100%;
     }
   }
+  .is-layout-flow {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
 
   .is-layout-flex {
     display: flex;
+    flex-direction: row;
     column-gap: 32px;
+  }
+
+  .is-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Cusotmized Class Names
+  .impact-card {
+    background: ${COLORS.green_opacity};
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 24px;
+    margin-bottom: 16px;
+    width: 100%;
   }
 `;
 
 export const ProjectFooter = styled.div`
   margin: auto;
   margin-top: 50px;
-  max-width: 848px;
-  width: calc(100% - 60px);
+  max-width: 680px;
+  width: calc(100% - 96px);
 `;

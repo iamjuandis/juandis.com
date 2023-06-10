@@ -37,5 +37,6 @@ module.exports = {
   },
   env: {
     PASSWORD: process.env.PASSWORD,
+    WORDPRESS_API_URL: process.env.WORDPRESS_API_URL,
   },
 };
