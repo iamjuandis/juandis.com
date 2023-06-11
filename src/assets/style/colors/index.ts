@@ -14,7 +14,7 @@ const COLORS = {
   black_text: '#0C1512',
   black_background: '#111111',
   // Opacity
-  green_opacity: 'hsla(151, 79%, 13%, 0.05);',
+  green_opacity: 'hsla(151, 79%, 13%, 0.05)',
 };
 
 export default COLORS;

@@ -15,8 +15,6 @@ interface Props {
 const ProjectPage = ({ metaInfo, project, notFound }: Props) => {
   const router = useRouter();
 
-  //console.log('PROJECT---', project);
-
   useEffect(() => {
     if (notFound) {
       router.push('/404');

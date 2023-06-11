@@ -11,6 +11,7 @@ import COLORS from '../../assets/style/colors';
 import hoursBetweenDates from '../../assets/utils/functions/hoursBetweenDates';
 import ProjectAuthForm from '../../components/projectAuthForm';
 import { getFullProjectById } from '../../lib/api';
+import Loading from '../../components/loading';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -30,6 +31,7 @@ const ProjectLayout = ({ project }: Props) => {
     setLoading(true);
     const postContent = await getFullProjectById(project.databaseId);
     setContent(postContent);
+    setAuth(true);
     setLoading(false);
   };
 
@@ -41,6 +43,7 @@ const ProjectLayout = ({ project }: Props) => {
       // Clean date local
       localStorage.removeItem('dateAuthLocal');
       setAuth(false);
+      setLoading(false);
     }
   };
 
@@ -55,19 +58,15 @@ const ProjectLayout = ({ project }: Props) => {
 
         if (authLocal === null) {
           blockAuth();
-          setLoading(false);
         } else if (authLocal === 'true' && dateAuthLocal !== null) {
           if (hoursBetweenDates(dateAuthLocal) > 12) {
             blockAuth();
-            setLoading(false);
           } else {
             // Get access
             getContent();
-            setAuth(true);
           }
         } else {
           blockAuth();
-          setLoading(false);
         }
       } else {
         getContent();
@@ -96,7 +95,6 @@ const ProjectLayout = ({ project }: Props) => {
       localStorage.setItem('authLocal', 'true');
       localStorage.setItem('dateAuthLocal', `${new Date().toISOString()}`);
       getContent();
-      setAuth(true);
     } else {
       blockAuth();
       setErrorPassword(true);
@@ -115,7 +113,7 @@ const ProjectLayout = ({ project }: Props) => {
       <Header />
 
       {loading ? (
-        <h1>LOADING</h1>
+        <Loading />
       ) : project?.acfProjects?.protected === true && auth === false ? (
         <ProjectAuthForm
           onSubmitForm={checkPassword}

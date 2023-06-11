@@ -24,7 +24,7 @@ async function fetchAPI(query: any, { variables }: Record<string, any> = {}) {
   return json?.data;
 }
 
-// Get one project by Slug
+// Get one project preview by Slug
 export async function getPreviewProjectBySlug(id: any, idType = 'SLUG') {
   const data = await fetchAPI(
     `query getProjectBySlug($id: ID!, $idType: PostIdType!) {
@@ -56,6 +56,7 @@ export async function getPreviewProjectBySlug(id: any, idType = 'SLUG') {
   return data?.post;
 }
 
+// Get one project content by ID
 export async function getFullProjectById(id: any) {
   const post = await fetch(`${WORDPRESS_API_URL}/posts/${id}`, {
     method: 'GET',
@@ -65,23 +66,6 @@ export async function getFullProjectById(id: any) {
     .then((data) => data?.content?.rendered); //gets content node
 
   return post;
-}
-
-// Get one project by Slug
-export async function getProjectContentBySlug(id: any, idType = 'SLUG') {
-  const data = await fetchAPI(
-    `query getProjectContentBySlug($id: ID!, $idType: PostIdType!) {
-    post(id: $id, idType: $idType) {
-      content
-      slug
-    }
-  }
-  `,
-    {
-      variables: { id, idType },
-    }
-  );
-  return data?.post;
 }
 
 export async function getAllProjectsSlug(categoryName = 'work') {
