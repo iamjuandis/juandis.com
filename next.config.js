@@ -39,4 +39,8 @@ module.exports = {
     PASSWORD: process.env.PASSWORD,
     WORDPRESS_API_URL: process.env.WORDPRESS_API_URL,
   },
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true,
+  },
 };
