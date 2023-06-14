@@ -143,7 +143,7 @@ export const ProjectContent = styled.div`
     }
 
     img {
-      border-radius: 24px;
+      height: auto;
       width: 100%;
     }
 
@@ -159,7 +159,6 @@ export const ProjectContent = styled.div`
     }
     &.size-large {
       max-width: 680px;
-      padding: 0 48px;
     }
   }
 

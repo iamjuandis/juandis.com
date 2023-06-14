@@ -30,6 +30,9 @@ const ProjectLayout = ({ project }: Props) => {
   const getContent = async () => {
     setLoading(true);
     const postContent = await getFullProjectById(project.databaseId);
+    //TODO - build a Node API to get posts information.
+    //const testContent = await getProjectContentBySlug(project.slug);
+    //console.log('TEST', testContent);
     setContent(postContent);
     setAuth(true);
     setLoading(false);
