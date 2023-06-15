@@ -48,6 +48,12 @@ export default class MyDocument extends Document<DocProps> {
           <meta name="twitter:creator" content="@iamjuandis" />
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+            rel="stylesheet"
+          />
           {isProduction && (
             <Fragment>
               <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />

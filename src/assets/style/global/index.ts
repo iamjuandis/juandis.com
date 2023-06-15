@@ -105,7 +105,7 @@ h6 {
 }
 
 /* Paragraphs */
-p {
+p, li {
   color: ${COLORS.green_dark};
 }
 

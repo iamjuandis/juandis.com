@@ -126,7 +126,8 @@ export const ProjectContent = styled.div`
     padding: 0;
   }
 
-  p {
+  p,
+  li {
     font-size: 20px;
     line-height: 28px;
   }
@@ -140,6 +141,7 @@ export const ProjectContent = styled.div`
       font-size: 14px;
       line-height: 18px;
       opacity: 0.5;
+      text-align: center;
     }
 
     img {
@@ -163,25 +165,52 @@ export const ProjectContent = styled.div`
   }
 
   blockquote {
-    box-sizing: border-box;
-    padding-left: 32px;
-    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: 2px solid ${COLORS.green_pale_light};
+    //box-sizing: border-box;
+    padding: 0 48px;
+    margin: auto;
+    margin-bottom: 32px;
+    margin-top: 24px;
+    max-width: 680px;
     width: 100%;
-    border-left: 1px solid #000;
     p {
+      color: ${COLORS.green_dark};
+      font-family: 'DM Serif Display', serif;
+      font-weight: 300;
       font-size: 32px;
-      line-height: 40px;
+      font-style: italic;
+      line-height: 48px;
+      opacity: 0.8;
       &::before {
-        content: '“';
+        content: '“\\A';
+        font-size: 80px;
+        line-height: 80px;
+        white-space: pre-wrap;
+        margin-bottom: -30px;
+        display: block;
       }
       &::after {
         content: '”';
       }
     }
     cite {
-      font-size: 16px;
-      font-style: italic;
-      line-height: 24px;
+      color: ${COLORS.green_pale};
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+    }
+  }
+
+  ul,
+  ol {
+    li {
+      &::marker {
+        color: ${COLORS.green_pale};
+      }
     }
   }
 
