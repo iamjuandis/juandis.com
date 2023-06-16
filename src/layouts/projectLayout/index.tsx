@@ -137,19 +137,19 @@ const ProjectLayout = ({ project }: Props) => {
             year={project.acfProjects.year}
           />
           <ProjectContent dangerouslySetInnerHTML={{ __html: content }} />
+          <ProjectFooter>
+            <Paragraph
+              color={`${COLORS.green_dark}55`}
+              children={`© ${
+                project?.acfProjects?.year !== new Date()?.getFullYear()
+                  ? `${project?.acfProjects?.year} - `
+                  : ''
+              }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
+            />
+          </ProjectFooter>
         </>
       )}
 
-      <ProjectFooter>
-        <Paragraph
-          color={`${COLORS.green_dark}55`}
-          children={`© ${
-            project?.acfProjects?.year !== new Date()?.getFullYear()
-              ? `${project?.acfProjects?.year} - `
-              : ''
-          }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
-        />
-      </ProjectFooter>
       <Footer />
     </ProjectLayoutContainer>
   );

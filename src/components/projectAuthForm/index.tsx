@@ -34,6 +34,7 @@ const ProjectAuthForm = ({
         <FormAuth onSubmit={onSubmitForm} style={{ marginTop: 100 }}>
           <div className="input-container">
             <InputField
+              className={errorPassword && 'input-error'}
               type="password"
               name="password"
               id="password"
@@ -45,7 +46,7 @@ const ProjectAuthForm = ({
 
             <ButtonLink onClick={onSubmitForm} label="Enter password" variant="primary" />
           </div>
-          {errorPassword && 'Wrong password'}
+          {errorPassword && <p className="error-message">Oops! Wrong password. Try again.</p>}
         </FormAuth>
       </ProjectFormContent>
       <ProjectPreview>

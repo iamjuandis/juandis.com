@@ -42,6 +42,10 @@ export const FormAuth = styled.form`
       width: auto;
     }
   }
+  .error-message {
+    color: ${COLORS.red_vivid};
+    padding-top: 4px;
+  }
 `;
 
 export const InputField = styled.input`
@@ -58,6 +62,9 @@ export const InputField = styled.input`
   appearance: none;
   &:focus {
     border-color: ${COLORS.green_vibrant};
+  }
+  &.input-error {
+    border-color: ${COLORS.red_vivid};
   }
 `;
 
