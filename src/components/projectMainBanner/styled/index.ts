@@ -25,5 +25,15 @@ export const MetaInfoBanner = styled.div`
 
 export const MetaInfoItemStyle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  column-gap: 12px;
+  img {
+    height: 60px;
+    width: 60px;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
 `;

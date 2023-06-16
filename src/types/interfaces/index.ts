@@ -163,6 +163,7 @@ export interface ThemeMode {
 export interface ProjectMainBannerInterface {
   title: string;
   company: string;
+  companyImage?: string;
   location: string;
   role: string;
   year: number;

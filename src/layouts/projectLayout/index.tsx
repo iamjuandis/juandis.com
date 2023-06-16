@@ -132,6 +132,7 @@ const ProjectLayout = ({ project }: Props) => {
           <ProjectMainBanner
             title={project.title}
             company={project.acfProjects.company}
+            companyImage={project.acfProjects?.companyimage}
             location={project.acfProjects.location}
             role={project.acfProjects.role}
             year={project.acfProjects.year}

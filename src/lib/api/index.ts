@@ -32,6 +32,7 @@ export async function getPreviewProjectBySlug(id: any, idType = 'SLUG') {
     post(id: $id, idType: $idType) {
       acfProjects {
         company
+        companyimage
         location
         protected
         role
@@ -134,6 +135,7 @@ export async function getAllProjects(preview: any, categoryName = 'work') {
           slug
           acfProjects {
             company
+            companyimage
             protected
             role
             year
