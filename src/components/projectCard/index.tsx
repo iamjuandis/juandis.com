@@ -1,6 +1,5 @@
 import { Lock } from 'react-feather';
 import { ProjectMainInterface } from '../../types/interfaces';
-import Paragraph from '../paragraph';
 import {
   ProjectCardContainer,
   ProjectCardCoverImage,
@@ -34,11 +33,11 @@ const ProjectCard = ({
         </ProtectedLabel>
       )}
       <ProjectCardTextContainer>
-        <Paragraph children={company} />
+        <p className="text-large semibold">{company}</p>
         <h3>{title}</h3>
         <ProjectSkillElement>
-          {role && <p>{role}</p>}
-          {year && <p>{year}</p>}
+          {role && <p className="text-large">{role}</p>}
+          {year && <p className="text-large">{year}</p>}
         </ProjectSkillElement>
       </ProjectCardTextContainer>
     </ProjectCardContainer>

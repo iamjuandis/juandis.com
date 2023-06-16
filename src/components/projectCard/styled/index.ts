@@ -96,7 +96,7 @@ export const ProtectedLabel = styled.div`
   flex-direction: row;
   column-gap: 8px;
   top: 24px;
-  left: 24px;
+  right: 24px;
   span {
     color: ${COLORS.white_cloud};
   }
