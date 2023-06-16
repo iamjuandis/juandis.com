@@ -37,7 +37,6 @@ export default class MyDocument extends Document<DocProps> {
     }
   }
 
-  /*eslint class-methods-use-this: ["error", { "exceptMethods": ["render"] }] */
   render() {
     const { isProduction } = this.props;
     return (
@@ -47,9 +46,14 @@ export default class MyDocument extends Document<DocProps> {
           <meta name="twitter:account_id" property="twitter:account_id" content="717185162" />
           <meta name="twitter:site" content="@iamjuandis" />
           <meta name="twitter:creator" content="@iamjuandis" />
-          <link rel="stylesheet" href="https://use.typekit.net/lmz3qmg.css" />
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+            rel="stylesheet"
+          />
           {isProduction && (
             <Fragment>
               <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
@@ -64,6 +68,18 @@ export default class MyDocument extends Document<DocProps> {
                       page_path: window.location.pathname,
                     });
                   `,
+                }}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `(function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:3523741,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
                 }}
               />
             </Fragment>

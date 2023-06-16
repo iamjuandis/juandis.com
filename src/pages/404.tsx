@@ -1,9 +1,9 @@
 import Errors from '../components/errors';
-import PageLayout from '../layouts/pageLayout/intex';
+import PageLayout from '../layouts/pageLayout/index';
 
 const Error404 = () => {
   return (
-    <PageLayout title={`Error 404 • Juan David Pérez • Portfolio`}>
+    <PageLayout title={`Not found · Error 404`}>
       <Errors typeError={404} />
     </PageLayout>
   );

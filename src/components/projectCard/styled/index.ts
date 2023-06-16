@@ -1,13 +1,17 @@
 import styled from 'styled-components';
-import { ProjectCardComponentTypes } from '..';
 import COLOR from '../../../assets/style/colors';
+import Link from 'next/link';
+import Image from 'next/image';
+import COLORS from '../../../assets/style/colors';
 
-export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
-  display: ${(props) => (props.gridRange && props.gridRange[2] === 'large' ? 'grid' : 'flex')};
+interface ProjectCardLocalInterface {
+  title: string;
+}
+
+export const ProjectCardContainer = styled(Link)<ProjectCardLocalInterface>`
+  display: flex;
   flex-direction: column;
-  grid-template-columns: 57.1289% 5fr;
   background: ${COLOR.white_cloud};
-  grid-column: ${(props) => props.gridRange && `${props.gridRange[0]} / ${props.gridRange[1]}`};
   position: relative;
   width: 100%;
   @media screen and (min-width: 750px) {
@@ -15,34 +19,14 @@ export const ProjectCardContainer = styled.a<ProjectCardComponentTypes>`
       transform: scale(1.02);
     }
   }
-  @media screen and (max-width: 750px) {
-    display: flex;
-  }
 `;
 
-export const ProjectCardCoverContainer = styled.div<ProjectCardComponentTypes>`
-  display: flex;
-  background: ${(props) => props.background};
-  height: ${(props) =>
-    props.gridRange && props.gridRange[2] === 'small'
-      ? '360px'
-      : props.gridRange && props.gridRange[2] === 'big'
-      ? '100%'
-      : 'auto'};
-  position: relative;
-  width: 100%;
-  @media screen and (max-width: 750px) {
-    display: flex;
-  }
-`;
-
-export const ProjectCardCoverImage = styled.div<ProjectCardComponentTypes>`
+export const ProjectCardCoverImage = styled(Image)`
+  border-radius: 24px;
   object-fit: cover;
-  object-position: ${(props) =>
-    props.gridRange && props.gridRange[2] === 'large' ? 'top' : 'center'};
-  height: ${(props) => (props.gridRange && props.gridRange[2] === 'large' ? '360px' : '100%')};
-  position: ${(props) =>
-    props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
+  object-position: center;
+  height: auto;
+  max-height: 450px;
   width: 100%;
   &:first-child {
     div {
@@ -62,25 +46,19 @@ export const ProjectCardCoverImage = styled.div<ProjectCardComponentTypes>`
   }
 `;
 
-export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
+export const ProjectCardTextContainer = styled.div`
   align-items: flex-start;
+  color: ${COLORS.green_dark};
   display: flex;
   flex-direction: column;
+  row-gap: 8px;
   justify-content: flex-end;
-  background: ${(props) => props.background};
-  bottom: ${(props) => (props.gridRange && props.gridRange[2] === 'big' ? 0 : 'auto')};
-  padding: 30px;
-  position: ${(props) =>
-    props.gridRange && props.gridRange[2] === 'big' ? 'absolute' : 'relative'};
+  padding: 24px 0;
   h3 {
-    text-shadow: ${(props) =>
-      props.gridRange && props.gridRange[2] === 'big' ? `0px 0px 15px ${props.mainColor}` : 'none'};
-    font-weight: bolder;
-    width: ${(props) => (props.gridRange && props.gridRange[2] === 'big' ? '60%' : '100%')};
+    color: ${(props) => props.theme.text};
+    width: 100%;
   }
   @media screen and (max-width: 750px) {
-    background: ${(props) =>
-      props.gridRange && props.gridRange[2] === 'big' ? props.mainColor : props.background};
     position: relative;
     h3 {
       text-shadow: none;
@@ -89,13 +67,10 @@ export const ProjectCardTextContainer = styled.div<ProjectCardComponentTypes>`
   }
 `;
 
-export const ProjectSkillsContainer = styled.div`
+export const ProjectSkillElement = styled.div`
   display: flex;
   flex-direction: row;
-`;
-
-export const ProjectSkillElement = styled.strong<ProjectCardComponentTypes>`
-  color: ${(props) => props.mainColor};
+  column-gap: 24px;
   font-size: 1em;
   font-weight: 500;
   &:not(:last-child) {
@@ -106,5 +81,23 @@ export const ProjectSkillElement = styled.strong<ProjectCardComponentTypes>`
   }
   @media screen and (max-width: 750px) {
     font-size: 0.8em;
+  }
+`;
+
+export const ProtectedLabel = styled.div`
+  background: hsla(0, 0%, 100%, 0.2);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 40px;
+  padding: 12px 24px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  top: 24px;
+  right: 24px;
+  span {
+    color: ${COLORS.white_cloud};
   }
 `;

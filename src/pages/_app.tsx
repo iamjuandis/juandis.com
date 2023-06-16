@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import * as gtag from '../lib/gtag';
-import '../assets/style/styles.css';
+//import '../assets/style/styles.css';
 import Provider from '../components/provider';
+import { GlobalStyles } from '../assets/style/global';
 
 const MyPortfolio = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -20,6 +21,7 @@ const MyPortfolio = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Provider>
+      <GlobalStyles />
       <Component {...pageProps} />
     </Provider>
   );

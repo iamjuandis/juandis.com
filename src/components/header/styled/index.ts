@@ -1,29 +1,14 @@
 import styled from 'styled-components';
-import COLOR from '../../../assets/style/colors';
+import COLORS from '../../../assets/style/colors';
 import { HeaderTypes } from '../../../types/interfaces';
+import Link from 'next/link';
 
 export const HeaderContainer = styled.header<HeaderTypes>`
-  background: ${(props) =>
-    props.bgColor &&
-    props.scrollTop !== undefined &&
-    props.limitScroll &&
-    props.scrollTop < props.limitScroll
-      ? `${props.bgColor}55`
-      : `${props.theme.background}77`};
-  backdrop-filter: blur(20px);
+  background: transparent;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 100;
-  /* Firefox */
-  @-moz-document url-prefix() {
-    background: ${(props) =>
-      props.bgColor &&
-      props.scrollTop !== undefined &&
-      props.limitScroll &&
-      props.scrollTop < props.limitScroll
-        ? props.bgColor
-        : COLOR.white_cloud};
-  }
 `;
 
 export const HeaderContent = styled.div`
@@ -33,157 +18,69 @@ export const HeaderContent = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  max-width: 1200px;
-  padding: 20px 0px;
-  width: calc(100% - 60px);
+  max-width: 1440px;
+  padding: 32px;
+  width: 100%;
+  @media screen and (max-width: 640px) {
+    padding: 16px;
+  }
 `;
 
-export const LogoContainer = styled.a<HeaderTypes>`
+export const LogoContainer = styled(Link)`
   flex-direction: row;
   cursor: pointer;
   display: flex;
-  div {
+  background: hsla(148, 60%, 98%, 0.7);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 40px;
+
+  p {
+    color: ${COLORS.green_dark};
     justify-content: center;
     display: flex;
     flex-direction: column;
-    strong {
-      color: ${(props) =>
-        props.bgColor &&
-        props.scrollTop !== undefined &&
-        props.limitScroll &&
-        props.scrollTop < props.limitScroll
-          ? COLOR.white_cloud
-          : props.theme.text};
-      font-size: 0.8em;
-      font-weight: 800;
-    }
-    span {
-      color: ${(props) =>
-        props.bgColor &&
-        props.scrollTop !== undefined &&
-        props.limitScroll &&
-        props.scrollTop < props.limitScroll
-          ? COLOR.white_cloud
-          : props.theme.text};
-      font-size: 0.7em;
-    }
-  }
-  svg {
-    height: 40px;
-    margin-right: 10px;
-    width: 40px;
-    path {
-      fill: ${(props) =>
-        props.bgColor &&
-        props.scrollTop !== undefined &&
-        props.limitScroll &&
-        props.scrollTop < props.limitScroll
-          ? COLOR.white_cloud
-          : props.theme.text};
-    }
-  }
-
-  @media (max-width: 640px) {
-    div {
-      strong {
-        font-size: 1em;
-      }
-      span {
-        display: none;
-      }
-    }
+    padding: 0 24px 0 16px;
   }
 `;
 
 export const NavContainer = styled.nav<HeaderTypes>`
-  a,
-  p {
-    color: ${(props) =>
-      props.bgColor &&
-      props.scrollTop !== undefined &&
-      props.limitScroll &&
-      props.scrollTop < props.limitScroll
-        ? COLOR.white_cloud
-        : props.theme.text};
-  }
+  background: hsla(148, 60%, 98%, 0.7);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px);
+  backface-visibility: hidden;
+  border-radius: 40px;
+  column-gap: 24px;
   display: flex;
   flex-direction: row;
+  padding-left: 24px;
   @media screen and (max-width: 640px) {
+    backdrop-filter: blur(px);
     box-shadow: 0px 0px 50px #00000022;
     box-sizing: border-box;
-    background: ${(props) =>
-      props.bgColor &&
-      props.scrollTop !== undefined &&
-      props.limitScroll &&
-      props.scrollTop < props.limitScroll
-        ? props.bgColor
-        : props.theme.background};
-    bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 30px;
+    border-radius: 24px;
+    display: flex;
     flex-direction: column;
+    left: 16px;
     height: fit-content;
-    left: 0;
     opacity: ${(props) => (props.isOpen ? 1 : 0)};
-    padding: 50px 30px;
+    padding: 48px;
     position: fixed;
     pointer-events: ${(props) => (props.isOpen ? 'all' : 'none')};
-    right: 0;
-    top: ${(props) => (props.isOpen ? '0px' : '-100vh')};
-    width: 100%;
+    right: 16px;
+    top: ${(props) => (props.isOpen ? '80px' : '-100vh')};
     z-index: 99;
-    a,
-    p {
-      font-size: 1.5em;
-    }
   }
 `;
 
 export const MenuMobileContainer = styled.p<HeaderTypes>`
-  color: ${(props) =>
-    props.bgColor &&
-    props.scrollTop !== undefined &&
-    props.limitScroll &&
-    props.scrollTop < props.limitScroll
-      ? COLOR.white_cloud
-      : props.theme.text};
+  color: ${COLORS.green_vibrant};
   display: none;
   @media screen and (max-width: 640px) {
-    display: block;
+    display: flex;
     position: relative;
     z-index: 100;
-  }
-`;
-
-export const MenuContactInfo = styled.div<HeaderTypes>`
-  display: none;
-  p,
-  a {
-    color: ${(props) =>
-      props.bgColor &&
-      props.scrollTop !== undefined &&
-      props.limitScroll &&
-      props.scrollTop < props.limitScroll
-        ? COLOR.white_cloud
-        : props.theme.text};
-  }
-  a {
-    border-bottom-color: ${(props) =>
-      props.bgColor &&
-      props.scrollTop !== undefined &&
-      props.limitScroll &&
-      props.scrollTop < props.limitScroll
-        ? COLOR.white_cloud
-        : props.theme.text};
-  }
-  @media screen and (max-width: 640px) {
-    box-sizing: border-box;
-    display: block;
-    font-size: 0.6em;
-    margin-top: 30px;
-    padding: 0 20px;
-    width: 100%;
   }
 `;
 

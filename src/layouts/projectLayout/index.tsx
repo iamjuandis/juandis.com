@@ -1,43 +1,81 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import COLOR from '../../assets/style/colors';
 import Footer from '../../components/footer';
 import HeadTags from '../../components/head';
 import Header from '../../components/header/header';
-import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
-import Slider from '../../components/slider';
-import { MetaInfoProps, ProjectAllTypes, ProjectSectionType } from '../../types/interfaces';
-import {
-  ProjectCompanyContainer,
-  ProjectCompanyTexts,
-  ProjectFooter,
-  ProjectLayoutContainer,
-  ProjectLayoutCoverImageContainer,
-  ProjectLayoutMainBanner,
-  ProjectLayoutMainBannerContent,
-  ProjectLayoutMainBannerTextContainer,
-  ProjectRoleBanner,
-  ProjectRoleBannerContent,
-  ProjectRoleTextBoxes,
-  ProjectSliderContainer,
-  ProjectSliderContent,
-  ProjectSmallImgsContainer,
-  ProjectSmallImgsContent,
-} from './styled';
-import ProjectSection from '../../components/projectSection';
-import Image from 'next/image';
-import useDarkMode from 'use-dark-mode';
+import { MetaInfoProps } from '../../types/interfaces';
+import { ProjectFooter, ProjectLayoutContainer, ProjectContent } from './styled';
+import ProjectMainBanner from '../../components/projectMainBanner';
+import COLORS from '../../assets/style/colors';
+import hoursBetweenDates from '../../assets/utils/functions/hoursBetweenDates';
+import ProjectAuthForm from '../../components/projectAuthForm';
+import { getFullProjectById } from '../../lib/api';
+import Loading from '../../components/loading';
 
 interface Props {
   metaInfo: MetaInfoProps;
-  project: ProjectAllTypes;
+  project: any;
 }
 
-const ProjectLayout = ({ metaInfo, project }: Props) => {
+const ProjectLayout = ({ project }: Props) => {
+  const [loading, setLoading] = useState<boolean>(true);
   const [currentURL, setCurrentURL] = useState<string>('https://juandis.com/');
+  const [auth, setAuth] = useState<boolean>(false);
+  const [enteredPassword, setEnteredPassword] = useState<string>('');
+  const [errorPassword, setErrorPassword] = useState<boolean>(false);
   const router = useRouter();
-  const darkmode = useDarkMode();
+  const [content, setContent] = useState<any>(null);
+
+  const getContent = async () => {
+    setLoading(true);
+    const postContent = await getFullProjectById(project.databaseId);
+    //TODO - build a Node API to get posts information.
+    //const testContent = await getProjectContentBySlug(project.slug);
+    //console.log('TEST', testContent);
+    setContent(postContent);
+    setAuth(true);
+    setLoading(false);
+  };
+
+  // Block auth to protected projects
+  const blockAuth = () => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      // Sets false Auth
+      localStorage.setItem('authLocal', 'false');
+      // Clean date local
+      localStorage.removeItem('dateAuthLocal');
+      setAuth(false);
+      setLoading(false);
+    }
+  };
+
+  // Hook to check project protection status
+  useEffect(() => {
+    setLoading(true);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      //Validate if projects needs protection
+      if (project?.acfProjects?.protected === true) {
+        let authLocal = localStorage.getItem('authLocal');
+        let dateAuthLocal = localStorage.getItem('dateAuthLocal');
+
+        if (authLocal === null) {
+          blockAuth();
+        } else if (authLocal === 'true' && dateAuthLocal !== null) {
+          if (hoursBetweenDates(dateAuthLocal) > 12) {
+            blockAuth();
+          } else {
+            // Get access
+            getContent();
+          }
+        } else {
+          blockAuth();
+        }
+      } else {
+        getContent();
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -46,133 +84,74 @@ const ProjectLayout = ({ metaInfo, project }: Props) => {
       );
     }
   }, []);
+
+  const onChangePassword = (e: any) => {
+    e.preventDefault();
+    setEnteredPassword(e.target.value);
+  };
+
+  const checkPassword = (event: any) => {
+    event.preventDefault();
+
+    if (enteredPassword === process.env.PASSWORD) {
+      // Get access
+      localStorage.setItem('authLocal', 'true');
+      localStorage.setItem('dateAuthLocal', `${new Date().toISOString()}`);
+      getContent();
+    } else {
+      blockAuth();
+      setErrorPassword(true);
+    }
+  };
+
   return (
     <ProjectLayoutContainer>
       <HeadTags
-        title={`${project.client}: ${project.headline} • ${metaInfo?.mainTitle}`}
-        description={project.headline}
+        title={`${project?.title}`}
+        description={project.excerpt}
         locale={`${router.locale}`}
         currentURL={currentURL}
-        image={project.images.previewImage}
-        mainColor={project.mainColor}
+        image={project?.featuredImage?.node.sourceUrl}
       />
-      <Header bgColor={project.mainColor} />
-      <ProjectLayoutMainBanner background={project.mainColor}>
-        <ProjectLayoutMainBannerContent>
-          <ProjectLayoutMainBannerTextContainer>
-            <Paragraph color={COLOR.white_cloud} children={project.client} />
-            <br />
-            <Headline color={COLOR.white_cloud} typeHeadline="h1" fontSize={50}>
-              {project.headline}
-            </Headline>
-            <br />
+      <Header />
+
+      {loading ? (
+        <Loading />
+      ) : project?.acfProjects?.protected === true && auth === false ? (
+        <ProjectAuthForm
+          onSubmitForm={checkPassword}
+          onChangeInput={onChangePassword}
+          passwordValue={enteredPassword}
+          errorPassword={errorPassword}
+          projectImage={project?.featuredImage?.node.sourceUrl}
+          projectTitle={project.title}
+          projectCompany={project.acfProjects.company}
+        />
+      ) : (
+        <>
+          <ProjectMainBanner
+            title={project.title}
+            company={project.acfProjects.company}
+            companyImage={project.acfProjects?.companyimage}
+            location={project.acfProjects.location}
+            role={project.acfProjects.role}
+            year={project.acfProjects.year}
+          />
+          <ProjectContent dangerouslySetInnerHTML={{ __html: content }} />
+          <ProjectFooter>
             <Paragraph
-              color={COLOR.white_cloud}
-              children={`${project.years?.first}${
-                project.years?.last ? ` - ${project.years?.last}` : ''
-              }`}
+              color={`${COLORS.green_dark}55`}
+              children={`© ${
+                project?.acfProjects?.year !== new Date()?.getFullYear()
+                  ? `${project?.acfProjects?.year} - `
+                  : ''
+              }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
             />
-          </ProjectLayoutMainBannerTextContainer>
-          <ProjectLayoutCoverImageContainer>
-            <img src={project.images.coverImage} alt={project.headline} />
-          </ProjectLayoutCoverImageContainer>
-        </ProjectLayoutMainBannerContent>
-      </ProjectLayoutMainBanner>
-
-      <ProjectRoleBanner>
-        <ProjectRoleBannerContent>
-          <ProjectRoleTextBoxes>
-            <Headline typeHeadline="h3" color={project.mainColor}>
-              Role
-            </Headline>
-            <br />
-            <Paragraph children={project.myRole} />
-            <ProjectCompanyContainer
-              color={project.mainColor}
-              oneColorIcon={project.ownerCompany?.oneColorIcon}
-            >
-              {project.ownerCompany.icon && (
-                <div dangerouslySetInnerHTML={{ __html: project.ownerCompany?.icon }} />
-              )}
-              <ProjectCompanyTexts>
-                <Paragraph size={0.7} children={`<strong>${project.ownerCompany?.name}</strong>`} />
-                <Paragraph size={0.7}>{project.ownerCompany?.country}</Paragraph>
-              </ProjectCompanyTexts>
-            </ProjectCompanyContainer>
-          </ProjectRoleTextBoxes>
-        </ProjectRoleBannerContent>
-      </ProjectRoleBanner>
-
-      <ProjectSliderContainer>
-        <ProjectSliderContent>
-          <Slider mainColor={project.mainColor} slides={project.images.sliderImages} />
-        </ProjectSliderContent>
-      </ProjectSliderContainer>
-
-      <ProjectSection
-        alignment="mid-up"
-        title="Overview"
-        content={project.overview}
-        columns={2}
-        mainColor={project.mainColor}
-      />
-
-      {project.sections &&
-        Object.entries(project.sections)?.map(
-          ([key, section]: [string, ProjectSectionType], index: number) => {
-            return (
-              <ProjectSection
-                alignment={section.alignment}
-                columns={section.columns}
-                content={section.content}
-                image={section.image}
-                key={`${key}-${index}`}
-                mainColor={project.mainColor}
-                marginBottom={section.marginBottom}
-                title={section.title}
-              />
-            );
-          }
-        )}
-
-      {project.images?.smallImages && (
-        <ProjectSmallImgsContainer>
-          <ProjectSmallImgsContent>
-            {project.images?.smallImages?.map((image: string, idx: number) => (
-              <Image
-                alt={`${idx + 1}. ${project.client}`}
-                key={idx}
-                quality={100}
-                src={image}
-                height={340}
-                width={340}
-              />
-            ))}
-          </ProjectSmallImgsContent>
-        </ProjectSmallImgsContainer>
+          </ProjectFooter>
+        </>
       )}
 
-      {project.conclusion && project.conclusion?.content && (
-        <ProjectSection
-          alignment="wide-bottom"
-          image={project.conclusion?.image}
-          title={project.conclusion?.title ?? 'Conclusion'}
-          content={project.conclusion?.content}
-          columns={project.conclusion?.columns}
-          mainColor={project.mainColor}
-        />
-      )}
-
-      <ProjectFooter>
-        <Paragraph
-          color={`${darkmode.value ? COLOR.white_dark : COLOR.blue_universe}55`}
-          size={0.7}
-          children={`© ${
-            project?.years?.first !== new Date()?.getFullYear() ? `${project.years?.first} - ` : ''
-          }${new Date()?.getFullYear()}. All rights reserved.<br/> No part of this project may be reproduced, distributed, or transmitted in any form by any means, without the prior written permission of the author, except in the case of certain other non-commercial uses permitted by copyright law.`}
-        />
-      </ProjectFooter>
-      <Footer mainColor={project.mainColor} />
+      <Footer />
     </ProjectLayoutContainer>
   );
 };

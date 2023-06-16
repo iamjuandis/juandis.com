@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import COLORS from '../../../assets/style/colors';
 
 export const PageLayoutContainer = styled.div`
-  background: ${(props) => props.theme.background};
+  background: ${COLORS.white_cloud};
+  padding-top: 110px;
   width: 100%;
 `;
 

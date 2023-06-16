@@ -1,113 +1,46 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { darken } from 'polished';
-import useDarkMode from 'use-dark-mode';
-import COLOR from '../../assets/style/colors';
-import { ProjectMainTypes } from '../../types/interfaces';
-import Headline from '../headline';
-import Paragraph from '../paragraph';
+import { Lock } from 'react-feather';
+import { ProjectMainInterface } from '../../types/interfaces';
 import {
   ProjectCardContainer,
-  ProjectCardCoverContainer,
   ProjectCardCoverImage,
   ProjectCardTextContainer,
   ProjectSkillElement,
-  ProjectSkillsContainer,
+  ProtectedLabel,
 } from './styled';
-
-export interface ProjectCardComponentTypes {
-  gridRange?: any[];
-  background?: string;
-  mainColor?: string;
-}
-
-type ProjectCardType = ProjectMainTypes & ProjectCardComponentTypes;
+import COLORS from '../../assets/style/colors';
 
 const ProjectCard = ({
-  mainColor,
-  client,
-  headline,
+  company,
+  featuredImage,
+  protectedProject,
+  role,
   slug,
-  skills,
-  images,
-  gridRange,
-}: ProjectCardType) => {
-  const darkmode = useDarkMode();
+  title,
+  year,
+}: ProjectMainInterface) => {
   return (
-    <Link href={`/projects/${slug}`} passHref>
-      <ProjectCardContainer title={client} gridRange={gridRange}>
-        <ProjectCardCoverContainer background={mainColor} gridRange={gridRange}>
-          <ProjectCardCoverImage gridRange={gridRange}>
-            <Image
-              alt={client}
-              height={gridRange && gridRange[2] === 'big' ? 1091 : 1000}
-              objectFit="cover"
-              objectPosition="top center"
-              quality={100}
-              src={
-                gridRange && gridRange[2] === 'big' ? images?.cardImages[1] : images?.cardImages[0]
-              }
-              width={gridRange && gridRange[2] === 'big' ? 1000 : 1139}
-            />
-          </ProjectCardCoverImage>
-        </ProjectCardCoverContainer>
-        <ProjectCardTextContainer
-          background={
-            gridRange && gridRange[2] === 'big'
-              ? 'transparent'
-              : darkmode.value
-              ? darken(0.1, mainColor)
-              : `${mainColor}11`
-          }
-          gridRange={gridRange}
-          mainColor={mainColor}
-        >
-          <Paragraph
-            children={client}
-            color={
-              gridRange && gridRange[2] === 'big'
-                ? COLOR.white_cloud
-                : darkmode.value
-                ? COLOR.white_cloud
-                : mainColor
-            }
-          />
-          <br />
-          <Headline
-            color={
-              gridRange && gridRange[2] === 'big'
-                ? COLOR.white_cloud
-                : darkmode.value
-                ? COLOR.white_cloud
-                : mainColor
-            }
-            typeHeadline="h3"
-            fontSize={30}
-          >
-            {headline}
-          </Headline>
-          <br />
-          {skills && skills.length > 0 && (
-            <ProjectSkillsContainer>
-              {skills.slice(0, 2).map((skill: string, idx: number) => (
-                <ProjectSkillElement
-                  mainColor={
-                    gridRange && gridRange[2] === 'big'
-                      ? COLOR.white_cloud
-                      : darkmode.value
-                      ? COLOR.white_cloud
-                      : mainColor
-                  }
-                  key={idx}
-                >
-                  {skill}
-                </ProjectSkillElement>
-              ))}
-            </ProjectSkillsContainer>
-          )}
-        </ProjectCardTextContainer>
-      </ProjectCardContainer>
-    </Link>
+    <ProjectCardContainer href={`/work/${slug}`} title={title}>
+      <ProjectCardCoverImage
+        alt={featuredImage.altText}
+        quality={100}
+        src={featuredImage.sourceUrl}
+        width={996}
+        height={450}
+      />
+      {protectedProject && (
+        <ProtectedLabel>
+          <Lock size={20} color={COLORS.white_cloud} /> <span>Protected</span>
+        </ProtectedLabel>
+      )}
+      <ProjectCardTextContainer>
+        <p className="text-large semibold">{company}</p>
+        <h3>{title}</h3>
+        <ProjectSkillElement>
+          {role && <p className="text-large">{role}</p>}
+          {year && <p className="text-large">{year}</p>}
+        </ProjectSkillElement>
+      </ProjectCardTextContainer>
+    </ProjectCardContainer>
   );
 };
 

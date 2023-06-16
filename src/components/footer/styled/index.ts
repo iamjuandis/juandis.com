@@ -1,27 +1,37 @@
 import styled from 'styled-components';
+import COLORS from '../../../assets/style/colors';
 
 export const FooterContainer = styled.footer`
-  padding: 100px 0;
+  padding: 48px 0;
   width: 100%;
-  @media screen and (max-width: 510px) {
-    padding: 50px 0;
+  p {
+    color: ${COLORS.green_pale};
+    margin: auto;
+    max-width: 996px;
+    padding: 48px;
+    text-align: center;
+    width: calc(100% - 96px);
   }
 `;
 
 export const FooterContent = styled.div`
-  display: flex;
-  flex-direction: column;
+  background: ${COLORS.green_opacity};
+  border-radius: 32px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  grid-column-gap: 32px;
+  align-items: center;
   margin: auto;
-  max-width: 1200px;
-  width: calc(100% - 60px);
+  max-width: 996px;
+  padding: 48px;
+  width: calc(100% - 96px);
 `;
 
 export const FooterTextContent = styled.div`
-  display: grid;
-  grid-template-columns: 6fr 4fr 4fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
   width: 100%;
   @media screen and (max-width: 510px) {
     grid-template-columns: 1fr;

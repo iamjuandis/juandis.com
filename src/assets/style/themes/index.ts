@@ -1,11 +1,13 @@
 import { DefaultTheme } from 'styled-components';
-import COLOR from '../colors';
+import COLORS from '../colors';
 
 export const lightTheme: DefaultTheme = {
-  text: COLOR.blue_universe,
-  background: '#FFFFFF',
+  text: COLORS.green_dark,
+  background: COLORS.white_base,
+  containerBackground: COLORS.gray_light,
 };
 export const darkTheme: DefaultTheme = {
-  text: COLOR.white_dark,
-  background: '#0b151c',
+  text: COLORS.white_cloud,
+  background: COLORS.black_background,
+  containerBackground: COLORS.green_dark,
 };

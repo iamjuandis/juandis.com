@@ -1,39 +1,30 @@
-import { handleGridRangeProject } from '../../assets/utils/components';
-import { ProjectMainTypes, ProjectsType } from '../../types/interfaces';
-import Headline from '../headline';
 import ProjectCard from '../projectCard';
-import { ProjectsContainer, ProjectsContent, ProjectsHeadlineContainer } from './styled';
+import { ProjectsContainer, ProjectsContent } from './styled';
 
 interface Props {
-  projects: ProjectsType;
+  projects: any;
 }
 
 const ProjectsBanner = ({ projects }: Props) => {
   return (
     <ProjectsContainer id="projects">
       <ProjectsContent>
-        <ProjectsHeadlineContainer>
-          <Headline typeHeadline="h2">Featured projects</Headline>
-        </ProjectsHeadlineContainer>
+        <h2>Featured work</h2>
         {projects &&
-          Object.entries(projects)?.map(
-            ([key, project]: [string, ProjectMainTypes], index: number) => {
-              const lenghtProjects = Object?.entries(projects)?.length;
-              return (
-                <ProjectCard
-                  client={project?.client}
-                  gridRange={handleGridRangeProject(lenghtProjects, index)}
-                  slug={project?.slug}
-                  skills={project?.skills}
-                  images={project?.images}
-                  key={`${key}-${index}`}
-                  mainColor={project?.mainColor}
-                  headline={project?.headline}
-                  years={project?.years}
-                />
-              );
-            }
-          )}
+          projects.map((project: any, index: number) => {
+            return (
+              <ProjectCard
+                company={project?.acfProjects.company}
+                featuredImage={project?.featuredImage.node}
+                key={`${index}`}
+                protectedProject={project?.acfProjects.protected}
+                role={project?.acfProjects.role}
+                slug={project?.slug}
+                title={project?.title}
+                year={project?.acfProjects.year}
+              />
+            );
+          })}
       </ProjectsContent>
     </ProjectsContainer>
   );

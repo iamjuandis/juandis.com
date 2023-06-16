@@ -14,10 +14,10 @@ export const DotComponent = styled.div<DotsStyledProps>`
   width: ${(props) => (props.active ? '15px' : '10px')};
   height: ${(props) => (props.active ? '15px' : '10px')};
   background: ${(props) =>
-    props.active ? (props.mainColor ? props.mainColor : COLOR.blue_universe) : COLOR.white_cloud};
+    props.active ? (props.mainColor ? props.mainColor : COLOR.green_dark) : COLOR.white_cloud};
   transition: all ease 0.3s;
   &:hover {
-    background: ${COLOR.blue_universe};
+    background: ${COLOR.green_dark};
     transform: scale(${(props) => (props.active ? 1 : 1.4)});
   }
 
@@ -29,7 +29,7 @@ export const DotComponent = styled.div<DotsStyledProps>`
 `;
 
 export const DotsComponent = styled.div`
-  background: ${`${COLOR.blue_universe}44`};
+  background: ${`${COLOR.green_dark}44`};
   border-radius: 50px;
   display: flex;
   align-items: center;

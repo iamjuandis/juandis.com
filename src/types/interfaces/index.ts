@@ -1,5 +1,15 @@
 import { ReactNode } from 'react';
 
+export interface ButtonType {
+  label: string;
+  route?: any;
+  variant: variantButtonTypes;
+  onClick?: any;
+  target?: linkTargetTypes;
+}
+export type variantButtonTypes = 'primary' | 'secondary' | 'tiertiary';
+type linkTargetTypes = '_blank' | '_self';
+
 export interface NavOptionType {
   label?: string;
   highlightColor?: string;
@@ -15,21 +25,20 @@ export interface ParagraphType {
   color?: string;
   columns?: number;
   highlightColor?: string;
-  size?: number;
+  paragraphSize?: paragrapSizeTypes;
   children?: any;
 }
+
+type paragrapSizeTypes = 'text-huge' | 'text-large' | 'text-medium' | 'text-small' | 'text-caption';
 
 export interface HeadlineType {
   children?: string;
   color?: string;
-  fontSize?: number;
-  fontWeight?: number;
-  typeHeadline: string;
 }
 
 export interface PageLayoutTypes {
   children: ReactNode;
-  title: string;
+  title?: string;
   description?: string;
   image?: string;
 }
@@ -94,20 +103,25 @@ export interface ProjectInternalInfoTypes {
 }
 
 export interface YearsTypes {
-  first: string | number;
-  last?: string | number;
+  first: string;
+  last?: string;
 }
-export interface ProjectMainTypes {
-  client: string;
-  headline: string;
-  images: ProjectImagesTypes;
-  mainColor: string;
-  skills: string[];
+export interface ProjectMainInterface {
+  company: string;
+  featuredImage: FeaturedImageTypes;
+  protectedProject: boolean;
+  role: string;
   slug: string;
-  years?: YearsTypes;
+  title: string;
+  year: string | number;
 }
 
-export type ProjectAllTypes = ProjectMainTypes & ProjectInternalInfoTypes;
+export interface FeaturedImageTypes {
+  altText: string;
+  sourceUrl: string;
+}
+
+export type ProjectAllTypes = ProjectInternalInfoTypes;
 
 export interface ProjectsType {
   [key: string]: ProjectAllTypes;
@@ -128,21 +142,29 @@ export interface MetaInfoProps {
   previewImage: string;
 }
 
-export interface ExperienceProps {
-  country?: string;
+// ListBanner
+export interface ListBannerProps {
+  location?: string;
   company: string;
-  position: string;
+  title: string;
   years: YearsTypes;
 }
 
 export interface HeaderTypes {
-  bgColor?: string;
-  scrollTop?: number;
-  limitScroll?: number;
   isOpen?: boolean;
 }
 
 export interface ThemeMode {
   darkMode: boolean;
   callback: () => void;
+}
+
+// Project Main Banner Types
+export interface ProjectMainBannerInterface {
+  title: string;
+  company: string;
+  companyImage?: string;
+  location: string;
+  role: string;
+  year: number;
 }

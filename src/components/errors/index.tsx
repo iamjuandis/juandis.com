@@ -1,5 +1,4 @@
 import COLOR from '../../assets/style/colors';
-import Headline from '../headline';
 import Paragraph from '../paragraph';
 import { ErrorContainer, ErrorContent } from './styled';
 
@@ -11,16 +10,13 @@ const Errors = ({ typeError }: ErrorsType) => {
   return (
     <ErrorContainer>
       <ErrorContent>
-        <Headline
-          children={
-            typeError === 404
-              ? `Not found`
-              : typeError === 500
-              ? `Internal Server Error`
-              : `Something is not working`
-          }
-          typeHeadline="h1"
-        />
+        <h1>
+          {typeError === 404
+            ? `Not found`
+            : typeError === 500
+            ? `Internal Server Error`
+            : `Something is not working`}
+        </h1>
         <Paragraph children={`Error ${typeError}`} />
         <Paragraph
           children={
@@ -29,9 +25,8 @@ const Errors = ({ typeError }: ErrorsType) => {
               : `There is an error on the server. Hope it's fixed soon.`
           }
         />
-        <br />
         <Paragraph
-          highlightColor={COLOR.yellow_sunrise}
+          highlightColor={COLOR.green_vibrant}
           children={`<a href="/" title="Back home">Back home</a>`}
         />
       </ErrorContent>

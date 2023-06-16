@@ -1,9 +1,9 @@
     {
-  "extends": ["netflix", "prettier", "eslint:recommended"],
+  "extends": ["prettier", "eslint:recommended"],
   "plugins": ["prettier", "react"],
   "rules": {
-    "prettier/prettier": ["error"],
-    "react/jsx-uses-react": "error",
+    "prettier/prettier": ["warn"],
+    "react/jsx-uses-react": "warn",
     "react/jsx-uses-vars": "error",
     "no-console": ["error", { "allow": ["info", "warn", "error"] }],
     "no-var": "error"

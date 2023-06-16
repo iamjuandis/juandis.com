@@ -1,12 +1,18 @@
 import { ParagraphType } from '../../types/interfaces';
 import { ParagraphContainer } from './styled';
 
-const Paragraph = ({ color, columns = 1, highlightColor, size, children }: ParagraphType) => (
+const Paragraph = ({
+  color,
+  columns = 1,
+  highlightColor,
+  paragraphSize,
+  children,
+}: ParagraphType) => (
   <ParagraphContainer
+    className={paragraphSize}
     columns={columns}
     highlightColor={highlightColor}
     color={color}
-    size={size}
     dangerouslySetInnerHTML={{ __html: children }}
   />
 );

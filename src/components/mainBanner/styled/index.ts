@@ -5,75 +5,38 @@ export const MainBannerContainer = styled.div`
 `;
 
 export const MainBannerContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-column-gap: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  max-width: 1200px;
-  padding-top: 100px;
-  width: calc(100% - 60px);
-  @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
+  max-width: 996px;
+  padding: 48px;
+  row-gap: 32px;
+  width: 100%;
 `;
 
 export const HeadlineMainBanner = styled.div`
-  grid-column: 2 / 11;
   width: 100%;
   .color {
-    font-size: 1em;
-    transition: all ease 0.3s;
-    position: relative;
-    &::after {
-      bottom: 0;
-      content: ' ';
-      background: linear-gradient(90deg, #ffca00 25%, #09f 50%, #f00 75%, #ffca00 100%);
-      background-size: 200% auto;
-      height: 3px;
-      left: 0;
-      margin: auto;
-      width: 0%;
-      opacity: 0;
-      position: absolute;
-      transition: all ease 0.3s;
-      animation: shine 1s linear infinite;
-    }
+    background: linear-gradient(to right, #16c973 20%, #ffca00 30%, #62957c 70%, #16c973 80%);
+    animation: shine 10s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 500% auto;
+    -webkit-text-fill-color: transparent;
+    transition: all ease 0.5s;
   }
-  &:hover {
-    .color {
-      &::after {
-        opacity: 1;
-        transition: all ease 0.3s;
-        width: 100%;
-      }
-    }
-  }
-  @media screen and (max-width: 700px) {
-    grid-column: 1 / -1;
-    .color {
-      &::after {
-        height: 2px;
-        opacity: 1;
-        transition: all ease 0.3s;
-        width: 100%;
-      }
-    }
-  }
+
   @keyframes shine {
-    to {
-      background-position: 200% center;
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
     }
   }
 `;
 
 export const ParagraphsContainerMainBanner = styled.div`
-  grid-column: 3 / 11;
-  padding-top: 60px;
   width: 100%;
-  @media screen and (max-width: 700px) {
-    grid-column: 1 / -1;
-    grid-template-columns: 1fr;
-    grid-row-gap: 30px;
-    padding-top: 30px;
-  }
 `;

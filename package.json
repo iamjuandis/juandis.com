@@ -1,62 +1,31 @@
 {
   "name": "juandis-portfolio",
-  "version": "22.06.0",
+  "version": "2.0.1.21",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "prettier": "prettier --write src/",
-    "eslint": "eslint './src/**/*.{ts,tsx,js,jsx}'"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,yml}": [
-      "npm run prettier",
-      "eslint './src/**/*.{ts,tsx,js,jsx}",
-      "git add"
-    ],
-    "*.{md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@types/styled-components": "^5.1.4",
-    "next": "latest",
-    "polished": "^4.1.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-feather": "^2.0.9",
-    "styled-components": "^5.2.0",
-    "use-dark-mode": "^2.3.1"
+    "@types/styled-components": "^5.1.26",
+    "next": "^13.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
+    "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/eslint-parser": "^7.13.10",
+    "@babel/core": "^7.21.8",
     "@types/gtag.js": "0.0.3",
-    "@types/node": "^12.12.21",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.2",
-    "eslint": "^7.30.0",
-    "eslint-config-netflix": "^2.0.0",
-    "eslint-config-next": "^11.0.1",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.5",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "prettier": "^2.1.2",
-    "typescript": "^4.3.2"
+    "@types/node": "^12.20.55",
+    "@types/react": "^16.14.41",
+    "@types/react-dom": "^16.9.19",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.41.0",
+    "lint-staged": "^10.5.4",
+    "typescript": "^4.9.5"
   }
 }
