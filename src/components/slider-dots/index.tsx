@@ -1,3 +1,4 @@
+import React from 'react';
 import { DotComponent, DotsComponent } from './styled';
 
 interface DotProps {

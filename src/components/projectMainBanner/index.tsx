@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import { ProjectMainBannerInterface } from '../../types/interfaces';
 import { BannerContainer, MetaInfoBanner, MetaInfoItemStyle } from './styled';

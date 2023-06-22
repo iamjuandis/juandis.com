@@ -1,3 +1,4 @@
+import React from 'react';
 import { LoadingContainer, LoadingContent, LoadingSkeleton } from './styled';
 
 const Loading = () => {
