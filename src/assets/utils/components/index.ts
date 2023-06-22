@@ -1,3 +1,4 @@
+import { css } from 'styled-components';
 import { variantButtonTypes } from '../../../types/interfaces';
 import COLORS from '../../style/colors';
 
@@ -111,3 +112,10 @@ export const ButtonVariantColor = (variant: variantButtonTypes) => {
       };
   }
 };
+
+// Mobile media queries
+export const responsiveMobile = (styles: any) => css`
+  @media screen and (max-width: 724px) {
+    ${styles}
+  }
+`;

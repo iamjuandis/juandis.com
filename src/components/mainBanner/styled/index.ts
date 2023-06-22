@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const MainBannerContainer = styled.div`
   width: 100%;
@@ -13,6 +14,10 @@ export const MainBannerContent = styled.div`
   padding: 48px;
   row-gap: 32px;
   width: 100%;
+  ${responsiveMobile(css`
+    padding: 16px;
+    row-gap: 16px;
+  `)}
 `;
 
 export const HeadlineMainBanner = styled.div`

@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLOR from '../../../assets/style/colors';
 import Link from 'next/link';
 import Image from 'next/image';
 import COLORS from '../../../assets/style/colors';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 interface ProjectCardLocalInterface {
   title: string;
@@ -38,12 +39,13 @@ export const ProjectCardCoverImage = styled(Image)`
       }
     }
   }
-  @media screen and (max-width: 750px) {
+  ${responsiveMobile(css`
+    border-radius: 16px;
     display: flex;
     height: 100%;
     object-position: center;
     position: relative;
-  }
+  `)}
 `;
 
 export const ProjectCardTextContainer = styled.div`
@@ -58,13 +60,15 @@ export const ProjectCardTextContainer = styled.div`
     color: ${(props) => props.theme.text};
     width: 100%;
   }
-  @media screen and (max-width: 750px) {
+  ${responsiveMobile(css`
     position: relative;
+    padding: 16px 0;
+    row-gap: 4px;
     h3 {
       text-shadow: none;
       width: 100%;
     }
-  }
+  `)}
 `;
 
 export const ProjectSkillElement = styled.div`
@@ -100,4 +104,9 @@ export const ProtectedLabel = styled.div`
   span {
     color: ${COLORS.white_cloud};
   }
+  ${responsiveMobile(css`
+    top: 16px;
+    right: 16px;
+    padding: 8px 16px;
+  `)}
 `;
