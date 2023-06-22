@@ -15,8 +15,11 @@ export const ButtonLinkStyle = styled(Link)<ButtonStyleType>`
   span,
   label {
     color: ${(props) => ButtonVariantColor(props.variant)?.default.font};
+    display: block;
     font-weight: 600;
     white-space: nowrap;
+    text-align: center;
+    width: 100%;
   }
   &:hover {
     background-color: ${(props) => ButtonVariantColor(props.variant)?.hover.background};
@@ -39,8 +42,11 @@ export const ButtonClickStyle = styled.button<ButtonStyleType>`
   span,
   label {
     color: ${(props) => ButtonVariantColor(props.variant)?.default.font};
+    display: block;
     font-weight: 600;
     white-space: nowrap;
+    text-align: center;
+    width: 100%;
   }
   &:hover {
     background-color: ${(props) => ButtonVariantColor(props.variant)?.hover.background};

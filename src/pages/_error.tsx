@@ -1,3 +1,4 @@
+import React from 'react';
 import Errors from '../components/errors';
 import PageLayout from '../layouts/pageLayout/index';
 

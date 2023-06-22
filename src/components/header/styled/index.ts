@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLORS from '../../../assets/style/colors';
 import { HeaderTypes } from '../../../types/interfaces';
 import Link from 'next/link';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const HeaderContainer = styled.header<HeaderTypes>`
   background: transparent;
@@ -21,9 +22,9 @@ export const HeaderContent = styled.div`
   max-width: 1440px;
   padding: 32px;
   width: 100%;
-  @media screen and (max-width: 640px) {
+  ${responsiveMobile(css`
     padding: 16px;
-  }
+  `)}
 `;
 
 export const LogoContainer = styled(Link)`
@@ -56,6 +57,7 @@ export const NavContainer = styled.nav<HeaderTypes>`
   flex-direction: row;
   padding-left: 24px;
   @media screen and (max-width: 640px) {
+    background: hsla(148, 60%, 98%, 1);
     backdrop-filter: blur(px);
     box-shadow: 0px 0px 50px #00000022;
     box-sizing: border-box;
@@ -65,10 +67,11 @@ export const NavContainer = styled.nav<HeaderTypes>`
     left: 16px;
     height: fit-content;
     opacity: ${(props) => (props.isOpen ? 1 : 0)};
-    padding: 48px;
+    padding: 24px;
     position: fixed;
     pointer-events: ${(props) => (props.isOpen ? 'all' : 'none')};
     right: 16px;
+    row-gap: 16px;
     top: ${(props) => (props.isOpen ? '80px' : '-100vh')};
     z-index: 99;
   }

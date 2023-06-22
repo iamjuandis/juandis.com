@@ -74,13 +74,13 @@ h6 {
 
 @media screen and (max-width: 724px) {
   h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 52px;
   }
   
   h2 {
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 36px;
+    line-height: 48px;
   }
   
   h3 {

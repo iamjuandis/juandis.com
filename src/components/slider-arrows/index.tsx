@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowComponent } from './styled';
 import * as Icon from 'react-feather';
 import COLOR from '../../assets/style/colors';

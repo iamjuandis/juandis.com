@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { NAV_OPTIONS } from '../../assets/content/index';
 import { PROFILE_JUAN } from '../../assets/images';

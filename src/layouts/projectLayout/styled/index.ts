@@ -1,11 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLORS from '../../../assets/style/colors';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const ProjectLayoutContainer = styled.section`
   background: ${COLORS.white_cloud};
   padding-top: 110px;
   width: 100%;
-  /* @media (prefers-color-scheme: dark) {
+  ${responsiveMobile(css`
+    padding-top: 80px;
+  `)}/* @media (prefers-color-scheme: dark) {
     background: ${COLORS.black_background};
   } */
 `;

@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLORS from '../../../assets/style/colors';
 import Image from 'next/image';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const ProjectAuthFormContainer = styled.section`
   align-items: center;
@@ -18,6 +19,13 @@ export const ProjectAuthFormContainer = styled.section`
   p {
     color: ${COLORS.black_text};
   }
+  ${responsiveMobile(css`
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 24px;
+    padding: 16px;
+    width: 100%;
+  `)}
 `;
 
 export const ProjectFormContent = styled.div`
@@ -25,6 +33,9 @@ export const ProjectFormContent = styled.div`
   flex-direction: column;
   row-gap: 32px;
   width: auto;
+  ${responsiveMobile(css`
+    row-gap: 16px;
+  `)}
 `;
 
 export const FormAuth = styled.form`
@@ -46,11 +57,20 @@ export const FormAuth = styled.form`
     color: ${COLORS.red_vivid};
     padding-top: 4px;
   }
+  ${responsiveMobile(css`
+    .input-container {
+      column-gap: 16px;
+      margin-top: 16px;
+      button {
+        width: fit-content;
+      }
+    }
+  `)}
 `;
 
 export const InputField = styled.input`
   border: 2px solid ${COLORS.gray_medium};
-  border-radius: 12px;
+  border-radius: 32px;
   box-sizing: border-box;
   background: ${COLORS.gray_light};
   font-size: 16px;
@@ -68,12 +88,14 @@ export const InputField = styled.input`
   }
 `;
 
+// PROJECT PREVIEW
+
 export const ProjectPreview = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 400px;
+  height: auto;
   width: 100%;
   .texts-prev {
     mask: linear-gradient(90deg, black, black, transparent);
@@ -84,7 +106,7 @@ export const ProjectPreview = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: 16px;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0px;
     padding: 24px;
@@ -104,6 +126,7 @@ export const ProjectPrevImage = styled(Image)`
   height: 100%;
   object-fit: cover;
   object-position: center;
+  position: absolute;
 `;
 
 export const IconPrev = styled.div`
@@ -114,4 +137,5 @@ export const IconPrev = styled.div`
   background: ${COLORS.white_cloud};
   width: 48px;
   height: 48px;
+  min-height: 48px;
 `;

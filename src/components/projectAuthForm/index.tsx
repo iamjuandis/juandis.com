@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import ButtonLink from '../buttonLink';
 import {
@@ -44,7 +45,7 @@ const ProjectAuthForm = ({
               data-lpignore
             />
 
-            <ButtonLink onClick={onSubmitForm} label="Enter password" variant="primary" />
+            <ButtonLink onClick={onSubmitForm} label="Enter" variant="primary" />
           </div>
           {errorPassword && <p className="error-message">Oops! Wrong password. Try again.</p>}
         </FormAuth>

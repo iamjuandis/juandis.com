@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const ProjectsContainer = styled.div`
   width: 100%;
-  @media screen and (max-width: 750px) {
-    padding-top: 50px;
-  }
+  ${responsiveMobile(css`
+    padding: 48px 0;
+  `)}
 `;
 
 export const ProjectsContent = styled.div`
@@ -16,4 +17,8 @@ export const ProjectsContent = styled.div`
   max-width: 996px;
   padding: 48px;
   width: 100%;
+  ${responsiveMobile(css`
+    padding: 16px;
+    row-gap: 16px;
+  `)}
 `;

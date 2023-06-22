@@ -1,3 +1,4 @@
+import React from 'react';
 import ProjectCard from '../projectCard';
 import { ProjectsContainer, ProjectsContent } from './styled';
 

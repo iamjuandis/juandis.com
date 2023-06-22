@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const BannerContainer = styled.section`
   align-items: center;
@@ -27,10 +28,25 @@ export const BannerContainer = styled.section`
       background-position: 0% 50%;
     }
   }
+
+  ${responsiveMobile(css`
+    flex-direction: column;
+    row-gap: 32px;
+    height: auto;
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 48px 24px;
+    width: calc(100% - 32px);
+  `)}
 `;
 
 export const ButtonsBanner = styled.div`
   display: flex;
   flex-direction: row;
   column-gap: 32px;
+  ${responsiveMobile(css`
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+  `)}
 `;

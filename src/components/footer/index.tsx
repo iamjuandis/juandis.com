@@ -1,3 +1,4 @@
+import React from 'react';
 import { FooterContainer, FooterContent, FooterTextContent } from './styled';
 import ButtonLink from '../buttonLink';
 

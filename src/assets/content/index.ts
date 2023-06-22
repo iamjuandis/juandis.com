@@ -81,7 +81,7 @@ export const EXPERIENCE: ListBannerProps[] = [
     title: 'Senior Product Designer',
     years: {
       first: '2022',
-      last: 'Present',
+      last: '2023',
     },
   },
   {
@@ -90,7 +90,7 @@ export const EXPERIENCE: ListBannerProps[] = [
     title: 'Product Designer & Design Systems',
     years: {
       first: '2021',
-      last: 'Present',
+      last: '2022',
     },
   },
   {
@@ -99,7 +99,7 @@ export const EXPERIENCE: ListBannerProps[] = [
     title: 'Product Designer',
     years: {
       first: '2021',
-      last: 'Present',
+      last: '2023',
     },
   },
   {
@@ -152,8 +152,8 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Creative Designer',
     years: {
-      first: '07/2017',
-      last: '12/2018',
+      first: '2017',
+      last: '2018',
     },
   },
   {

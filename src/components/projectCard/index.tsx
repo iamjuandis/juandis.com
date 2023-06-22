@@ -1,3 +1,4 @@
+import React from 'react';
 import { Lock } from 'react-feather';
 import { ProjectMainInterface } from '../../types/interfaces';
 import {

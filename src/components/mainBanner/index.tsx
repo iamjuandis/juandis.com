@@ -1,3 +1,4 @@
+import React from 'react';
 import { MainBannerType } from '../../types/interfaces';
 import Paragraph from '../paragraph';
 import {
