@@ -4,7 +4,7 @@ import { responsiveMobile } from '../../../assets/utils/components';
 export const ProjectsContainer = styled.div`
   width: 100%;
   ${responsiveMobile(css`
-    padding-top: 48px;
+    padding: 48px 0;
   `)}
 `;
 

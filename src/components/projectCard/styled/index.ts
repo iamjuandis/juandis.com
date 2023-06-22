@@ -63,7 +63,6 @@ export const ProjectCardTextContainer = styled.div`
   ${responsiveMobile(css`
     position: relative;
     padding: 16px 0;
-    row-gap: 4px;
     h3 {
       text-shadow: none;
       width: 100%;

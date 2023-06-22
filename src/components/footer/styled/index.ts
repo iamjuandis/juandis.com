@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLORS from '../../../assets/style/colors';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const FooterContainer = styled.footer`
   padding: 48px 0;
@@ -12,6 +13,10 @@ export const FooterContainer = styled.footer`
     text-align: center;
     width: calc(100% - 96px);
   }
+  ${responsiveMobile(css`
+    padding: 24px 0;
+    width: 100%;
+  `)}
 `;
 
 export const FooterContent = styled.div`
@@ -26,6 +31,12 @@ export const FooterContent = styled.div`
   max-width: 996px;
   padding: 48px;
   width: calc(100% - 96px);
+  ${responsiveMobile(css`
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: calc(100% - 32px);
+  `)}
 `;
 
 export const FooterTextContent = styled.div`
@@ -33,9 +44,12 @@ export const FooterTextContent = styled.div`
   flex-direction: row;
   column-gap: 32px;
   width: 100%;
-  @media screen and (max-width: 510px) {
-    grid-template-columns: 1fr;
-  }
+  ${responsiveMobile(css`
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-flow: row wrap;
+  `)}
 `;
 
 export const FooterTextGroup = styled.div`

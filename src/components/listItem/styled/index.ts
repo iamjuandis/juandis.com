@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLORS from '../../../assets/style/colors';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const ListItemContainer = styled.div`
   width: 100%;
@@ -19,4 +20,8 @@ export const ListMetaInfo = styled.div`
   p {
     color: ${COLORS.green_pale};
   }
+  ${responsiveMobile(css`
+    display: inline-flex;
+    flex-flow: row wrap;
+  `)}
 `;
