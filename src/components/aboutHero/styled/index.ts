@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const AboutHeroContainer = styled.section`
   display: grid;
@@ -9,6 +10,13 @@ export const AboutHeroContainer = styled.section`
   margin: auto;
   padding: 48px;
   width: calc(100% - 96px);
+  ${responsiveMobile(css`
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 24px;
+    width: 100%;
+  `)}
 `;
 
 export const AboutTitle = styled.div`
