@@ -272,6 +272,21 @@ export const ProjectContent = styled.div`
     flex-direction: column;
   }
 
+  .wp-block-verse {
+    background: ${COLORS.green_opacity};
+    color: ${COLORS.green_pale};
+    padding: 16px 24px;
+    border-radius: 16px;
+    margin: auto;
+    margin-bottom: 24px;
+    max-width: 680px;
+    width: 100%;
+    &::before {
+      content: 'ℹ️';
+      margin-right: 8px;
+    }
+  }
+
   // Cusotmized Class Names
   .impact-card {
     background: ${COLORS.green_opacity};
