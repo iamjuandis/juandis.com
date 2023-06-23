@@ -44,6 +44,10 @@ export const LogoContainer = styled(Link)`
     flex-direction: column;
     padding: 0 24px 0 16px;
   }
+
+  img {
+    border-radius: 40px;
+  }
 `;
 
 export const NavContainer = styled.nav<HeaderTypes>`
