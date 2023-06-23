@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import COLORS from '../../../assets/style/colors';
+import { responsiveMobile } from '../../../assets/utils/components';
 
 export const BannerContainer = styled.div`
   background-color: ${COLORS.green_opacity};
@@ -14,13 +15,23 @@ export const BannerContainer = styled.div`
   margin-bottom: 48px;
   max-width: 996px;
   width: calc(100% - 96px);
+  ${responsiveMobile(css`
+    border-radius: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+    row-gap: 16px;
+    width: calc(100% - 32px);
+  `)}
 `;
 
 export const MetaInfoBanner = styled.div`
-  display: flex;
-  flex-direction: row;
-  column-gap: 32px;
+  display: inline-flex;
+  flex-flow: row wrap;
+  gap: 32px;
   width: 100%;
+  ${responsiveMobile(css`
+    gap: 16px;
+  `)}
 `;
 
 export const MetaInfoItemStyle = styled.div`

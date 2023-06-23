@@ -24,10 +24,13 @@ const ProjectAuthForm = ({
   return (
     <ProjectAuthFormContainer>
       <ProjectFormContent>
-        <h2>Password protected work</h2>
-        <p>
+        <h2>Protected work</h2>
+        <p className="text-large">
           If you have a password, enter it below. Otherwise, request access by sending an email to{' '}
-          <Link href="mailto:me@juandis.com" title="me@juandis.com">
+          <Link
+            href="mailto:me@juandis.com?subject=Portfolio password request - [YOUR NAME AND COMPANY]"
+            title="Request password"
+          >
             me@juandis.com
           </Link>
           .
@@ -40,7 +43,7 @@ const ProjectAuthForm = ({
               name="password"
               id="password"
               onChange={onChangeInput}
-              placeholder="Enter the password"
+              placeholder="Type password"
               value={passwordValue}
               data-lpignore
             />

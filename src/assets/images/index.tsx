@@ -1,5 +1,5 @@
 export const PROFILE_JUAN =
-  'https://res.cloudinary.com/juandis/image/upload/v1685114483/portfolio/assets/Juan-David-profile-image_124.png';
+  'https://res.cloudinary.com/juandis/image/upload/v1687528857/portfolio/assets/profile-memoji_yodcwp.jpg';
 
 export const LOGO_JUANDIS = (
   <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">

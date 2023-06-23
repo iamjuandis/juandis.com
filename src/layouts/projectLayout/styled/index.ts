@@ -272,6 +272,22 @@ export const ProjectContent = styled.div`
     flex-direction: column;
   }
 
+  .wp-block-verse {
+    background: ${COLORS.green_opacity};
+    box-sizing: border-box;
+    color: ${COLORS.green_pale};
+    padding: 16px 24px;
+    border-radius: 16px;
+    margin: auto;
+    margin-bottom: 24px;
+    max-width: 680px;
+    width: 100%;
+    &::before {
+      content: 'ℹ️';
+      margin-right: 8px;
+    }
+  }
+
   // Cusotmized Class Names
   .impact-card {
     background: ${COLORS.green_opacity};
@@ -281,6 +297,105 @@ export const ProjectContent = styled.div`
     margin-bottom: 16px;
     width: 100%;
   }
+  ${responsiveMobile(css`
+    // Width
+    & > p,
+    & > hr,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6,
+    & > img,
+    & > table,
+    & > div,
+    & > ul,
+    & > ol {
+      width: calc(100% - 32px);
+    }
+
+    figure {
+      margin-bottom: 16px;
+      figcaption {
+      }
+
+      img {
+      }
+
+      &.alignfull {
+        max-width: 100% !important;
+        img {
+          border-radius: 0px;
+        }
+      }
+      &.alignwide {
+        max-width: 1200px !important;
+        padding: 0 16px;
+      }
+      &.size-large {
+        max-width: 680px;
+      }
+
+      // Pullquote
+      &.wp-block-pullquote {
+        blockquote {
+          border-radius: 16px;
+          padding: 24px;
+          box-sizing: border-box;
+          width: calc(100% - 32px);
+          p {
+            font-size: 24px;
+            line-height: 130%;
+            text-align: center;
+            width: 100%;
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+
+    blockquote {
+      box-sizing: border-box;
+      padding: 16px 24px;
+      margin-bottom: 24px;
+      width: 100%;
+      p {
+        font-size: 24px;
+        line-height: 32px;
+        &::before {
+          content: '“\\A';
+          font-size: 64px;
+          line-height: 64px;
+          margin-bottom: -20px;
+        }
+      }
+      cite {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .wp-block-columns {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+    .is-layout-flow {
+    }
+
+    .is-layout-flex {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    .is-vertical {
+    }
+    .wp-block-verse {
+      width: calc(100% - 32px);
+    }
+  `)}
 `;
 
 export const ProjectFooter = styled.div`
@@ -288,4 +403,8 @@ export const ProjectFooter = styled.div`
   margin-top: 50px;
   max-width: 680px;
   width: calc(100% - 96px);
+  ${responsiveMobile(css`
+    margin-top: 32px;
+    width: calc(100% - 32px);
+  `)}
 `;
