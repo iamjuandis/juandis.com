@@ -124,7 +124,7 @@ export async function getAllProjectsSlug(categoryName = 'work') {
 export async function getAllProjects(preview: any, categoryName = 'work') {
   const data = await fetchAPI(
     `query getAllProjects($categoryName: String) {
-      posts(where: {categoryName: $categoryName}) {
+      posts(where: {categoryName: $categoryName, orderby: {field: DATE, order: DESC}}) {
         nodes {
           featuredImage {
             node {

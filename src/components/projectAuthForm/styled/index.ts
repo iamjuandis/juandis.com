@@ -100,6 +100,7 @@ export const ProjectPreview = styled.div`
   .texts-prev {
     mask: linear-gradient(90deg, black, black, transparent);
     backdrop-filter: blur(8px);
+    background-color: hsla(0, 0%, 0%, 0.4);
     border-radius: 24px;
     box-sizing: border-box;
     justify-content: flex-end;
