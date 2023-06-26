@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import COLOR from '../../../assets/style/colors';
 import Link from 'next/link';
 import Image from 'next/image';
 import COLORS from '../../../assets/style/colors';
@@ -12,7 +11,7 @@ interface ProjectCardLocalInterface {
 export const ProjectCardContainer = styled(Link)<ProjectCardLocalInterface>`
   display: flex;
   flex-direction: column;
-  background: ${COLOR.white_cloud};
+  background: ${COLORS.white_cloud};
   position: relative;
   width: 100%;
   @media screen and (min-width: 750px) {
@@ -27,7 +26,7 @@ export const ProjectCardCoverImage = styled(Image)`
   object-fit: cover;
   object-position: center;
   height: auto;
-  max-height: 450px;
+  max-height: 506px;
   width: 100%;
   &:first-child {
     div {
@@ -88,7 +87,7 @@ export const ProjectSkillElement = styled.div`
 `;
 
 export const ProtectedLabel = styled.div`
-  background: hsla(0, 0%, 100%, 0.2);
+  background: ${COLORS.green_opacity};
   -webkit-backdrop-filter: blur(8px) saturate(180%);
   backdrop-filter: blur(8px);
   backface-visibility: hidden;
