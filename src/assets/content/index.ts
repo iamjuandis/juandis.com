@@ -29,15 +29,15 @@ export const NAV_OPTIONS: ButtonType[] = [
 
 export const META_INFO: MetaInfoProps = {
   description:
-    'Juan David is an experienced Product Designer driven to build future and friendly things, based in Colombia.',
+    'Juan David is an experienced Product Designer driven to build a better future for everyone by designing friendly and inclusive products - based in Colombia.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
   mainTitle: 'Juan David Perez · Product Designer & Frontend Hobbyistr',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `<span class="color">Juan David</span> is an experienced Product Designer driven to build future and friendly things, based in Colombia.`,
-  paragraph: `Recently designing intuitive and efficient tools for Walmart, Bridgestone and Design Systems at Verizon.`,
+  headline: `<span class="color">Juan David</span> is an experienced Product Designer driven to build a better future for everyone by designing friendly and inclusive products.`,
+  paragraph: `Recently designing intuitive and efficient tools for Walmart, Bridgestone and Design Systems at Verizon. Based in Colombia.`,
 };
 
 export const OTHER_PROJECTS: ListBannerProps[] = [
