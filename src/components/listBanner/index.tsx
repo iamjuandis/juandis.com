@@ -28,6 +28,7 @@ const ListBanner = ({ list, button, background, title }: Props) => {
               label={button?.label}
               route={button?.route}
               onClick={button?.onClick}
+              target={button?.target}
             />
           )}
         </ListContainerHeadline>

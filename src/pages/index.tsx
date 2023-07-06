@@ -35,7 +35,9 @@ const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
       <CTABanner
         title="Know more about me"
         mainCTA={<ButtonLink label="About me" route="/about" variant="tiertiary" />}
-        secondaryCTA={<ButtonLink label="Get resume" route="/resume" variant="primary" />}
+        secondaryCTA={
+          <ButtonLink label="Get resume" route="/resume" variant="primary" target="_blank" />
+        }
       />
       <ListBanner list={otherProjects} title={`Other projects I've worked on`} />
     </PageLayout>
