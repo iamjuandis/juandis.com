@@ -9,7 +9,7 @@ const Footer = () => {
         <h4>Get in touch</h4>
         <FooterTextContent>
           <ButtonLink route="mailto:me@juandis.com" label="me@juandis.com" variant="tiertiary" />
-          <ButtonLink route="/resume" label="Resume" variant="tiertiary" />
+          <ButtonLink route="/resume" label="Resume" variant="tiertiary" target="_blank" />
           <ButtonLink route="/in" label="LinkedIn" variant="tiertiary" />
         </FooterTextContent>
       </FooterContent>
