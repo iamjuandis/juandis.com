@@ -11,7 +11,7 @@ const AboutPage = ({ experience, introduction }: any) => {
       <ListBanner
         list={experience}
         title="Professional experience"
-        button={{ variant: 'primary', label: 'Get resume', route: '/resume' }}
+        button={{ variant: 'primary', label: 'Get resume', route: '/resume', target: '_blank' }}
       />
     </PageLayout>
   );
