@@ -76,30 +76,39 @@ export const OTHER_PROJECTS: ListBannerProps[] = [
 
 export const EXPERIENCE: ListBannerProps[] = [
   {
-    company: 'Walmart',
-    location: 'United States',
+    company: 'Wandr Studio',
+    location: 'California, United States',
     title: 'Senior Product Designer',
     years: {
-      first: '2022',
-      last: '2023',
-    },
-  },
-  {
-    company: 'Verizon',
-    location: 'United States',
-    title: 'Product Designer & Design Systems',
-    years: {
-      first: '2021',
-      last: '2022',
+      first: 'Jul 2023',
+      last: 'Present',
     },
   },
   {
     company: 'Zemoga Inc.',
-    location: 'Colombia',
-    title: 'Product Designer',
+    location: 'United States',
+    title: 'Senior Product Designer at Walmart',
     years: {
-      first: '2021',
-      last: '2023',
+      first: 'Jan 2022',
+      last: 'Mar 2023',
+    },
+  },
+  {
+    company: 'Zemoga Inc.',
+    location: 'United States',
+    title: 'Product Designer & Design Systems at Verizon',
+    years: {
+      first: 'Aug 2021',
+      last: 'Jan 2022',
+    },
+  },
+  {
+    company: 'Zemoga Inc.',
+    location: 'United States',
+    title: 'UX Designer at University of Arizona Global Campus',
+    years: {
+      first: 'Jun 2021',
+      last: 'Aug 2023',
     },
   },
   {
@@ -107,8 +116,8 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Lead Product Designer & Frontend Developer',
     years: {
-      first: '2020',
-      last: '2021',
+      first: 'Mar 2020',
+      last: 'Jun 2021',
     },
   },
   {
@@ -116,8 +125,8 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Senior Product Designer',
     years: {
-      first: '2019',
-      last: '2021',
+      first: 'Jan 2019',
+      last: 'Mar 2020',
     },
   },
   {
@@ -125,8 +134,8 @@ export const EXPERIENCE: ListBannerProps[] = [
     location: 'Colombia',
     title: 'Product Designer & Frontend Developer',
     years: {
-      first: '2017',
-      last: '2019',
+      first: 'Aug 2017',
+      last: 'Jan 2019',
     },
   },
   {
@@ -141,7 +150,7 @@ export const EXPERIENCE: ListBannerProps[] = [
   {
     company: 'Pródigos',
     location: 'Colombia',
-    title: 'Mobile Developer',
+    title: 'React Mobile Developer',
     years: {
       first: '2018',
       last: '2019',
