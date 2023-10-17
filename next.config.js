@@ -33,6 +33,12 @@ module.exports = {
         destination: 'https://bit.ly/githubjuandis',
         permanent: true,
       },
+      {
+        source: '/ui',
+        destination:
+          'https://www.figma.com/proto/io8Dd3ZIl39kaYQZYZ5nUU/UI-Showcase---Juan-David?page-id=1%3A2&type=design&node-id=1-3&viewport=92%2C446%2C0.05&t=8e2nTeEh4dyGGgrz-1&scaling=contain&starting-point-node-id=1%3A3&mode=design',
+        permanent: true,
+      },
     ];
   },
   env: {
