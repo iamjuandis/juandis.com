@@ -23,6 +23,7 @@ export const MainBannerContent = styled.div`
 export const HeadlineMainBanner = styled.div`
   width: 100%;
   .color {
+    font-family: 'Ogg Text';
     background: linear-gradient(to right, #16c973 20%, #ffca00 30%, #62957c 70%, #16c973 80%);
     animation: shine 10s linear infinite;
     -webkit-background-clip: text;

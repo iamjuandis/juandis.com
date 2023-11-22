@@ -20,9 +20,9 @@ export const NAV_OPTIONS: ButtonType[] = [
     target: '_blank',
   },
   {
-    label: 'Get resume',
+    label: 'Portfolio',
     variant: 'primary',
-    route: '/resume',
+    route: 'https://portfolio.juandis.com',
     target: '_blank',
   },
 ];
@@ -36,8 +36,8 @@ export const META_INFO: MetaInfoProps = {
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `<span class="color">Juan David</span> is an experienced Product Designer driven to build a better future for everyone by designing friendly and inclusive products.`,
-  paragraph: `Recently designing intuitive and efficient tools for Walmart, Bridgestone and Design Systems at Verizon. Based in Colombia.`,
+  headline: `<span class="color">Juan David</span> is a senior product designer from Colombia.`,
+  paragraph: `Juan David has over 7 years of experience designing digital products. Recently collaborated with amazing product design teams at Verizon, Bridgestone, Media.Monks, and Walmart. Currently partnering with startups at Wandr Studio to design intuitive and efficient products.`,
 };
 
 export const OTHER_PROJECTS: ListBannerProps[] = [
