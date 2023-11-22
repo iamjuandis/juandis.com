@@ -3,23 +3,57 @@ import COLORS from '../colors';
 
 export const GlobalStyles = createGlobalStyle`
 
+// SF PRO
+
 @font-face {
   font-family: 'San Francisco Pro Display';
   font-weight: 400;
   src: url(/assets/fonts/sf-pro-display_regular.woff2) format('woff2');
 }
-
 @font-face {
   font-family: 'San Francisco Pro Display';
   font-weight: 600;
   src: url(/assets/fonts/sf-pro-display_semibold.woff2) format('woff2');
 }
-
 @font-face {
   font-family: 'San Francisco Pro Display';
   font-weight: 700;
   src: url(/assets/fonts/sf-pro-display_bold.woff2) format('woff2');
 }
+
+// OGG
+
+@font-face {
+  font-family: 'Ogg Text';
+  font-weight: 200;
+  font-style: normal;
+  src: url(/assets/fonts/ogg-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Ogg Text';
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/fonts/ogg-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Ogg Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/fonts/ogg-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Ogg Text';
+  font-weight: 500;
+  font-style: normal;
+  src: url(/assets/fonts/ogg-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Ogg Text';
+  font-weight: 600;
+  font-style: normal;
+  src: url(/assets/fonts/ogg-Bold.otf) format('opentype');
+}
+
 
 * {
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
@@ -32,6 +66,10 @@ export const GlobalStyles = createGlobalStyle`
   transition: all ease 0.3s;
 }
 
+
+
+
+
 /* Headlines */
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: 'Ogg Text';
   font-size: 64px;
   line-height: 80px;
 }

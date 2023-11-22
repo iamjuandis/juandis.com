@@ -13,6 +13,7 @@ module.exports = {
       'res.cloudinary.com',
       'cloudinary.com',
       'juandis.com',
+      'portfolio.juandis.com',
     ],
   },
   async redirects() {
