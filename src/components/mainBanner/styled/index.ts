@@ -44,5 +44,8 @@ export const HeadlineMainBanner = styled.div`
 `;
 
 export const ParagraphsContainerMainBanner = styled.div`
+  display: grid;
+  flex-direction: column;
+  row-gap: 32px;
   width: 100%;
 `;

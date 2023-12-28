@@ -13,6 +13,7 @@ export const ButtonLinkStyle = styled(Link)<ButtonStyleType>`
   border-radius: 40px;
   padding: 12px ${(props) => (props.variant === 'tiertiary' ? 0 : '24px')};
   transition: all ease 0.3s;
+  width: fit-content;
   span,
   label {
     color: ${(props) => ButtonVariantColor(props.variant)?.default.font};
@@ -45,6 +46,7 @@ export const ButtonClickStyle = styled.button<ButtonStyleType>`
   cursor: pointer;
   padding: 12px ${(props) => (props.variant === 'tiertiary' ? 0 : '24px')};
   transition: all ease 0.3s;
+  width: fit-content;
   span,
   label {
     color: ${(props) => ButtonVariantColor(props.variant)?.default.font};
