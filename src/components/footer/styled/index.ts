@@ -5,6 +5,7 @@ import { responsiveMobile } from '../../../assets/utils/components';
 export const FooterContainer = styled.footer`
   background: ${COLORS.green_opacity};
   padding: 48px 0;
+  margin-top: 48px;
   width: 100%;
   p {
     color: ${COLORS.green_pale};

@@ -2,14 +2,14 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { OTHER_PROJECTS, MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/index';
+import { MAIN_BANNER_TEXTS, META_INFO } from '../assets/content/index';
 import { scrollToIDElement } from '../assets/utils/components';
 import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/pageLayout/index';
 import { ListBannerProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
 //import { getAllProjects } from '../lib/api';
-import ListBanner from '../components/listBanner';
+//import ListBanner from '../components/listBanner';
 import CTABanner from '../components/ctaBanner';
 import ButtonLink from '../components/buttonLink';
 import { AVAILABLE_PROJECTS } from '../assets/content/availableProjects';
@@ -21,7 +21,7 @@ interface Props {
   bannerTexts: MainBannerType;
 }
 
-const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
+const Home = ({ projects, metaInfo, bannerTexts }: Props) => {
   //console.log('PROJECTS:', projects);
   const router = useRouter();
   useEffect(() => {
@@ -40,7 +40,6 @@ const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
           <ButtonLink label="Get resume" route="/resume" variant="primary" target="_blank" />
         }
       />
-      <ListBanner list={otherProjects} title={`Other projects I've worked on`} />
     </PageLayout>
   );
 };
@@ -49,7 +48,6 @@ export const getStaticProps: GetStaticProps = async () => {
   //const projects = await getAllProjects(false);
   return {
     props: {
-      otherProjects: OTHER_PROJECTS,
       projects: AVAILABLE_PROJECTS,
       metaInfo: META_INFO,
       bannerTexts: MAIN_BANNER_TEXTS,

@@ -1,6 +1,7 @@
 export const AVAILABLE_PROJECTS: any = [
   {
-    title: 'Refrigeration Alarms',
+    title:
+      'Optimizing the onboarding experience of refrigeration alarms for Walmart store Associates',
     year: '2023',
     company: 'Walmart',
     slug: 'refrigeration-alarms',
