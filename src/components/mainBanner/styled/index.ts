@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { responsiveMobile } from '../../../assets/utils/components';
 
 export const MainBannerContainer = styled.div`
+  padding-bottom: 10vh;
   width: 100%;
 `;
 

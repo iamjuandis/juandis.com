@@ -37,7 +37,7 @@ export const META_INFO: MetaInfoProps = {
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
   headline: `<span class="color">Juan David</span> is a senior product designer from Colombia.`,
-  paragraph: `Juan David has over 7 years of experience designing digital products. Recently collaborated with amazing product design teams at Verizon, Bridgestone, Media.Monks, and Walmart. Currently partnering with startups at Wandr Studio to design intuitive and efficient products.`,
+  paragraph: `Juan David has over 7 years of experience designing digital products. Recently collaborated with talented product teams at Verizon, Bridgestone, Media.Monks, and Walmart. Currently partnering with startups at Wandr Studio to design intuitive and efficient products.`,
 };
 
 export const OTHER_PROJECTS: ListBannerProps[] = [

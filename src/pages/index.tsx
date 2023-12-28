@@ -8,10 +8,11 @@ import MainBanner from '../components/mainBanner';
 import ProjectsBanner from '../components/projects';
 import PageLayout from '../layouts/pageLayout/index';
 import { ListBannerProps, MainBannerType, MetaInfoProps } from '../types/interfaces';
-import { getAllProjects } from '../lib/api';
+//import { getAllProjects } from '../lib/api';
 import ListBanner from '../components/listBanner';
 import CTABanner from '../components/ctaBanner';
 import ButtonLink from '../components/buttonLink';
+import { AVAILABLE_PROJECTS } from '../assets/content/availableProjects';
 
 interface Props {
   otherProjects: ListBannerProps[];
@@ -31,7 +32,7 @@ const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
   return (
     <PageLayout image={metaInfo?.previewImage} description={metaInfo?.description}>
       <MainBanner headline={bannerTexts?.headline} paragraph={bannerTexts?.paragraph} />
-      <ProjectsBanner projects={projects.nodes} />
+      <ProjectsBanner projects={projects} />
       <CTABanner
         title="Know more about me"
         mainCTA={<ButtonLink label="About me" route="/about" variant="tiertiary" />}
@@ -45,11 +46,11 @@ const Home = ({ otherProjects, projects, metaInfo, bannerTexts }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = await getAllProjects(false);
+  //const projects = await getAllProjects(false);
   return {
     props: {
       otherProjects: OTHER_PROJECTS,
-      projects: projects,
+      projects: AVAILABLE_PROJECTS,
       metaInfo: META_INFO,
       bannerTexts: MAIN_BANNER_TEXTS,
     },
