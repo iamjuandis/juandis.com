@@ -36,8 +36,8 @@ export const META_INFO: MetaInfoProps = {
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `<span class="color">Juan David</span> is a senior product designer from Colombia.`,
-  paragraph: `Juan David has over 7 years of experience designing digital products. Recently collaborated with talented product teams at Verizon, Bridgestone, Media.Monks, and Walmart. Currently partnering with startups at Wandr Studio to design intuitive and efficient products.`,
+  headline: `<span class="color">Juan David</span> is an experienced product designer from Colombia currently at Nubank.`,
+  paragraph: `Juan David has collaborated with talented product teams at Verizon, Bridgestone, Media.Monks, Wandr Studio and Walmart. Currently building better financial services with the Growth team at Nu Colombia 💜.`,
 };
 
 export const OTHER_PROJECTS: ListBannerProps[] = [
@@ -76,12 +76,21 @@ export const OTHER_PROJECTS: ListBannerProps[] = [
 
 export const EXPERIENCE: ListBannerProps[] = [
   {
+    company: 'Nubank',
+    location: 'Colombia',
+    title: 'Senior Product Designer',
+    years: {
+      first: 'Feb 2024',
+      last: 'Present',
+    },
+  },
+  {
     company: 'Wandr Studio',
     location: 'California, United States',
     title: 'Senior Product Designer',
     years: {
       first: 'Jul 2023',
-      last: 'Present',
+      last: 'Feb 2024',
     },
   },
   {
