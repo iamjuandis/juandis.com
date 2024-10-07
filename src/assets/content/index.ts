@@ -32,7 +32,7 @@ export const META_INFO: MetaInfoProps = {
     'Juan David is an experienced Product Designer driven to build a better future for everyone by designing friendly and inclusive products - based in Colombia.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Perez · Product Designer & Frontend Hobbyistr',
+  mainTitle: 'Juan David · Product Designer & Frontend Hobbyistr',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {

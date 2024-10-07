@@ -1,10 +1,10 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { META_INFO } from '../../assets/content/index';
+//import { META_INFO } from '../../assets/content/index';
 import ProjectLayout from '../../layouts/projectLayout';
 import { MetaInfoProps, ProjectAllTypes } from '../../types/interfaces';
-import { getAllProjectsSlug, getPreviewProjectBySlug } from '../../lib/api';
+import { getAllProjectsSlug } from '../../lib/api';
 
 interface Props {
   metaInfo: MetaInfoProps;
@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+/* export const getStaticProps: GetStaticProps = async (context) => {
   const project: any = await getPreviewProjectBySlug(`${context?.params?.slug}`).then(
     (value: any) => {
       if (value === 'null' || value === null) {
@@ -57,6 +57,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   );
 
   return project;
-};
+}; */
 
 export default ProjectPage;
