@@ -19,9 +19,9 @@ const MainBanner = ({ headline, paragraph }: MainBannerType) => {
         <ParagraphsContainerMainBanner>
           <Paragraph paragraphSize="text-huge" columns={1} children={paragraph} />
           <ButtonLink
-            label="Portfolio"
+            label="LinkedIn"
             variant="primary"
-            route="https://portfolio.juandis.com"
+            route="http://bit.ly/linkedinjuandis"
             target="_blank"
           />
         </ParagraphsContainerMainBanner>

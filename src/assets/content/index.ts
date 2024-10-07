@@ -1,7 +1,7 @@
 import { ButtonType, ListBannerProps, MainBannerType, MetaInfoProps } from '../../types/interfaces';
 
 export const NAV_OPTIONS: ButtonType[] = [
-  {
+  /* {
     label: 'Home',
     variant: 'tiertiary',
     route: '/',
@@ -12,19 +12,19 @@ export const NAV_OPTIONS: ButtonType[] = [
     variant: 'tiertiary',
     route: '/about',
     target: '_self',
-  },
+  }, 
   {
     label: 'LinkedIn',
-    variant: 'tiertiary',
+    variant: 'primary',
     route: 'http://bit.ly/linkedinjuandis',
     target: '_blank',
   },
-  {
+   {
     label: 'Portfolio',
     variant: 'primary',
     route: 'https://portfolio.juandis.com',
     target: '_blank',
-  },
+  }, */
 ];
 
 export const META_INFO: MetaInfoProps = {
@@ -36,8 +36,8 @@ export const META_INFO: MetaInfoProps = {
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `<span class="color">Juan David</span> is an experienced product designer from Colombia currently at Nubank.`,
-  paragraph: `Juan David has collaborated with talented product teams at Verizon, Bridgestone, Media.Monks, Wandr Studio and Walmart. Currently building better financial services with the Growth team at Nu Colombia 💜.`,
+  headline: `I’m <span class="color">Juan David</span>, a product designer from Colombia`,
+  paragraph: `I enjoy blending creativity with technical expertise to craft intuitive and meaningful solutions that contribute to humanity.`,
 };
 
 export const OTHER_PROJECTS: ListBannerProps[] = [

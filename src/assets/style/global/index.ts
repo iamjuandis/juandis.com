@@ -66,9 +66,9 @@ export const GlobalStyles = createGlobalStyle`
   transition: all ease 0.3s;
 }
 
-
-
-
+body {
+  background: ${COLORS.white_cloud};
+}
 
 /* Headlines */
 

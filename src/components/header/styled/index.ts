@@ -85,7 +85,7 @@ export const MenuMobileContainer = styled.p<HeaderTypes>`
   color: ${COLORS.green_vibrant};
   display: none;
   @media screen and (max-width: 640px) {
-    display: flex;
+    display: none;
     position: relative;
     z-index: 100;
   }
