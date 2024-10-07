@@ -6,6 +6,7 @@ export interface ButtonType {
   variant: variantButtonTypes;
   onClick?: any;
   target?: linkTargetTypes;
+  accentColor?: string;
 }
 export type variantButtonTypes = 'primary' | 'secondary' | 'tiertiary';
 type linkTargetTypes = '_blank' | '_self';

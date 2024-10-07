@@ -1,7 +1,7 @@
 import { ButtonType, ListBannerProps, MainBannerType, MetaInfoProps } from '../../types/interfaces';
 
 export const NAV_OPTIONS: ButtonType[] = [
-  {
+  /* {
     label: 'Home',
     variant: 'tiertiary',
     route: '/',
@@ -12,19 +12,19 @@ export const NAV_OPTIONS: ButtonType[] = [
     variant: 'tiertiary',
     route: '/about',
     target: '_self',
-  },
+  }, 
   {
     label: 'LinkedIn',
-    variant: 'tiertiary',
+    variant: 'primary',
     route: 'http://bit.ly/linkedinjuandis',
     target: '_blank',
   },
-  {
-    label: 'Get resume',
+   {
+    label: 'Portfolio',
     variant: 'primary',
-    route: '/resume',
+    route: 'https://portfolio.juandis.com',
     target: '_blank',
-  },
+  }, */
 ];
 
 export const META_INFO: MetaInfoProps = {
@@ -32,12 +32,12 @@ export const META_INFO: MetaInfoProps = {
     'Juan David is an experienced Product Designer driven to build a better future for everyone by designing friendly and inclusive products - based in Colombia.',
   previewImage:
     'https://res.cloudinary.com/juandis/image/upload/v1618336904/portfolio/assets/preview-juandis_mbq17j.jpg',
-  mainTitle: 'Juan David Perez · Product Designer & Frontend Hobbyistr',
+  mainTitle: 'Juan David · Product Designer & Frontend Hobbyistr',
 };
 
 export const MAIN_BANNER_TEXTS: MainBannerType = {
-  headline: `<span class="color">Juan David</span> is an experienced Product Designer driven to build a better future for everyone by designing friendly and inclusive products.`,
-  paragraph: `Recently designing intuitive and efficient tools for Walmart, Bridgestone and Design Systems at Verizon. Based in Colombia.`,
+  headline: `I’m <span class="color">Juan David</span>, a product designer from Colombia`,
+  paragraph: `I enjoy blending creativity with technical expertise to craft intuitive and meaningful solutions that contribute to humanity.`,
 };
 
 export const OTHER_PROJECTS: ListBannerProps[] = [
@@ -76,12 +76,21 @@ export const OTHER_PROJECTS: ListBannerProps[] = [
 
 export const EXPERIENCE: ListBannerProps[] = [
   {
+    company: 'Nubank',
+    location: 'Colombia',
+    title: 'Senior Product Designer',
+    years: {
+      first: 'Feb 2024',
+      last: 'Present',
+    },
+  },
+  {
     company: 'Wandr Studio',
     location: 'California, United States',
     title: 'Senior Product Designer',
     years: {
       first: 'Jul 2023',
-      last: 'Present',
+      last: 'Feb 2024',
     },
   },
   {

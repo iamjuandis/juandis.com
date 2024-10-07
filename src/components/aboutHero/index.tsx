@@ -4,7 +4,7 @@ const AboutHero = ({ title, content, button }: any) => {
   return (
     <AboutHeroContainer>
       <AboutTitle>
-        <h1>{title}</h1>
+        <h1 dangerouslySetInnerHTML={{ __html: `${title}` }} />
         {button && button}
       </AboutTitle>
 

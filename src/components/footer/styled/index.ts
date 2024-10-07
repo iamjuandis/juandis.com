@@ -4,14 +4,14 @@ import { responsiveMobile } from '../../../assets/utils/components';
 
 export const FooterContainer = styled.footer`
   padding: 48px 0;
+  margin-top: 48px;
   width: 100%;
   p {
     color: ${COLORS.green_pale};
     margin: auto;
-    max-width: 996px;
-    padding: 48px;
+    max-width: 800px;
     text-align: center;
-    width: calc(100% - 96px);
+    width: 100%;
   }
   ${responsiveMobile(css`
     padding: 24px 0;
@@ -20,13 +20,11 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterContent = styled.div`
-  background: ${COLORS.green_opacity};
   border-radius: 32px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  grid-column-gap: 32px;
-  align-items: center;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
   margin: auto;
   max-width: 996px;
   padding: 48px;

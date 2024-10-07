@@ -7,7 +7,7 @@ import AboutHero from '../../components/aboutHero';
 const AboutPage = ({ experience, introduction }: any) => {
   return (
     <PageLayout title="About">
-      <AboutHero title="Hi there!" content={introduction} />
+      <AboutHero title="I'm <br> Juan David" content={introduction} />
       <ListBanner
         list={experience}
         title="Professional experience"

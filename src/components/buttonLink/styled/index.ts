@@ -5,14 +5,17 @@ import { variantButtonTypes } from '../../../types/interfaces';
 import COLORS from '../../../assets/style/colors';
 
 interface ButtonStyleType {
+  accentColor?: string;
   variant: variantButtonTypes;
 }
 
 export const ButtonLinkStyle = styled(Link)<ButtonStyleType>`
-  background-color: ${(props) => ButtonVariantColor(props.variant)?.default.background};
+  background-color: ${(props) =>
+    props.accentColor ? props.accentColor : ButtonVariantColor(props.variant)?.default.background};
   border-radius: 40px;
   padding: 12px ${(props) => (props.variant === 'tiertiary' ? 0 : '24px')};
   transition: all ease 0.3s;
+  width: fit-content;
   span,
   label {
     color: ${(props) => ButtonVariantColor(props.variant)?.default.font};
@@ -40,11 +43,13 @@ export const ButtonClickStyle = styled.button<ButtonStyleType>`
   border: 0;
   border-style: none;
   outline-style: none;
-  background-color: ${(props) => ButtonVariantColor(props.variant)?.default.background};
+  background-color: ${(props) =>
+    props.accentColor ? props.accentColor : ButtonVariantColor(props.variant)?.default.background};
   border-radius: 40px;
   cursor: pointer;
   padding: 12px ${(props) => (props.variant === 'tiertiary' ? 0 : '24px')};
   transition: all ease 0.3s;
+  width: fit-content;
   span,
   label {
     color: ${(props) => ButtonVariantColor(props.variant)?.default.font};

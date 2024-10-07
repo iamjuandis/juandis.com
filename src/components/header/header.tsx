@@ -26,7 +26,7 @@ const Header = () => {
       <HeaderContent>
         <LogoContainer href="/">
           <Image src={PROFILE_JUAN} alt={`Juan David's profile picture`} width={40} height={40} />
-          <p className="text-medium">Juan David Perez</p>
+          <p className="text-medium">Juan David</p>
         </LogoContainer>
         <MenuMobileContainer>
           <ButtonLink
